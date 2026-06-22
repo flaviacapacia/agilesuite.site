@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia Forasteiros</title>
+  <style>
+    body { margin:0; font-family:'Poppins', sans-serif; background:#111; color:#fff; }
+    header { background:#000; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { height:50px; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+    nav a:hover { color:#d4af37; }
+
+    .hero { background:url('img/barbearia.jpeg') center/cover no-repeat; height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; }
+    .hero-overlay { background:rgba(0,0,0,0.6); padding:40px; border-radius:8px; }
+    .hero h1 { font-size:2.5em; margin:0; color:#d4af37; }
+    .hero p { font-size:1.2em; margin:10px 0; }
+    .btn { background:#d4af37; color:#000; padding:12px 25px; border:none; border-radius:6px; cursor:pointer; font-weight:bold; text-decoration:none; }
+    .btn:hover { background:#b38e2e; }
+
+    .section { padding:60px 20px; text-align:center; }
+    .section.light { background:#fff; color:#000; }
+    .section.dark { background:#111; color:#fff; }
+
+    .icons { display:flex; justify-content:center; gap:60px; margin-bottom:20px; }
+    .icons div { text-align:center; }
+  .icons img {
+  width: 70px;
+  filter: brightness(1.3) contrast(1.2) saturate(1.4);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.5) contrast(1.3) saturate(1.6);
+}
+
+
+    form { max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px; text-align:left; }
+    input, textarea { padding:12px; border:1px solid #ccc; border-radius:6px; }
+    .horarios { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .hora { padding:10px 15px; border:1px solid #d4af37; border-radius:6px; cursor:pointer; color:#d4af37; font-weight:bold; transition:0.3s; }
+    .hora:hover { background:#222; }
+    .hora.selecionado { background:#d4af37; color:#000; }
+
+    footer { background:#000; color:#fff; text-align:center; padding:30px 20px; }
+    .footer-logo { height:50px; margin-bottom:10px; }
+    .social a { color:#d4af37; margin:0 10px; text-decoration:none; }
+    .social a:hover { color:#fff; }
+
+    @media (max-width:768px){
+      header { flex-direction:column; }
+      nav { margin-top:10px; }
+      .icons { flex-direction:column; gap:20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="img/barbearia.jpeg" alt="Logo Barbearia Forasteiros" class="logo">
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Barbearia Forasteiros</h1>
+      <p>Seu Estilo, Nossa Missão</p>
+      <a href="#agenda" class="btn">Agende Agora</a>
+    </div>
+  </section>
+
+  <!-- Agenda -->
+  <section id="agenda" class="section dark">
+    <h2>Agende Seu Horário</h2>
+    <div class="icons">
+      <div><img src="img/calendario.webp" alt="Calendário"><p>Escolha a Data</p></div>
+      <div><img src="img/relogio.webp" alt="Relógio"><p>Selecione o Horário</p></div>
+      <div><img src="img/whatsapp.webp" alt="WhatsApp"><p>Confirme pelo WhatsApp</p></div>
+    </div>
+
+    <form id="formAgendamento">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" required onchange="mostrarHorarios()">
+
+      <h3>Horários disponíveis:</h3>
+      <div class="horarios" id="listaHorarios"></div>
+
+      <button type="button" class="btn" onclick="confirmarAgendamento()">Confirmar Agendamento</button>
+    </form>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section light">
+    <h2>Fale Conosco</h2>
+    <form onsubmit="enviarWhatsApp(); return false;">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Enviar pelo WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <img src="img/barbearia.jpeg" alt="Logo Barbearia Forasteiros" class="footer-logo">
+    <p>&copy; 2026 Barbearia Forasteiros - Todos os direitos reservados</p>
+    <div class="social">
+      <a href="https://www.instagram.com/agilesuite.oficial" target="_blank">Instagram</a> |
+      <a href="https://wa.me/5511912381257" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    const agenda = {
+      "domingo": [],
+      "segunda-feira": ["09:00","09:30","10:00","14:00","15:00"],
+      "terça-feira": ["09:00","10:00","11:00","14:00","16:00"],
+      "quarta-feira": ["09:00","09:30","10:30","15:00"],
+      "quinta-feira": ["09:00","10:00","11:00","14:00","15:30"],
+      "sexta-feira": ["09:00","09:30","10:00","11:00","14:00","15:00","16:00"],
+      "sábado": ["09:00","09:30","10:00","11:00","12:00"]
+    };
+
+    let selecionado = null;
+
+    function mostrarHorarios(){
+      const data = document.getElementById("data").value;
+      const lista = document.getElementById("listaHorarios");
+      lista.innerHTML = "";
+      selecionado = null;
+
+      if(!data) return;
+
+      const diaSemana = new Date(data).toLocaleDateString("pt-BR",{weekday:"long"});
+      const horarios = agenda[diaSemana];
+
+      if(horarios && horarios.length > 0){
+        horarios.forEach(h => {
+          const div = document.createElement("div");
+          div.className = "hora";
+          div.innerText = h;
+          div.onclick = () => {
+            document.querySelectorAll(".hora").forEach(el => el.classList.remove("selecionado"));
+            div.classList.add("selecionado");
+            selecionado = h;
+          };
+          lista.appendChild(div);
+        });
+      } else {
+        lista.innerHTML = "<p>Neste dia não há atendimento.</p>";
+      }
+    }
+
+    function confirmarAgendamento(){
+      const nome = document.getElementById("nome").value;
+      const data = document.getElementById("data").value;
+
+      if(nome && data && selecionado){
+        const numero = "5511912381257";
+        const mensagem = `Olá, meu nome é ${nome}. Gostaria de agendar em ${data} às ${selecionado} na Barbearia Forasteiros.`;
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, "_blank");
+      } else {
+        alert("Por favor, preencha nome, data e selecione um horário.");
+      }
+    }
+
+    function enviarWhatsApp(){
+  const email = document.getElementById("email").value;
+  const mensagem = document.getElementById("mensagem").value;
+  const numero = "5511912381257";
+  const texto = `Olá, meu email é ${email}.\nMensagem: ${mensagem}`;
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+}
+  
+  </script>
+</body>
+</html>
