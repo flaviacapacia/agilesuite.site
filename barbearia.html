@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia Forasteiros</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; color:#333; }
+    header { background:#222; color:#fff; padding:20px; text-align:center; }
+    header img { height:60px; }
+    nav { background:#444; padding:10px; text-align:center; }
+    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
+    nav a:hover { color:#ffd700; }
+    .container { max-width:1000px; margin:20px auto; background:#fff; padding:20px; border-radius:8px; }
+    h2 { color:#222; }
+    .sobre, .contato { display:flex; gap:20px; align-items:center; }
+    .sobre img, .contato img { max-width:300px; border-radius:8px; }
+    form { flex:1; display:flex; flex-direction:column; }
+    label { margin:10px 0 5px; }
+    input, textarea { padding:10px; border:1px solid #ccc; border-radius:4px; }
+    button { margin-top:15px; padding:12px; background:#222; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+    button:hover { background:#555; }
+    .horarios { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .hora { padding:10px 15px; border:1px solid #ccc; border-radius:4px; cursor:pointer; }
+    .hora.selecionado { background:#222; color:#fff; }
+    footer { background:#222; color:#fff; text-align:center; padding:20px; margin-top:30px; }
+    footer img { height:40px; margin-bottom:10px; }
+    .social a { color:#fff; margin:0 10px; text-decoration:none; }
+    .social a:hover { color:#ffd700; }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="img/barbearia.jpeg" alt="Logo Barbearia Forasteiros">
+    <h1>Barbearia Forasteiros</h1>
+    <p>Estilo e cuidado para você</p>
+  </header>
+
+  <!-- Menu -->
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <!-- Seção Sobre -->
+  <div class="container" id="sobre">
+    <h2>Sobre Nós</h2>
+    <div class="sobre">
+      <img src="img/barbearia.jpeg" alt="Imagem da Barbearia">
+      <p>
+        A Barbearia Forasteiros é especializada em cortes masculinos e barba, 
+        oferecendo uma experiência única para nossos clientes. 
+        Nosso objetivo é unir tradição e modernidade, garantindo estilo e confiança.
+      </p>
+    </div>
+  </div>
+
+  <!-- Seção Agenda -->
+  <div class="container" id="agenda">
+    <h2>Agende seu horário</h2>
+    <form id="formAgendamento">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" required onchange="mostrarHorarios()">
+
+      <h3>Selecione o horário:</h3>
+      <div class="horarios" id="listaHorarios"></div>
+
+      <button type="button" onclick="confirmarAgendamento()">Confirmar Agendamento</button>
+    </form>
+  </div>
+
+  <!-- Seção Contato -->
+  <div class="container" id="contato">
+    <h2>Entre em Contato</h2>
+    <div class="contato">
+      <img src="img/barbearia.jpeg" alt="Imagem de contato">
+      <form onsubmit="enviarWhatsApp(); return false;">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <img src="img/barbearia.jpeg" alt="Logo Barbearia Forasteiros">
+    <p>&copy; 2026 Barbearia Forasteiros - Todos os direitos reservados</p>
+    <div class="social">
+      <a href="https://www.instagram.com/seuinstagram" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/seufacebook" target="_blank">Facebook</a> |
+      <a href="https://wa.me/5548999999999" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    // Agenda por dia da semana
+    const agenda = {
+      "domingo": [],
+      "segunda-feira": ["09:00","09:30","10:00","14:00","15:00"],
+      "terça-feira": ["09:00","10:00","11:00","14:00","16:00"],
+      "quarta-feira": ["09:00","09:30","10:30","15:00"],
+      "quinta-feira": ["09:00","10:00","11:00","14:00","15:30"],
+      "sexta-feira": ["09:00","09:30","10:00","11:00","14:00","15:00","16:00"],
+      "sábado": ["09:00","09:30","10:00","11:00","12:00"]
+    };
+
+    let selecionado = null;
+
+    function mostrarHorarios(){
+      const data = document.getElementById("data").value;
+      const lista = document.getElementById("listaHorarios");
+      lista.innerHTML = "";
+      selecionado = null;
+
+      if(!data) return;
+
+      const diaSemana = new Date(data).toLocaleDateString("pt-BR",{weekday:"long"});
+      const horarios = agenda[diaSemana];
+
+      if(horarios && horarios.length > 0){
+        horarios.forEach(h => {
+          const div = document.createElement("div");
+          div.className = "hora";
+          div.innerText = h;
+          div.onclick = () => {
+            document.querySelectorAll(".hora").forEach(el => el.classList.remove("selecionado"));
+            div.classList.add("selecionado");
+            selecionado = h;
+          };
+          lista.appendChild(div);
+        });
+      } else {
+        lista.innerHTML = "<p>Neste dia não há atendimento.</p>";
+      }
+    }
+
+    function confirmarAgendamento(){
+      const nome = document.getElementById("nome").value;
+      const data = document.getElementById("data").value;
+
+      if(nome && data && selecionado){
+        const numero = "5548999999999"; // coloque aqui seu número com DDI/DDD
+        const mensagem = `Olá, meu nome é ${nome}. Gostaria de agendar em ${data} às ${selecionado} na Barbearia Forasteiros.`;
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, "_blank");
+      } else {
+        alert("Por favor, preencha nome, data e selecione um horário.");
+      }
+    }
+
+    function enviarWhatsApp(){
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+      const numero = "5548999999999"; // coloque aqui seu número com DDI/DDD
+      const texto = `Olá, meu email é ${email}.\nMensagem: ${mensagem}`;
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
