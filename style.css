@@ -19,6 +19,7 @@ nav {
 
 nav h1 {
   color: #a29bfe;
+  text-align: center;   /* centraliza o h1 dentro do nav */
 }
 
 nav ul {
@@ -37,9 +38,11 @@ nav ul li a:hover {
   color: #a29bfe;
 }
 
-.hero h2 {
+.hero h2,
+#modelos h2 {
   font-size: 2.5em;
   animation: fadeIn 2s ease-in-out;
+  text-align: center;   /* centraliza o h2 */
 }
 
 .hero p {
