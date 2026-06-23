@@ -89,7 +89,39 @@ nav ul li a:hover {
   object-fit: cover;
   border-radius: 8px;
 }
+/* Seção de novos modelos */
+#modelos {
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #2a5298, #3a1c71);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+  animation: destaque 3s ease-in-out infinite alternate;
+}
 
+/* Título */
+#modelos h2 {
+  font-size: 2.5em;
+  color: #a29bfe;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+#modelos h2:hover {
+  transform: scale(1.05);
+  color: #dcd6ff;
+}
+
+/* Animação de brilho suave */
+@keyframes destaque {
+  from {
+    box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(162, 155, 254, 0.8);
+  }
+}
 footer {
   text-align: center;
   padding: 20px;
