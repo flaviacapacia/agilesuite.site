@@ -79,22 +79,20 @@ nav ul li a:hover {
 }
 
 /* Seções de modelos - Grid 3 colunas */
-#modelos,
-#modelos-solicitar {
+.secao-modelos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding: 60px 40px;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 40px auto;
   background: linear-gradient(135deg, #2a5298, #3a1c71);
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
   animation: destaque 3s ease-in-out infinite alternate;
 }
 
-#modelos h2,
-#modelos-solicitar h2 {
+.secao-modelos h2 {
   grid-column: 1 / -1;
   font-size: 2.5em;
   color: #a29bfe;
@@ -105,8 +103,7 @@ nav ul li a:hover {
   transition: transform 0.5s ease, color 0.5s ease;
 }
 
-#modelos h2:hover,
-#modelos-solicitar h2:hover {
+.secao-modelos h2:hover {
   transform: scale(1.05);
   color: #dcd6ff;
 }
@@ -191,8 +188,7 @@ footer {
 
 /* RESPONSIVO - TABLETS (2 colunas) */
 @media (max-width: 1024px) {
-  #modelos,
-  #modelos-solicitar {
+  .secao-modelos {
     grid-template-columns: repeat(2, 1fr);
     padding: 40px 20px;
   }
@@ -209,15 +205,13 @@ footer {
 
 /* RESPONSIVO - CELULARES (1 coluna / fila) */
 @media (max-width: 768px) {
-  #modelos,
-  #modelos-solicitar {
+  .secao-modelos {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 30px 15px;
   }
 
-  #modelos h2,
-  #modelos-solicitar h2 {
+  .secao-modelos h2 {
     font-size: 2em;
   }
 
@@ -254,13 +248,11 @@ footer {
 
 /* RESPONSIVO - CELULARES PEQUENOS */
 @media (max-width: 480px) {
-  #modelos,
-  #modelos-solicitar {
+  .secao-modelos {
     padding: 20px 10px;
   }
 
-  #modelos h2,
-  #modelos-solicitar h2 {
+  .secao-modelos h2 {
     font-size: 1.5em;
   }
 
