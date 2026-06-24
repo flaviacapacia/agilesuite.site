@@ -54,9 +54,7 @@ nav ul li a:hover {
   animation: brilho 3s ease-in-out infinite alternate;
 }
 
-.hero h2,
-#modelos h2,
-#modelos-solicitar h2 {
+.hero h2 {
   font-size: 2.5em;
   animation: fadeIn 2s ease-in-out;
   text-align: center;
@@ -80,7 +78,7 @@ nav ul li a:hover {
   background: #00cec9;
 }
 
-/* Container de cards - 3 colunas no desktop */
+/* Seções de modelos - Grid 3 colunas */
 #modelos,
 #modelos-solicitar {
   display: grid;
@@ -98,11 +96,12 @@ nav ul li a:hover {
 #modelos h2,
 #modelos-solicitar h2 {
   grid-column: 1 / -1;
-  font-size: 2.8em;
+  font-size: 2.5em;
   color: #a29bfe;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  text-align: center;
   transition: transform 0.5s ease, color 0.5s ease;
 }
 
@@ -137,6 +136,28 @@ nav ul li a:hover {
   font-size: 1.3em;
 }
 
+/* Seção Ebooks */
+#ebooks {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #1e1b4b, #2a5298);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1400px;
+  box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+}
+
+#ebooks h2 {
+  font-size: 2.5em;
+  color: #a29bfe;
+  margin-top: 0;
+}
+
+#ebooks p {
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+
 /* Animação de brilho suave */
 @keyframes destaque {
   from {
@@ -165,6 +186,7 @@ footer {
   text-align: center;
   padding: 20px;
   background: rgba(0,0,0,0.8);
+  margin-top: 40px;
 }
 
 /* RESPONSIVO - TABLETS (2 colunas) */
@@ -219,6 +241,15 @@ footer {
     width: 90%;
     height: 60px;
   }
+
+  #ebooks {
+    padding: 30px 15px;
+    margin: 30px 15px;
+  }
+
+  #ebooks h2 {
+    font-size: 1.8em;
+  }
 }
 
 /* RESPONSIVO - CELULARES PEQUENOS */
@@ -248,5 +279,18 @@ footer {
 
   header {
     padding: 30px 10px;
+  }
+
+  #ebooks {
+    padding: 20px 10px;
+    margin: 20px 10px;
+  }
+
+  #ebooks h2 {
+    font-size: 1.3em;
+  }
+
+  #ebooks p {
+    font-size: 1em;
   }
 }
