@@ -152,6 +152,39 @@ nav ul li a:hover {
   margin: 15px 0;
   font-size: 1.3em;
 }
+/* Container do slider */
+.slider-container {
+  display: flex;
+  gap: 30px;
+  animation: slide 20s linear infinite;
+}
+
+/* Cards */
+.card {
+  flex: 0 0 300px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Animação */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Pausa no hover */
+.slider-container:hover {
+  animation-play-state: paused;
+}
 
 /* Seção Ebooks */
 #ebooks {
