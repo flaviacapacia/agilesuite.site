@@ -98,60 +98,6 @@ nav ul li a:hover {
   background: #00cec9;
 }
 
-/* Seções de modelos - Grid 3 colunas */
-.secao-modelos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 60px 40px;
-  max-width: 1400px;
-  margin: 40px auto;
-  background: linear-gradient(135deg, #2a5298, #3a1c71);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
-  animation: destaque 3s ease-in-out infinite alternate;
-}
-
-.secao-modelos h2 {
-  grid-column: 1 / -1;
-  font-size: 2.5em;
-  color: #a29bfe;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 0 0 20px 0;
-  text-align: center;
-  transition: transform 0.5s ease, color 0.5s ease;
-}
-
-.secao-modelos h2:hover {
-  transform: scale(1.05);
-  color: #dcd6ff;
-}
-
-.card {
-  background: rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  margin: 15px 0;
-  font-size: 1.3em;
-}
 /* Container do slider */
 .slider-container {
   display: flex;
@@ -185,7 +131,6 @@ nav ul li a:hover {
 .slider-container:hover {
   animation-play-state: paused;
 }
-
 /* Seção Ebooks */
 #ebooks {
   text-align: center;
