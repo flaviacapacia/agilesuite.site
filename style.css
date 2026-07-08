@@ -1,132 +1,29 @@
-body {
+/* ======== Estrutura geral ======== */
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #05081f, #0a0f2c, #1a1f4a);
   color: #fff;
-  min-height: 100vh;
 }
 
-/* Cabeçalho */
-header {
+/* ======== Títulos centralizados ======== */
+#modelos h2,
+#solicitar h2,
+#ebooks h2,
+#contato h2 {
   text-align: center;
-  padding: 30px 20px;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
-}
-
-.logo {
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-nav h1 {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
   font-size: 2em;
-  text-align: center;
-  margin-bottom: 15px;
-  animation: glowText 3s ease-in-out infinite alternate;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li a {
-  color: #a29bfe;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #fd6bf1;
-  text-shadow: 0 0 10px #fd6bf1;
-  transform: scale(1.1);
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero h2 {
+  margin-bottom: 25px;
   background: linear-gradient(90deg, #a29bfe, #fd6bf1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.5em;
-  font-weight: 700;
   animation: glowText 3s ease-in-out infinite alternate;
 }
 
-.hero p {
-  color: #dcd6ff;
-  font-size: 1.1em;
-  margin-top: 15px;
-  line-height: 1.5;
-}
-
-@keyframes glowText {
-  from { text-shadow: 0 0 10px #a29bfe; }
-  to { text-shadow: 0 0 25px #fd6bf1; }
-}
-
-/* Botão pulsante */
-.btn {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  display: inline-block;
-  margin-top: 20px;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 8px #a29bfe; }
-  50% { transform: scale(1.05); box-shadow: 0 0 15px #fd6bf1; }
-  100% { transform: scale(1); box-shadow: 0 0 8px #a29bfe; }
-}
-/* Cards menores */
-.card {
-  flex: 0 0 220px; /* menor largura */
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
-  padding: 12px;
-  text-align: center;
-  color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
-  height: 320px; /* menor altura */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-/* Container dos cards */
-.slider-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  transition: all 0.3s ease;
-}
-
-/* Cards menores e uniformes */
+/* ======== Cards ======== */
 .card {
   flex: 0 0 220px;
   background: rgba(255,255,255,0.08);
@@ -148,133 +45,15 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-/* Hover ativo apenas nos cards de baixo */
-#solicitar .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
-}
-
-/* Botão “Veja mais modelos” */
-.ver-mais {
-  display: block;
-  margin: 30px auto 0;
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  text-align: center;
-  width: fit-content;
-  transition: transform 0.3s ease;
-  animation: pulse 2s infinite;
-}
-
-.ver-mais:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #fd6bf1;
-}
-
-/* Responsividade para notebook */
-@media (min-width: 1024px) {
-  .slider-container {
-    justify-content: center;
-  }
-
-  .card {
-    flex: 0 0 calc(25% - 20px); /* 4 por linha */
-  }
-}
-
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  .slider-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .card {
-    flex: 0 0 calc(50% - 15px); /* 2 por linha */
-  }
-
-  .ver-mais {
-    margin-top: 20px;
-  }
-}
-
-/* Hover só nos cards da seção de baixo */
-#solicitar .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
-}
-
-/* Slider contínuo apenas na seção de baixo */
-#solicitar .slider-container {
-  display: flex;
-  gap: 20px;
-  animation: slide 25s linear infinite;
-}
-
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* loop sem buracos */
-}
-
-#solicitar .slider-container:hover {
-  animation-play-state: paused;
-}
-
-/* Seção de cima (Sites Prontos) fica estável */
+/* ======== Sites Prontos (estável e centralizado) ======== */
 #modelos .slider-container {
   display: flex;
   gap: 20px;
-  /* sem animação */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  .card {
-    flex: 0 0 160px; /* ainda menor no celular */
-    height: 280px;
-  }
-
-  .card img {
-    height: 120px;
-  }
-
-  #solicitar .slider-container {
-    gap: 15px;
-    animation-duration: 20s; /* mais rápido no celular */
-  }
-}
-/* Cards menores */
-.card {
-  flex: 0 0 220px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
-  padding: 12px;
-  text-align: center;
-  color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
-  height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Hover só nos cards da seção de baixo */
-#solicitar .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
-}
-
-/* Slider contínuo apenas na seção de baixo */
+/* ======== Solicite Novos Modelos (carrossel horizontal) ======== */
 #solicitar .slider-container {
   display: flex;
   gap: 20px;
@@ -290,25 +69,17 @@ nav ul li a:hover {
   animation-play-state: paused;
 }
 
-/* Seção de cima (Sites Prontos) fica estável */
-#modelos .slider-container {
-  display: flex;
-  gap: 20px;
-}
-#ebooks {
-  text-align: center;        /* Centraliza todo o conteúdo */
-  padding: 60px 20px;        /* Espaçamento interno */
-  margin: 40px auto;         /* Espaçamento externo */
-  max-width: 800px;          /* Limita a largura para não ficar muito expandido */
+#solicitar .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
 }
 
-#ebooks h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 3s ease-in-out infinite alternate;
+/* ======== Mini Curso ======== */
+#ebooks {
+  text-align: center;
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 800px;
 }
 
 #ebooks p {
@@ -334,35 +105,12 @@ nav ul li a:hover {
   box-shadow: 0 0 15px #fd6bf1;
 }
 
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  #ebooks {
-    padding: 40px 15px;
-    margin: 20px auto;
-  }
-
-  #ebooks h2 {
-    font-size: 1.6em;
-  }
-
-  #ebooks p {
-    font-size: 1em;
-  }
-}
-/* Formulário */
+/* ======== Formulário ======== */
 #contato {
   text-align: center;
   padding: 40px 20px;
   max-width: 600px;
   margin: 0 auto;
-}
-
-#contato h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 #contato form {
@@ -407,54 +155,13 @@ nav ul li a:hover {
   color: #dcd6ff;
 }
 
-/* Responsividade geral */
-body {
-  overflow-x: hidden; /* impede abertura lateral */
-}
-
-@media (max-width: 768px) {
-  .slider-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .card {
-    flex: 0 0 calc(50% - 15px);
-    height: 280px;
-  }
-
-  #contato {
-    padding: 30px 15px;
-  }
-
-  #contato h2 {
-    font-size: 1.5em;
-  }
-
-  #contato input,
-  #contato textarea {
-    font-size: 0.95em;
-  }
-}
-
-@media (min-width: 1024px) {
-  .slider-container {
-    justify-content: center;
-  }
-
-  .card {
-    flex: 0 0 calc(25% - 20px);
-  }
-}
-/* Footer */
+/* ======== Footer ======== */
 footer {
   background: rgba(0, 0, 0, 0.8);
   color: #a29bfe;
   padding: 30px 20px;
   text-align: center;
   border-top: 1px solid rgba(162, 155, 254, 0.3);
-  position: relative;
-  bottom: 0;
   width: 100%;
 }
 
@@ -481,28 +188,44 @@ footer p {
   color: #dcd6ff;
 }
 
-/* Responsividade geral */
-html, body {
-  overflow-x: hidden; /* impede abertura lateral */
-  width: 100%;
-  margin: 0;
-  padding: 0;
+/* ======== Animações ======== */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px #a29bfe; }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px #fd6bf1; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #a29bfe; }
 }
 
+@keyframes glowText {
+  from { text-shadow: 0 0 10px #a29bfe; }
+  to { text-shadow: 0 0 25px #fd6bf1; }
+}
+
+/* ======== Responsividade ======== */
 @media (max-width: 768px) {
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .slider-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .card {
     flex: 0 0 calc(50% - 15px);
     height: 280px;
+  }
+
+  #contato {
+    padding: 30px 15px;
+  }
+
+  #contato h2 {
+    font-size: 1.5em;
+  }
+
+  #ebooks {
+    padding: 40px 15px;
+    margin: 20px auto;
+  }
+
+  #ebooks h2 {
+    font-size: 1.6em;
+  }
+
+  #ebooks p {
+    font-size: 1em;
   }
 
   footer .social a {
@@ -512,11 +235,11 @@ html, body {
 }
 
 @media (min-width: 1024px) {
-  .slider-container {
-    justify-content: center;
-  }
-
   .card {
     flex: 0 0 calc(25% - 20px);
+  }
+
+  #modelos .slider-container {
+    justify-content: center;
   }
 }
