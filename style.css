@@ -57,7 +57,12 @@ html, body {
 #solicitar .slider-container {
   display: flex;
   gap: 20px;
+  white-space: nowrap;       /* impede quebra de linha */
   animation: slide 25s linear infinite;
+}
+
+#solicitar .card {
+  display: inline-block;     /* garante alinhamento horizontal */
 }
 
 @keyframes slide {
