@@ -5,38 +5,35 @@ body {
   color: #fff;
   min-height: 100vh;
 }
-main {
-  background: linear-gradient(135deg, #05081f, #0a0f2c, #1a1f4a); /* azul marinho sólido */
-  color: #fff;
-  padding: 60px 40px;
-  border-radius: 0; /* remove bordas arredondadas */
-  box-shadow: none; /* remove o efeito fosco */
-}
 
 /* Cabeçalho */
 header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 30px 20px;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
 }
 
-/* Título principal */
+.logo {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
 nav h1 {
   background: linear-gradient(90deg, #a29bfe, #fd6bf1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  animation: glowText 3s ease-in-out infinite alternate;
 }
 
-/* Menu */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -44,39 +41,36 @@ nav ul {
 nav ul li a {
   color: #a29bfe;
   text-decoration: none;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #fd6bf1;
   text-shadow: 0 0 10px #fd6bf1;
+  transform: scale(1.1);
 }
 
-/* Hero section */
+/* Hero */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 .hero h2 {
   background: linear-gradient(90deg, #a29bfe, #fd6bf1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 700;
+  animation: glowText 3s ease-in-out infinite alternate;
 }
 
 .hero p {
   color: #dcd6ff;
-  font-size: 1.2em;
-  margin-top: 20px;
-}
-/* Títulos com animação de brilho */
-nav h1, .hero h2, .secao-modelos h2 {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 3s ease-in-out infinite alternate;
+  font-size: 1.1em;
+  margin-top: 15px;
+  line-height: 1.5;
 }
 
 @keyframes glowText {
@@ -84,35 +78,35 @@ nav h1, .hero h2, .secao-modelos h2 {
   to { text-shadow: 0 0 25px #fd6bf1; }
 }
 
-/* Botão com animação pulsante */
+/* Botão pulsante */
 .btn {
   background: linear-gradient(90deg, #a29bfe, #fd6bf1);
   color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
+  padding: 10px 20px;
+  border-radius: 25px;
   text-decoration: none;
   transition: transform 0.3s ease;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 20px;
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 10px #a29bfe; }
-  50% { transform: scale(1.05); box-shadow: 0 0 20px #fd6bf1; }
-  100% { transform: scale(1); box-shadow: 0 0 10px #a29bfe; }
+  0% { transform: scale(1); box-shadow: 0 0 8px #a29bfe; }
+  50% { transform: scale(1.05); box-shadow: 0 0 15px #fd6bf1; }
+  100% { transform: scale(1); box-shadow: 0 0 8px #a29bfe; }
 }
 
-/* Cards padronizados */
+/* Cards menores */
 .card {
-  flex: 0 0 300px;
+  flex: 0 0 220px; /* menor largura */
   background: rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 12px;
   text-align: center;
   color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 420px; /* altura fixa */
+  height: 320px; /* menor altura */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -120,57 +114,28 @@ nav h1, .hero h2, .secao-modelos h2 {
 
 .card img {
   width: 100%;
-  height: 200px; /* altura fixa para imagens */
-  object-fit: cover; /* corta proporcionalmente */
-  border-radius: 12px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-/* Botão */
-.btn {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  display: inline-block;
-  margin-top: 30px;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #fd6bf1;
-}
-/* Container do slider */
+/* Slider contínuo */
 .slider-container {
   display: flex;
-  gap: 30px;
-  animation: slide 20s linear infinite;
+  gap: 20px;
+  animation: slide 25s linear infinite;
 }
 
-/* Cards */
-.card {
-  flex: 0 0 300px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* Animação */
 @keyframes slide {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-50%); } /* loop sem buracos */
 }
 
-/* Pausa no hover */
 .slider-container:hover {
   animation-play-state: paused;
 }
@@ -178,7 +143,7 @@ nav h1, .hero h2, .secao-modelos h2 {
 /* Rodapé */
 footer {
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
   background: rgba(0, 0, 0, 0.7);
   color: #a29bfe;
   font-size: 0.9em;
@@ -186,23 +151,31 @@ footer {
   border-top: 1px solid rgba(162, 155, 254, 0.3);
 }
 
-/* Animação de brilho */
-@keyframes brilho {
-  from { box-shadow: 0 0 10px #a29bfe; }
-  to { box-shadow: 0 0 25px #fd6bf1; }
-}
-
-
-  #ebooks {
-    padding: 20px 10px;
-    margin: 20px 10px;
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  nav h1 {
+    font-size: 1.5em;
   }
 
-  #ebooks h2 {
-    font-size: 1.3em;
+  .hero h2 {
+    font-size: 2em;
   }
 
-  #ebooks p {
+  .hero p {
     font-size: 1em;
+  }
+
+  .card {
+    flex: 0 0 160px; /* ainda menor no celular */
+    height: 280px;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  .slider-container {
+    gap: 15px;
+    animation-duration: 20s; /* mais rápido no celular */
   }
 }
