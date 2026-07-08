@@ -256,16 +256,19 @@ html, body {
 #contato p {
   margin-top: 15px;
   color: #dcd6ff;
-}
-/* Footer separado e ocupando toda a largura */
+}/* Footer separado e ocupando toda a largura da tela */
 footer {
   background: rgba(0, 0, 0, 0.85); /* tarja escura */
   color: #a29bfe;
   padding: 30px 20px;
   text-align: center;
   border-top: 1px solid rgba(162, 155, 254, 0.3);
-  width: 100%;              /* ocupa toda a tela */
-  margin-top: 40px;          /* afasta do formulário */
+  width: 100vw;          /* ocupa toda a largura da viewport */
+  margin-top: 60px;       /* afasta do formulário */
+  position: relative;
+  left: 0;
+  right: 0;
+  box-sizing: border-box; /* evita recorte lateral */
 }
 
 footer .social {
@@ -274,7 +277,7 @@ footer .social {
 
 footer .social a {
   color: #a29bfe;
-  margin: 0 10px;
+  margin: 0 15px;
   font-size: 1.1em;
   transition: color 0.3s, transform 0.3s;
   text-decoration: none;
@@ -289,6 +292,18 @@ footer p {
   font-size: 0.9em;
   letter-spacing: 1px;
   color: #dcd6ff;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  footer {
+    padding: 25px 15px;
+  }
+
+  footer .social a {
+    display: block;
+    margin: 8px 0;
+  }
 }
 
 /* ======== Animações ======== */
