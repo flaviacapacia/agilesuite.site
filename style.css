@@ -212,6 +212,60 @@ nav ul li a:hover {
   display: flex;
   gap: 20px;
 }
+#ebooks {
+  text-align: center;        /* Centraliza todo o conteúdo */
+  padding: 60px 20px;        /* Espaçamento interno */
+  margin: 40px auto;         /* Espaçamento externo */
+  max-width: 800px;          /* Limita a largura para não ficar muito expandido */
+}
+
+#ebooks h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+#ebooks p {
+  font-size: 1.2em;
+  color: #dcd6ff;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+#ebooks .btn {
+  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+#ebooks .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #fd6bf1;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  #ebooks {
+    padding: 40px 15px;
+    margin: 20px auto;
+  }
+
+  #ebooks h2 {
+    font-size: 1.6em;
+  }
+
+  #ebooks p {
+    font-size: 1em;
+  }
+}
 
 /* Formulário de contato */
 #contato {
