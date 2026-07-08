@@ -16,51 +16,33 @@
 </head>
 <body>
   <header class="site-header">
-  <div class="container header-wrap">
-    <a href="index.html" class="logo" aria-label="Francielen Santos - Nail Designer">
-      <img class="logo-photo" src="img/fran-logo.jpeg" alt="Logo Francielen Santos - Nail Designer">
-      <span class="logo-text">Francielen Santos - Nail Designer</span>
-    </a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav class="nav-menu">
-      <a href="index.html" class="active">Início</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="blog.html">Blog</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-  </div>
-</header>
-
-     
-
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav class="nav-menu">
-      <a href="index.html" class="active">Início</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="blog.html">Blog</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-  </div>
-</header>
-
+    <div class="container header-wrap">
+      <a href="index.html" class="logo" aria-label="Francielen Santos - Nail Designer">
+        <img class="logo-photo" src="img/fran-logo.jpeg" alt=" ">
         
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu">
+        <a href="index.html" class="active">home</a>
+        <a href="sobre.html">Agenda</a>
+        <a href="blog.html">Produtos</a>
         
       </nav>
     </div>
   </header>
 
- <main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <img src="img/fran-1.jpeg" alt="Unhas feitas por Francielen Santos" class="hero-image">
-      <div class="hero-text">
-        <h1>Unhas que elevam sua autoestima </h1>
-        <p>Este site é uma apresentação do trabalho da Nail Designer <strong>Francielen Santos</strong>, especialista em alongamento com naturalidade e esmaltação em gel. Aqui você encontra informações, serviços, produtos e canais de contato para transformar suas unhas e sua confiança.</p>
-        <a class="btn-primary" href="https://wa.me/5524993024137" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <img src="img/fran-logo.jpeg" alt="Unhas feitas por Francielen Santos" class="hero-image">
+        <div class="hero-text">
+          <h1>Unhas que elevam sua autoestima </h1>
+          <p>Este é o meu trabalho como Nail Designer <strong>Sou Francielen Santos</strong>, especialista em alongamento com naturalidade e esmaltação em gel. Aqui você encontra informações, serviços, produtos e canais de contato para transformar suas unhas e sua confiança.</p>
+          <a class="btn-primary" href="https://wa.me/5524993024137" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
 
  <section class="products container">
@@ -75,8 +57,20 @@
       <form onsubmit="sendWhatsApp(event, 'Pedicure')">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
-        <input type="time" name="hora" required>
-        <button type="submit">Agendar pelo WhatsApp</button>
+        <select name="hora" required>
+          <option value="">Selecione o horário</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+        </select>
+        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
@@ -87,8 +81,20 @@
       <form onsubmit="sendWhatsApp(event, 'Manicure')">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
-        <input type="time" name="hora" required>
-        <button type="submit">Agendar pelo WhatsApp</button>
+        <select name="hora" required>
+          <option value="">Selecione o horário</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+        </select>
+        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
@@ -99,8 +105,20 @@
       <form onsubmit="sendWhatsApp(event, 'Alongamento Fibra de Vidro')">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
-        <input type="time" name="hora" required>
-        <button type="submit">Agendar pelo WhatsApp</button>
+        <select name="hora" required>
+          <option value="">Selecione o horário</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+        </select>
+        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
@@ -111,8 +129,20 @@
       <form onsubmit="sendWhatsApp(event, 'Alongamento Mold F1')">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
-        <input type="time" name="hora" required>
-        <button type="submit">Agendar pelo WhatsApp</button>
+        <select name="hora" required>
+          <option value="">Selecione o horário</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+        </select>
+        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
@@ -123,8 +153,20 @@
       <form onsubmit="sendWhatsApp(event, 'Banho de Gel')">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
-        <input type="time" name="hora" required>
-        <button type="submit">Agendar pelo WhatsApp</button>
+        <select name="hora" required>
+          <option value="">Selecione o horário</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+        </select>
+        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
@@ -135,8 +177,20 @@
       <form onsubmit="sendWhatsApp(event, 'Blindagem')">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
-        <input type="time" name="hora" required>
-        <button type="submit">Agendar pelo WhatsApp</button>
+        <select name="hora" required>
+          <option value="">Selecione o horário</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+        </select>
+        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
@@ -155,6 +209,19 @@ function sendWhatsApp(event, servico) {
   const url = `https://wa.me/5524993024137?text=${encodeURIComponent(mensagem)}`;
   window.open(url, '_blank');
 }
+
+// Mostrar botão apenas quando todos os campos forem preenchidos
+document.querySelectorAll("form").forEach(form => {
+  const inputs = form.querySelectorAll("input, select");
+  const button = form.querySelector("button");
+
+  inputs.forEach(input => {
+    input.addEventListener("input", () => {
+      const preenchido = Array.from(inputs).every(i => i.value.trim() !== "");
+      button.style.display = preenchido ? "block" : "none";
+    });
+  });
+});
 </script>
 
  <section class="produtos">
