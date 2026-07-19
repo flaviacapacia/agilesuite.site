@@ -5,213 +5,238 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thiago Schlichting - Empreendedor Serial</title>
   <style>
-    :root {
-      --primary: #2a5298;
-      --secondary: #ff9800;
-      --accent: #E1306C;
-      --youtube: #FF0000;
-      --dark: #1e1e1e;
-      --light: #f9f9f9;
-    }
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), #1e3c72);
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      font-size: 2.8em;
-      font-weight: bold;
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 15px;
-    }
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), #1e3c72);
-      color: #fff;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    header h1 {
-      font-size: 2.8em;
-      font-weight: bold;
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 15px;
-    }
-    .cta-btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 35px;
-      background: var(--secondary);
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .cta-btn:hover {
-      background: #e68900;
-      transform: scale(1.05);
-    }
-    .instagram-btn, .youtube-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 30px;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .instagram-btn {
-      background: var(--accent);
-    }
-    .instagram-btn:hover {
-      background: #c72c5d;
-      transform: scale(1.05);
-    }
-    .youtube-btn {
-      background: var(--youtube);
-    }
-    .youtube-btn:hover {
-      background: #cc0000;
-      transform: scale(1.05);
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--primary);
-      font-size: 2em;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--primary);
-      font-size: 2em;
-    }
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .benefit {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .benefit:hover {
-      transform: translateY(-5px);
-    }
-    .benefit h3 {
-      margin-bottom: 10px;
-      color: var(--secondary);
-    }
-    .profiles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .profile-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .profile-card:hover {
-      transform: translateY(-5px);
-    }
-    .profile-card h3 {
-      margin-bottom: 10px;
-      color: var(--secondary);
-    }
-    .profile-card p {
-      margin-bottom: 20px;
-    }
-    .form-section {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 70px 20px;
-      border-radius: 12px;
-      margin: 40px auto;
-      max-width: 900px;
-    }
-    .form-section input {
-      padding: 15px;
-      margin: 10px;
-      width: 250px;
-      border: none;
-      border-radius: 8px;
-    }
-    .form-section button {
-      padding: 15px 35px;
-      background: var(--secondary);
-      border: none;
-      border-radius: 50px;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .form-section button:hover {
-      background: #e68900;
-      transform: scale(1.05);
-    }
-    footer {
-      background: var(--dark);
-      color: #fff;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-    }
+  :root {
+  --primary: #2a5298;
+  --secondary: #ff9800;
+  --accent: #E1306C;
+  --youtube: #FF0000;
+  --dark: #1e1e1e;
+  --light: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, var(--primary), #1e3c72);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+
+/* ===== BOTÕES ===== */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cta-btn, .instagram-btn, .youtube-btn {
+  display: block;
+  width: 280px;
+  padding: 15px 25px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.3s, background 0.3s;
+  text-align: center;
+}
+
+.cta-btn {
+  background: var(--secondary);
+}
+.cta-btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+.instagram-btn {
+  background: var(--accent);
+}
+.instagram-btn:hover {
+  background: #c72c5d;
+  transform: scale(1.05);
+}
+
+.youtube-btn {
+  background: var(--youtube);
+}
+.youtube-btn:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+
+/* ===== SEÇÕES ===== */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary);
+  font-size: 2em;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.benefit {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.benefit:hover {
+  transform: translateY(-5px);
+}
+.benefit h3 {
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+.profile-card h3 {
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+.profile-card p {
+  margin-bottom: 20px;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-section {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+.form-section input {
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 8px;
+}
+.form-section button {
+  padding: 15px 35px;
+  background: var(--secondary);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.form-section button:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+  header h1 { font-size: 2.2em; }
+  header p { font-size: 1.1em; }
+  .cta-btn, .instagram-btn, .youtube-btn { width: 90%; }
+  .benefits { grid-template-columns: 1fr 1fr; }
+  .profiles { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  header { padding: 40px 15px; }
+  header img { width: 120px; height: 120px; }
+  header h1 { font-size: 1.8em; }
+  header p { font-size: 1em; }
+  .cta-btn, .instagram-btn, .youtube-btn { width: 100%; }
+  .benefits { grid-template-columns: 1fr; }
+  .profiles { grid-template-columns: 1fr; }
+  .form-section input, .form-section button { width: 90%; }
+}
+
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Adicione aqui a foto do Thiago -->
     <img src="img/thiago.jpeg" alt="Thiago Schlichting">
     <h1>Transforme sua visão em negócios lucrativos</h1>
     <p>Com Thiago Schlichting, estrategista e empreendedor serial</p>
-    <a href="#form" class="cta-btn">Quero aprender com Thiago</a>
-    <br>
-    <a href="https://www.instagram.com/thiago.schlichting" target="_blank" class="instagram-btn">📷 Seguir no Instagram</a>
-    <a href="https://www.youtube.com/watch?v=SPRquKn_TBs&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnrMt1KK_WrxeRRSf9Kr9JBF1RuR0TmyGyGKOXcrN41OT4CHh6ZUQhieuxsfE_aem_jXa1iMxiMzRQv2YOtxEBFQ" target="_blank" class="youtube-btn">▶ Assista nosso Podcast no YouTube</a>
+    <div class="btn-group">
+      <a href="#form" class="cta-btn">Quero aprender com Thiago</a>
+      <a href="https://www.instagram.com/thiago.schlichting" target="_blank" class="instagram-btn">📷 Seguir no Instagram</a>
+      <a href="https://www.youtube.com/watch?v=SPRquKn_TBs" target="_blank" class="youtube-btn">▶ Assista nosso Podcast no YouTube</a>
+    </div>
   </header>
+
+</body>
+</html>
 
   <!-- restante da página igual ao seu código -->
   <section>
