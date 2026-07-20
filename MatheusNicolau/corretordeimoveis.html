@@ -164,38 +164,65 @@
     <div class="lp-content">
       <h1 class="lp-title">Encontre o imóvel ideal para o seu momento de vida</h1>
       <p class="lp-subtitle">Preencha os dados abaixo para receber atendimento personalizado via WhatsApp e e-mail com as melhores opções da região.</p>
-<!-- Formulário Matheus -->
-<form class="lp-form" action="https://wa.me/554891365133?text=Olá%20Matheus,%20quero%20receber%20as%20ofertas%20landpage" method="GET" target="_blank">
-  <input type="text" class="lp-input" placeholder="Digite seu nome" required>
-  <input type="email" class="lp-input" placeholder="Digite seu email" required>
-  <input type="tel" class="lp-input" placeholder="+55 Digite seu telefone" required>
+
+    <!-- Formulário Matheus -->
+<form class="lp-form" id="whatsappForm">
+  <input type="text" id="nome" class="lp-input" placeholder="Digite seu nome" required>
+  <input type="email" id="email" class="lp-input" placeholder="Digite seu email" required>
+  <input type="tel" id="telefone" class="lp-input" placeholder="+55 Digite seu telefone" required>
 
   <!-- Perguntas BANT -->
   <div class="qualification-group">
-    <label class="radio-label"><input type="radio" name="budget" value="ate_300mil">Meu orçamento é até R$300 mil</label>
-    <label class="radio-label"><input type="radio" name="budget" value="300_600mil">Entre R$300 mil e R$600 mil</label>
-    <label class="radio-label"><input type="radio" name="budget" value="600mil_mais">Acima de R$600 mil</label>
+    <label class="radio-label"><input type="radio" name="budget" value="até R$300 mil">Meu orçamento é até R$300 mil</label>
+    <label class="radio-label"><input type="radio" name="budget" value="R$300 mil a R$600 mil">Entre R$300 mil e R$600 mil</label>
+    <label class="radio-label"><input type="radio" name="budget" value="Acima de R$600 mil">Acima de R$600 mil</label>
   </div>
 
   <div class="qualification-group">
-    <label class="radio-label"><input type="radio" name="authority" value="decido_sozinho">Eu decido sozinho</label>
-    <label class="radio-label"><input type="radio" name="authority" value="decido_familia">Decido junto com a família</label>
+    <label class="radio-label"><input type="radio" name="authority" value="Decido sozinho">Eu decido sozinho</label>
+    <label class="radio-label"><input type="radio" name="authority" value="Decido junto com a família">Decido junto com a família</label>
   </div>
 
   <div class="qualification-group">
-    <label class="radio-label"><input type="radio" name="need" value="primeiro_imovel">Quero comprar meu primeiro imóvel</label>
-    <label class="radio-label"><input type="radio" name="need" value="mudar_familia">Busco um imóvel maior para minha família</label>
-    <label class="radio-label"><input type="radio" name="need" value="investimento">Quero investir no mercado imobiliário</label>
+    <label class="radio-label"><input type="radio" name="need" value="Primeiro imóvel">Quero comprar meu primeiro imóvel</label>
+    <label class="radio-label"><input type="radio" name="need" value="Imóvel maior para família">Busco um imóvel maior para minha família</label>
+    <label class="radio-label"><input type="radio" name="need" value="Investimento">Quero investir no mercado imobiliário</label>
   </div>
 
   <div class="qualification-group">
-    <label class="radio-label"><input type="radio" name="timing" value="urgente">Preciso comprar em até 3 meses</label>
-    <label class="radio-label"><input type="radio" name="timing" value="medio_prazo">Pretendo comprar em até 12 meses</label>
-    <label class="radio-label"><input type="radio" name="timing" value="longo_prazo">Estou apenas pesquisando valores</label>
+    <label class="radio-label"><input type="radio" name="timing" value="Urgente">Preciso comprar em até 3 meses</label>
+    <label class="radio-label"><input type="radio" name="timing" value="Médio prazo">Pretendo comprar em até 12 meses</label>
+    <label class="radio-label"><input type="radio" name="timing" value="Longo prazo">Estou apenas pesquisando valores</label>
   </div>
 
   <button type="submit" class="lp-button">Falar com o Corretor</button>
 </form>
+
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let nome = document.getElementById("nome").value;
+  let email = document.getElementById("email").value;
+  let telefone = document.getElementById("telefone").value;
+  let budget = document.querySelector('input[name="budget"]:checked')?.value || "";
+  let authority = document.querySelector('input[name="authority"]:checked')?.value || "";
+  let need = document.querySelector('input[name="need"]:checked')?.value || "";
+  let timing = document.querySelector('input[name="timing"]:checked')?.value || "";
+
+  let mensagem = `Olá Matheus, quero receber as ofertas landpage.%0A
+Nome: ${nome}%0A
+Email: ${email}%0A
+Telefone: ${telefone}%0A
+Orçamento: ${budget}%0A
+Autoridade: ${authority}%0A
+Necessidade: ${need}%0A
+Timing: ${timing}`;
+
+  window.open(`https://wa.me/554891365133?text=${mensagem}`, "_blank");
+});
+</script>
+
 
 <!-- Seção Quem é Matheus -->
 <section class="about-matheus">
