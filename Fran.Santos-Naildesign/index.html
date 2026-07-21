@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content=" Designer de Unhas . Serviços de design de unhas, manicure e pedicure.">
   <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://agilesuite.site/fran.santos-naildesign/">
+  <link rel="canonical" href="https://agilesuite.site/naildesign/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="xxxxxxxxxxxxxxxxxxx | Nail Designer | Início">
+  <meta property="og:title" content="Fernanda | Nail Designer | Início">
   <meta property="og:description" content=" Designer de Unhas . Serviços de design de unhas, manicure e pedicure.">
   <meta property="og:image" content="">
   <meta property="og:locale" content="pt_BR">
@@ -17,8 +17,8 @@
 <body>
  <header class="site-header">
   <div class="container header-wrap">
-    <a href="index.html" class="logo" aria-label="Francielen Santos - Nail Designer">
-      <img class="logo-photo" src="img/fran-logo.jpeg" alt="Logo xxxxxxxxxxxx - Nail Designer">
+    <a href="index.html" class="logo" aria-label="Nail Designer">
+      <img class="logo-photo" src="img/naill (1).jpeg" alt="Logo - Nail Designer">
     </a>
     <nav class="nav-menu">
       <a href="index.html" class="active">Home</a>
@@ -27,14 +27,446 @@
     </nav>
   </div>
 </header>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+/* Header */
+.site-header {
+  background: #fff;
+  border-bottom: 2px solid #a64bf4;
+  padding: 1rem 2rem;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-photo {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #a64bf4;
+}
+
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fff, #f3e6ff);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #a64bf4;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #a64bf4;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #d18cff;
+  box-shadow: 0 0 15px rgba(166,75,244,0.6);
+  transform: scale(1.05);
+}
+
+/* Hero image */
+.hero-image {
+  max-width: 400px;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(166,75,244,0.3);
+}
+
+  /* Container da seção */
+.products.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #4b3f72;
+}
+
+.products p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Grid dos cards */
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Cada card */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Botão Agendar */
+.card button[type="button"] {
+  background: #a29bfe;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.card button[type="button"]:hover {
+  background: #6c5ce7;
+  transform: scale(1.05);
+}
+
+/* Formulário oculto */
+.card form {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.card form input,
+.card form select,
+.card form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95em;
+  box-sizing: border-box;
+}
+
+.card form input:focus,
+.card form select:focus,
+.card form textarea:focus {
+  border-color: #a29bfe;
+  outline: none;
+}
+
+/* Botão enviar WhatsApp */
+.card form button[type="submit"] {
+  background: #00b894;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.card form button[type="submit"]:hover {
+  background: #019874;
+  transform: scale(1.05);
+}
+/* Blog */
+.blog {
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  border-left: 4px solid #a64bf4;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.blog h2 {
+  color: #a64bf4;
+  margin-bottom: 1rem;
+}
+
+.blog p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #333;
+}
+
+/* Curso */
+.curso {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.curso h2 {
+  color: #a64bf4;
+  margin-bottom: 1rem;
+}
+
+.curso p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+
+/* Avaliações */
+.avaliacoes {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.avaliacoes h2 {
+  color: #a64bf4;
+  margin-bottom: 2rem;
+}
+
+.avaliacoes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.avaliacao-card {
+  background: #fff;
+  border: 2px solid #a64bf4;
+  border-radius: 15px;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.avaliacao-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(166,75,244,0.3);
+}
+
+.avaliacao-card p {
+  font-size: 1.1rem;
+  color: #333;
+  font-style: italic;
+}
+/* Footer */
+.site-footer {
+  background: #fff;
+  border-top: 3px solid #a64bf4;
+  color: #333;
+  padding: 3rem 2rem;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between; /* coloca lado a lado */
+  gap: 4rem;
+  flex-wrap: wrap; /* responsivo para telas menores */
+  margin-bottom: 2rem;
+}
+
+.footer-grid div {
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.footer-grid h4 {
+  margin-bottom: 0.8rem;
+  color: #a64bf4;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-grid p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: #a64bf4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.produtos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.produtos h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #4b3f72;
+}
+
+.produtos p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.produto-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.produto-card h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.produto-card p {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Botão WhatsApp */
+.btn-comprar {
+  display: inline-block;
+  background: #25d366; /* verde WhatsApp */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #128c7e;
+  transform: scale(1.05);
+}
+
+.site-footer a:hover {
+  color: #d18cff;
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
+.mapa {
+  margin: 2rem auto;
+  max-width: 1000px;
+  border: 2px solid #a64bf4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(166,75,244,0.25);
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
+</style>
 
   <main>
     <section class="hero">
       <div class="container hero-grid">
      
           <h1>Unhas que elevam sua autoestima </h1>
-          <p>Este é o meu trabalho como Nail Designer <strong>Sou xxxxxxxxxxxxxxs</strong>, especialista em alongamento com naturalidade e esmaltação em gel. Aqui você encontra informações, serviços, produtos e canais de contato para transformar suas unhas e sua confiança.</p>
+          <p>Este é o meu trabalho como Nail Designer <strong>Sou </strong>, especialista em alongamento com naturalidade e esmaltação em gel. Aqui você encontra informações, serviços, produtos e canais de contato para transformar suas unhas e sua confiança.</p>
           <a class="btn-primary" href="https://wa.me/5599999999999" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
         </div>
       </div>
@@ -44,157 +476,132 @@
 
  <section class="products container">
   <h2>Produtos e Serviços</h2>
-  <p>Escolha um serviço, selecione a data e horário e fale comigo no WhatsApp para confirmar seu agendamento.</p>
+  <p>Escolha um serviço, clique em "Agendar" e fale comigo no WhatsApp para confirmar seu horário.</p>
   <div class="grid-products">
 
     <!-- Pedicure -->
     <div class="card">
-      <img src="img/" alt="Pedicure">
+      <img src="img/naill (1).jpeg" alt="Pedicure">
       <h3>Pedicure — R$30</h3>
-      <form onsubmit="sendWhatsApp(event, 'Pedicure')">
+      <button type="button" onclick="mostrarAgenda(this)">Agendar</button>
+      <form onsubmit="sendWhatsApp(event, 'Pedicure')" style="display:none;">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
         <select name="hora" required>
           <option value="">Selecione o horário</option>
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option>
+          <option>09:00</option><option>10:00</option><option>11:00</option>
+          <option>12:00</option><option>13:00</option><option>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option>
+          <option>18:00</option>
         </select>
-        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
+        <button type="submit">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
     <!-- Manicure -->
     <div class="card">
-      <img src="img/" alt="Manicure">
+      <img src="img/naill (2).jpeg" alt="Manicure">
       <h3>Manicure — R$28</h3>
-      <form onsubmit="sendWhatsApp(event, 'Manicure')">
+      <button type="button" onclick="mostrarAgenda(this)">Agendar</button>
+      <form onsubmit="sendWhatsApp(event, 'Manicure')" style="display:none;">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
         <select name="hora" required>
           <option value="">Selecione o horário</option>
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option>
+          <option>09:00</option><option>10:00</option><option>11:00</option>
+          <option>12:00</option><option>13:00</option><option>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option>
+          <option>18:00</option>
         </select>
-        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
+        <button type="submit">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
     <!-- Alongamento Fibra de Vidro -->
     <div class="card">
-      <img src="img/" alt="Alongamento Fibra de Vidro">
-      <h3>Alongamento Fibra de Vidro — R$210<br>(R$230 com esmaltação em gel)</h3>
-      <form onsubmit="sendWhatsApp(event, 'Alongamento Fibra de Vidro')">
+      <img src="img/naill (3).jpeg" alt="Alongamento Fibra de Vidro">
+      <h3>Alongamento Fibra de Vidro — R$210</h3>
+      <button type="button" onclick="mostrarAgenda(this)">Agendar</button>
+      <form onsubmit="sendWhatsApp(event, 'Alongamento Fibra de Vidro')" style="display:none;">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
         <select name="hora" required>
           <option value="">Selecione o horário</option>
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option>
+          <option>09:00</option><option>10:00</option><option>11:00</option>
+          <option>12:00</option><option>13:00</option><option>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option>
+          <option>18:00</option>
         </select>
-        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
+        <button type="submit">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
     <!-- Alongamento Mold F1 -->
     <div class="card">
-      <img src="img/" alt="Alongamento Mold F1">
-      <h3>Alongamento Mold F1 — R$200<br>(R$220 com esmaltação em gel)</h3>
-      <form onsubmit="sendWhatsApp(event, 'Alongamento Mold F1')">
+      <img src="img/naill (4).png" alt="Alongamento Mold F1">
+      <h3>Alongamento Mold F1 — R$200</h3>
+      <button type="button" onclick="mostrarAgenda(this)">Agendar</button>
+      <form onsubmit="sendWhatsApp(event, 'Alongamento Mold F1')" style="display:none;">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
         <select name="hora" required>
           <option value="">Selecione o horário</option>
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option>
+          <option>09:00</option><option>10:00</option><option>11:00</option>
+          <option>12:00</option><option>13:00</option><option>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option>
+          <option>18:00</option>
         </select>
-        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
+        <button type="submit">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
     <!-- Banho de Gel -->
     <div class="card">
-      <img src="img/" alt="Banho de Gel">
+      <img src="img/naill (5).jpeg" alt="Banho de Gel">
       <h3>Banho de Gel — R$100</h3>
-      <form onsubmit="sendWhatsApp(event, 'Banho de Gel')">
+      <button type="button" onclick="mostrarAgenda(this)">Agendar</button>
+      <form onsubmit="sendWhatsApp(event, 'Banho de Gel')" style="display:none;">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
         <select name="hora" required>
           <option value="">Selecione o horário</option>
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option>
+          <option>09:00</option><option>10:00</option><option>11:00</option>
+          <option>12:00</option><option>13:00</option><option>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option>
+          <option>18:00</option>
         </select>
-        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
+        <button type="submit">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
     <!-- Blindagem -->
     <div class="card">
-      <img src="img/" alt="Blindagem">
+      <img src="img/naill (7).jpeg" alt="Blindagem">
       <h3>Blindagem — R$100</h3>
-      <form onsubmit="sendWhatsApp(event, 'Blindagem')">
+      <button type="button" onclick="mostrarAgenda(this)">Agendar</button>
+      <form onsubmit="sendWhatsApp(event, 'Blindagem')" style="display:none;">
         <input type="text" name="nome" placeholder="Seu nome" required>
         <input type="date" name="data" required>
         <select name="hora" required>
           <option value="">Selecione o horário</option>
-          <option value="09:00">09:00</option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option>
+          <option>09:00</option><option>10:00</option><option>11:00</option>
+          <option>12:00</option><option>13:00</option><option>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option>
+          <option>18:00</option>
         </select>
-        <button type="submit" style="display:none;">Agendar pelo WhatsApp</button>
+        <button type="submit">Agendar pelo WhatsApp</button>
       </form>
     </div>
 
   </div>
 </section>
-
 <script>
+function mostrarAgenda(botao) {
+  const form = botao.nextElementSibling; // pega o form logo após o botão
+  form.style.display = "block";          // mostra o formulário
+  botao.style.display = "none";          // esconde o botão "Agendar"
+}
+
 function sendWhatsApp(event, servico) {
   event.preventDefault();
   const form = event.target;
@@ -206,42 +613,39 @@ function sendWhatsApp(event, servico) {
   const url = `https://wa.me/559999999999?text=${encodeURIComponent(mensagem)}`;
   window.open(url, '_blank');
 }
-
-// Mostrar botão apenas quando todos os campos forem preenchidos
-document.querySelectorAll("form").forEach(form => {
-  const inputs = form.querySelectorAll("input, select");
-  const button = form.querySelector("button");
-
-  inputs.forEach(input => {
-    input.addEventListener("input", () => {
-      const preenchido = Array.from(inputs).every(i => i.value.trim() !== "");
-      button.style.display = preenchido ? "block" : "none";
-    });
-  });
-});
 </script>
-
 <section class="produtos">
   <h2>Produtos à Venda</h2>
   <p>Explore nossa linha de produtos profissionais para unhas — gel, top coat, moldes e acessórios exclusivos.</p>
   <div class="produtos-grid">
+
     <div class="produto-card">
-      <img src="img/gel-unha.jpeg" alt="Gel para Unhas">
+      <img src="img/produto (1).jpeg" alt="Canecas Estilizadas">
       <h3>Gel para Unhas</h3>
       <p>Gel profissional para alongamento e esmaltação.</p>
+      <a href="https://wa.me/559999999999?text=Olá!%20Quero%20comprar%20o%20Gel%20para%20Unhas.%20Pode%20me%20enviar%20formas%20de%20pagamento%20(cartão%20ou%20pix)?" 
+         target="_blank" class="btn-comprar">Comprar pelo WhatsApp</a>
     </div>
+
     <div class="produto-card">
-      <img src="img/top-coat.jpeg" alt="Top Coat">
+      <img src="img/produto (4).jpeg" alt="Top Coat">
       <h3>Top Coat</h3>
       <p>Finalização com brilho intenso e duradouro.</p>
+      <a href="https://wa.me/559999999999?text=Olá!%20Quero%20comprar%20o%20Top%20Coat.%20Pode%20me%20enviar%20formas%20de%20pagamento%20(cartão%20ou%20pix)?" 
+         target="_blank" class="btn-comprar">Comprar pelo WhatsApp</a>
     </div>
+
     <div class="produto-card">
-      <img src="img/moldes.jpeg" alt="Moldes">
+      <img src="img/produto (3).jpeg" alt="kit completo">
       <h3>Moldes</h3>
       <p>Moldes exclusivos para alongamento com precisão.</p>
+      <a href="https://wa.me/559999999999?text=Olá!%20Quero%20comprar%20os%20Moldes.%20Pode%20me%20enviar%20formas%20de%20pagamento%20(cartão%20ou%20pix)?" 
+         target="_blank" class="btn-comprar">Comprar pelo WhatsApp</a>
     </div>
+
   </div>
 </section>
+
 
   <section class="blog">
     <h2>Blog</h2>
@@ -303,16 +707,24 @@ document.querySelectorAll("form").forEach(form => {
   </script>
   <section>
    <p></p>
-   
-        <div class="mapa">
-      <iframe src="" width="100%" height="250" style="border:0;" allowfullscreen></iframe>
-    </div>
+   <div class="mapa">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.792598408269!2d-46.63330968502146!3d-23.55051998469144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8c8c8c8c8%3A0x123456789abcdef!2sSão%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1699999999999" 
+    width="100%" 
+    height="250" 
+    style="border:0;" 
+    allowfullscreen 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
       <h4>Contato</h4>
-      <p>Telefone: <a href="tel:+559999999999">999999999999</a></p>
-      <p>Email: contato@xxxxxxxxxxxxxxxxxxxxxx</p>
+      <p>Telefone: <a href="tel:+559999999999">(11)25992929</a></p>
+      <p>Email: contato@naildesign</p>
       <p>Endereço</p>
     </div>
     <div>
