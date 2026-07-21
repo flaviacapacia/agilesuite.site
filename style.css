@@ -256,18 +256,23 @@ html, body {
 #contato p {
   margin-top: 15px;
   color: #dcd6ff;
-}/* Footer separado e ocupando toda a largura da tela */
+}
+
+/* Footer separado e ocupando toda a largura da tela */
 footer {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.85); /* tarja escura */
   color: #a29bfe;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   border-top: 1px solid rgba(162, 155, 254, 0.3);
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+  width: 100%;            /* ocupa toda a largura */
+  margin-top: 60px;       /* afasta do formulário */
+  position: relative;     /* segue o fluxo normal da página */
   left: 0;
+  right: 0;
+  box-sizing: border-box; /* evita recorte lateral */
 }
+
 
 
 footer .social {
