@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcela - Esteticista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
+body {background:#fff; color:#333; min-height:100vh; display:flex; justify-content:center; align-items:center; padding:20px;}
+.lp-container {width:100%; max-width:480px; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.1); padding-bottom:30px;}
+
+.lp-header {position:relative; width:100%; height:auto; overflow:hidden; border-bottom:2px solid #eee;}
+.lp-banner {width:100%; height:auto; object-fit:cover;}
+.company-info {position:absolute; bottom:20px; left:20px; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,0.7);}
+.company-info h1 {font-size:26px; font-weight:bold; color:#87CEEB;} /* azul bebê */
+.company-info p {font-size:14px; color:#fff;}
+
+.about-section, .benefits {padding:30px 20px; background:#f0f8ff; border-radius:12px; margin:20px; text-align:center;}
+.about-section h2, .benefits h2 {font-size:22px; font-weight:bold; color:#87CEEB; margin-bottom:15px;}
+.about-section p {font-size:14px; color:#555; margin-bottom:20px;}
+.about-section ul, .benefits ul {list-style:none; padding:0;}
+.about-section ul li, .benefits ul li {font-size:14px; margin:10px 0; color:#333;}
+.about-section ul li::before, .benefits ul li::before {content:"✔ "; color:#87CEEB; font-weight:bold;}
+
+.lp-content {padding:25px 20px; text-align:center;}
+.lp-title {font-size:20px; font-weight:700; margin-bottom:15px; color:#333;}
+.lp-subtitle {font-size:14px; color:#555; margin-bottom:25px;}
+.lp-form {display:flex; flex-direction:column; gap:15px;}
+.lp-input {width:100%; padding:15px; border-radius:8px; border:1px solid #ccc; background:#fff; color:#000;}
+.lp-input::placeholder {color:#777;}
+.lp-button {width:100%; background:#f5f5dc; /* bege */ color:#333; border:none; padding:16px; border-radius:8px; font-size:16px; font-weight:700; text-transform:uppercase; cursor:pointer; margin-top:15px; transition:background 0.3s ease;}
+.lp-button:hover {background:#ffc0cb; /* rosa claro */ color:#000;}
+
+.social-links {margin-top:20px; display:flex; flex-direction:column; gap:12px;}
+.social-links a {display:block; background-color:#87CEEB; /* azul bebê */ color:#fff; text-decoration:none; font-weight:bold; padding:12px; border-radius:8px; transition:background 0.3s ease, color 0.3s ease;}
+.social-links a:hover {background-color:#f5f5dc; color:#333;}
+
+.whatsapp-float {position:fixed; bottom:20px; right:20px; background:#87CEEB; border-radius:50%; width:60px; height:60px; display:flex; justify-content:center; align-items:center; box-shadow:0 4px 10px rgba(0,0,0,0.3); cursor:pointer; animation:vibrate 2s infinite;}
+.whatsapp-float img {width:35px; height:35px;}
+@keyframes vibrate {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(2deg); }
+  20% { transform: rotate(-2deg); }
+  30% { transform: rotate(2deg); }
+  40% { transform: rotate(-2deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+.whatsapp-float:hover {background:#ffc0cb;}
+
+.cookies {position:fixed; bottom:0; left:0; width:100%; background:#eee; color:#333; padding:10px; text-align:center; font-size:13px; border-top:1px solid #ccc;}
+.cookies button {margin-left:10px; padding:5px 10px; border:none; background:#87CEEB; color:#fff; border-radius:5px; cursor:pointer;}
+.cookies button:hover {background:#ffc0cb; color:#000;}
+
+    </style>
+
+  <div class="lp-container">
+    <!-- Cabeçalho com foto -->
+    <div class="lp-header">
+      <img src="img/marcela.png" alt="Marcela Morais" class="lp-banner">
+      <div class="company-info">
+        <h1>Marcela Morais</h1>
+        <p>Especialista em  Rejuvenescimento</p>
+        <p>Transformo sua pele com o protocolo certo</p>
+      </div>
+    </div>
+
+    <!-- Seção Quem é Marcela Morais -->
+    <div class="about-section">
+      <h2>Quem é Marcela Morais?</h2>
+      <p>
+        Débora é especialista em estética avançada, com foco em protocolos estratégicos para acne, manchas e rejuvenescimento.
+        Sua missão é transformar a pele de cada cliente com técnicas modernas como microagulhamento e tratamentos personalizados.
+      </p>
+      <h2>Por que seguir Marcela Morais?</h2>
+      <ul>
+        <li>💎 Transformação da Pele – resultados reais e visíveis</li>
+        <li>📈 Estratégias práticas de estética que funcionam</li>
+        <li>💬 Prova Social – clientes satisfeitos e recomendação constante</li>
+      </ul>
+    </div>
+
+    <!-- Benefícios -->
+    <div class="benefits">
+      <h2>Benefícios dos Protocolos</h2>
+      <ul>
+        <li>✔ Atendimento humano e personalizado</li>
+        <li>✔ Protocolos modernos e seguros</li>
+        <li>✔ Resultados visíveis e comprovados</li>
+        <li>✔ Credibilidade e experiência no mercado</li>
+      </ul>
+    </div>
+
+    <!-- Oferta do eBook -->
+    <div class="lp-content">
+      <h2 class="lp-title">Baixe gratuitamente o eBook: 5 passos para transformar sua pele</h2>
+      <p class="lp-subtitle">Descubra como cuidar da sua pele e evitar os erros mais comuns que atrapalham o tratamento.</p>
+
+      <!-- Formulário -->
+      <form class="lp-form" action="#" method="POST">
+        <input type="text" class="lp-input" placeholder="Digite seu nome" required>
+        <input type="email" class="lp-input" placeholder="Digite seu email" required>
+        <input type="tel" class="lp-input" placeholder="+55 Digite seu telefone" required>
+        <button type="submit" class="lp-button">Quero meu eBook</button>
+      </form>
+
+      <!-- Links sociais -->
+      <div class="social-links">
+        <a href="https://instagram.com/MarcelaMorais.esteticista" target="_blank">Seguir no Instagram</a>
+        <a href="https://wa.me/559999999999" target="_blank">Agendar Avaliação</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/99999999999999" class="whatsapp-float" target="_blank">
+  
+  </a>
+
+  <!-- Cookies -->
+  <div class="cookies">
+    Este site utiliza cookies para melhorar sua experiência.
+    <button onclick="this.parentElement.style.display='none'">Aceitar</button>
+  </div>
+
+</body>
+</html>
