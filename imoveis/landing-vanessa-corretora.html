@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanessa | Corretora de Imóveis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+  * {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif;}
+body {
+  background:#0b0b0b; color:#fff;
+  min-height:100vh; display:flex;
+  justify-content:center; align-items:center;
+  padding:20px;
+}
+
+.lp-container {
+  width:100%; max-width:520px;
+  background:#111; border-radius:12px;
+  overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.6);
+}
+
+.lp-header {text-align:center; padding:25px; border-bottom:2px solid #d4af37;}
+.logo-text {font-size:26px; font-weight:bold; text-transform:uppercase; color:#fff;}
+.logo-highlight {color:rgb(232,16,239);} /* pink lilás */
+
+/* Foto quadrada */
+.profile-photo {
+  width:180px; height:180px;
+  object-fit:cover;
+  border-radius:12px; /* quadrada com cantos arredondados */
+  border:3px solid #d4af37;
+  margin-bottom:15px;
+}
+
+.lp-content {padding:30px 20px; text-align:center;}
+.lp-title {font-size:22px; font-weight:700; margin-bottom:15px; color:#d4af37;}
+.lp-subtitle {font-size:15px; color:#ccc; margin-bottom:25px;}
+
+/* Inputs */
+.lp-input {
+  width:100%; padding:14px;
+  border-radius:8px; border:1px solid #333;
+  background:#fff; color:#000;
+  font-size:0.95rem; margin-bottom:12px;
+}
+.lp-input:focus {outline:none; border-color:#d4af37;}
+
+/* Botão */
+.lp-button {
+  width:100%; background:linear-gradient(135deg, #BF953F, #FBF5B7, #AA771C);
+  color:#000; border:none; padding:14px;
+  border-radius:8px; font-size:16px;
+  font-weight:700; text-transform:uppercase;
+  cursor:pointer; margin-top:10px;
+  transition:background 0.3s, transform 0.3s;
+}
+.lp-button:hover {transform:scale(1.05);}
+
+/* Grupos */
+.qualification-group {
+  text-align:left; margin-top:15px;
+  display:flex; flex-direction:column; gap:10px;
+  background:#1c1c1c; padding:12px; border-radius:8px;
+}
+.qualification-group h3 {font-size:15px; color:#d4af37; margin-bottom:8px;}
+.radio-label {display:flex; align-items:center; font-size:14px; color:#fff; cursor:pointer;}
+.radio-label input {margin-right:12px; accent-color:hsl(231, 90%, 49%);}
+
+/* Barra de progresso discreta */
+.progress-bar {
+  background:#222; border-radius:6px;
+  overflow:hidden; margin-bottom:15px; height:14px;
+}
+.progress {
+  background:linear-gradient(135deg, #BF953F, #FBF5B7, #AA771C);
+  color:#000; font-size:0.7rem; font-weight:bold;
+  text-align:center; line-height:14px;
+  transition:width 0.3s ease;
+}
+
+/* Aba Sobre */
+.about {
+  background:#1c1c1c;
+  padding:20px;
+  border-top:2px solid #d4af37;
+  text-align:center;
+}
+.about h2 {color:#d4af37; margin-bottom:10px;}
+.about p {color:#ccc; font-size:14px; line-height:1.6;}
+
+/* Footer */
+footer {
+  text-align:center; padding:20px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:#ccc; font-size:0.85rem;
+}
+.footer-links {margin-top:10px;}
+.footer-links a {
+  color:#d4af37; margin:0 10px;
+  text-decoration:none; font-size:0.85rem;
+}
+.footer-links a:hover {color:rgb(22, 8, 229);}
+
+</style>
+<body>
+
+<div class="lp-container">
+  <!-- Cabeçalho -->
+  <div class="lp-header">
+    <!-- Foto quadrada -->
+    <img src="img/dupla.jpg" alt="Vanessa Corretora" class="profile-photo">
+    <h1 class="logo-text">Vanessa <span class="logo-highlight">Corretora</span></h1>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="lp-content">
+    <h2 class="lp-title">Encontre o imóvel ideal</h2>
+    <p class="lp-subtitle">Preencha os dados abaixo para receber atendimento personalizado.</p>
+
+    <!-- Etapa 1 -->
+    <form id="formContato" onsubmit="mostrarQuestionario(event)">
+      <div class="progress-bar">
+        <div class="progress" style="width:30%;">Etapa 1</div>
+      </div>
+      <input type="text" class="lp-input" placeholder="Digite seu nome" required>
+      <input type="email" class="lp-input" placeholder="Digite seu email" required>
+      <input type="tel" class="lp-input" placeholder="+55 Digite seu telefone" required>
+      <button type="submit" class="lp-button">Continuar</button>
+    </form>
+
+    <!-- Etapa 2 -->
+    <form id="formQuestionario" style="display:none;">
+      <div class="progress-bar">
+        <div class="progress" style="width:100%;">Etapa 2</div>
+      </div>
+
+      <div class="qualification-group">
+        <h3>Orçamento</h3>
+        <label class="radio-label"><input type="radio" name="budget">Até R$600 mil</label>
+        <label class="radio-label"><input type="radio" name="budget">Entre R$600 mil e R$1.200 milhão</label>
+        <label class="radio-label"><input type="radio" name="budget">Acima de R$1.200 milhão</label>
+      </div>
+
+      <div class="qualification-group">
+        <h3>Decisão</h3>
+        <label class="radio-label"><input type="radio" name="authority">Eu decido sozinho</label>
+        <label class="radio-label"><input type="radio" name="authority">Decido junto com a família</label>
+      </div>
+
+      <div class="qualification-group">
+        <h3>Necessidade</h3>
+        <label class="radio-label"><input type="radio" name="need">Primeiro imóvel</label>
+        <label class="radio-label"><input type="radio" name="need">Imóvel maior para família</label>
+        <label class="radio-label"><input type="radio" name="need">Investimento</label>
+      </div>
+
+      <div class="qualification-group">
+        <h3>Prazo</h3>
+        <label class="radio-label"><input type="radio" name="timing">Até 3 meses</label>
+        <label class="radio-label"><input type="radio" name="timing">Até 12 meses</label>
+        <label class="radio-label"><input type="radio" name="timing">Apenas pesquisando valores</label>
+      </div>
+
+      <button type="submit" class="lp-button">Falar com a Corretora</button>
+    </form>
+  </div>
+
+  <!-- Aba Sobre -->
+  <section class="about">
+    <h2>Sobre Vanessa</h2>
+    <p>Vanessa é apaixonada pelo mercado imobiliário e dedicada a transformar sonhos em realidade. 
+    Com experiência sólida e atendimento humano, oferece consultoria exclusiva para compra e venda de imóveis em Florianópolis.</p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2026 Vanessa | Corretora de Imóveis</p>
+    <div class="footer-links">
+      <a href="https://instagram.com/vanessacorretora" target="_blank">Instagram</a>
+      <a href="https://www.vanessacorretora.com" target="_blank">Site Oficial</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+function mostrarQuestionario(event) {
+  event.preventDefault();
+  document.getElementById("formContato").style.display = "none";
+  document.getElementById("formQuestionario").style.display = "block";
+}
+</script>
+
+</body>
+</html>
