@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rita |  Recursos Humanos </title>
+  <style>
+      * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
+    body {background:#0b0b0b; color:#fff; min-height:100vh; display:flex; justify-content:center; align-items:center; padding:20px;}
+
+   
+.lp-container {
+  width:100%; max-width:520px;
+  background:#111; border-radius:12px;
+  overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.6);
+}
+
+.lp-header {text-align:center; padding:25px; border-bottom:2px solid #d4af37;}
+.logo-text {font-size:26px; font-weight:bold; text-transform:uppercase; color:#f338f3;}
+.logo-highlight {color:rgb(249, 58, 249);} /* pink lilás */
+
+
+    /* Cabeçalho */
+    .lp-header {text-align:center; padding:25px; border-bottom:2px solid #d4af37;}
+    .lp-header img {width:100%; max-width:400px; border-radius:12px; margin-bottom:15px;}
+    .logo-text {font-size:26px; font-weight:bold; text-transform:uppercase; color:#fff;}
+    .logo-highlight {color:hsl(296, 97%, 52%), 94%, 51%), 93%, 48%), 91%, 51%);} /* terracota escuro */
+
+    /* Conteúdo */
+    .lp-content {padding:30px 20px; text-align:center;}
+    .lp-title {font-size:22px; font-weight:700; margin-bottom:15px; color:#d4af37;}
+    .lp-subtitle {font-size:15px; color:#ccc; margin-bottom:25px;}
+
+    /* Formulário */
+    .lp-form {display:flex; flex-direction:column; gap:15px;}
+    .lp-input {
+      width:100%; padding:14px;
+      border-radius:8px; border:1px solid #333;
+      background:#fff; color:#000;
+    }
+    .lp-input::placeholder {color:#777;}
+
+    .qualification-group {
+      text-align:left; margin-top:10px;
+      display:flex; flex-direction:column; gap:12px;
+      background:#1c1c1c; padding:12px; border-radius:8px;
+    }
+    .qualification-group h3 {
+      font-size:15px; color:#d4af37; margin-bottom:8px;
+    }
+    .radio-label {
+      display:flex; align-items:center;
+      font-size:14px; color:#fff; cursor:pointer;
+      padding:6px; border-radius:6px;
+      transition: background 0.3s;
+    }
+    .radio-label:hover {background:hsl(301, 93%, 46%);}
+    .radio-label input {margin-right:12px; accent-color:#d4af37; width:18px; height:18px;}
+
+    .lp-button {
+      width:100%; background:hsl(301, 92%, 51%); color:#fff;
+      border:none; padding:16px; border-radius:8px;
+      font-size:16px; font-weight:700; text-transform:uppercase;
+      cursor:pointer; margin-top:15px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .lp-button:hover {background:#d8af28; color:#000; transform:scale(1.05);}
+
+    /* Seção Quem é Flavia */
+    .about-flavia {
+      background-color:#111;
+      padding:40px 20px;
+      border-top:2px solid #d4af37;
+      text-align:center;
+    }
+    .about-container h2 {
+      font-size:24px; font-weight:bold; color:#d4af37; margin-bottom:20px;
+    }
+    .about-container p {
+      font-size:15px; color:#ddd; line-height:1.6; margin-bottom:15px;
+    }
+    .about-container .highlight-box {
+      background:hsl(308, 94%, 48%); color:#fff;
+      padding:15px; border-radius:8px;
+      margin:20px 0; font-weight:bold;
+    }
+    .about-container ul {
+      list-style:none; padding-left:0; margin:20px 0;
+    }
+    .about-container ul li {
+      font-size:14px; color:#fff; margin-bottom:8px;
+      padding:8px; background:#222; border-radius:6px;
+    }
+
+    /* Links sociais */
+    .social-links {margin-top:20px; display:flex; flex-direction:column; gap:12px;}
+    .social-links a {
+      display:block; background-color:hsl(309, 98%, 52%);
+      color:#fff; text-decoration:none; font-weight:bold;
+      padding:12px; border-radius:8px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .social-links a:hover {background-color:#d4af37; color:#000;}
+
+    /* WhatsApp Flutuante */
+    .whatsapp-float {
+      position:fixed; bottom:20px; right:20px;
+      background:#25D366; border-radius:50%;
+      width:60px; height:60px; display:flex;
+      justify-content:center; align-items:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      cursor:pointer; animation:vibrate 2s infinite;
+    }
+    .whatsapp-float img {width:35px; height:35px;}
+    @keyframes vibrate {
+      0% {transform:rotate(0deg);} 10% {transform:rotate(2deg);}
+      20% {transform:rotate(-2deg);} 30% {transform:rotate(2deg);}
+      40% {transform:rotate(-2deg);} 50% {transform:rotate(0deg);}
+      100% {transform:rotate(0deg);}
+    }
+    .whatsapp-float:hover {background:hwb(46 5% 13%);}
+
+    /* Cookies */
+    .cookies {
+      position:fixed; bottom:0; left:0; width:100%;
+      background:#222; color:#fff; padding:10px;
+      text-align:center; font-size:13px;
+    }
+    .cookies button {
+      margin-left:10px; padding:5px 10px;
+      border:none; background:hsl(46, 65%, 52%); color:#000;
+      border-radius:5px; cursor:pointer;
+    }
+  </style>
+
+</head>
+<body>
+
+
+    
+     <div class="lp-container">
+  <!-- Cabeçalho -->
+  <div class="lp-header">
+      <img src="img/foto-1.jpeg" alt="Sandra ">
+    <h1 class="logo-text">Rita | <span class="logo-highlight">Recursos Humanos</span></h1>
+  </div>
+
+    <!-- Conteúdo -->
+    <div class="lp-content">
+      <h1 class="lp-title"> Organizando seu momento de vida</h1>
+      <p class="lp-subtitle">Preencha os dados abaixo para receber atendimento personalizado</p>
+
+      <!-- Formulário -->
+      <form class="lp-form" action="#" method="POST">
+        <input type="text" class="lp-input" placeholder="Digite seu nome" required>
+        <input type="email" class="lp-input" placeholder="Digite seu email" required>
+        <input type="tel" class="lp-input" placeholder="+55 Digite seu telefone" required>
+
+        <!-- Perguntas BANT -->
+         
+        <div class="qualification-group">
+ <h3>Orçamento</h3>
+          <label class="radio-label"><input type="radio" name="budget" value="ate_600mil">Meu orçamento é até R$600 mil</label>
+          <label class="radio-label"><input type="radio" name="budget" value="600_1200mil">Entre R$600 mil e R$1.200 milhao</label>
+          <label class="radio-label"><input type="radio" name="budget" value="1200milhao_mais">Acima de R$1.200 milhao</label>
+        </div>
+ 
+        <div class="qualification-group">
+          <h3>Decisão</h3>
+          <label class="radio-label"><input type="radio" name="authority" value="decido_sozinho">Eu decido sozinho</label>
+          <label class="radio-label"><input type="radio" name="authority" value="decido_familia">Decido junto com a família</label>
+        </div>
+ 
+        <div class="qualification-group">
+          <h3>Necessidade</h3>
+          <label class="radio-label"><input type="radio" name="need" value="primeiro_imovel">Quero comprar meu primeiro imóvel</label>
+          <label class="radio-label"><input type="radio" name="need" value="mudar_familia">Busco um imóvel maior para minha família</label>
+          <label class="radio-label"><input type="radio" name="need" value="investimento">Quero investir no mercado imobiliário</label>
+        </div>
+
+        <div class="qualification-group">
+           <h3>Prazo</h3>
+          <label class="radio-label"><input type="radio" name="timing" value="urgente">Preciso comprar em até 3 meses</label>
+          <label class="radio-label"><input type="radio" name="timing" value="medio_prazo">Pretendo comprar em até 12 meses</label>
+          <label class="radio-label"><input type="radio" name="timing" value="longo_prazo">Estou apenas pesquisando valores</label>
+        </div>
+
+        <button type="submit" class="lp-button">Falar com a Corretora</button>
+      </form>
+<!-- Seção Quem é Rita -->
+<section class="about-rita">
+  <div class="about-container">
+    <h2>Quem é Rita</h2>
+    <p>
+      Rita é especialista em Recursos Humanos e consultoria organizacional, dedicada a apoiar empresas e profissionais na construção de ambientes de trabalho mais saudáveis e produtivos.
+    </p>
+    <p>
+      Com mais de 10 anos de experiência, destaca-se pela ética, transparência e compromisso em oferecer soluções estratégicas que fortalecem equipes e impulsionam resultados.
+    </p>
+
+    <h2>Ao escolher Rita você garante:</h2>
+    <ul>
+      <li>✔ Consultoria personalizada em gestão de pessoas</li>
+      <li>✔ Estratégias para desenvolvimento de talentos e liderança</li>
+      <li>✔ Suporte completo em processos de recrutamento e seleção</li>
+      <li>✔ Orientação para melhorar clima organizacional e engajamento</li>
+    </ul>
+
+    <p>
+      Acompanhe Rita nas redes sociais e fique por dentro de dicas, novidades e conteúdos exclusivos sobre carreira e gestão de pessoas.
+    </p>
+  </div>
+</section>
+
+    <div class="social-links">
+      <a href="https://https:///" target="_blank"> Site de Imoveis </a>
+      <a href="https://instagram.com/" target="_blank"> Siga no Instagram</a>
+      <a href="https://youtube.com/@" target="_blank"> Veja os imoveis no YouTube</a>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+
+
+
+
+  <!-- Cookies -->
+  <div class="cookies">
+    Este site utiliza cookies para melhorar sua experiência.
+    <button onclick="this.parentElement.style.display='none'">Aceitar</button>
+  </div>
+
+</body>
+</html>
