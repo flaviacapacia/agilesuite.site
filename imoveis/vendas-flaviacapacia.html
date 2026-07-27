@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flávia Capacia | Imóveis em Florianópolis e Investimentos</title>
+
+  <!-- SEO OTIMIZADO PARA GOOGLE -->
+  <meta name="description" content="Flávia Capacia — Especialista em imóveis em Florianópolis, studios para investimento, Airbnb, apartamentos na planta e troca de imóvel. Atendimento personalizado e resultados.">
+  <meta name="keywords" content="imóveis Florianópolis, studio para investimento Floripa, apartamento na planta SC, Airbnb Florianópolis, troca de imóvel, corretora de alto padrão">
+  <meta name="author" content="Flávia Capacia">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-black: #0B0B0C;
+      --card-bg: #141416;
+      --text-white: #FFFFFF;
+      --text-muted: #D1D1D6;
+      --pink-lilas: rgb(232, 16, 239);
+      --gold-primary: #D4AF37;
+      --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+      --font-title: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-title);
+    }
+
+    .highlight-pink { color: var(--pink-lilas); }
+    .highlight-gold {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: #000;
+      font-weight: 700;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--pink-lilas);
+      color: var(--pink-lilas);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(11,11,12,0.95);
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+      z-index: 999;
+      border-bottom: 1px solid rgba(232,16,239,0.15);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--gold-primary);
+    }
+
+    nav a {
+      color: var(--text-muted);
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: var(--pink-lilas); }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 160px 5% 80px;
+      background: radial-gradient(circle at top right, rgba(216, 131, 255, 0.15), transparent 40%);
+    }
+
+    .hero-content { max-width: 580px; }
+    .hero-subtitle {
+      color: var(--pink-lilas);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .hero-title { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
+    .hero-description { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px; }
+
+    .hero-avatar {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--pink-lilas);
+      box-shadow: 0 0 30px rgba(232,16,239,0.25);
+    }
+
+    .servicos {
+      padding: 70px 5%;
+      background: #000;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 45px;
+    }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 20px;
+    }
+
+    .servico-card {
+      background: var(--card-bg);
+      padding: 25px 20px;
+      border-radius: 12px;
+      border-left: 4px solid var(--pink-lilas);
+      transition: 0.3s;
+    }
+
+    .servico-card:hover { transform: translateY(-5px); border-color: var(--gold-primary); }
+    .servico-card h3 { margin-bottom: 10px; color: var(--gold-primary); }
+
+    .destaques { padding: 70px 5%; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 30px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(232,16,239,0.2);
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); border-color: var(--pink-lilas); }
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      aspect-ratio: 1/1; /* IMAGEM QUADRADA */
+    }
+    .card-body { padding: 24px; }
+    .card-price { color: var(--pink-lilas); font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+
+    .depoimentos {
+      padding: 70px 5%;
+      background: #000;
+    }
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 25px;
+    }
+    .depo-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 4px solid var(--gold-primary);
+    }
+    .depo-nome { margin-top: 12px; color: var(--gold-primary); font-weight: 600; }
+
+    .mapa {
+      padding: 70px 5%;
+      text-align: center;
+    }
+    .mapa iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 350px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .contato {
+      padding: 70px 5%;
+      background: linear-gradient(180deg, #000 0%, var(--bg-black) 100%);
+    }
+    .form-container {
+      max-width: 550px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 35px 25px;
+      border-radius: 20px;
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; margin-bottom: 6px; color: var(--text-muted); }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 13px;
+      border-radius: 8px;
+      border: 1px solid rgba(232,16,239,0.3);
+      background: #0B0B0C;
+      color: #fff;
+    }
+
+    footer {
+      padding: 40px 5%;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: var(--text-muted);
+    }
+    .footer-links { margin-top: 15px; }
+    .footer-links a { color: var(--text-muted); margin: 0 12px; text-decoration: none; }
+    .footer-links a:hover { color: var(--pink-lilas); }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .whatsapp-float img { width: 32px; height: 32px; }
+
+    @media (max-width: 768px) {
+      .hero { text-align: center; justify-content: center; padding-top: 140px; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-avatar { width: 260px; height: 260px; }
+      nav a { margin: 0 8px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <div class="logo">Flávia Capacia</div>
+    <nav>
+      <a href="#servicos">Soluções</a>
+      <a href="#destaques">Imóveis</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#contato">Falar</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-subtitle">Imóveis em Floripa FC</p>
+    <h1 class="hero-title">Flávia Capacia</h1>
+    <p class="hero-description">Encontrando as propriedades mais exclusivas e os melhores investimentos para o seu estilo de vida. Studios, Airbnb, lançamentos e troca facilitada.</p>
+    <div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:10px;">
+      <a href="#contato" class="btn-gold">Agendar Consultoria</a>
+      <a href="#destaques" class="btn-gold btn-outline">Ver Oportunidades</a>
+    </div>
+  </div>
+  <img src="img/imagens/flavia.jpeg" alt="Flávia Capacia" class="hero-avatar">
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="container">
+    <h2 class="section-title">O que posso fazer por você</h2>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <h3>🏠 Studios para Investidores</h3>
+        <p>As melhores opções com retorno garantido em Florianópolis.</p>
+      </div>
+      <div class="servico-card">
+        <h3>💰 Investimento em Airbnb</h3>
+        <p>Imóveis com alta demanda e rentabilidade mensal.</p>
+      </div>
+      <div class="servico-card">
+        <h3>🏗️ Apartamentos na Planta</h3>
+        <p>Lançamentos exclusivos e condições especiais.</p>
+      </div>
+      <div class="servico-card">
+        <h3>🔄 Use seu Imóvel como Parte</h3>
+        <p>Negociamos seu imóvel atual na compra do novo.</p>
+      </div>
+      <div class="servico-card">
+        <h3>⬆️ Upgrade do seu Imóvel</h3>
+        <p>Troque por um imóvel melhor com condições facilitadas.</p>
+      </div>
+      <div class="servico-card">
+        <h3>📍 Todo Florianópolis</h3>
+        <p>Atendimento em todas as regiões da ilha.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="destaques" id="destaques">
+  <div class="container">
+    <h2 class="section-title">Imóveis em <span class="highlight-pink">Destaque</span></h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/v448/12.1 sacada mesanino.jpg" class="card-img" alt="Cobertura Duplex Estreito">
+        <div class="card-body">
+          <p class="card-price">R$ 2.000.000</p>
+          <h3>Cobertura Duplex no Estreito</h3>
+          <button class="btn-gold" style="width:100%; margin-top:10px;" onclick="enviarWhatsapp('Cobertura Duplex Estreito')">Tenho Interesse</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/v472/anco1.jpeg" class="card-img" alt="Apartamento Agronômica">
+        <div class="card-body">
+          <p class="card-price">R$ 2.295.000</p>
+          <h3>Apartamento na Agronômica</h3>
+          <button class="btn-gold" style="width:100%; margin-top:10px;" onclick="enviarWhatsapp('Apartamento Agronômica')">Tenho Interesse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <h2 class="section-title">O que dizem meus clientes</h2>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <p>"A Flávia entendeu exatamente o que eu buscava para investir em Airbnb. Todo o processo foi rápido e seguro."</p>
+        <p class="depo-nome">— Rodrigo, investidor</p>
+      </div>
+      <div class="depo-card">
+        <p>"Consegui usar meu apartamento como parte do pagamento e fiz um upgrade incrível. Profissionalismo impecável."</p>
+        <p class="depo-nome">— Mariana, Florianópolis</p>
+      </div>
+      <div class="depo-card">
+        <p>"Encontrei o studio perfeito com o retorno que eu esperava. Sempre atenciosa e transparente."</p>
+        <p class="depo-nome">— Pedro, São José</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mapa">
+  <div class="container">
+    <h2 class="section-title">Onde estamos</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.2!2d-48.54!3d-27.59!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM1JzI1LjIiUyA0OcKwMzInMjQuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    <p style="margin-top:15px; color:var(--text-muted);">Centro / Hoepcke — Florianópolis/SC</p>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="form-container">
+    <h2 style="margin-bottom:20px; text-align:center;">Fale <span class="highlight-pink">Comigo</span></h2>
+    <form id="leadForm">
+      <div class="form-group">
+        <label>Nome Completo</label>
+        <input type="text" id="nome" required placeholder="Seu nome">
+      </div>
+      <div class="form-group">
+        <label>WhatsApp</label>
+        <input type="tel" id="telefone" required placeholder="(48) 9 XXXX-XXXX">
+      </div>
+      <div class="form-group">
+        <label>O que você procura?</label>
+        <select id="assunto">
+          <option>Escolha</option>
+          <option>Studio para investir</option>
+          <option>Imóvel para Airbnb</option>
+          <option>Apartamento na planta</option>
+          <option>Trocar meu imóvel</option>
+          <option>Outro objetivo</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensagem</label>
+        <input type="text" id="mensagem" placeholder="Conte um pouco mais...">
+      </div>
+      <button type="submit" class="btn-gold" style="width:100%;">Enviar Mensagem</button>
+    </form>
+
+    <div style="text-align:center; margin-top:25px;">
+      <a href="https://instagram.com/flaviacapaciacorretora" target="_blank" class="btn-gold btn-outline">Seguir no Instagram</a>
+      <a href="https://wa.me/5548999600601" target="_blank" class="btn-gold">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <h3>Flávia Capacia • Corretora de Imóveis</h3>
+    <p>Centro / Hoepcke — Florianópolis/SC</p>
+    <div class="footer-links">
+      <a href="https://instagram.com/flaviacapaciacorretora" target="_blank">Instagram</a>
+      <a href="https://www.flaviacapaciacorretora.com" target="_blank">Site Oficial</a>
+    </div>
+    <p style="margin-top:15px;">&copy; 2026 Flávia Capacia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5548999600601" target="_blank" class="whatsapp-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<script>
+const SEU_NUMERO = "5548999600601";
+
+document.getElementById('leadForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const nome = document.getElementById('nome').value;
+  const tel = document.getElementById('telefone').value;
+  const assunto = document.getElementById('assunto').value;
+  const msg = document.getElementById('mensagem').value;
+
+  const texto = `Olá Flávia! Me chamo ${nome}, meu WhatsApp é ${tel}.%0AQuero saber sobre: ${assunto}.%0A${msg}`;
+  window.open(`https://wa.me/${SEU_NUMERO}?text=${encodeURIComponent(texto)}`, '_blank');
+});
+
+function enviarWhatsapp(imovel) {
+  window.open(`https://wa.me/${SEU_NUMERO}?text=${encodeURIComponent(`Olá Flávia, gostaria de detalhes sobre: ${imovel}`)}`, '_blank');
+}
+</script>
+
+</body>
+</html>
