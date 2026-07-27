@@ -298,59 +298,6 @@
       font-size: 14px;
     }
 
-    .contato {
-      background: #1a1a1a;
-      color: white;
-      padding: 60px 0;
-    }
-
-    .contato .section-title {
-      color: white;
-    }
-
-    .form-container {
-      max-width: 550px;
-      margin: 0 auto;
-      background: white;
-      padding: 28px 22px;
-      border-radius: 12px;
-      color: #1a1a1a;
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 500;
-      font-size: 15px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 11px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 15px;
-    }
-
-    .radio-group {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      margin-top: 5px;
-    }
-
-    .radio-option {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
     .mapa {
       padding: 60px 0;
       text-align: center;
@@ -363,6 +310,67 @@
       border-radius: 12px;
       border: none;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .contato {
+      background: #1a1a1a;
+      color: white;
+      padding: 60px 0;
+    }
+
+    .contato .section-title {
+      color: white;
+    }
+
+    /* === FORMULÁRIO IGUAL AO DO VLADIMIR - COMPACTO E FUNCIONAL === */
+    .form-container {
+      max-width: 520px;
+      margin: 0 auto;
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      color: #1a1a1a;
+    }
+
+    .lp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .lp-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    .lp-input::placeholder {
+      color: #888;
+    }
+
+    .qualification-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 5px 0;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .radio-label input {
+      width: 16px;
+      height: 16px;
+      accent-color: #d4af37;
     }
 
     footer {
@@ -413,6 +421,7 @@
       .btn { width: 100%; max-width: 280px; }
       nav a { margin: 4px 6px; }
       .header-content { justify-content: center; }
+      .form-container { padding: 20px 15px; }
     }
   </style>
 </head>
@@ -540,36 +549,37 @@
   <div class="container">
     <h2 class="section-title">Busque o seu imóvel</h2>
     <div class="form-container">
-      <p style="text-align:center; margin-bottom:18px; color:#555;">Preencha e receba opções no seu WhatsApp.</p>
+      <p style="text-align:center; margin-bottom:15px; color:#555;">Preencha abaixo e receba as melhores opções diretamente no seu WhatsApp.</p>
       
-      <form id="formLeads">
-        <div class="form-group">
-          <label>Seu nome</label>
-          <input type="text" id="nome" placeholder="Nome completo" required>
+      <!-- FORMULÁRIO PADRÃO VLADIMIR -->
+      <form class="lp-form" id="formLeads">
+        <input type="text" id="nome" class="lp-input" placeholder="Digite seu nome" required>
+        <input type="tel" id="telefone" class="lp-input" placeholder="Digite seu WhatsApp" required>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="orcamento" value="Até R$300 mil"> Meu orçamento é até R$300 mil</label>
+          <label class="radio-label"><input type="radio" name="orcamento" value="Entre R$300 mil e R$600 mil"> Entre R$300 mil e R$600 mil</label>
+          <label class="radio-label"><input type="radio" name="orcamento" value="Acima de R$600 mil"> Acima de R$600 mil</label>
         </div>
-        <div class="form-group">
-          <label>Seu WhatsApp</label>
-          <input type="tel" id="telefone" placeholder="(48) 9 XXXX-XXXX" required>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="autoridade" value="Decido sozinho"> Eu decido sozinho</label>
+          <label class="radio-label"><input type="radio" name="autoridade" value="Decido com a família"> Decido com a família</label>
         </div>
-        <div class="form-group">
-          <label>Cidade</label>
-          <select id="cidade">
-            <option>Escolha</option>
-            <option>Florianópolis</option>
-            <option>São José</option>
-            <option>Palhoça</option>
-            <option>Qualquer</option>
-          </select>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="necessidade" value="Primeiro imóvel"> Quero comprar meu primeiro imóvel</label>
+          <label class="radio-label"><input type="radio" name="necessidade" value="Imóvel maior"> Busco um imóvel maior</label>
+          <label class="radio-label"><input type="radio" name="necessidade" value="Investimento"> Quero investir</label>
         </div>
-        <div class="form-group">
-          <label>Faixa de valor</label>
-          <div class="radio-group">
-            <label class="radio-option"><input type="radio" name="valor" value="Até R$300 mil"> Até R$300 mil</label>
-            <label class="radio-option"><input type="radio" name="valor" value="R$300 a R$600 mil"> R$300 a R$600 mil</label>
-            <label class="radio-option"><input type="radio" name="valor" value="Acima de R$600 mil"> Acima de R$600 mil</label>
-          </div>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="prazo" value="Até 3 meses"> Preciso comprar em até 3 meses</label>
+          <label class="radio-label"><input type="radio" name="prazo" value="Até 12 meses"> Pretendo comprar em até 12 meses</label>
+          <label class="radio-label"><input type="radio" name="prazo" value="Apenas pesquisando"> Estou apenas pesquisando</label>
         </div>
-        <button type="submit" class="btn" style="width:100%;">Receber Oportunidades</button>
+
+        <button type="submit" class="btn" style="width:100%; margin-top:8px;">Falar com o Corretor</button>
       </form>
 
       <div class="social-links">
@@ -595,13 +605,17 @@
 <script>
 document.getElementById('formLeads').addEventListener('submit', function(e){
   e.preventDefault();
-  const nome = document.getElementById('nome').value;
-  const tel = document.getElementById('telefone').value;
-  const cidade = document.getElementById('cidade').value;
-  const valor = document.querySelector('input[name="valor"]:checked')?.value || 'Não informado';
 
-  const msg = `Olá Matheus! Tenho interesse.%0A%0ANome: ${nome}%0ATel: ${tel}%0ACidade: ${cidade}%0AValor: ${valor}`;
-  window.open(`https://wa.me/554891365133?text=${encodeURIComponent(msg)}`, '_blank');
+  const nome = document.getElementById('nome').value;
+  const telefone = document.getElementById('telefone').value;
+  const orcamento = document.querySelector('input[name="orcamento"]:checked')?.value || 'Não informado';
+  const autoridade = document.querySelector('input[name="autoridade"]:checked')?.value || 'Não informado';
+  const necessidade = document.querySelector('input[name="necessidade"]:checked')?.value || 'Não informado';
+  const prazo = document.querySelector('input[name="prazo"]:checked')?.value || 'Não informado';
+
+  const mensagem = `Olá Matheus, quero receber as opções de imóveis.%0A%0ANome: ${nome}%0ATelefone: ${telefone}%0AOrçamento: ${orcamento}%0AAutoridade: ${autoridade}%0ANecessidade: ${necessidade}%0APrazo: ${prazo}`;
+
+  window.open(`https://wa.me/554891365133?text=${encodeURIComponent(mensagem)}`, '_blank');
 });
 </script>
 
