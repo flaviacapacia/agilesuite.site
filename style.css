@@ -1,9 +1,8 @@
 /* ==========================================
-   AGILESUITE.SITE — ESTRUTURA + SEU VISUAL
-   Sem azul/laranja • Apenas roxo/rosa neon
+   VISUAL EXATO — ROXO/ROSA NEON ESCURO
+   ESTRUTURA OTIMIZADA PARA CONVERSÃO
    ========================================== */
 
-/* ---------- RESET E BASE ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -18,23 +17,21 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #05081f, #0a0f2c, #1a1f4a);
+    background: #0f1120;
     color: #dcd6ff;
     min-height: 100vh;
 }
 
-/* ---------- PALETA EXCLUSIVA (SEU ESTILO) ---------- */
 :root {
-    --roxo-claro: #a29bfe;
-    --rosa-neon: #fd6bf1;
-    --fundo-escuro: #05081f;
-    --fundo-card: rgba(255, 255, 255, 0.08);
-    --borda-suave: rgba(162, 155, 254, 0.3);
-    --sombra-leve: 0 0 12px rgba(162, 155, 254, 0.25);
-    --sombra-media: 0 0 20px rgba(253, 107, 241, 0.35);
+    --roxo-claro: #c77dff;
+    --rosa-neon: #f72585;
+    --fundo-escuro: #0f1120;
+    --fundo-card: rgba(255, 255, 255, 0.05);
+    --borda-suave: rgba(199, 125, 255, 0.3);
+    --sombra-leve: 0 0 12px rgba(199, 125, 255, 0.25);
+    --sombra-media: 0 0 20px rgba(247, 37, 133, 0.35);
 }
 
-/* ---------- ANIMAÇÕES PADRÃO ---------- */
 @keyframes glowText {
     from { text-shadow: 0 0 10px var(--roxo-claro); }
     to { text-shadow: 0 0 25px var(--rosa-neon); }
@@ -46,12 +43,6 @@ body {
     100% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
 }
 
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* ---------- TIPOGRAFIA ---------- */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 0.8em;
@@ -78,7 +69,6 @@ a:hover {
     text-shadow: 0 0 10px var(--rosa-neon);
 }
 
-/* ---------- ESTRUTURA GERAL ---------- */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -105,20 +95,21 @@ section {
     margin: 10px auto 0;
 }
 
-/* Cabeçalho — Corrigido */
 header {
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
-    /* position: sticky;  ← Removi ou comentei essa linha se quiser que não fique fixo */
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(199, 125, 255, 0.3);
+    position: sticky;
     top: 0;
-    z-index: 100;
-    padding-bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 15px 0;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
     flex-wrap: wrap;
     gap: 15px;
 }
@@ -148,7 +139,6 @@ nav {
     text-shadow: 0 0 10px var(--rosa-neon);
 }
 
-/* ---------- BOTÕES — TODOS COM SUAS CORES ---------- */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -178,19 +168,6 @@ nav {
     color: white;
 }
 
-.btn-secundario {
-    background: transparent;
-    border: 2px solid var(--roxo-claro);
-    color: var(--roxo-claro);
-    animation: none;
-}
-
-.btn-secundario:hover {
-    background: var(--roxo-claro);
-    color: #05081f;
-}
-
-/* ---------- SEÇÃO HERO ---------- */
 .hero {
     padding: 100px 0;
     text-align: center;
@@ -213,7 +190,6 @@ nav {
     flex-wrap: wrap;
 }
 
-/* ---------- CARDS ---------- */
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -233,10 +209,23 @@ nav {
     box-shadow: var(--sombra-media);
 }
 
-.card-img {
+.card-img-container {
+    background: var(--fundo-escuro);
     width: 100%;
     height: 180px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.card-img:hover {
+    opacity: 1;
 }
 
 .card-conteudo {
@@ -248,47 +237,6 @@ nav {
     margin-bottom: 10px;
 }
 
-/* ---------- CARROSSEL ---------- */
-.slider-container {
-    display: flex;
-    gap: 20px;
-    white-space: nowrap;
-    animation: slide 25s linear infinite;
-}
-
-.slider-container:hover {
-    animation-play-state: paused;
-}
-
-/* ---------- FORMULÁRIO ---------- */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-input, textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid var(--borda-suave);
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1em;
-}
-
-input::placeholder, textarea::placeholder {
-    color: #dcd6ff;
-}
-
-textarea {
-    resize: none;
-    height: 120px;
-}
-
-/* ---------- RODAPÉ ---------- */
 footer {
     background: rgba(0, 0, 0, 0.85);
     border-top: 1px solid var(--borda-suave);
@@ -321,7 +269,6 @@ footer a:hover {
     border-top: 1px solid var(--borda-suave);
 }
 
-/* ---------- RESPONSIVIDADE ---------- */
 @media (max-width: 768px) {
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.5rem; }
