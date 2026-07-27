@@ -1,17 +1,6 @@
 /* ==========================================
-   AGILESUITE.SITE — CSS UNIFICADO
-   Mantém estilo original • Organizado • Otimizado
-   ========================================== */
-
-/* ---------- RESET E BASE ---------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* ==========================================
    AGILESUITE.SITE — ESTRUTURA + SEU VISUAL
-   Organizado • Otimizado • Cores Futuristas
+   Sem azul/laranja • Apenas roxo/rosa neon
    ========================================== */
 
 /* ---------- RESET E BASE ---------- */
@@ -34,7 +23,7 @@ body {
     min-height: 100vh;
 }
 
-/* ---------- PALETA DE CORES (SEU ESTILO) ---------- */
+/* ---------- PALETA EXCLUSIVA (SEU ESTILO) ---------- */
 :root {
     --roxo-claro: #a29bfe;
     --rosa-neon: #fd6bf1;
@@ -159,7 +148,7 @@ nav {
     text-shadow: 0 0 10px var(--rosa-neon);
 }
 
-/* ---------- BOTÕES (PADRÃO EM TODAS AS PÁGINAS) ---------- */
+/* ---------- BOTÕES — TODOS COM SUAS CORES ---------- */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -224,7 +213,7 @@ nav {
     flex-wrap: wrap;
 }
 
-/* ---------- CARDS (PORTFÓLIO, SERVIÇOS) ---------- */
+/* ---------- CARDS ---------- */
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -330,270 +319,6 @@ footer a:hover {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid var(--borda-suave);
-}
-
-/* ---------- RESPONSIVIDADE ---------- */
-@media (max-width: 768px) {
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .menu {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .hero { padding: 60px 0; }
-}
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-/* ---------- PALETA DE CORES (ORIGINAL DO SEU SITE) ---------- */
-:root {
-    --cor-principal: #2563eb;       /* Azul confiança — seu padrão */
-    --cor-secundaria: #1e40af;      /* Azul escuro */
-    --cor-destaque: #f97316;        /* Laranja para botões/CTA */
-    --cor-texto: #374151;
-    --cor-texto-claro: #6b7280;
-    --cor-fundo: #ffffff;
-    --cor-fundo-sec: #f3f4f6;
-    --borda-suave: #e5e7eb;
-    --sombra-leve: 0 2px 8px rgba(0,0,0,0.08);
-    --sombra-media: 0 4px 16px rgba(0,0,0,0.12);
-}
-
-/* ---------- TIPOGRAFIA ---------- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    margin-bottom: 0.8em;
-    color: var(--cor-principal);
-}
-
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.4rem; }
-
-p { margin-bottom: 1em; color: var(--cor-texto); }
-
-a {
-    text-decoration: none;
-    color: var(--cor-principal);
-    transition: color 0.2s ease;
-}
-
-a:hover { color: var(--cor-secundaria); }
-
-/* ---------- ESTRUTURA GERAL ---------- */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-section {
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background: var(--cor-destaque);
-    display: block;
-    margin: 10px auto 0;
-}
-
-/* ---------- CABEÇALHO ---------- */
-header {
-    background: var(--cor-fundo);
-    box-shadow: var(--sombra-leve);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--cor-principal);
-}
-
-.menu {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-.menu a {
-    font-weight: 500;
-    color: var(--cor-texto);
-}
-
-.menu a:hover, .menu a.ativo {
-    color: var(--cor-destaque);
-}
-
-/* ---------- BOTÕES (PADRÃO EM TODAS AS PÁGINAS) ---------- */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-weight: 500;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-principal {
-    background: var(--cor-principal);
-    color: white;
-}
-
-.btn-principal:hover {
-    background: var(--cor-secundaria);
-    transform: translateY(-2px);
-}
-
-.btn-destaque {
-    background: var(--cor-destaque);
-    color: white;
-}
-
-.btn-destaque:hover {
-    background: #ea580c;
-    transform: translateY(-2px);
-}
-
-.btn-secundario {
-    background: transparent;
-    border: 2px solid var(--cor-principal);
-    color: var(--cor-principal);
-}
-
-.btn-secundario:hover {
-    background: var(--cor-principal);
-    color: white;
-}
-
-/* ---------- SEÇÃO HERO ---------- */
-.hero {
-    background: linear-gradient(rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.05)), url('img/fundo-hero.jpg') center/cover no-repeat;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero h1 {
-    margin-bottom: 15px;
-    color: var(--cor-principal);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    color: var(--cor-texto);
-}
-
-.hero-botoes {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* ---------- CARDS (PORTFÓLIO, SERVIÇOS) ---------- */
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--sombra-leve);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--sombra-media);
-}
-
-.card-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-conteudo {
-    padding: 20px;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-/* ---------- RODAPÉ ---------- */
-footer {
-    background: var(--cor-principal);
-    color: white;
-    padding: 50px 0 20px;
-}
-
-footer h3 {
-    color: white;
-}
-
-footer p, footer a {
-    color: rgba(255,255,255,0.85);
-}
-
-footer a:hover {
-    color: var(--cor-destaque);
-}
-
-.rodape-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.rodape-final {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 /* ---------- RESPONSIVIDADE ---------- */
