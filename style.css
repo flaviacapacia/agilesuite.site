@@ -1,362 +1,616 @@
+/* ==========================================
+   AGILESUITE.SITE — CSS UNIFICADO
+   Mantém estilo original • Organizado • Otimizado
+   ========================================== */
+
+/* ---------- RESET E BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ==========================================
+   AGILESUITE.SITE — ESTRUTURA + SEU VISUAL
+   Organizado • Otimizado • Cores Futuristas
+   ========================================== */
+
+/* ---------- RESET E BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #05081f, #0a0f2c, #1a1f4a);
-  color: #fff;
-  min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #05081f, #0a0f2c, #1a1f4a);
+    color: #dcd6ff;
+    min-height: 100vh;
 }
 
-/* Cabeçalho */
-header {
-  text-align: center;
-  padding: 30px 20px;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+/* ---------- PALETA DE CORES (SEU ESTILO) ---------- */
+:root {
+    --roxo-claro: #a29bfe;
+    --rosa-neon: #fd6bf1;
+    --fundo-escuro: #05081f;
+    --fundo-card: rgba(255, 255, 255, 0.08);
+    --borda-suave: rgba(162, 155, 254, 0.3);
+    --sombra-leve: 0 0 12px rgba(162, 155, 254, 0.25);
+    --sombra-media: 0 0 20px rgba(253, 107, 241, 0.35);
 }
 
-.logo {
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-nav h1 {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 15px;
-  animation: glowText 3s ease-in-out infinite alternate;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li a {
-  color: #a29bfe;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #fd6bf1;
-  text-shadow: 0 0 10px #fd6bf1;
-  transform: scale(1.1);
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero h2 {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2.5em;
-  font-weight: 700;
-  animation: glowText 3s ease-in-out infinite alternate;
-}
-
-.hero p {
-  color: #dcd6ff;
-  font-size: 1.1em;
-  margin-top: 15px;
-  line-height: 1.5;
-}
-
+/* ---------- ANIMAÇÕES PADRÃO ---------- */
 @keyframes glowText {
-  from { text-shadow: 0 0 10px #a29bfe; }
-  to { text-shadow: 0 0 25px #fd6bf1; }
-}
-
-/* Botão pulsante */
-.btn {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  display: inline-block;
-  margin-top: 20px;
-  animation: pulse 2s infinite;
+    from { text-shadow: 0 0 10px var(--roxo-claro); }
+    to { text-shadow: 0 0 25px var(--rosa-neon); }
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 8px #a29bfe; }
-  50% { transform: scale(1.05); box-shadow: 0 0 15px #fd6bf1; }
-  100% { transform: scale(1); box-shadow: 0 0 8px #a29bfe; }
-}
-/* ======== Estrutura geral ======== */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #05081f, #0a0f2c, #1a1f4a);
-  color: #fff;
-}
-
-/* ======== Títulos centralizados ======== */
-#modelos h2,
-#solicitar h2,
-#ebooks h2,
-#contato h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 25px;
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 3s ease-in-out infinite alternate;
-}
-
-/* ======== Cards ======== */
-.card {
-  flex: 0 0 220px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
-  padding: 12px;
-  text-align: center;
-  color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s;
-  height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* ======== Sites Prontos (estável e centralizado) ======== */
-#modelos .slider-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ======== Solicite Novos Modelos (carrossel horizontal) ======== */
-#solicitar .slider-container {
-  display: flex;
-  gap: 20px;
-  white-space: nowrap;       /* impede quebra de linha */
-  animation: slide 25s linear infinite;
-}
-
-#solicitar .card {
-  display: inline-block;     /* garante alinhamento horizontal */
+    0% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px var(--rosa-neon); }
+    100% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
 }
 
 @keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
-#solicitar .slider-container:hover {
-  animation-play-state: paused;
+/* ---------- TIPOGRAFIA ---------- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 0.8em;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowText 3s ease-in-out infinite alternate;
 }
 
-#solicitar .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+p { margin-bottom: 1em; color: #dcd6ff; }
+
+a {
+    text-decoration: none;
+    color: var(--roxo-claro);
+    transition: all 0.2s ease;
 }
 
-/* ======== Mini Curso ======== */
-#ebooks {
-  text-align: center;
-  padding: 60px 20px;
-  margin: 40px auto;
-  max-width: 800px;
+a:hover {
+    color: var(--rosa-neon);
+    text-shadow: 0 0 10px var(--rosa-neon);
 }
 
-#ebooks p {
-  font-size: 1.2em;
-  color: #dcd6ff;
-  margin-bottom: 30px;
-  line-height: 1.6;
+/* ---------- ESTRUTURA GERAL ---------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-#ebooks .btn {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  display: inline-block;
-  animation: pulse 2s infinite;
+section {
+    padding: 60px 0;
 }
 
-#ebooks .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #fd6bf1;
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
 }
 
-/* ======== Formulário ======== */
-#contato {
-  text-align: center;
-  padding: 40px 20px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#contato form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#contato input,
-#contato textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background: rgba(255,255,255,0.1);
-  color: #fff;
-  font-size: 1em;
-}
-
-#contato textarea {
-  resize: none;
-  height: 120px;
-}
-
-#contato button {
-  background: linear-gradient(90deg, #a29bfe, #fd6bf1);
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-#contato button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #fd6bf1;
-}
-
-#contato p {
-  margin-top: 15px;
-  color: #dcd6ff;
-}
-
-/* Footer separado e ocupando toda a largura da tela */
-footer {
-  background: rgba(0, 0, 0, 0.85); /* tarja escura */
-  color: #a29bfe;
-  padding: 30px 20px;
-  text-align: center;
-  border-top: 1px solid rgba(162, 155, 254, 0.3);
-  width: 100%;            /* ocupa toda a largura */
-  margin-top: 60px;       /* afasta do formulário */
-  position: relative;     /* segue o fluxo normal da página */
-  left: 0;
-  right: 0;
-  box-sizing: border-box; /* evita recorte lateral */
-}
-
-
-
-footer .social {
-  margin: 20px 0;
-}
-
-footer .social a {
-  color: #a29bfe;
-  margin: 0 15px;
-  font-size: 1.1em;
-  transition: color 0.3s, transform 0.3s;
-  text-decoration: none;
-}
-
-footer .social a:hover {
-  color: #fd6bf1;
-  transform: scale(1.1);
-}
-
-footer p {
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  color: #dcd6ff;
-}
-
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  footer {
-    padding: 25px 15px;
-  }
-
-  footer .social a {
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
     display: block;
-    margin: 8px 0;
-  }
+    margin: 10px auto 0;
 }
 
-/* ======== Animações ======== */
-@keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 10px #a29bfe; }
-  50% { transform: scale(1.05); box-shadow: 0 0 20px #fd6bf1; }
-  100% { transform: scale(1); box-shadow: 0 0 10px #a29bfe; }
+/* ---------- CABEÇALHO ---------- */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-@keyframes glowText {
-  from { text-shadow: 0 0 10px #a29bfe; }
-  to { text-shadow: 0 0 25px #fd6bf1; }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-/* ======== Responsividade ======== */
-@media (max-width: 768px) {
-  .card {
-    flex: 0 0 calc(50% - 15px);
-    height: 280px;
-  }
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-  #contato {
-    padding: 30px 15px;
-  }
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
 
-  #contato h2 {
-    font-size: 1.5em;
-  }
+.menu a {
+    font-weight: 500;
+    color: var(--roxo-claro);
+}
 
-  #ebooks {
-    padding: 40px 15px;
-    margin: 20px auto;
-  }
+.menu a:hover, .menu a.ativo {
+    color: var(--rosa-neon);
+    text-shadow: 0 0 10px var(--rosa-neon);
+}
 
-  #ebooks h2 {
-    font-size: 1.6em;
-  }
+/* ---------- BOTÕES (PADRÃO EM TODAS AS PÁGINAS) ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    color: white;
+    animation: pulse 2s infinite;
+}
 
-  #ebooks p {
-    font-size: 1em;
-  }
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--rosa-neon);
+}
 
+.btn-principal {
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    color: white;
+}
 
-@media (min-width: 1024px) {
-  .card {
-    flex: 0 0 calc(25% - 20px);
-  }
+.btn-destaque {
+    background: linear-gradient(90deg, var(--rosa-neon), var(--roxo-claro));
+    color: white;
+}
 
-  #modelos .slider-container {
+.btn-secundario {
+    background: transparent;
+    border: 2px solid var(--roxo-claro);
+    color: var(--roxo-claro);
+    animation: none;
+}
+
+.btn-secundario:hover {
+    background: var(--roxo-claro);
+    color: #05081f;
+}
+
+/* ---------- SEÇÃO HERO ---------- */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
     justify-content: center;
-  }
+    flex-wrap: wrap;
+}
+
+/* ---------- CARDS (PORTFÓLIO, SERVIÇOS) ---------- */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--fundo-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--borda-suave);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 20px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* ---------- CARROSSEL ---------- */
+.slider-container {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    animation: slide 25s linear infinite;
+}
+
+.slider-container:hover {
+    animation-play-state: paused;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--borda-suave);
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1em;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #dcd6ff;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    border-top: 1px solid var(--borda-suave);
+    color: #dcd6ff;
+    padding: 50px 0 20px;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer p, footer a {
+    color: rgba(220, 214, 255, 0.85);
+}
+
+footer a:hover {
+    color: var(--rosa-neon);
+}
+
+.rodape-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.rodape-final {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda-suave);
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero { padding: 60px 0; }
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* ---------- PALETA DE CORES (ORIGINAL DO SEU SITE) ---------- */
+:root {
+    --cor-principal: #2563eb;       /* Azul confiança — seu padrão */
+    --cor-secundaria: #1e40af;      /* Azul escuro */
+    --cor-destaque: #f97316;        /* Laranja para botões/CTA */
+    --cor-texto: #374151;
+    --cor-texto-claro: #6b7280;
+    --cor-fundo: #ffffff;
+    --cor-fundo-sec: #f3f4f6;
+    --borda-suave: #e5e7eb;
+    --sombra-leve: 0 2px 8px rgba(0,0,0,0.08);
+    --sombra-media: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* ---------- TIPOGRAFIA ---------- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 0.8em;
+    color: var(--cor-principal);
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+p { margin-bottom: 1em; color: var(--cor-texto); }
+
+a {
+    text-decoration: none;
+    color: var(--cor-principal);
+    transition: color 0.2s ease;
+}
+
+a:hover { color: var(--cor-secundaria); }
+
+/* ---------- ESTRUTURA GERAL ---------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: var(--cor-destaque);
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* ---------- CABEÇALHO ---------- */
+header {
+    background: var(--cor-fundo);
+    box-shadow: var(--sombra-leve);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    font-weight: 500;
+    color: var(--cor-texto);
+}
+
+.menu a:hover, .menu a.ativo {
+    color: var(--cor-destaque);
+}
+
+/* ---------- BOTÕES (PADRÃO EM TODAS AS PÁGINAS) ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-principal {
+    background: var(--cor-principal);
+    color: white;
+}
+
+.btn-principal:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+.btn-destaque {
+    background: var(--cor-destaque);
+    color: white;
+}
+
+.btn-destaque:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 2px solid var(--cor-principal);
+    color: var(--cor-principal);
+}
+
+.btn-secundario:hover {
+    background: var(--cor-principal);
+    color: white;
+}
+
+/* ---------- SEÇÃO HERO ---------- */
+.hero {
+    background: linear-gradient(rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.05)), url('img/fundo-hero.jpg') center/cover no-repeat;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+    color: var(--cor-principal);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: var(--cor-texto);
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---------- CARDS (PORTFÓLIO, SERVIÇOS) ---------- */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--sombra-leve);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+    background: var(--cor-principal);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer p, footer a {
+    color: rgba(255,255,255,0.85);
+}
+
+footer a:hover {
+    color: var(--cor-destaque);
+}
+
+.rodape-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.rodape-final {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero { padding: 60px 0; }
 }
