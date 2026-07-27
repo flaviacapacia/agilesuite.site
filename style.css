@@ -105,13 +105,16 @@ section {
     margin: 10px auto 0;
 }
 
-/* ---------- CABEÇALHO ---------- */
+/* Cabeçalho — FIXO e correto */
 header {
     background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
     position: sticky;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 15px 0;
 }
 
 nav {
