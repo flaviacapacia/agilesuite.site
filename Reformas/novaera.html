@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Era Construtora e Pavimentadora | Construção, Pavimentação e Pintura SC</title>
+    <meta name="description" content="Nova Era Construtora e Pavimentadora Ltda ME: Obras, reformas, pavimentação, pinturas e reparos na Grande Florianópolis. Orçamento grátis!">
+    <meta name="keywords" content="construtora Palhoça, pavimentação Florianópolis, pintura São José, reforma Grande Florianópolis">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --azul-escuro: #0A2463;
+            --azul-medio: #1E40AF;
+            --laranja: #F97316;
+            --laranja-claro: #FDBA74;
+            --branco: #FFFFFF;
+            --cinza-claro: #F3F4F6;
+            --cinza-texto: #374151;
+            --sombra: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            color: var(--cinza-texto);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img { max-width: 100%; border-radius: 8px; }
+
+        .btn-principal {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--laranja);
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .btn-principal:hover { background: #EA580C; transform: translateY(-2px); }
+
+        .btn-whatsapp {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #25D366;
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            margin-left: 12px;
+            transition: 0.3s;
+        }
+        .btn-whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
+
+        .cabecalho {
+            background: var(--azul-escuro);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .cabecalho .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo { height: 55px; }
+        .menu a {
+            color: var(--branco);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+        .menu a:hover { color: var(--laranja-claro); }
+
+        .banner {
+            background: linear-gradient(rgba(10,36,99,0.88), rgba(10,36,99,0.88)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--branco);
+            padding: 160px 20px;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 3.2rem;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        .banner p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section { padding: 70px 20px; }
+        section h2 {
+            text-align: center;
+            color: var(--azul-escuro);
+            font-size: 2.2rem;
+            margin-bottom: 45px;
+        }
+        section h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--laranja);
+            display: block;
+            margin: 12px auto 0;
+        }
+        section h3 { color: var(--azul-medio); margin-bottom: 15px; }
+
+        .grade-dupla {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .lista-valores { list-style: none; padding-left: 0; }
+        .lista-valores li { margin-bottom: 10px; font-size: 1.05rem; }
+
+        .grade-servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+        }
+        .card-servico {
+            background: var(--branco);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--sombra);
+            text-align: center;
+            border-top: 4px solid var(--laranja);
+            transition: 0.3s;
+        }
+        .card-servico:hover { transform: translateY(-6px); }
+        .card-servico img {
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .card-servico h3 { margin-bottom: 10px; }
+
+        .atendimento {
+            background: var(--cinza-claro);
+            text-align: center;
+        }
+        .atendimento ul {
+            list-style: none;
+            font-size: 1.2rem;
+            margin: 25px 0;
+        }
+        .atendimento li { margin-bottom: 8px; }
+
+        /* MAPA RESPONSIVO */
+        .mapa-container {
+            max-width: 800px;
+            margin: 25px auto 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--sombra);
+        }
+        .mapa-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        .chamada {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            text-align: center;
+        }
+        .chamada h2 { color: var(--branco); }
+
+        .rodape {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        .rodape a { color: var(--laranja-claro); text-decoration: none; }
+
+        .whatsapp-flutuante {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: 0.3s;
+        }
+        .whatsapp-flutuante img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+        .whatsapp-flutuante:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+
+        @media (max-width: 900px) {
+            .cabecalho .container { flex-direction: column; gap: 15px; }
+            .menu a { margin: 0 10px; }
+            .banner { padding: 120px 20px; }
+            .banner h1 { font-size: 2.2rem; }
+            .botoes { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+            .btn-whatsapp { margin-left: 0; }
+            .grade-dupla { grid-template-columns: 1fr; }
+            .mapa-container iframe { height: 300px; }
+        }
+        @media (max-width: 600px) {
+            .banner h1 { font-size: 1.8rem; }
+            section h2 { font-size: 1.7rem; }
+            .whatsapp-flutuante { width: 50px; height: 50px; bottom: 15px; right: 15px; }
+            .whatsapp-flutuante img { width: 26px; height: 26px; }
+            .mapa-container iframe { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <img src="imagens/logo.png" alt="Nova Era Construtora" class="logo">
+            <nav class="menu">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#atendimento">Atendimento</a>
+                <a href="#contato" class="btn-principal">Orçamento</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner" id="inicio">
+        <div class="container">
+            <h1>Nova Era Construtora e Pavimentadora Ltda ME</h1>
+            <p>Da fundação ao acabamento — Construção Civil, Pavimentação, Pinturas e Reparos em toda a Grande Florianópolis. Qualidade, compromisso e preço justo.</p>
+            <div class="botoes">
+                <a href="#contato" class="btn-principal">Pedir Orçamento Grátis</a>
+                <a href="https://wa.me/5554993560067" target="_blank" class="btn-whatsapp">Chamar no WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="grade-dupla">
+                <div>
+                    <h3>Quem Somos</h3>
+                    <p>Atuamos no ramo da construção civil com foco em execução e acabamento de qualidade. Com sede em Palhoça, atendemos toda a região com agilidade, segurança e compromisso com o resultado final.</p>
+                    <br>
+                    <h3>Nossos Valores</h3>
+                    <ul class="lista-valores">
+                        <li>✅ Qualidade em cada detalhe</li>
+                        <li>✅ Cumprimento de prazos</li>
+                        <li>✅ Transparência e honestidade</li>
+                        <li>✅ Segurança em todas as etapas</li>
+                        <li>✅ Preço justo e acessível</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1581094794329-42772c5c7d96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipe de construção">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="grade-servicos">
+                <div class="card-servico">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Construção e Reformas">
+                    <h3>Construção e Reformas</h3>
+                    <p>Obras residenciais, comerciais e reformas completas.</p>
+                </div>
+                <div class="card-servico">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pavimentação">
+                    <h3>Pavimentação</h3>
+                    <p>Asfalto, paver, calçadas e estacionamentos.</p>
+                </div>
+                <div class="card-servico">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pinturas e Acabamentos">
+                    <h3>Pinturas e Acabamentos</h3>
+                    <p>Pintura predial, residencial, lavação e texturas.</p>
+                </div>
+                <div class="card-servico">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Reparos e Manutenção">
+                    <h3>Reparos e Manutenção</h3>
+                    <p>Pequenos reparos e manutenção preventiva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="atendimento" id="atendimento">
+        <div class="container">
+            <h2>Onde Atuamos</h2>
+            <p>Com sede em Palhoça, levamos qualidade para toda a Grande Florianópolis:</p>
+            <ul>
+                <li>📍 Palhoça</li>
+                <li>📍 Florianópolis</li>
+                <li>📍 São José</li>
+                <li>📍 Biguaçu</li>
+                <li>📍 Garopaba</li>
+            </ul>
+            <!-- ✅ MAPA INTERATIVO DO GOOGLE MAPS - PALHOÇA E REGIÃO -->
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228944.9019883751!2d-48.76598298476563!3d-27.62591097420407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952747000d79e3bd%3A0x9919191d79e3bd0!2sPalho%C3%A7a%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1753712000000!5m2!1spt-BR!2sbr" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="chamada" id="contato">
+        <div class="container">
+            <h2>Precisa de um Orçamento?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 25px;">Solicite uma visita técnica gratuita e sem compromisso!</p>
+            <p style="margin-bottom: 15px;">📞 WhatsApp: (54) 99356-0067</p>
+            <p style="margin-bottom: 25px;">📧 jorgeleandrodasilvaprates06@gmail.com</p>
+            <a href="https://wa.me/5554993560067?text=Olá! Preciso de um orçamento para..." target="_blank" class="btn-principal">Solicitar Agora</a>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Nova Era Construtora e Pavimentadora Ltda ME</strong></p>
+            <p>📞 (54) 99356-0067 | 📧 jorgeleandrodasilvaprates06@gmail.com</p>
+            <p>📍 Palhoça/SC — Atendemos Grande Florianópolis</p>
+            <p>&copy; 2026 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5554993560067" target="_blank" class="whatsapp-flutuante">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Ícone WhatsApp">
+    </a>
+
+</body>
+</html>

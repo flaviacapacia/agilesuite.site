@@ -1,0 +1,176 @@
+/* RESET GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #0A2463;
+    --azul-medio: #1E40AF;
+    --laranja: #F97316;
+    --laranja-claro: #FDBA74;
+    --branco: #FFFFFF;
+    --cinza-claro: #F3F4F6;
+    --cinza-texto: #374151;
+    --sombra: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--cinza-texto);
+    line-height: 1.6;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* BOTÕES */
+.btn-principal {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--laranja);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.btn-principal:hover {
+    background: #EA580C;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background: var(--azul-escuro);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    height: 55px;
+}
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+.menu a:hover {
+    color: var(--laranja-claro);
+}
+
+/* SEÇÕES */
+section {
+    padding: 60px 20px;
+}
+section h2 {
+    text-align: center;
+    color: var(--azul-escuro);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: var(--laranja);
+    display: block;
+    margin: 12px auto 0;
+}
+section h3 {
+    color: var(--azul-medio);
+    margin-bottom: 15px;
+}
+
+/* LAYOUT PÁGINA SOBRE */
+.grade-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.lista-valores {
+    list-style: none;
+    padding-left: 0;
+}
+.lista-valores li {
+    margin-bottom: 8px;
+}
+.img-placeholder {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+.aviso-img {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: var(--cinza-texto);
+}
+
+/* RODAPÉ */
+.rodape {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+.rodape a {
+    color: var(--laranja-claro);
+    text-decoration: none;
+}
+
+/* ✅ BOTÃO WHATSAPP FLUTUANTE COM ÍCONE */
+.whatsapp-flutuante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: 0.3s;
+}
+.whatsapp-flutuante img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.whatsapp-flutuante:hover {
+    transform: scale(1.1);
+    background: #128C7E;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .cabecalho .container { flex-direction: column; gap: 15px; }
+    .menu a { margin: 0 10px; }
+    .grade-dupla { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+    section h2 { font-size: 1.6rem; }
+    .whatsapp-flutuante { width: 50px; height: 50px; bottom: 15px; right: 15px; }
+    .whatsapp-flutuante img { width: 26px; height: 26px; }
+}

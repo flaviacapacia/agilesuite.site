@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Nova Era Construtora e Pavimentadora</title>
+    <meta name="description" content="Solicite orçamento ou entre em contato com a Nova Era. Atendimento rápido na Grande Florianópolis.">
+    <meta name="keywords" content="contato construtora Palhoça, orçamento obra SC, WhatsApp Nova Era">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="imagens/favicon.ico">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <img src="imagens/logo.png" alt="Nova Era Construtora e Pavimentadora" class="logo">
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="atendimento.html">Área de Atendimento</a>
+                <a href="contato.html" class="btn-principal">Solicitar Orçamento</a>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div>
+                    <h3 style="color: var(--azul-medio); margin-bottom: 15px;">Dados para Contato</h3>
+                    <p><strong>📞 WhatsApp:</strong> <a href="https://wa.me/5554993560067" target="_blank" style="color: var(--laranja); text-decoration: none;">(54) 99356-0067</a></p>
+                    <p><strong>📧 E-mail:</strong> jorgeleandrodasilvaprates06@gmail.com</p>
+                    <p><strong>📍 Endereço:</strong> Palhoça - SC</p>
+                    <p><strong>🗺️ Área de Atendimento:</strong> Grande Florianópolis</p>
+                    <br>
+                    <a href="https://wa.me/5554993560067?text=Olá! Preciso de um orçamento para..." target="_blank" class="btn-whatsapp">Chamar Agora no WhatsApp</a>
+                </div>
+                <div>
+                    <h3 style="color: var(--azul-medio); margin-bottom: 15px;">Solicite um Orçamento</h3>
+                    <form action="https://formspree.io/f/seu-codigo" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
+                        <input type="text" name="nome" placeholder="Seu nome" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+                        <input type="tel" name="telefone" placeholder="Seu WhatsApp" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+                        <input type="text" name="cidade" placeholder="Cidade" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+                        <select name="servico" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+                            <option value="">Escolha o serviço</option>
+                            <option>Construção / Reforma</option>
+                            <option>Pavimentação</option>
+                            <option>Pintura / Acabamento</option>
+                            <option>Reparos / Manutenção</option>
+                        </select>
+                        <textarea name="mensagem" placeholder="Descreva o que precisa..." rows="4" style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+                        <button type="submit" class="btn-principal">Enviar Solicitação</button>
+                    </form>
+                    <p style="font-size: 0.85rem; margin-top: 8px;">*Use o Formspree gratuitamente para receber os dados no seu e-mail — basta se cadastrar e alterar o código no action*</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Nova Era Construtora e Pavimentadora Ltda ME</strong></p>
+            <p>📞 WhatsApp: <a href="https://wa.me/5554993560067" target="_blank">(54) 99356-0067</a></p>
+            <p>📧 E-mail: jorgeleandrodasilvaprates06@gmail.com</p>
+            <p>📍 Sede: Palhoça/SC - Atendimento em toda a região</p>
+            <p>&copy; 2026 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <a href="https://wa.me/5554993560067" target="_blank" class="whatsapp-flutuante">📱</a>
+    <script src="js/script.js"></script>
+</body>
+</html>

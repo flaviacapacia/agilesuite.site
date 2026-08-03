@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construção, Reforma e Pavimentação em Palhoça e Grande Florianópolis | Nova Era</title>
+    <meta name="description" content="✅ Entenda por que a Nova Era é a escolha certa para sua obra. Qualidade, preço justo e cumprimento de prazo. Orçamento grátis e visita técnica sem compromisso.">
+    <meta name="keywords" content="construtora Palhoça, reforma Florianópolis, pavimentação São José, pintura predial SC, orçamento construção, empresa de obras Grande Florianópolis">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --azul-escuro: #0A2463;
+            --azul-medio: #1E40AF;
+            --laranja: #F97316;
+            --laranja-claro: #FDBA74;
+            --branco: #FFFFFF;
+            --cinza-claro: #F9FAFB;
+            --cinza-texto: #1F2937;
+            --sombra: 0 4px 20px rgba(0,0,0,0.08);
+            --sombra-forte: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            color: var(--cinza-texto);
+            line-height: 1.7;
+            background: var(--branco);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img { max-width: 100%; border-radius: 8px; }
+
+        .btn-principal {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 24px;
+            background: var(--laranja);
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn-principal:hover {
+            background: #EA580C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.35);
+        }
+
+        .cabecalho {
+            background: var(--azul-escuro);
+            padding: 15px 0;
+            text-align: center;
+        }
+        .cabecalho img { height: 50px; }
+
+        .hero {
+            background: linear-gradient(rgba(10,36,99,0.92), rgba(10,36,99,0.92)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--branco);
+            padding: 80px 20px;
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 45px;
+            align-items: start;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .diferenciais {
+            list-style: none;
+            margin-bottom: 35px;
+        }
+        .diferenciais li {
+            padding: 8px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-card {
+            background: var(--branco);
+            color: var(--cinza-texto);
+            padding: 35px 28px;
+            border-radius: 12px;
+            box-shadow: var(--sombra-forte);
+        }
+        .form-card h2 {
+            color: var(--azul-escuro);
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-card input, .form-card select {
+            width: 100%;
+            padding: 13px 15px;
+            margin-bottom: 16px;
+            border: 1px solid #D1D5DB;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .form-card input:focus, .form-card select:focus {
+            outline: none;
+            border-color: var(--laranja);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+        }
+
+        .porque {
+            padding: 70px 20px;
+        }
+        .porque h2 {
+            text-align: center;
+            color: var(--azul-escuro);
+            font-size: 2.1rem;
+            margin-bottom: 45px;
+        }
+        .grade-motivos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .motivo {
+            padding: 25px;
+            border-left: 4px solid var(--laranja);
+            background: var(--cinza-claro);
+            border-radius: 0 10px 10px 0;
+        }
+        .motivo h3 {
+            color: var(--azul-medio);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .servicos {
+            padding: 70px 20px;
+            background: var(--cinza-claro);
+        }
+        .servicos h2 {
+            text-align: center;
+            color: var(--azul-escuro);
+            font-size: 2.1rem;
+            margin-bottom: 45px;
+        }
+        .grade-servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .servico-item {
+            background: var(--branco);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--sombra);
+            border-top: 4px solid var(--laranja);
+            transition: 0.3s;
+        }
+        .servico-item:hover { transform: translateY(-5px); }
+        .servico-item img {
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .servico-item h3 {
+            color: var(--azul-medio);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .duvidas {
+            padding: 70px 20px;
+        }
+        .duvidas h2 {
+            text-align: center;
+            color: var(--azul-escuro);
+            font-size: 2.1rem;
+            margin-bottom: 45px;
+        }
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #E5E7EB;
+            padding-bottom: 20px;
+        }
+        .faq-item h3 {
+            color: var(--azul-medio);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .regiao {
+            padding: 60px 20px;
+            text-align: center;
+            background: var(--azul-escuro);
+            color: var(--branco);
+        }
+        .regiao h2 {
+            font-size: 1.9rem;
+            margin-bottom: 25px;
+        }
+        .regiao ul {
+            list-style: none;
+            font-size: 1.15rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .regiao li {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 18px;
+            border-radius: 20px;
+        }
+
+        .rodape {
+            background: #05122b;
+            color: var(--branco);
+            padding: 40px 20px 20px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        .rodape a { color: var(--laranja-claro); text-decoration: none; }
+
+        .whatsapp-flutuante {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+        }
+        .whatsapp-flutuante img { width: 32px; height: 32px; }
+
+        @media (max-width: 900px) {
+            .hero .container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.1rem; }
+            .form-card { order: 2; }
+            .hero-conteudo { order: 1; }
+        }
+        @media (max-width: 600px) {
+            .hero { padding: 50px 15px; }
+            .hero h1 { font-size: 1.8rem; }
+            .porque h2, .servicos h2, .duvidas h2 { font-size: 1.7rem; }
+            .whatsapp-flutuante { width: 50px; height: 50px; bottom: 15px; right: 15px; }
+            .whatsapp-flutuante img { width: 26px; height: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container">
+            <img src="https://via.placeholder.com/180x50/0A2463/FFFFFF?text=NOVA+ERA" alt="Nova Era Construtora e Pavimentadora">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-conteudo">
+                <h1>Sua Obra Feita com Segurança, Qualidade e Respeito ao Seu Bolso</h1>
+                <p>Você não precisa mais ficar preocupado se a empresa vai cumprir o que promete, se vai passar do orçamento ou se a qualidade vai deixar a desejar. A Nova Era cuida de tudo para você: da fundação ao acabamento final.</p>
+                <ul class="diferenciais">
+                    <li>✅ Orçamento detalhado, sem surpresas</li>
+                    <li>✅ Cumprimos rigorosamente o prazo combinado</li>
+                    <li>✅ Visita técnica totalmente grátis</li>
+                    <li>✅ Atendemos toda a Grande Florianópolis</li>
+                    <li>✅ Garantia em todos os serviços realizados</li>
+                </ul>
+                <img src="https://images.unsplash.com/photo-1581094794329-42772c5c7d96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Equipe Nova Era trabalhando com segurança">
+            </div>
+
+            <div class="form-card">
+                <h2>Solicite Seu Orçamento Grátis</h2>
+                <form action="https://formspree.io/f/seu-codigo-aqui" method="POST">
+                    <input type="text" name="nome" placeholder="Seu nome completo" required>
+                    <input type="tel" name="whatsapp" placeholder="Seu WhatsApp com DDD" required>
+                    <input type="text" name="cidade" placeholder="Cidade onde precisa do serviço" required>
+                    <select name="servico" required>
+                        <option value="">O que você precisa?</option>
+                        <option>Construção ou Reforma completa</option>
+                        <option>Pavimentação ou calçada</option>
+                        <option>Pintura ou acabamento</option>
+                        <option>Reparos ou manutenção</option>
+                    </select>
+                    <button type="submit" class="btn-principal">Quero Meu Orçamento Sem Compromisso</button>
+                </form>
+                <p style="font-size: 0.85rem; text-align: center; margin-top: 15px;">Seus dados ficam conosco e usamos apenas para entrar em contato com você.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="porque">
+        <div class="container">
+            <h2>Por Que Escolher a Nova Era para Sua Obra?</h2>
+            <div class="grade-motivos">
+                <div class="motivo">
+                    <h3>Você não vai ficar no escuro</h3>
+                    <p>Mostramos cada etapa, explicamos o que será feito e atualizamos você sempre que precisar. Nenhuma surpresa, nenhum gasto extra sem você saber.</p>
+                </div>
+                <div class="motivo">
+                    <h3>Preço justo e transparente</h3>
+                    <p>Não cobramos taxas escondidas. O valor que combinamos no orçamento é o valor que você paga. Tudo calculado com materiais e mão de obra de qualidade.</p>
+                </div>
+                <div class="motivo">
+                    <h3>Cumprimos prazos</h3>
+                    <p>Sabemos que tempo é dinheiro. Planejamos cada detalhe para entregar sua obra no prazo acordado, sem atrasos desnecessários.</p>
+                </div>
+                <div class="motivo">
+                    <h3>Segurança em primeiro lugar</h3>
+                    <p>Toda a equipe trabalha com equipamentos adequados e seguindo todas as normas. Sua tranquilidade e a de todos vem sempre antes de tudo.</p>
+                </div>
+                <div class="motivo">
+                    <h3>Experiência que faz diferença</h3>
+                    <p>Já realizamos diversos tipos de serviços na região e sabemos exatamente como resolver cada desafio que aparecer na sua obra.</p>
+                </div>
+                <div class="motivo">
+                    <h3>Atendimento próximo de você</h3>
+                    <p>Estamos aqui na Grande Florianópolis. Isso significa agilidade na visita, na execução e no suporte depois que o serviço ficar pronto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicos">
+        <div class="container">
+            <h2>O Que Podemos Fazer Por Você</h2>
+            <div class="grade-servicos">
+                <div class="servico-item">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Construção e Reformas">
+                    <h3>Construção e Reformas</h3>
+                    <p>Casas, comércios, ampliações e reformas completas ou parciais. Do projeto ao acabamento final.</p>
+                </div>
+                <div class="servico-item">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pavimentação">
+                    <h3>Pavimentação</h3>
+                    <p>Asfalto, paver, calçadas, estacionamentos e vias particulares com acabamento perfeito.</p>
+                </div>
+                <div class="servico-item">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pinturas e Acabamentos">
+                    <h3>Pinturas e Acabamentos</h3>
+                    <p>Pintura interna e externa, predial, residencial, lavação de fachadas, texturas e grafiatos.</p>
+                </div>
+                <div class="servico-item">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Reparos e Manutenção">
+                    <h3>Reparos e Manutenção</h3>
+                    <p>Pequenos consertos, troca de peças, ajustes e manutenção preventiva para deixar tudo em ordem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="duvidas">
+        <div class="container">
+            <h2>Dúvidas Mais Comuns</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <h3>O orçamento é realmente grátis?</h3>
+                    <p>Sim! A visita técnica e o orçamento são totalmente gratuitos e sem nenhum compromisso de contratação.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Quanto tempo demora para receber o valor?</h3>
+                    <p>Após a visita no local, enviamos o orçamento detalhado em até 2 dias úteis pelo WhatsApp ou e-mail.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Vocês aceitam parcelamento?</h3>
+                    <p>Sim! Trabalhamos com condições de pagamento facilitadas e parcelamento direto com a empresa.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Atendem minha cidade?</h3>
+                    <p>Atendemos Palhoça, Florianópolis, São José, Biguaçu, Garopaba e toda a região da Grande Florianópolis.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Tem garantia do serviço?</h3>
+                    <p>Sim! Oferecemos garantia sobre mão de obra e materiais conforme o tipo de serviço realizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="regiao">
+        <div class="container">
+            <h2>Estamos Pertinho de Você</h2>
+            <ul>
+                <li>Palhoça</li>
+                <li>Florianópolis</li>
+                <li>São José</li>
+                <li>Biguaçu</li>
+                <li>Garopaba</li>
+            </ul>
+            <p>Seja qual for sua necessidade, estamos prontos para ir até você e entender exatamente o que precisa ser feito.</p>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <p><strong>Nova Era Construtora e Pavimentadora Ltda ME</strong></p>
+            <p>📞 WhatsApp: <a href="https://wa.me/5554993560067">(54) 99356-0067</a> | 📧 jorgeleandrodasilvaprates06@gmail.com</p>
+            <p>📍 Sede: Palhoça/SC — Atendimento em toda a Grande Florianópolis</p>
+            <p>&copy; 2026 — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5554993560067?text=Olá! Vi seu site e quero entender melhor sobre o orçamento para..." target="_blank" class="whatsapp-flutuante">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Falar no WhatsApp">
+    </a>
+
+</body>
+</html>
