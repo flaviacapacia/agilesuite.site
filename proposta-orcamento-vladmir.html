@@ -3,238 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preços e Valores | Agile Suite</title>
-  <meta name="description" content="Valores acessíveis para criação de sites e landing pages. De R$350,00 por apenas R$297,00 — entrega rápida e garantia.">
-  <meta name="keywords" content="preço site São José SC, valor landing page, site barato Palhoça, criar site Florianópolis">
-  
-  <link rel="icon" type="image/png" href="img/logo-agile.png">
+  <title>Orçamento de Serviços | Agile Suite</title>
+  <meta name="description" content="Proposta personalizada: Landing Pages e Sites para imobiliárias e corretores — qualidade, agilidade e identidade visual profissional.">
+  <!-- Meta para imagem aparecer ao compartilhar no WhatsApp -->
+  <meta property="og:image" content="https://www.agilesuite.site/img/logo-agile.png">
+  <meta property="og:title" content="Orçamento de Serviços | Agile Suite">
+  <meta property="og:description" content="Soluções sob medida: Landing Page modelo Vladimir Vieira e Site modelo Flávia Capacia. Confira os valores e faça seu pedido!">
+  <meta property="og:url" content="https://www.agilesuite.site/orcamento.html">
+  <link rel="icon" type="image/png" href="https://www.agilesuite.site/img/logo-agile.png">
   <style>
-    /* ===== PALETA AGILE SUITE: ROSA NEON + AZUIS ELEGANTES ===== */
+    /* ==========================================
+       VISUAL EXATO — ROXO/ROSA NEON ESCURO
+       ========================================== */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html {scroll-behavior: smooth; font-size: 16px;}
+    body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: #0f1120; color: #dcd6ff; min-height: 100vh;}
     :root {
-      --rosa-neon: #ff2e88;       /* Cor principal característica */
-      --azul-escuro: #0f172a;     /* Fundo principal (azul escuro ao invés de roxo) */
-      --azul-medio: #1e293b;      /* Fundo dos cards */
-      --azul-claro-destaque: #2563eb; /* Azul vibrante para detalhes */
-      --azul-suave: #3b82f6;      /* Azul suave para hover/gradiente */
-      --texto-claro: #ffffff;     /* Texto branco */
-      --cinza-suave: #cbd5e1;     /* Texto secundário */
-      --gradiente-misto: linear-gradient(45deg, #ff2e88, #3b82f6); /* Rosa + Azul */
+        --roxo-claro: #c77dff;
+        --rosa-neon: #f72585;
+        --fundo-escuro: #0f1120;
+        --fundo-card: rgba(255, 255, 255, 0.05);
+        --borda-suave: rgba(199, 125, 255, 0.3);
+        --sombra-leve: 0 0 12px rgba(199, 125, 255, 0.25);
+        --sombra-media: 0 0 20px rgba(247, 37, 133, 0.35);
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    }
-
-    body {
-      background-color: var(--azul-escuro);
-      color: var(--texto-claro);
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* ===== CABEÇALHO ===== */
-    header {
-      position: fixed;
-      width: 100%;
-      background: rgba(15, 23, 42, 0.95);
-      padding: 1rem 0;
-      z-index: 99;
-      top: 0;
-      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.15);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      background: var(--gradiente-misto);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 1.8rem;
-    }
-
-    .menu a {
-      color: var(--texto-claro);
-      text-decoration: none;
-      font-size: 1.05rem;
-      transition: color 0.3s ease;
-    }
-
-    .menu a:hover,
-    .menu a.ativo {
-      color: var(--rosa-neon);
-    }
-
-    /* ===== CONTEÚDO ===== */
-    main {
-      padding-top: 75px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--rosa-neon);
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--cinza-suave);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .grid-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      padding-bottom: 3rem;
-    }
-
-    .card {
-      background-color: var(--azul-medio);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
-    }
-
-    .card:nth-child(1) {
-      border: 2px solid var(--rosa-neon);
-      transform: scale(1.03);
-      box-shadow: 0 0 15px rgba(255, 46, 136, 0.2);
-    }
-
-    .card-conteudo h3 {
-      margin-bottom: 1rem;
-      color: var(--rosa-neon);
-    }
-
-    .card-conteudo p {
-      margin-bottom: 1rem;
-      color: var(--cinza-suave);
-    }
-
-    .card-conteudo p[style*="font-size: 2rem"],
-    .card-conteudo p[style*="font-size: 1.8rem"] {
-      color: var(--texto-claro);
-    }
-
-    /* ===== BOTÕES ===== */
-    .btn {
-      display: inline-block;
-      background: var(--rosa-neon);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      text-align: center;
-      font-size: 1rem;
-    }
-
-    .btn:hover {
-      background: var(--azul-claro-destaque);
-      transform: scale(1.01);
-    }
-
-    .btn-destaque {
-      background: var(--gradiente-misto);
-    }
-
-    .btn-destaque:hover {
-      background: linear-gradient(45deg, #3b82f6, #ff2e88);
-    }
-
-    .caixa-personalizado {
-      text-align: center;
-      margin-top: 40px;
-      padding: 25px;
-      background: rgba(37, 99, 235, 0.08);
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .caixa-personalizado h3 {
-      color: var(--azul-claro-destaque);
-      margin-bottom: 0.8rem;
-    }
-
-    /* ===== RODAPÉ ===== */
-    footer {
-      background: #020617; /* Azul mais escuro para rodapé */
-      padding: 3rem 1rem 1rem;
-      margin-top: 2rem;
-    }
-
-    .rodape-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .rodape-grid h3 {
-      color: var(--rosa-neon);
-      margin-bottom: 1rem;
-    }
-
-    .rodape-grid p a {
-      color: var(--cinza-suave);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .rodape-grid p a:hover {
-      color: var(--azul-suave);
-    }
-
-    .rodape-final {
-      text-align: center;
-      padding-top: 1rem;
-      border-top: 1px solid var(--azul-medio);
-      color: var(--cinza-suave);
-      font-size: 0.9rem;
-    }
-
-    /* ===== RESPONSIVO ===== */
-    @media(max-width:768px){
-      .menu {gap:0.8rem;}
-      .hero h2 {font-size:1.6rem;}
-      .card:nth-child(1) {transform: none;}
-    }
+    @keyframes glowText {from {text-shadow: 0 0 10px var(--roxo-claro);} to {text-shadow: 0 0 25px var(--rosa-neon);}}
+    @keyframes pulse {0% {transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro);} 50% {transform: scale(1.05); box-shadow: 0 0 15px var(--rosa-neon);} 100% {transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro);}}
+    h1, h2, h3 {font-weight: 600; margin-bottom: 0.8em; background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: glowText 3s ease-in-out infinite alternate;}
+    h1 {font-size: 2.2rem;} h2 {font-size: 1.8rem;} h3 {font-size: 1.4rem;}
+    p {margin-bottom: 1em; color: #dcd6ff;}
+    a {text-decoration: none; color: var(--roxo-claro); transition: all 0.2s ease;}
+    a:hover {color: var(--rosa-neon); text-shadow: 0 0 10px var(--rosa-neon);}
+    .container {width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px;}
+    section {padding: 60px 0;}
+    header {background: rgba(0, 0, 0, 0.7); box-shadow: 0 0 20px rgba(199, 125, 255, 0.3); position: sticky; top: 0; left: 0; right: 0; z-index: 999; padding: 15px 0;}
+    nav {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;}
+    .logo {font-size: 1.5rem; font-weight: 700; background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+    .menu {display: flex; gap: 25px; list-style: none; flex-wrap: wrap;}
+    .menu a {font-weight: 500; color: var(--roxo-claro);}
+    .menu a:hover, .menu a.ativo {color: var(--rosa-neon); text-shadow: 0 0 10px var(--rosa-neon);}
+    .btn {display: inline-block; padding: 12px 28px; border-radius: 30px; font-weight: 500; text-align: center; border: none; cursor: pointer; transition: all 0.3s ease; background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon)); color: white; animation: pulse 2s infinite; width: 100%;}
+    .btn:hover {transform: translateY(-2px); box-shadow: 0 0 15px var(--rosa-neon);}
+    .btn-destaque {background: linear-gradient(90deg, var(--rosa-neon), var(--roxo-claro));}
+    .hero {padding: 60px 0; text-align: center;}
+    .hero h1 {margin-bottom: 15px;}
+    .grid-cards {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;}
+    .card {background: var(--fundo-card); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--borda-suave); padding: 25px; text-align: center;}
+    .card:hover {transform: translateY(-5px); box-shadow: var(--sombra-media);}
+    .card.destaque {box-shadow: var(--sombra-media); border-color: var(--rosa-neon);}
+    .preco {font-size: 1.8rem; font-weight: bold; margin:15px 0; color: #fff;}
+    .info-box {background: var(--fundo-card); border:1px solid var(--borda-suave); border-radius:12px; padding:30px; text-align:center; margin-top:50px;}
+    footer {background: rgba(0, 0, 0, 0.85); border-top: 1px solid var(--borda-suave); color: #dcd6ff; padding: 50px 0 20px; margin-top:40px;}
+    .rodape-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px;}
+    .rodape-final {text-align: center; padding-top: 20px; border-top: 1px solid var(--borda-suave);}
+    @media (max-width: 768px) {h1 {font-size: 1.8rem;} h2 {font-size: 1.5rem;} nav {flex-direction: column; gap: 15px;} .menu {gap: 15px; justify-content: center;} .hero {padding: 40px 0;}}
   </style>
 </head>
 <body>
@@ -244,9 +66,10 @@
       <nav>
         <div class="logo">Agile Suite</div>
         <ul class="menu">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="vendas-sites.html">Modelos</a></li>
-          <li><a href="#" class="ativo">Valores</a></li>
+          <li><a href="https://www.agilesuite.site/" target="_blank">Início</a></li>
+          <li><a href="https://www.agilesuite.site/vendas-sites.html" target="_blank">Modelos</a></li>
+          <li><a href="https://www.agilesuite.site/valores.html" target="_blank">Valores</a></li>
+          <li><a href="#" class="ativo">Orçamento</a></li>
         </ul>
       </nav>
     </div>
@@ -255,47 +78,88 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h2>Investimento que cabe no seu bolso</h2>
-        <p>Qualidade profissional sem preço de agência. Aproveite o valor especial para clientes de São José, Palhoça, Florianópolis e todo o Brasil.</p>
+        <h1>Orçamento de Serviços — Sites e Landing Pages</h1>
+        <p>Proposta personalizada com modelos de referência: <strong>Landing Page → Vladimir Vieira</strong> | <strong>Site Completo → Flávia Capacia</strong>.<br>
+        Identidade visual exclusiva, agilidade na entrega e suporte anual. Conheça os valores abaixo!</p>
       </div>
     </section>
 
     <section>
       <div class="container">
         <div class="grid-cards">
+          <!-- OPÇÃO 1: Landing Page Modelo Vladimir Vieira -->
           <div class="card">
-            <div class="card-conteudo">
-              <h3>🔥 Modelo Pronto por Segmento</h3>
-              <p style="text-decoration: line-through; opacity: 0.6;">De R$ 350,00</p>
-              <p style="font-size: 2rem; font-weight: bold; margin: 10px 0;">Por apenas <br>R$ 297,00</p>
-              <p>✅ Layout pronto e personalizado com seus dados<br>✅ Otimizado para aparecer no Google<br>✅ Botão direto para WhatsApp e Mapa<br>✅ Funciona em celular, tablet e computador<br>✅ Entrega em até 3 dias úteis<br>✅ 30 dias de suporte gratuito<br>✅ Até 2x sem juros</p>
-              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20Modelo%20Pronto%20por%20R$297" target="_blank" class="btn">Quero este valor</a>
-            </div>
+            <h3>Landing Page Modelo<br>(Referência: Vladimir Vieira)</h3>
+            <p class="preco">R$ 1.200,00</p>
+            <p>✅ Até 6 imagens de imóveis + código e descrição detalhada<br>
+            ✅ Identidade visual personalizada com a marca do cliente<br>
+            ✅ Botões de contato direto encaminhando para WhatsApp<br>
+            ✅ Totalmente responsiva<br>
+            ✅ Prazo de entrega: 1 a 3 dias úteis<br>
+            ✅ Suporte anual incluso<br>
+            ✅ Domínio simples <strong>.com</strong> incluso</p>
+            <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20solicitar%20a%20Landing%20Page%20Modelo%20Vladimir%20Vieira%20por%20R$1200" target="_blank" class="btn">Solicitar essa opção</a>
           </div>
 
-          <div class="card">
-            <div class="card-conteudo">
-              <h3>Landing Page Personalizada</h3>
-              <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0;">R$ 397,00</p>
-              <p>✅ Feita do zero para o seu negócio<br>✅ Textos e estrutura alinhados ao seu serviço<br>✅ SEO completo<br>✅ Formulário de contato<br>✅ Entrega em até 4 dias<br>✅ Até 3x sem juros</p>
-              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20a%20Landing%20Page%20Personalizada" target="_blank" class="btn">Solicitar</a>
-            </div>
+          <!-- OPÇÃO 2: Landing Page Completa -->
+          <div class="card destaque">
+            <h3>Landing Page Completa + Links de Imóveis<br>(Referência: Vladimir Vieira)</h3>
+            <p class="preco">R$ 2.000,00</p>
+            <p>✅ Tudo da opção anterior<br>
+            ✅ Até 10 links direcionando para os imóveis da imobiliária<br>
+            ✅ Organização prática para visitantes<br>
+            ✅ Identidade visual exclusiva<br>
+            ✅ Prazo de entrega: 1 a 3 dias úteis<br>
+            ✅ Suporte anual incluso<br>
+            ✅ Domínio simples <strong>.com</strong> incluso</p>
+            <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20a%20Landing%20Page%20Completa%20modelo%20Vladimir%20Vieira%20por%20R$2000" target="_blank" class="btn">Escolher essa opção</a>
           </div>
 
+          <!-- OPÇÃO 3: Site Modelo Flávia Capacia -->
           <div class="card">
-            <div class="card-conteudo">
-              <h3>Site Completo</h3>
-              <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0;">R$ 597,00</p>
-              <p>✅ Até 5 páginas: Início, Sobre, Serviços, Galeria, Contato<br>✅ Mapa de localização<br>✅ Estrutura pronta para crescer<br>✅ Entrega em até 7 dias<br>✅ Até 3x sem juros<br>✅ Até 10x com juros</p>
-              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20Site%20Completo" target="_blank" class="btn">Solicitar</a>
-            </div>
+            <h3>Site Modelo Pronto + Integração<br>(Referência: Flávia Capacia)</h3>
+            <p class="preco">R$ 3.000,00 / ano</p>
+            <p>✅ Personalização de cores e identidade visual<br>
+            ✅ Suporte no cadastro de imóveis pela nossa equipe<br>
+            ✅ Integração com catálogo do Facebook ou portais imobiliários<br>
+            ✅ Estrutura igual ao modelo Flávia Capacia<br>
+            ✅ Suporte anual completo<br>
+            ✅ Domínio simples <strong>.com</strong> incluso</p>
+            <a href="https://wa.me/5511912381257?text=Olá!%20Tenho%20interesse%20no%20Site%20Modelo%20Flávia%20Capacia%20por%20R$3000%20anual" target="_blank" class="btn">Saber mais</a>
+          </div>
+
+          <!-- OPÇÃO 4: Site + CRM -->
+          <div class="card">
+            <h3>Site + CRM de Cadastro Rápido<br>(Referência: Flávia Capacia)</h3>
+            <p class="preco">R$ 5.000,00 / ano</p>
+            <p>✅ Todas as vantagens do site modelo<br>
+            ✅ Integração com CRM prático para cadastro rápido<br>
+            ✅ Atualização facilitada do catálogo<br>
+            ✅ Identidade visual completa<br>
+            ✅ Suporte anual incluso<br>
+            ✅ Domínio simples <strong>.com</strong> incluso</p>
+            <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20orçamento%20do%20Site%20com%20CRM%20modelo%20Flávia%20Capacia%20por%20R$5000%20anual" target="_blank" class="btn">Solicitar detalhes</a>
+          </div>
+
+          <!-- OPÇÃO 5: Site Premium -->
+          <div class="card">
+            <h3>Site Premium + Base Completa<br>(Referência: Flávia Capacia)</h3>
+            <p class="preco">R$ 10.000,00</p>
+            <p>✅ Estrutura robusta e completa para imobiliárias<br>
+            ✅ Recursos avançados e layout exclusivo<br>
+            ✅ Modelo estruturado como o site Flávia Capacia<br>
+            ✅ Suporte anual dedicado<br>
+            ✅ Domínio simples <strong>.com</strong> incluso</p>
+            <a href="https://wa.me/5511912381257?text=Olá!%20Gostaria%20de%20informações%20do%20Site%20Premium%20modelo%20Flávia%20Capacia%20por%20R$10000" target="_blank" class="btn">Falar com especialista</a>
           </div>
         </div>
 
-        <div class="caixa-personalizado">
-          <h3>Precisa de algo diferente?</h3>
-          <p>Criamos do jeito que você precisar — mais páginas, funcionalidades especiais ou layout exclusivo.</p>
-          <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20um%20orçamento%20personalizado" target="_blank" class="btn btn-destaque" style="max-width:350px; display:inline-block; margin-top:15px;">Pedir Orçamento Personalizado</a>
+        <div class="info-box">
+          <h3>Informações importantes</h3>
+          <p>🔹 O domínio <strong>.com.br</strong> pode ser adquirido separadamente, se desejar.</p>
+          <p>🔹 Forma de pagamento: <strong>50% à vista</strong> + <strong>50% parcelado em até 18x com juros</strong>.</p>
+          <p>🔹 Todos os serviços contam com suporte anual e acompanhamento da equipe Agile Suite.</p>
+          <a href="https://wa.me/5511912381257?text=Olá!%20Tenho%20dúvidas%20sobre%20os%20orçamentos%20e%20modelos%20de%20sites%2Fe%20landing%20pages" target="_blank" class="btn btn-destaque" style="max-width:380px; display:inline-block; margin-top:15px;">Tirar dúvidas agora</a>
         </div>
       </div>
     </section>
@@ -309,15 +173,15 @@
           <p>Sites que trazem clientes para você.</p>
         </div>
         <div>
-          <h3>Links</h3>
-          <p><a href="index.html">Página Inicial</a></p>
-          <p><a href="vendas-sites.html">Modelos</a></p>
-          <p><a href="https://wa.me/5511912381257" target="_blank">Contato</a></p>
+          <h3>Acesse também</h3>
+          <p><a href="https://www.agilesuite.site/" target="_blank">Site Oficial Agile Suite</a></p>
+          <p><a href="https://wa.me/5511912381257" target="_blank">Contato WhatsApp</a></p>
+          <p><a href="https://www.agilesuite.site/vendas-sites.html" target="_blank">Ver todos os Modelos</a></p>
         </div>
         <div>
           <h3>Atendimento</h3>
           <p>São José / Palhoça / Florianópolis</p>
-          <p>Todo o Brasil</p>
+          <p>Atendimento para todo o Brasil</p>
         </div>
       </div>
       <div class="rodape-final">
