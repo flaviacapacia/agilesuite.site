@@ -16,12 +16,13 @@
       font-family: 'Segoe UI', Roboto, sans-serif;
     }
     :root {
-      --roxo-claro: #c77dff;
-      --rosa-neon: #f72585;
+      --roxo-principal: #b693ff;
+      --rosa-destaque: #e066a8;
       --fundo-escuro: #0f1120;
       --fundo-card: rgba(255, 255, 255, 0.06);
       --texto-claro: #e2e0ff;
       --branco: #ffffff;
+      --borda-roxa: rgba(182, 147, 255, 0.3);
     }
     body {
       background: var(--fundo-escuro);
@@ -33,15 +34,13 @@
       text-align: center;
       margin-bottom: 40px;
       padding-bottom: 20px;
-      border-bottom: 2px solid;
-      border-image: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon)) 1;
+      border-bottom: 2px solid var(--roxo-principal);
     }
     .cabecalho h1 {
-      background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--roxo-principal);
       font-size: 26px;
       margin-bottom: 8px;
+      font-weight: 600;
     }
     .cabecalho p {
       font-size: 16px;
@@ -51,15 +50,15 @@
       margin-bottom: 35px;
     }
     .secao h2 {
-      color: var(--roxo-claro);
+      color: var(--roxo-principal);
       font-size: 20px;
       margin-bottom: 20px;
       padding-left: 10px;
-      border-left: 3px solid var(--rosa-neon);
+      border-left: 3px solid var(--roxo-principal);
     }
     .card {
       background: var(--fundo-card);
-      border: 1px solid rgba(199, 125, 255, 0.3);
+      border: 1px solid var(--borda-roxa);
       border-radius: 12px;
       padding: 20px;
       margin-bottom: 15px;
@@ -72,8 +71,12 @@
     .preco {
       font-size: 20px;
       font-weight: bold;
-      color: var(--rosa-neon);
+      color: var(--rosa-destaque);
       margin: 8px 0;
+    }
+    .diferencial {
+      color: var(--rosa-destaque);
+      font-weight: 600;
     }
     .lista-beneficios {
       list-style: none;
@@ -81,15 +84,36 @@
     }
     .lista-beneficios li::before {
       content: "✓ ";
-      color: var(--roxo-claro);
+      color: var(--roxo-principal);
       font-weight: bold;
+    }
+    a {
+      color: var(--roxo-principal);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--rosa-destaque);
+      text-decoration: underline;
     }
     .dados-contato {
       background: var(--fundo-card);
       border-radius: 12px;
       padding: 20px;
       text-align: center;
-      border: 1px solid rgba(247, 37, 133, 0.3);
+      border: 1px solid var(--borda-roxa);
+      margin-bottom:25px;
+    }
+    .dados-contato h2 {
+      border: none;
+      color: var(--rosa-destaque);
+      margin: 0 0 15px 0;
+      padding: 0;
+    }
+    .programa {
+      background: var(--fundo-card);
+      border:1px solid var(--borda-roxa);
+      border-radius:12px;
+      padding:20px;
     }
     .rodape {
       text-align: center;
@@ -97,14 +121,13 @@
       font-size: 13px;
       opacity: 0.7;
     }
-    /* Regra essencial para impressão manter cores */
     @media print {
       body {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
         background: var(--fundo-escuro) !important;
       }
-      .card, .dados-contato {
+      .card, .dados-contato, .programa {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -115,57 +138,80 @@
 
   <div class="cabecalho">
     <h1>Agile Suite — Proposta de Serviços Digitais</h1>
-    <p>Soluções em Sites e Landing Pages para Corretores e Imobiliárias</p>
-    <p style="margin-top:8px;">Modelo de referência: Landing Page Vladimir Vieira | Site Completo Flávia Capacia</p>
+    <p>Soluções profissionais em Sites e Landing Pages para Corretores e Imobiliárias</p>
+    <p style="margin-top:8px;">
+      Modelos de referência:
+      <a href="https://www.agilesuite.site/vendas-vlad.html" target="_blank">Landing Page Vladimir Vieira</a> |
+      <a href="https://www.flaviacapaciacorretora.com/index.html" target="_blank">Site Flávia Capacia</a> |
+      <a href="https://www.flaviacapaciacorretora.com/v464-apartamento-a-venda-no-bairro-kobrasol-em-sao-jose-sc-com-2-quartos-1-suite-1-vaga.html" target="_blank">Exemplo Página de Imóvel</a>
+    </p>
   </div>
 
   <div class="secao">
-    <h2>Opções de Serviços</h2>
+    <h2>Opções de Serviços e Benefícios</h2>
 
     <div class="card">
-      <h3>Landing Page Modelo</h3>
+      <h3>Landing Page Modelo<br>(Referência: Vladimir Vieira)</h3>
       <div class="preco">R$ 1.200,00</div>
       <ul class="lista-beneficios">
-        <li>Até 6 imóveis com imagens e descrição detalhada</li>
-        <li>Identidade visual personalizada com sua marca</li>
-        <li>Botões de contato direto para WhatsApp</li>
-        <li>Totalmente responsiva (celular, tablet e computador)</li>
+        <li>Até 6 imóveis com imagens de qualidade + descrição detalhada</li>
+        <li>Identidade visual personalizada com logotipo e cores da marca</li>
+        <li>Botões de contato direto e visível para WhatsApp</li>
+        <li>Totalmente responsiva — celular, tablet e computador</li>
+        <li>Otimizada para carregamento rápido e melhor visibilidade no Google</li>
         <li>Prazo de entrega: 1 a 3 dias úteis</li>
-        <li>Suporte anual incluso + domínio .com incluso</li>
+        <li>Suporte anual técnico incluso + domínio .com incluso</li>
       </ul>
     </div>
 
     <div class="card">
-      <h3>Landing Page Completa + Links de Imóveis</h3>
+      <h3>Landing Page Completa + Links de Imóveis<br>(Referência: Vladimir Vieira)</h3>
       <div class="preco">R$ 2.000,00</div>
       <ul class="lista-beneficios">
         <li>Todos os benefícios da Landing Page Modelo</li>
-        <li>Até 10 links direcionando para os seus imóveis</li>
-        <li>Organização prática e navegação intuitiva</li>
-        <li>Suporte anual incluso + domínio .com incluso</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Site Modelo Pronto + Integração</h3>
-      <div class="preco">R$ 3.000,00 / ano</div>
-      <ul class="lista-beneficios">
-        <li>Personalização de cores e identidade visual completa</li>
-        <li>Suporte no cadastro de imóveis pela nossa equipe</li>
-        <li>Integração com redes sociais e portais imobiliários</li>
-        <li>Estrutura igual ao modelo Flávia Capacia</li>
+        <li>Até 10 links direcionando para páginas individuais dos seus imóveis</li>
+        <li>Navegação intuitiva e organização prática para visitantes</li>
+        <li>Seções extras opcionais: depoimentos, localização</li>
+        <li>Prazo de entrega: 1 a 3 dias úteis</li>
         <li>Suporte anual completo + domínio .com incluso</li>
       </ul>
     </div>
 
     <div class="card">
-      <h3>Site Premium + Base Completa</h3>
+      <h3>Site Modelo Pronto + Integração<br>(Referência: Flávia Capacia)</h3>
+      <div class="preco">R$ 3.000,00 / ano</div>
+      <ul class="lista-beneficios">
+        <li>Personalização completa de cores, logotipo e estrutura</li>
+        <li><span class="diferencial">Diferencial Exclusivo:</span> Suporte no cadastro e organização dos imóveis pela nossa equipe</li>
+        <li><span class="diferencial">Diferencial Exclusivo:</span> Integração com catálogo do Facebook e portais imobiliários</li>
+        <li>Páginas organizadas: Início, Sobre, Imóveis, Blog e Contato</li>
+        <li>Estrutura igual ao modelo de sucesso Flávia Capacia</li>
+        <li>Suporte anual completo + domínio .com incluso</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Site + CRM de Cadastro Rápido<br>(Referência: Flávia Capacia)</h3>
+      <div class="preco">R$ 5.000,00 / ano</div>
+      <ul class="lista-beneficios">
+        <li>Todas as vantagens do Site Modelo Pronto</li>
+        <li><span class="diferencial">Diferencial Exclusivo:</span> Integração com CRM Ágil de cadastro rápido</li>
+        <li>Painel simples para atualizar fotos, preços e descrições sem complicação</li>
+        <li>Filtros de busca por bairro, valor e quantidade de quartos</li>
+        <li>Suporte anual </li>
+        <li>Domínio .com incluso</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Site Premium + Base Completa Imobiliaria<br>(Referência: Gralha)</h3>
       <div class="preco">R$ 10.000,00</div>
       <ul class="lista-beneficios">
-        <li>Estrutura robusta e completa para imobiliárias</li>
-        <li>Recursos avançados, layout exclusivo e otimizações</li>
-        <li>Suporte anual dedicado e acompanhamento contínuo</li>
-        <li>Domínio incluso e treinamento básico para atualizações</li>
+         <li><span class="diferencial">Diferencial Exclusivo:</span> Site atualizado com toda base da Imobiliaria de referencia</li>
+        <li><span class="diferencial">Diferencial Exclusivo:</span> Integração com CRM Ágil de cadastro rápido</li>
+        <li>Todas as vantagens do Site Modelo Pronto</li>
+       <li>Suporte anual </li>
+        <li>Domínio incluso</li>
       </ul>
     </div>
   </div>
@@ -174,16 +220,21 @@
     <h2>Condições Comerciais</h2>
     <div class="card">
       <p><strong>Forma de pagamento:</strong> 50% à vista no início do projeto + 50% parcelado em até 18x com juros.</p>
-      <p style="margin-top:10px;"><strong>Observação:</strong> Domínios .com.br, hospedagem extra e funcionalidades adicionais podem ser contratados separadamente.</p>
-      <p style="margin-top:10px;">Todos os serviços contam com entrega rápida, qualidade visual e suporte técnico durante todo o período contratado.</p>
+      <p style="margin-top:10px;"><strong>Observação:</strong> Domínios .com.br, hospedagem de maior capacidade e funcionalidades extras podem ser contratados separadamente.</p>
+      <p style="margin-top:10px;">Todos os serviços são entregues testados, responsivos e contam com suporte técnico durante todo o período contratado.</p>
     </div>
   </div>
 
+  <div class="programa secao">
+    <h2>Programa de Indicação</h2>
+    <p>Indique amigos, colegas ou empresas que contratarem nossos serviços e ganhe benefícios exclusivos: descontos em renovações, extensão gratuita do suporte e pontos acumuláveis que podem ser trocados por ajustes extras ou melhorias no seu site!</p>
+  </div>
+
   <div class="dados-contato">
-    <h2 style="border:none; color:var(--rosa-neon); margin:0 0 15px 0; padding:0;">Entre em Contato</h2>
-    <p>WhatsApp: +55 (11) 91238-1257</p>
-    <p>Site Oficial: https://www.agilesuite.site/</p>
-    <p>Atendimento em Florianópolis/SC e todo o território nacional</p>
+    <h2>Entre em Contato</h2>
+    <p>WhatsApp: <a href="https://wa.me/5511912381257" target="_blank">+55 (11) 91238-1257</a></p>
+    <p>Site Oficial: <a href="https://www.agilesuite.site/" target="_blank">https://www.agilesuite.site/</a></p>
+    <p>Atendimento presencial em São José / Palhoça / Florianópolis-SC e online para todo o Brasil</p>
   </div>
 
   <div class="rodape">
