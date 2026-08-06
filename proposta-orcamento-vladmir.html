@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preços e Valores | Agile Suite</title>
+  <meta name="description" content="Valores acessíveis para criação de sites e landing pages. De R$350,00 por apenas R$297,00 — entrega rápida e garantia.">
+  <meta name="keywords" content="preço site São José SC, valor landing page, site barato Palhoça, criar site Florianópolis">
+  
+  <link rel="icon" type="image/png" href="img/logo-agile.png">
+  <style>
+    /* ===== PALETA AGILE SUITE: ROSA NEON + AZUIS ELEGANTES ===== */
+    :root {
+      --rosa-neon: #ff2e88;       /* Cor principal característica */
+      --azul-escuro: #0f172a;     /* Fundo principal (azul escuro ao invés de roxo) */
+      --azul-medio: #1e293b;      /* Fundo dos cards */
+      --azul-claro-destaque: #2563eb; /* Azul vibrante para detalhes */
+      --azul-suave: #3b82f6;      /* Azul suave para hover/gradiente */
+      --texto-claro: #ffffff;     /* Texto branco */
+      --cinza-suave: #cbd5e1;     /* Texto secundário */
+      --gradiente-misto: linear-gradient(45deg, #ff2e88, #3b82f6); /* Rosa + Azul */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      background-color: var(--azul-escuro);
+      color: var(--texto-claro);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ===== CABEÇALHO ===== */
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 1rem 0;
+      z-index: 99;
+      top: 0;
+      box-shadow: 0 2px 12px rgba(37, 99, 235, 0.15);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: var(--gradiente-misto);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    .menu a {
+      color: var(--texto-claro);
+      text-decoration: none;
+      font-size: 1.05rem;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover,
+    .menu a.ativo {
+      color: var(--rosa-neon);
+    }
+
+    /* ===== CONTEÚDO ===== */
+    main {
+      padding-top: 75px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--rosa-neon);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--cinza-suave);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 3rem;
+    }
+
+    .card {
+      background-color: var(--azul-medio);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    .card:nth-child(1) {
+      border: 2px solid var(--rosa-neon);
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 46, 136, 0.2);
+    }
+
+    .card-conteudo h3 {
+      margin-bottom: 1rem;
+      color: var(--rosa-neon);
+    }
+
+    .card-conteudo p {
+      margin-bottom: 1rem;
+      color: var(--cinza-suave);
+    }
+
+    .card-conteudo p[style*="font-size: 2rem"],
+    .card-conteudo p[style*="font-size: 1.8rem"] {
+      color: var(--texto-claro);
+    }
+
+    /* ===== BOTÕES ===== */
+    .btn {
+      display: inline-block;
+      background: var(--rosa-neon);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background: var(--azul-claro-destaque);
+      transform: scale(1.01);
+    }
+
+    .btn-destaque {
+      background: var(--gradiente-misto);
+    }
+
+    .btn-destaque:hover {
+      background: linear-gradient(45deg, #3b82f6, #ff2e88);
+    }
+
+    .caixa-personalizado {
+      text-align: center;
+      margin-top: 40px;
+      padding: 25px;
+      background: rgba(37, 99, 235, 0.08);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .caixa-personalizado h3 {
+      color: var(--azul-claro-destaque);
+      margin-bottom: 0.8rem;
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background: #020617; /* Azul mais escuro para rodapé */
+      padding: 3rem 1rem 1rem;
+      margin-top: 2rem;
+    }
+
+    .rodape-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .rodape-grid h3 {
+      color: var(--rosa-neon);
+      margin-bottom: 1rem;
+    }
+
+    .rodape-grid p a {
+      color: var(--cinza-suave);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .rodape-grid p a:hover {
+      color: var(--azul-suave);
+    }
+
+    .rodape-final {
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--azul-medio);
+      color: var(--cinza-suave);
+      font-size: 0.9rem;
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media(max-width:768px){
+      .menu {gap:0.8rem;}
+      .hero h2 {font-size:1.6rem;}
+      .card:nth-child(1) {transform: none;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Agile Suite</div>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="vendas-sites.html">Modelos</a></li>
+          <li><a href="#" class="ativo">Valores</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Investimento que cabe no seu bolso</h2>
+        <p>Qualidade profissional sem preço de agência. Aproveite o valor especial para clientes de São José, Palhoça, Florianópolis e todo o Brasil.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-cards">
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>🔥 Modelo Pronto por Segmento</h3>
+              <p style="text-decoration: line-through; opacity: 0.6;">De R$ 350,00</p>
+              <p style="font-size: 2rem; font-weight: bold; margin: 10px 0;">Por apenas <br>R$ 297,00</p>
+              <p>✅ Layout pronto e personalizado com seus dados<br>✅ Otimizado para aparecer no Google<br>✅ Botão direto para WhatsApp e Mapa<br>✅ Funciona em celular, tablet e computador<br>✅ Entrega em até 3 dias úteis<br>✅ 30 dias de suporte gratuito<br>✅ Até 2x sem juros</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20Modelo%20Pronto%20por%20R$297" target="_blank" class="btn">Quero este valor</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>Landing Page Personalizada</h3>
+              <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0;">R$ 397,00</p>
+              <p>✅ Feita do zero para o seu negócio<br>✅ Textos e estrutura alinhados ao seu serviço<br>✅ SEO completo<br>✅ Formulário de contato<br>✅ Entrega em até 4 dias<br>✅ Até 3x sem juros</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20a%20Landing%20Page%20Personalizada" target="_blank" class="btn">Solicitar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>Site Completo</h3>
+              <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0;">R$ 597,00</p>
+              <p>✅ Até 5 páginas: Início, Sobre, Serviços, Galeria, Contato<br>✅ Mapa de localização<br>✅ Estrutura pronta para crescer<br>✅ Entrega em até 7 dias<br>✅ Até 3x sem juros<br>✅ Até 10x com juros</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20Site%20Completo" target="_blank" class="btn">Solicitar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="caixa-personalizado">
+          <h3>Precisa de algo diferente?</h3>
+          <p>Criamos do jeito que você precisar — mais páginas, funcionalidades especiais ou layout exclusivo.</p>
+          <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20um%20orçamento%20personalizado" target="_blank" class="btn btn-destaque" style="max-width:350px; display:inline-block; margin-top:15px;">Pedir Orçamento Personalizado</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="rodape-grid">
+        <div>
+          <h3>Agile Suite</h3>
+          <p>Sites que trazem clientes para você.</p>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <p><a href="index.html">Página Inicial</a></p>
+          <p><a href="vendas-sites.html">Modelos</a></p>
+          <p><a href="https://wa.me/5511912381257" target="_blank">Contato</a></p>
+        </div>
+        <div>
+          <h3>Atendimento</h3>
+          <p>São José / Palhoça / Florianópolis</p>
+          <p>Todo o Brasil</p>
+        </div>
+      </div>
+      <div class="rodape-final">
+        <p>&copy; 2026 Agile Suite — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
