@@ -1,1 +1,114 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Não Encontrada | Agile Suite</title>
+  <meta name="description" content="Ops! A página que você procurou não existe. Volte para o site oficial da Agile Suite — Sites que trazem clientes para corretores e imobiliárias.">
+  <style>
+    :root {
+      --roxo-principal: #b693ff;
+      --rosa-destaque: #e066a8;
+      --fundo-escuro: #0f1120;
+      --texto-claro: #e2e0ff;
+      --branco: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      background-color: var(--fundo-escuro);
+      color: var(--texto-claro);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--roxo-principal);
+      margin-bottom: 40px;
+    }
+    .codigo-erro {
+      font-size: clamp(5rem, 15vw, 8rem);
+      font-weight: 800;
+      color: var(--rosa-destaque);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      color: var(--roxo-principal);
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+    }
+    .btn-voltar {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--roxo-principal), var(--rosa-destaque));
+      color: var(--branco);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-voltar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(182, 147, 255, 0.35);
+    }
+    .links-uteis {
+      margin-top: 40px;
+    }
+    .links-uteis a {
+      color: var(--roxo-principal);
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .links-uteis a:hover {
+      color: var(--rosa-destaque);
+      text-decoration: underline;
+    }
+    @media (max-width: 480px) {
+      .links-uteis {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Agile Suite</div>
+
+  <div class="codigo-erro">404</div>
+  <h1>Página não encontrada</h1>
+  <p>Ops! Parece que o endereço que você acessou não existe, foi movido ou está digitado incorretamente.<br>Não se preocupe, volte para o início ou contate nossa equipe para ajuda!</p>
+
+  <a href="https://www.agilesuite.site/" class="btn-voltar">Voltar ao Site Oficial</a>
+
+  <div class="links-uteis">
+    <a href="https://www.agilesuite.site/">Página Inicial</a>
+    <a href="https://wa.me/5511912381257" target="_blank">Falar no WhatsApp</a>
+  </div>
+</body>
+</html>
