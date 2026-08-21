@@ -3,18 +3,271 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matheus Nicolau | Imóveis em Florianópolis, São José e Palhoça</title>
-  <meta name="description" content="Encontre o imóvel ideal com Matheus Nicolau da MN Negócios Imobiliários. Atendimento personalizado, transparência e as melhores oportunidades da região.">
-  <meta name="keywords" content="corretor de imóveis Florianópolis, imóveis São José SC, apartamento Palhoça, comprar casa Floripa, MN Negócios Imobiliários">
+  <title>MN Negócios Imobiliários - Corretor de Imóveis</title>
+  <!-- Open Graph -->
+<meta property="og:title" content="Matheus Nicolau - Corretor de Imóveis">
+<meta property="og:description" content="Fundador da MN Negócios Imobiliários. Ajudo você a encontrar o imóvel ideal no Estreito e região de Florianópolis.">
+<meta property="og:image" content="https://www.agilesuite.site/MatheusNicolau/img/matheus.png">
+<meta property="og:url" content="https://www.agilesuite.site/MatheusNicolau/corretordeimoveis.html">
+<meta property="og:type" content="website">
 
-  <meta property="og:title" content="Matheus Nicolau - Corretor de Imóveis">
-  <meta property="og:description" content="Ajudo você a encontrar o imóvel ideal em Florianópolis, São José e região. Atendimento exclusivo e transparente.">
-  <meta property="og:image" content="https://www.agilesuite.site/MatheusNicolau/img/matheus.png">
-  <meta property="og:url" content="https://www.agilesuite.site/MatheusNicolau/matheus-nicolau.html">
-  <meta property="og:type" content="website">
+<!-- Twitter Card (funciona também em WhatsApp) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Matheus Nicolau - Corretor de Imóveis">
+<meta name="twitter:description" content="Especialista em vendas de imóveis no Estreito e região. Veja as ofertas exclusivas.">
+<meta name="twitter:image" content="https://www.agilesuite.site/MatheusNicolau/img/matheus.png">
+</head>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif;}
+    body {background:#0b0b0b; color:#fff; min-height:100vh; display:flex; justify-content:center; align-items:center; padding:20px;}
+    .lp-container {width:100%; max-width:480px; background:#000; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.5); padding-bottom:30px;}
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    /* Cabeçalho com faixa estilo LinkedIn */
+    .lp-container {width:100%; max-width:480px; background:#000; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.5); padding-bottom:30px;}
+    .lp-header {text-align:center; padding:20px; border-bottom:2px solid #222;}
+    .lp-header img {width:100%; max-width:380px; border-radius:12px; margin-bottom:15px;}
+    .logo-text {font-size:24px; font-weight:bold; text-transform:uppercase; color:#fff;}
+    .logo-highlight {color:#00ff66;}
+    .lp-content {padding:25px 20px; text-align:center;}
+    .lp-title {font-size:20px; font-weight:700; margin-bottom:15px;}
+    .lp-subtitle {font-size:14px; color:#aaa; margin-bottom:25px;}
+    .company-info {position:absolute; bottom:20px; left:20px; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,0.7);}
+    .company-info h1 {font-size:22px; font-weight:bold; color:#d4af37; margin-bottom:5px;} /* dourado */
+    .company-info p {font-size:14px; margin:2px 0;}
 
+    .lp-content {padding:25px 20px; text-align:center;}
+    .lp-title {font-size:20px; font-weight:700; margin-bottom:15px;}
+    .lp-subtitle {font-size:14px; color:#aaa; margin-bottom:25px;}
+    .lp-form {display:flex; flex-direction:column; gap:15px;}
+    .lp-input {width:100%; padding:15px; border-radius:8px; border:1px solid #333; background:#fff; color:#000;}
+    .lp-input::placeholder {color:#777;}
+    .qualification-group {text-align:left; margin-top:10px; display:flex; flex-direction:column; gap:12px;}
+    .radio-label {display:flex; align-items:center; font-size:14px; color:#ddd; cursor:pointer;}
+    .radio-label input {margin-right:12px; accent-color:#d4af37; width:18px; height:18px;}
+    .lp-button {width:100%; background:#d4af37; color:#000; border:none; padding:16px; border-radius:8px; font-size:16px; font-weight:700; text-transform:uppercase; cursor:pointer; margin-top:15px;}
+    .lp-button:hover {background:#b9972c;}
+/* Seção Quem é Matheus */
+.about-matheus {
+  background-color: #111; /* fundo escuro elegante */
+  padding: 40px 20px;
+  border-top: 2px solid #d4af37; /* linha dourada */
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4af37; /* título dourado */
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.about-container ul li {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* Botões sociais estilo Thiago */
+.about-container .social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-container .social-links a {
+  display: block;
+  background-color: #00b341; /* verde padrão */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.about-container .social-links a:hover {
+  background-color: #d4af37; /* dourado no hover */
+  color: #000;
+}
+
+  /* Botão WhatsApp Flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  animation: vibrate 2s infinite;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Efeito de vibração */
+@keyframes vibrate {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(2deg); }
+  20% { transform: rotate(-2deg); }
+  30% { transform: rotate(2deg); }
+  40% { transform: rotate(-2deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.whatsapp-float:hover {
+  background: #d4af37; /* dourado no hover */
+}
+
+
+    /* Cookies */
+    .cookies {position:fixed; bottom:0; left:0; width:100%; background:#222; color:#fff; padding:10px; text-align:center; font-size:13px;}
+    .cookies button {margin-left:10px; padding:5px 10px; border:none; background:#d4af37; color:#000; border-radius:5px; cursor:pointer;}
+
+    .social-links {margin-top:20px;}
+    .social-links a {color:#d4af37; margin:0 10px; text-decoration:none; font-weight:bold;}
+  </style>
+
+<body>
+
+  <div class="lp-container">
+    <!-- Cabeçalho com foto -->
+    <div class="lp-header">
+      <img src="img/matheus.png" alt="Matheus Nicolau">
+      <div class="logo-text">Matheus Nicolau</div>
+      <div class="logo-text logo-highlight">Corretor de Imóveis</div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="lp-content">
+      <h1 class="lp-title">Encontre o imóvel ideal para o seu momento de vida</h1>
+      <p class="lp-subtitle">Preencha os dados abaixo para receber atendimento personalizado via WhatsApp e e-mail com as melhores opções da região.</p>
+
+    <!-- Formulário Matheus -->
+<form class="lp-form" id="whatsappForm">
+  <input type="text" id="nome" class="lp-input" placeholder="Digite seu nome" required>
+  <input type="email" id="email" class="lp-input" placeholder="Digite seu email" required>
+  <input type="tel" id="telefone" class="lp-input" placeholder="+55 Digite seu telefone" required>
+
+  <!-- Perguntas BANT -->
+  <div class="qualification-group">
+    <label class="radio-label"><input type="radio" name="budget" value="até R$300 mil">Meu orçamento é até R$300 mil</label>
+    <label class="radio-label"><input type="radio" name="budget" value="R$300 mil a R$600 mil">Entre R$300 mil e R$600 mil</label>
+    <label class="radio-label"><input type="radio" name="budget" value="Acima de R$600 mil">Acima de R$600 mil</label>
+  </div>
+
+  <div class="qualification-group">
+    <label class="radio-label"><input type="radio" name="authority" value="Decido sozinho">Eu decido sozinho</label>
+    <label class="radio-label"><input type="radio" name="authority" value="Decido junto com a família">Decido junto com a família</label>
+  </div>
+
+  <div class="qualification-group">
+    <label class="radio-label"><input type="radio" name="need" value="Primeiro imóvel">Quero comprar meu primeiro imóvel</label>
+    <label class="radio-label"><input type="radio" name="need" value="Imóvel maior para família">Busco um imóvel maior para minha família</label>
+    <label class="radio-label"><input type="radio" name="need" value="Investimento">Quero investir no mercado imobiliário</label>
+  </div>
+
+  <div class="qualification-group">
+    <label class="radio-label"><input type="radio" name="timing" value="Urgente">Preciso comprar em até 3 meses</label>
+    <label class="radio-label"><input type="radio" name="timing" value="Médio prazo">Pretendo comprar em até 12 meses</label>
+    <label class="radio-label"><input type="radio" name="timing" value="Longo prazo">Estou apenas pesquisando valores</label>
+  </div>
+
+  <button type="submit" class="lp-button">Falar com o Corretor</button>
+</form>
+
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let nome = document.getElementById("nome").value;
+  let email = document.getElementById("email").value;
+  let telefone = document.getElementById("telefone").value;
+  let budget = document.querySelector('input[name="budget"]:checked')?.value || "";
+  let authority = document.querySelector('input[name="authority"]:checked')?.value || "";
+  let need = document.querySelector('input[name="need"]:checked')?.value || "";
+  let timing = document.querySelector('input[name="timing"]:checked')?.value || "";
+
+  let mensagem = `Olá Matheus, quero receber as ofertas landpage.%0A
+Nome: ${nome}%0A
+Email: ${email}%0A
+Telefone: ${telefone}%0A
+Orçamento: ${budget}%0A
+Autoridade: ${authority}%0A
+Necessidade: ${need}%0A
+Timing: ${timing}`;
+
+  window.open(`https://wa.me/554891365133?text=${mensagem}`, "_blank");
+});
+</script>
+
+
+<!-- Seção Quem é Matheus -->
+<section class="about-matheus">
+  <div class="about-container">
+    <h2>Quem é Matheus Nicolau</h2>
+    <p>
+      Matheus Nicolau é cofundador da <strong>MN Negócios Imobiliários</strong>, empresa especializada em compra e venda de imóveis em Florianópolis e região. 
+      Com experiência sólida no mercado e foco em atendimento personalizado, Matheus se destaca por unir tecnologia, credibilidade e proximidade com seus clientes.
+    </p>
+    <p>
+    <p>
+      Ao escolher comprar ou vender com Matheus, você garante:
+    </p>
+    <ul>
+      <li>✔ Atendimento humano e transparente</li>
+      <li>✔ Acesso às melhores oportunidades da região</li>
+      <li>✔ Suporte completo em todas as etapas da negociação</li>
+      <li>✔ Credibilidade de uma empresa registrada (CNPJ: 49.626.154/0001-82)</li>
+    </ul>
+    <p>
+      Siga o Matheus nas redes sociais e acompanhe dicas, novidades e oportunidades exclusivas:
+    </p>
+    <div class="social-links">
+      <a href="https://matheusnicolauimoveis.com.br/" target="_blank"> Site de Imoveis </a>
+      <a href="https://instagram.com/corretormatheusnicolau/" target="_blank"> Siga no Instagram</a>
+      <a href="https://youtube.com/@corretormatheusnicolau" target="_blank"> Veja os imoveis no YouTube</a>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+ <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/554891365133" class="whatsapp-float" target="_blank"></a>
+
+
+
+  <!-- Cookies -->
+  <div class="cookies">
+    Este site utiliza cookies para melhorar sua experiência.
+    <button onclick="this.parentElement.style.display='none'">Aceitar</button>
+  </div>
+
+</body>
+</html>
   <style>
     * {
       margin: 0;
