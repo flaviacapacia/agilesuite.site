@@ -1,1 +1,624 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Nicolau | Imóveis em Florianópolis, São José e Palhoça</title>
+  <meta name="description" content="Encontre o imóvel ideal com Matheus Nicolau da MN Negócios Imobiliários. Atendimento personalizado, transparência e as melhores oportunidades da região.">
+  <meta name="keywords" content="corretor de imóveis Florianópolis, imóveis São José SC, apartamento Palhoça, comprar casa Floripa, MN Negócios Imobiliários">
+
+  <meta property="og:title" content="Matheus Nicolau - Corretor de Imóveis">
+  <meta property="og:description" content="Ajudo você a encontrar o imóvel ideal em Florianópolis, São José e região. Atendimento exclusivo e transparente.">
+  <meta property="og:image" content="https://www.agilesuite.site/MatheusNicolau/img/matheus.png">
+  <meta property="og:url" content="https://www.agilesuite.site/MatheusNicolau/matheus-nicolau.html">
+  <meta property="og:type" content="website">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1a1a1a;
+      min-height: 100vh;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #d4af37;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 24px;
+      background: linear-gradient(90deg,#d4af37,#f0d78c);
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(212,175,55,0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .hero {
+      padding: 130px 0 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 35px;
+      text-align: center;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      line-height: 42px;
+      margin-bottom: 18px;
+      color: #1a1a1a;
+      word-wrap: break-word;
+    }
+
+    .hero span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 22px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .diferenciais {
+      background: #f9f9f9;
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1a1a1a;
+      word-wrap: break-word;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-left: 4px solid #d4af37;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #d4af37;
+      font-size: 18px;
+    }
+
+    .sobre {
+      padding: 60px 0;
+    }
+
+    .sobre-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .sobre-texto {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .sobre-texto h2 {
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .sobre-texto ul {
+      list-style: none;
+      margin-top: 18px;
+      text-align: left;
+      display: inline-block;
+    }
+
+    .sobre-texto li {
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .sobre-texto li strong {
+      color: #d4af37;
+    }
+
+    .imoveis-destaque {
+      background: #f9f9f9;
+      padding: 60px 0;
+    }
+
+    .imoveis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 25px;
+    }
+
+    .imovel-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .imovel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .imovel-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .imovel-info {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .imovel-info h3 {
+      margin-bottom: 6px;
+      color: #1a1a1a;
+      font-size: 19px;
+    }
+
+    .imovel-info p {
+      color: #666;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .depoimentos {
+      padding: 60px 0;
+    }
+
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 20px;
+    }
+
+    .depo-card {
+      background: #f9f9f9;
+      padding: 22px;
+      border-radius: 12px;
+      border-left: 4px solid #d4af37;
+    }
+
+    .depo-texto {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .depo-nome {
+      font-weight: 700;
+      color: #d4af37;
+      font-size: 14px;
+    }
+
+    .mapa {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .mapa iframe {
+      width: 100%;
+      max-width: 850px;
+      height: 300px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .contato {
+      background: #1a1a1a;
+      color: white;
+      padding: 60px 0;
+    }
+
+    .contato .section-title {
+      color: white;
+    }
+
+    /* === FORMULÁRIO IGUAL AO DO VLADIMIR - COMPACTO E FUNCIONAL === */
+    .form-container {
+      max-width: 520px;
+      margin: 0 auto;
+      background: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      color: #1a1a1a;
+    }
+
+    .lp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .lp-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    .lp-input::placeholder {
+      color: #888;
+    }
+
+    .qualification-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 5px 0;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .radio-label input {
+      width: 16px;
+      height: 16px;
+      accent-color: #d4af37;
+    }
+
+    footer {
+      background: #111;
+      color: #999;
+      padding: 40px 0 25px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+      z-index: 999;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media(max-width: 600px){
+      .hero h1 { font-size: 28px; line-height: 36px; }
+      .section-title { font-size: 24px; }
+      .btn { width: 100%; max-width: 280px; }
+      nav a { margin: 4px 6px; }
+      .header-content { justify-content: center; }
+      .form-container { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <div class="logo">Matheus Nicolau</div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#destaques">Imóveis</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#contato">Buscar</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <h1>Encontre o <span>imóvel ideal</span> com segurança e transparência</h1>
+      <p>Sou Matheus Nicolau, da MN Negócios Imobiliários — especialista em compra, venda e negociação em <strong>Florianópolis, São José e Palhoça</strong>.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:15px;">
+        <a href="#contato" class="btn">Solicitar Oportunidades</a>
+        <a href="#destaques" class="btn btn-outline">Ver Imóveis</a>
+      </div>
+    </div>
+    <img src="img/matheus.png" alt="Matheus Nicolau" class="hero-img">
+  </div>
+</section>
+
+<section class="diferenciais">
+  <div class="container">
+    <h2 class="section-title">Por que escolher o meu trabalho?</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <h3>✔ Transparência total</h3>
+        <p>Sem surpresas, sem enrolação.</p>
+      </div>
+      <div class="card">
+        <h3>✔ Oportunidades exclusivas</h3>
+        <p>Acesso a imóveis diferenciados.</p>
+      </div>
+      <div class="card">
+        <h3>✔ Suporte completo</h3>
+        <p>Do início até a assinatura.</p>
+      </div>
+      <div class="card">
+        <h3>✔ Credibilidade</h3>
+        <p>Empresa registrada na região.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="container sobre-content">
+    <div class="sobre-texto">
+      <h2>Quem sou eu</h2>
+      <p>Sou <strong>Matheus Nicolau</strong>, cofundador da <strong>MN Negócios Imobiliários</strong> (CNPJ: 49.626.154/0001-82).</p>
+      <p>Unindo conhecimento e atendimento próximo, ajudo você a encontrar o imóvel certo.</p>
+      <ul>
+        <li>✅ Atendimento personalizado</li>
+        <li>✅ Conheço bem Floripa, São José e Palhoça</li>
+        <li>✅ Melhor negociação para você</li>
+        <li>✅ Acompanhamento completo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="imoveis-destaque" id="destaques">
+  <div class="container">
+    <h2 class="section-title">Oportunidades em Destaque</h2>
+    <div class="imoveis-grid">
+      <div class="imovel-card">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80" alt="Apartamento Florianópolis" class="imovel-img">
+        <div class="imovel-info">
+          <h3>Apartamento Frente Mar</h3>
+          <p>3 suítes • Vista ampla • Lazer completo</p>
+          <a href="https://wa.me/554891365133?text=Olá!%20Quero%20saber%20deste%20apartamento" target="_blank" class="btn">Mais Detalhes</a>
+        </div>
+      </div>
+      <div class="imovel-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Casa São José" class="imovel-img">
+        <div class="imovel-info">
+          <h3>Casa Espaçosa</h3>
+          <p>São José • Piscina • 4 quartos • Terreno grande</p>
+          <a href="https://wa.me/554891365133?text=Olá!%20Quero%20conhecer%20esta%20casa" target="_blank" class="btn">Mais Detalhes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <h2 class="section-title">O que dizem meus clientes</h2>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <p class="depo-texto">"O Matheus foi essencial para encontrarmos a casa ideal. Sempre atencioso e transparente. Recomendo!"</p>
+        <p class="depo-nome">— Família Silva, Floripa</p>
+      </div>
+      <div class="depo-card">
+        <p class="depo-texto">"Investimento seguro e rápido. Conhece muito bem a região e fez toda a diferença."</p>
+        <p class="depo-nome">— Carlos Alberto, São José</p>
+      </div>
+      <div class="depo-card">
+        <p class="depo-texto">"Desde o primeiro contato até as chaves, todo suporte necessário. Muito profissional."</p>
+        <p class="depo-nome">— Juliana Mendes, Palhoça</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mapa">
+  <div class="container">
+    <h2 class="section-title">Onde estamos</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.2!2d-48.54!3d-27.59!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM1JzI1LjIiUyA0OcKwMzInMjQuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    <p style="margin-top:12px; color:#666;">Rua Souza Dutra, 145 - Sala 601, Estreito - Floripa</p>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="container">
+    <h2 class="section-title">Busque o seu imóvel</h2>
+    <div class="form-container">
+      <p style="text-align:center; margin-bottom:15px; color:#555;">Preencha abaixo e receba as melhores opções diretamente no seu WhatsApp.</p>
+      
+      <!-- FORMULÁRIO PADRÃO VLADIMIR -->
+      <form class="lp-form" id="formLeads">
+        <input type="text" id="nome" class="lp-input" placeholder="Digite seu nome" required>
+        <input type="tel" id="telefone" class="lp-input" placeholder="Digite seu WhatsApp" required>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="orcamento" value="Até R$300 mil"> Meu orçamento é até R$300 mil</label>
+          <label class="radio-label"><input type="radio" name="orcamento" value="Entre R$300 mil e R$600 mil"> Entre R$300 mil e R$600 mil</label>
+          <label class="radio-label"><input type="radio" name="orcamento" value="Acima de R$600 mil"> Acima de R$600 mil</label>
+        </div>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="autoridade" value="Decido sozinho"> Eu decido sozinho</label>
+          <label class="radio-label"><input type="radio" name="autoridade" value="Decido com a família"> Decido com a família</label>
+        </div>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="necessidade" value="Primeiro imóvel"> Quero comprar meu primeiro imóvel</label>
+          <label class="radio-label"><input type="radio" name="necessidade" value="Imóvel maior"> Busco um imóvel maior</label>
+          <label class="radio-label"><input type="radio" name="necessidade" value="Investimento"> Quero investir</label>
+        </div>
+
+        <div class="qualification-group">
+          <label class="radio-label"><input type="radio" name="prazo" value="Até 3 meses"> Preciso comprar em até 3 meses</label>
+          <label class="radio-label"><input type="radio" name="prazo" value="Até 12 meses"> Pretendo comprar em até 12 meses</label>
+          <label class="radio-label"><input type="radio" name="prazo" value="Apenas pesquisando"> Estou apenas pesquisando</label>
+        </div>
+
+        <button type="submit" class="btn" style="width:100%; margin-top:8px;">Falar com o Corretor</button>
+      </form>
+
+      <div class="social-links">
+        <a href="https://matheusnicolauimoveis.com.br/" target="_blank" class="btn btn-outline">Site</a>
+        <a href="https://instagram.com/corretormatheusnicolau/" target="_blank" class="btn">Instagram</a>
+        <a href="https://youtube.com/@matheusnicolaucorretordeim6451" target="_blank" class="btn btn-outline">YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <h3>Matheus Nicolau • MN Negócios Imobiliários</h3>
+    <p>CNPJ: 49.626.154/0001-82 • (48) 99136-5133</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/554891365133" target="_blank" class="whatsapp-float">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<script>
+document.getElementById('formLeads').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const nome = document.getElementById('nome').value;
+  const telefone = document.getElementById('telefone').value;
+  const orcamento = document.querySelector('input[name="orcamento"]:checked')?.value || 'Não informado';
+  const autoridade = document.querySelector('input[name="autoridade"]:checked')?.value || 'Não informado';
+  const necessidade = document.querySelector('input[name="necessidade"]:checked')?.value || 'Não informado';
+  const prazo = document.querySelector('input[name="prazo"]:checked')?.value || 'Não informado';
+
+  const mensagem = `Olá Matheus, quero receber as opções de imóveis.%0A%0ANome: ${nome}%0ATelefone: ${telefone}%0AOrçamento: ${orcamento}%0AAutoridade: ${autoridade}%0ANecessidade: ${necessidade}%0APrazo: ${prazo}`;
+
+  window.open(`https://wa.me/554891365133?text=${encodeURIComponent(mensagem)}`, '_blank');
+});
+</script>
+
+</body>
+</html>
