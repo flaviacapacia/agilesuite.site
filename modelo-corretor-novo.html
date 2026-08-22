@@ -1,1 +1,655 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vladimir Vilmor • Imóveis de Alto Padrão em Florianópolis</title>
+  <meta name="description" content="Imóveis de alto padrão nos melhores endereços de Florianópolis — de Jurerê à Lagoa, da Beira Mar ao Campeche. Curadoria, discrição e atendimento sob medida.">
+  <meta name="keywords" content="imóveis alto padrão Florianópolis, apartamento frente mar, casa alto padrão Jurerê, cobertura Beira Mar Norte, corretor SC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --escuro: #0f111a;
+      --meio-escuro: #181a28;
+      --dourado: #c8a951;
+      --dourado-suave: #e2d49f;
+      --texto: #e6e6e6;
+      --texto-suave: #a8a8a8;
+      --borda: rgba(200, 169, 81, 0.15);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: var(--escuro);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* Cabeçalho */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 16px 0;
+      background: rgba(15, 17, 26, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--borda);
+      z-index: 999;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dourado);
+      letter-spacing: 0.8px;
+      text-decoration: none;
+    }
+
+    .sub-logo {
+      font-size: 13px;
+      color: var(--texto-suave);
+      margin-left: 8px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: var(--texto);
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--dourado);
+    }
+
+    /* Seção Hero */
+    .hero {
+      padding: 170px 0 100px;
+    }
+
+    .hero-conteudo {
+      max-width: 780px;
+    }
+
+    .hero .tag {
+      display: inline-block;
+      font-size: 14px;
+      color: var(--dourado-suave);
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: var(--texto-suave);
+      margin-bottom: 36px;
+      line-height: 1.8;
+      max-width: 680px;
+    }
+
+    .hero-botoes {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 32px;
+      background: linear-gradient(135deg, var(--dourado), #b89a3f);
+      color: #0f111a;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.35s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200, 169, 81, 0.22);
+    }
+
+    .btn-linha {
+      display: inline-block;
+      padding: 11px 30px;
+      border: 1px solid var(--dourado);
+      color: var(--dourado);
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: all 0.35s ease;
+    }
+
+    .btn-linha:hover {
+      background: var(--dourado);
+      color: var(--escuro);
+    }
+
+    /* Seções Gerais */
+    section {
+      padding: 80px 0;
+    }
+
+    .secao-cabecalho {
+      margin-bottom: 48px;
+    }
+
+    .secao-cabecalho h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 10px;
+    }
+
+    .secao-cabecalho p {
+      color: var(--texto-suave);
+      max-width: 600px;
+    }
+
+    /* Filtro de Busca */
+    .filtro-box {
+      background: var(--meio-escuro);
+      padding: 36px;
+      border-radius: 6px;
+      border: 1px solid var(--borda);
+      margin-bottom: 48px;
+    }
+
+    .filtro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 13px 15px;
+      background: var(--escuro);
+      border: 1px solid var(--borda);
+      color: var(--texto);
+      border-radius: 4px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    select:focus, input:focus {
+      border-color: var(--dourado);
+    }
+
+    /* Imóveis em Destaque */
+    .imoveis-grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .imovel-card {
+      background: var(--meio-escuro);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: all 0.35s ease;
+    }
+
+    .imovel-card:hover {
+      border-color: var(--borda);
+      transform: translateY(-4px);
+    }
+
+    .imovel-foto {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .imovel-corpo {
+      padding: 24px;
+    }
+
+    .imovel-codigo {
+      font-size: 13px;
+      color: var(--texto-suave);
+      margin-bottom: 6px;
+    }
+
+    .imovel-corpo h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .imovel-local {
+      font-size: 14px;
+      color: var(--texto-suave);
+      margin-bottom: 12px;
+    }
+
+    .imovel-meta {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--texto-suave);
+      margin-bottom: 14px;
+    }
+
+    .imovel-valor {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dourado);
+      margin-bottom: 16px;
+    }
+
+    .link-detalhe {
+      color: var(--dourado-suave);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .link-detalhe:hover {
+      border-bottom-color: var(--dourado);
+    }
+
+    /* Bairros de Atuação */
+    .bairros-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .bairro-item {
+      padding: 16px 20px;
+      background: var(--meio-escuro);
+      border-radius: 4px;
+      border-left: 2px solid var(--dourado);
+      transition: background 0.3s;
+    }
+
+    .bairro-item:hover {
+      background: rgba(200, 169, 81, 0.08);
+    }
+
+    .bairro-item strong {
+      display: block;
+      color: var(--texto);
+      font-size: 15px;
+    }
+
+    .bairro-item span {
+      font-size: 13px;
+      color: var(--texto-suave);
+    }
+
+    /* Sobre */
+    .sobre-grade {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .sobre-dados {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .dado-item h3 {
+      font-size: 34px;
+      color: var(--dourado);
+      margin-bottom: 4px;
+    }
+
+    .dado-item p {
+      font-size: 14px;
+      color: var(--texto-suave);
+    }
+
+    /* Contato Final */
+    .contato-secao {
+      background: var(--meio-escuro);
+      padding: 48px;
+      border-radius: 6px;
+      border-top: 2px solid var(--dourado);
+    }
+
+    .contato-item {
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    .contato-item a {
+      color: var(--dourado-suave);
+      text-decoration: none;
+    }
+
+    /* Rodapé */
+    footer {
+      padding: 40px 0 24px;
+      border-top: 1px solid var(--borda);
+      margin-top: 20px;
+    }
+
+    .rodape-infos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-bottom: 24px;
+    }
+
+    .rodape-col h4 {
+      font-size: 15px;
+      color: var(--dourado);
+      margin-bottom: 12px;
+    }
+
+    .rodape-col p,
+    .rodape-col a {
+      font-size: 14px;
+      color: var(--texto-suave);
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .rodape-col a:hover {
+      color: var(--dourado);
+    }
+
+    .direitos {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--borda);
+      font-size: 13px;
+      color: var(--texto-suave);
+    }
+
+    /* Responsivo */
+    @media(max-width:900px) {
+      .sobre-grade { grid-template-columns: 1fr; }
+      .sobre-dados { grid-template-columns: repeat(2, 1fr); }
+      header { padding: 12px 0; }
+      nav a { margin-left: 12px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      Vladimir Vilmor
+      <span class="sub-logo">Florianópolis · Alto Padrão</span>
+    </a>
+    <nav>
+      <a href="#imoveis">Imóveis</a>
+      <a href="#bairros">Regiões</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Principal -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-conteudo">
+      <span class="tag">Imóveis de Alto Padrão em Floripa</span>
+      <h1>Os melhores endereços de Florianópolis com curadoria e discrição.</h1>
+      <p>Seleção criteriosa de imóveis em Jurerê Internacional, Beira Mar Norte, Lagoa da Conceição, Campeche, Cacupé e regiões mais valorizadas da Ilha. Mais de R$85 milhões comercializados e atendimento personalizado do início à escritura.</p>
+      <div class="hero-botoes">
+        <a href="#imoveis" class="btn">Explorar imóveis</a>
+        <a href="#sobre" class="btn-linha">Conheça o corretor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filtro de Busca -->
+<section>
+  <div class="container">
+    <div class="secao-cabecalho">
+      <h2>Encontre o imóvel ideal.</h2>
+      <p>Filtre por tipo, bairro, dormitórios e faixa de preço.</p>
+    </div>
+    <div class="filtro-box">
+      <div class="filtro-grid">
+        <select>
+          <option>Todo tipo de imóvel</option>
+          <option>Apartamento</option>
+          <option>Cobertura</option>
+          <option>Casa</option>
+          <option>Terreno</option>
+          <option>Comercial</option>
+        </select>
+        <select>
+          <option>Todos os bairros</option>
+          <option>Centro / Beira Mar Norte</option>
+          <option>Jurerê Internacional</option>
+          <option>Jurerê Tradicional</option>
+          <option>Praia Brava</option>
+          <option>Lagoa da Conceição</option>
+          <option>Campeche</option>
+          <option>Cacupé</option>
+          <option>Santo Antônio de Lisboa</option>
+          <option>Itacorubi</option>
+        </select>
+        <select>
+          <option>Dormitórios — Indiferente</option>
+          <option>2 dormitórios</option>
+          <option>3 dormitórios</option>
+          <option>4 ou mais</option>
+        </select>
+        <select>
+          <option>Qualquer valor</option>
+          <option>Até R$ 1 milhão</option>
+          <option>R$ 1M – R$ 3M</option>
+          <option>R$ 3M – R$ 5M</option>
+          <option>R$ 5M – R$ 10M</option>
+          <option>Acima de R$ 10M</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Imóveis em Destaque -->
+<section id="imoveis">
+  <div class="container">
+    <div class="secao-cabecalho">
+      <h2>Imóveis em destaque.</h2>
+      <p>Uma seleção para morar bem em Florianópolis.</p>
+    </div>
+    <div class="imoveis-grade">
+
+      <div class="imovel-card">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80" class="imovel-foto" alt="Apartamento Frente Mar Jurerê">
+        <div class="imovel-corpo">
+          <div class="imovel-codigo">Cód. 44001</div>
+          <h3>Apartamento Frente Mar em Jurerê Internacional</h3>
+          <div class="imovel-local">Jurerê Internacional, Florianópolis</div>
+          <div class="imovel-meta">
+            <span>4 suítes</span>
+            <span>380 m²</span>
+          </div>
+          <div class="imovel-valor">R$ 7.900.000</div>
+          <a href="https://wa.me/5548999999999?text=Gostaria de detalhes do imóvel Cód. 44001" target="_blank" class="link-detalhe">Ver detalhes →</a>
+        </div>
+      </div>
+
+      <div class="imovel-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" class="imovel-foto" alt="Casa Alto Padrão Cacupé">
+        <div class="imovel-corpo">
+          <div class="imovel-codigo">Cód. 44002</div>
+          <h3>Casa Alto Padrão em Cacupé</h3>
+          <div class="imovel-local">Cacupé, Florianópolis</div>
+          <div class="imovel-meta">
+            <span>5 suítes</span>
+            <span>720 m²</span>
+          </div>
+          <div class="imovel-valor">R$ 9.900.000</div>
+          <a href="https://wa.me/5548999999999?text=Gostaria de detalhes do imóvel Cód. 44002" target="_blank" class="link-detalhe">Ver detalhes →</a>
+        </div>
+      </div>
+
+      <div class="imovel-card">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80" class="imovel-foto" alt="Cobertura Beira Mar Norte">
+        <div class="imovel-corpo">
+          <div class="imovel-codigo">Cód. 44003</div>
+          <h3>Cobertura Duplex Beira Mar Norte</h3>
+          <div class="imovel-local>Centro / Beira Mar Norte, Florianópolis</div>
+          <div class="imovel-meta">
+            <span>4 suítes</span>
+            <span>535 m²</span>
+          </div>
+          <div class="imovel-valor">Sob Consulta</div>
+          <a href="https://wa.me/5548999999999?text=Gostaria de detalhes do imóvel Cód. 44003" target="_blank" class="link-detalhe">Ver detalhes →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bairros de Atuação -->
+<section id="bairros">
+  <div class="container">
+    <div class="secao-cabecalho">
+      <h2>Os melhores endereços de Florianópolis.</h2>
+      <p>Cobertura completa nas regiões mais valorizadas da Ilha.</p>
+    </div>
+    <div class="bairros-lista">
+      <div class="bairro-item"><strong>Jurerê Internacional</strong><span>Endereço mais exclusivo da Ilha</span></div>
+      <div class="bairro-item"><strong>Jurerê Tradicional</strong><span>Tranquilidade e qualitye de vida</span></div>
+      <div class="bairro-item"><strong>Praia Brava</strong><span>Mar aberto e arquitetura contemporânea</span></div>
+      <div class="bairro-item"><strong>Beira Mar Norte</strong><span>Vista mar e localização central</span></div>
+      <div class="bairro-item"><strong>Agronômica</strong><span>Próximo ao centro, vista privilegiada</span></div>
+      <div class="bairro-item"><strong>Lagoa da Conceição</strong><span>Estilo de vida único</span></div>
+      <div class="bairro-item"><strong>Campeche</strong><span>Praia, lifestyle e lançamentos</span></div>
+      <div class="bairro-item"><strong>Cacupé</strong><span>Mar calmo, pôr do sol e exclusividade</span></div>
+      <div class="bairro-item"><strong>Santo Antônio de Lisboa</strong><span>Charme açoriano à beira-mar</span></div>
+      <div class="bairro-item"><strong>Itacorubi</strong><span>Bairro nobre, próximo a tudo</span></div>
+      <div class="bairro-item"><strong>Trindade</strong><span>Centralidade e valorização</span></div>
+      <div class="bairro-item"><strong>Morro das Pedras</strong><span>Vista mar aberta e privacidade</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre o Corretor -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-grade">
+      <div>
+        <div class="secao-cabecalho">
+          <h2>Sobre mim.</h2>
+        </div>
+        <p>Sou <strong>Vladimir Vilmor</strong>, corretor especializado em imóveis de médio e alto padrão em Florianópolis. Com mais de 16 anos de experiência e atuação focada nas regiões mais valorizadas da Ilha, atendo compradores, vendedores e investidores que buscam uma experiência imobiliária personalizada, segura e transparente.</p>
+        <p style="margin-top:16px; color:var(--texto-suave);">Meu trabalho vai além da intermediação: envolve escuta ativa, curadoria criteriosa, análise de perfil, leitura de mercado e acompanhamento próximo em cada etapa da negociação.</p>
+        <div class="sobre-dados">
+          <div class="dado-item"><h3>+16</h3><p>anos de mercado</p></div>
+          <div class="dado-item"><h3 id="val1">0</h3><p>milhões<br>comercializados</p></div>
+          <div class="dado-item"><h3 id="val2">0</h3><p>prêmios<br>Gralha Prime</p></div>
+          <div class="dado-item"><h3>100%</h3><p>atendimento<br>personalizado</p></div>
+        </div>
+      </div>
+      <div class="contato-secao">
+        <h3 style="margin-bottom:20px;">Vamos conversar?</h3>
+        <p style="color:var(--texto-suave); margin-bottom:24px;">Conte o bairro, o estilo de vida e o orçamento que você procura. Em breve eu retorno com uma seleção personalizada.</p>
+        <div class="contato-item">📞 <a href="https://wa.me/5548999999999" target="_blank">+55 (48) 9 9999-9999</a></div>
+        <div class="contato-item">✉️ <a href="mailto:contato@vladimirvilmor.com.br">contato@vladimirvilmor.com.br</a></div>
+        <div class="contato-item">📷 <a href="https://instagram.com/vladimivolmor.imoveis" target="_blank">@vladimivolmor.imoveis</a></div>
+        <div class="contato-item" style="margin-top:24px; color:var(--texto-suave); font-size:14px;">Florianópolis/SC · Norte, Centro, Leste e Sul da Ilha</div>
+        <div style="margin-top:20px;">
+          <a href="https://wa.me/5548999999999?text=Olá! Gostaria de uma seleção de imóveis em Florianópolis" target="_blank" class="btn">Solicitar seleção personalizada</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer id="contato">
+  <div class="container">
+    <div class="rodape-infos">
+      <div class="rodape-col">
+        <h4>Credenciais</h4>
+        <p>Vladimir Vilmor</p>
+        <p>CRECI/SC — 29999</p>
+        <p>Associado à Gralha Imóveis</p>
+      </div>
+      <div class="rodape-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5548999999999" target="_blank">+55 (48) 9 9999-9999</a><br>
+        <a href="mailto:contato@vladimirvilmor.com.br">contato@vladimirvilmor.com.br</a>
+      </div>
+      <div class="rodape-col">
+        <h4>Atuação</h4>
+        <p>Jurerê, Praia Brava, Beira Mar Norte, Lagoa, Campeche, Cacupé e toda Florianópolis</p>
+      </div>
+    </div>
+    <div class="direitos">
+      © 2026 Vladimir Vilmor · Imóveis em Florianópolis. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<script>
+function contador(id, alvo, sufixo = '') {
+  let atual = 0;
+  const el = document.getElementById(id);
+  const timer = setInterval(() => {
+    atual++;
+    if(atual >= alvo) { atual = alvo; clearInterval(timer); }
+    el.textContent = atual + sufixo;
+  }, 60);
+}
+contador('val1', 85, 'M');
+contador('val2', 10);
+</script>
+
+</body>
+</html>
