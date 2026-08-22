@@ -1,1 +1,731 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fernanda | Nail Designer — Unhas que elevam sua autoestima. Especialista em alongamento e esmaltação em gel.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://agilesuite.site/naildesign/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fernanda | Nail Designer">
+  <meta property="og:description" content="Unhas que elevam sua autoestima. Beleza, qualidade e cuidado em cada detalhe.">
+  <meta property="og:locale" content="pt_BR">
+  <title>Fernanda | Nail Designer — Unhas que Brilham ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --roxo: #a64bf4;
+      --rosa: #ff66b2;
+      --rosa-escuro: #e04080;
+      --claro: #fcf7ff;
+      --texto: #4b2e63;
+      --texto-suave: #7a5b91;
+      --sombra: rgba(166, 75, 244, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff 0%, #f8efff 100%);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(166,75,244,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--roxo);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .logo img {
+      height: 56px;
+      width: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--roxo);
+      box-shadow: 0 0 12px var(--sombra);
+    }
+
+    nav a {
+      color: var(--texto);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 28px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--rosa-escuro);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--rosa), var(--roxo));
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    /* Seção Hero — Grande e Encantadora */
+    .hero {
+      padding: 70px 0 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,102,178,0.15), transparent 70%);
+      top: -80px;
+      right: -80px;
+      border-radius: 50%;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(166,75,244,0.25), 0 0 60px rgba(255,102,178,0.12);
+      margin-bottom: 40px;
+      object-fit: cover;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.2;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--rosa-escuro), var(--roxo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 36px;
+      color: var(--texto-suave);
+    }
+
+    .btn-hero {
+      display: inline-block;
+      padding: 16px 42px;
+      background: linear-gradient(135deg, var(--rosa), var(--roxo));
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 24px rgba(255,102,178,0.35), 0 0 40px var(--sombra);
+      transition: all 0.4s ease;
+    }
+
+    .btn-hero:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 10px 35px rgba(255,102,178,0.45), 0 0 60px var(--sombra);
+    }
+
+    /* Seção Geral */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--roxo);
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      font-size: 1.1rem;
+      color: var(--texto-suave);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Serviços — Cards Grandes e Bonitos */
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+    }
+
+    .servico-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(166,75,244,0.1);
+      border: 1px solid rgba(166,75,244,0.1);
+      transition: all 0.4s ease;
+    }
+
+    .servico-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 45px rgba(166,75,244,0.18);
+      border-color: var(--rosa);
+    }
+
+    .servico-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .servico-corpo {
+      padding: 26px;
+    }
+
+    .servico-corpo h3 {
+      font-size: 1.3rem;
+      color: var(--texto);
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--rosa-escuro);
+      margin-bottom: 18px;
+    }
+
+    .btn-agendar {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, var(--roxo), var(--rosa));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-agendar:hover {
+      opacity: 0.92;
+      transform: scale(1.02);
+    }
+
+    .form-agenda {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px dashed rgba(166,75,244,0.2);
+      display: none;
+    }
+
+    .form-agenda input,
+    .form-agenda select {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      border: 2px solid #f0e4fa;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-agenda input:focus,
+    .form-agenda select:focus {
+      border-color: var(--rosa);
+    }
+
+    .btn-whats {
+      width: 100%;
+      padding: 12px;
+      background: #25d366;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-whats:hover {
+      background: #1da854;
+    }
+
+    /* Produtos */
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .produto-card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(166,75,244,0.08);
+      border: 1px solid rgba(166,75,244,0.08);
+      transition: all 0.35s ease;
+    }
+
+    .produto-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--rosa);
+    }
+
+    .produto-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 18px;
+    }
+
+    .produto-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .produto-card p {
+      font-size: 0.98rem;
+      color: var(--texto-suave);
+      margin-bottom: 16px;
+    }
+
+    .btn-comprar {
+      display: inline-block;
+      padding: 10px 24px;
+      background: #25d366;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-comprar:hover {
+      background: #1da854;
+      transform: scale(1.05);
+    }
+
+    /* Depoimentos */
+    .depoimentos {
+      background: linear-gradient(135deg, #fcf4fb, #f8efff);
+      border-radius: 28px;
+    }
+
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .depo-card {
+      background: white;
+      padding: 28px;
+      border-radius: 20px;
+      border-left: 4px solid var(--rosa);
+      box-shadow: 0 6px 20px rgba(166,75,244,0.08);
+    }
+
+    .depo-card p {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--texto);
+    }
+
+    /* Frase Destaque */
+    .frase {
+      text-align: center;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--roxo);
+      padding: 50px 30px;
+      background: linear-gradient(90deg, rgba(255,102,178,0.08), rgba(166,75,244,0.08));
+      border-radius: 24px;
+    }
+
+    /* Mapa e Rodapé */
+    .mapa-box {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 3px solid var(--roxo);
+      box-shadow: 0 8px 30px var(--sombra);
+    }
+
+    footer {
+      background: linear-gradient(180deg, #fff, #f8efff);
+      border-top: 2px solid rgba(166,75,244,0.15);
+      padding: 50px 0 30px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 36px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      color: var(--roxo);
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      color: var(--texto-suave);
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .footer-col a:hover {
+      color: var(--rosa-escuro);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(166,75,244,0.1);
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+    }
+
+    /* Responsivo */
+    @media(max-width:768px) {
+      .nav-wrap { flex-direction: column; gap: 12px; padding: 12px 0; }
+      nav a { margin: 0 10px; font-size: 15px; }
+      .hero { padding: 40px 0 60px; }
+      .hero-img { border-radius: 16px; }
+      section { padding: 45px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cabeçalho -->
+<header>
+  <div class="container nav-wrap">
+    <a href="#" class="logo">
+      <img src="img/naill (1).jpeg" alt="Logo — Fernanda Nail Designer">
+      Fernanda ✨
+    </a>
+    <nav>
+      <a href="#" class="active">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Seção Principal — Grande e Encantadora -->
+<section class="hero">
+  <div class="container">
+    <img src="img/naill (1).jpeg" alt="Unhas perfeitas e elegantes" class="hero-img">
+    <h1>Unhas que elevam sua autoestima 💅</h1>
+    <p>Sou Fernanda, especialista em alongamento com naturalidade e esmaltação em gel. Transformo suas unhas em verdadeiras joias — com brilho, durabilidade e toda a elegância que você merece. Aqui a beleza encontra qualidade. 💜</p>
+    <a href="https://wa.me/5599999999999" target="_blank" class="btn-hero">Agendar seu Horário →</a>
+  </div>
+</section>
+
+<!-- Serviços -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Serviços ✨</h2>
+      <p>Escolha o tratamento perfeito para você e brilhe como merece.</p>
+    </div>
+    <div class="servicos-grid">
+
+      <div class="servico-card">
+        <img src="img/naill (1).jpeg" alt="Pedicure" class="servico-img">
+        <div class="servico-corpo">
+          <h3>Pedicure — Cuidado completo dos pés</h3>
+          <div class="preco">R$ 30</div>
+          <button class="btn-agendar" onclick="mostrarForm(this)">Agendar Horário</button>
+          <form class="form-agenda" onsubmit="enviarWhats(event, 'Pedicure')">
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+            <input type="date" name="data" required>
+            <select name="hora" required>
+              <option value="">Escolha o horário</option>
+              <option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option>
+            </select>
+            <button type="submit" class="btn-whats">Agendar pelo WhatsApp 💚</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <img src="img/naill (2).jpeg" alt="Manicure" class="servico-img">
+        <div class="servico-corpo">
+          <h3>Manicure — Suas mãos com carinho</h3>
+          <div class="preco">R$ 28</div>
+          <button class="btn-agendar" onclick="mostrarForm(this)">Agendar Horário</button>
+          <form class="form-agenda" onsubmit="enviarWhats(event, 'Manicure')">
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+            <input type="date" name="data" required>
+            <select name="hora" required>
+              <option value="">Escolha o horário</option>
+              <option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option>
+            </select>
+            <button type="submit" class="btn-whats">Agendar pelo WhatsApp 💚</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <img src="img/naill (3).jpeg" alt="Alongamento Fibra de Vidro" class="servico-img">
+        <div class="servico-corpo">
+          <h3>Alongamento Fibra de Vidro — Elegância e força</h3>
+          <div class="preco">R$ 210</div>
+          <button class="btn-agendar" onclick="mostrarForm(this)">Agendar Horário</button>
+          <form class="form-agenda" onsubmit="enviarWhats(event, 'Alongamento Fibra de Vidro')">
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+            <input type="date" name="data" required>
+            <select name="hora" required>
+              <option value="">Escolha o horário</option>
+              <option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option>
+            </select>
+            <button type="submit" class="btn-whats">Agendar pelo WhatsApp 💚</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <img src="img/naill (4).png" alt="Alongamento Mold F1" class="servico-img">
+        <div class="servico-corpo">
+          <h3>Alongamento Mold F1 — Forma perfeita</h3>
+          <div class="preco">R$ 200</div>
+          <button class="btn-agendar" onclick="mostrarForm(this)">Agendar Horário</button>
+          <form class="form-agenda" onsubmit="enviarWhats(event, 'Alongamento Mold F1')">
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+            <input type="date" name="data" required>
+            <select name="hora" required>
+              <option value="">Escolha o horário</option>
+              <option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option>
+            </select>
+            <button type="submit" class="btn-whats">Agendar pelo WhatsApp 💚</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <img src="img/naill (5).jpeg" alt="Banho de Gel" class="servico-img">
+        <div class="servico-corpo">
+          <h3>Banho de Gel — Brilho e proteção</h3>
+          <div class="preco">R$ 100</div>
+          <button class="btn-agendar" onclick="mostrarForm(this)">Agendar Horário</button>
+          <form class="form-agenda" onsubmit="enviarWhats(event, 'Banho de Gel')">
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+            <input type="date" name="data" required>
+            <select name="hora" required>
+              <option value="">Escolha o horário</option>
+              <option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option>
+            </select>
+            <button type="submit" class="btn-whats">Agendar pelo WhatsApp 💚</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <img src="img/naill (7).jpeg" alt="Blindagem" class="servico-img">
+        <div class="servico-corpo">
+          <h3>Blindagem — Proteção e durabilidade</h3>
+          <div class="preco">R$ 100</div>
+          <button class="btn-agendar" onclick="mostrarForm(this)">Agendar Horário</button>
+          <form class="form-agenda" onsubmit="enviarWhats(event, 'Blindagem')">
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+            <input type="date" name="data" required>
+            <select name="hora" required>
+              <option value="">Escolha o horário</option>
+              <option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>13:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option>
+            </select>
+            <button type="submit" class="btn-whats">Agendar pelo WhatsApp 💚</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Frase que Encanta -->
+<section class="container frase">
+  "Não é apenas sobre unhas. É sobre reconhecimento, cuidado e brilhar com confiança. ✨ Cada detalhe feito com amor para você se sentir ainda mais linda."
+</section>
+
+<!-- Produtos -->
+<section id="produtos">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Produtos Exclusivos 💜</h2>
+      <p>Leve para casa a mesma qualidade que uso em seus atendimentos.</p>
+    </div>
+    <div class="produtos-grid">
+
+      <div class="produto-card">
+        <img src="img/produto (1).jpeg" alt="Gel para Unhas">
+        <h3>Gel para Unhas</h3>
+        <p>Profissional para alongamento e esmaltação com brilho intenso.</p>
+        <a href="https://wa.me/559999999999?text=Olá! Quero comprar o Gel para Unhas. Agradeço pelas informações!" target="_blank" class="btn-comprar">Comprar 💚</a>
+      </div>
+
+      <div class="produto-card">
+        <img src="img/produto (4).jpeg" alt="Top Coat">
+        <h3>Top Coat</h3>
+        <p>Finalização perfeita, brilho de salão e durabilidade excepcional.</p>
+        <a href="https://wa.me/559999999999?text=Olá! Quero comprar o Top Coat. Pode me ajudar?" target="_blank" class="btn-comprar">Comprar 💚</a>
+      </div>
+
+      <div class="produto-card">
+        <img src="img/produto (3).jpeg" alt="Moldes">
+        <h3>Moldes Profissionais</h3>
+        <p>Precisão e formato perfeito para seus alongamentos.</p>
+        <a href="https://wa.me/559999999999?text=Olá! Tenho interesse nos Moldes. Obrigada!" target="_blank" class="btn-comprar">Comprar 💚</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Depoimentos -->
+<section class="depoimentos">
+  <div class="container">
+    <div class="section-heading">
+      <h2>O que dizem minhas clientes 💬</h2>
+      <p>A satisfação de cada mulher é minha maior recompensa.</p>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card"><p>⭐ "Unhas perfeitas, atendimento impecável! Saio sempre me sentindo ainda mais bonita."</p></div>
+      <div class="depo-card"><p>⭐ "É uma verdadeira artista! Minhas unhas nunca ficaram tão lindas."</p></div>
+      <div class="depo-card"><p>⭐ "A melhor Nail Designer que conheço! Qualidade, carinho e brilho em cada detalhe."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Mapa e Contato -->
+<section id="contato">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Venha me Visitar 📍</h2>
+      <p>Estou pronta para cuidar de você com todo carinho e dedicação.</p>
+    </div>
+    <div class="mapa-box">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.792598408269!2d-46.63330968502146!3d-23.55051998469144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8c8c8c8c8%3A0x123456789abcdef!2sSão%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1699999999999" 
+        width="100%" height="320" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>📞 Contato</h4>
+        <p>Telefone: <a href="tel:+5599999999999">(11) 2599-2929</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5599999999999" target="_blank">(11) 99999-9999</a></p>
+        <p>Email: contato@naildesign</p>
+      </div>
+      <div class="footer-col">
+        <h4>⏰ Horários</h4>
+        <p>Segunda a Sexta: 9h às 18h</p>
+        <p>Sábado: 9h às 14h</p>
+        <p>Domingo: Fechado</p>
+      </div>
+      <div class="footer-col">
+        <h4>💜 Redes Sociais</h4>
+        <p><a href="https://www.instagram.com/" target="_blank">Instagram — @fernandanaildesign</a></p>
+        <p><a href="https://www.facebook.com/" target="_blank">Facebook</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Fernanda Nail Designer — Site criado com 💜 pelo Agile Suite. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+function mostrarForm(botao) {
+  const form = botao.nextElementSibling;
+  form.style.display = 'block';
+  botao.style.display = 'none';
+}
+
+function enviarWhats(event, servico) {
+  event.preventDefault();
+  const form = event.target;
+  const nome = form.nome.value.trim();
+  const data = form.data.value;
+  const hora = form.hora.value;
+  const mensagem = `Olá! Meu nome é ${nome}. Gostaria de agendar ${servico} para o dia ${data} às ${hora}. Fico no aguardo da confirmação! 💜`;
+  const url = `https://wa.me/5599999999999?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
