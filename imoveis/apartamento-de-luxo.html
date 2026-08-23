@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags Principais -->
+    <title>Residencial Prime Living | Mansões e Apartamentos de Luxo</title>
+    <meta name="description" content="Descubra o auge do luxo e exclusividade. Imóveis de alto padrão nas localizações mais nobres com condições especiais de pré-lançamento. Agende sua visita privada.">
+    <meta name="keywords" content="imoveis de luxo, alto padrao, cobertura, investimento imobiliario, mansao">
+    <meta name="robots" content="index, follow">
 
+    <!-- Open Graph / Meta Tags de Envio (WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seudominio.com.br/">
+    <meta property="og:title" content="Residencial Prime Living | O Topo do Luxo ao Seu Alcance">
+    <meta property="og:description" content="Condições exclusivas de atendimento VIP para os melhores imóveis de alto padrão. Clique para saber mais.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #d97706;
+            --accent-hover: #b45309;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: #fff;
+            padding: 80px 20px 100px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .badge {
+            background-color: rgba(217, 119, 6, 0.2);
+            color: #fbbf24;
+            border: 1px solid #d97706;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Cards de Solução / Alcance */
+        .features {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        /* Form / Conversão */
+        .cta-section {
+            background: var(--primary);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .form-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 500px;
+            margin: 30px auto 0;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .form-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="badge">Oportunidade Exclusiva</span>
+            <h1>Viva no Endereço Mais Desejado da Cidade</h1>
+            <p>Atendimento personalizado para investidores e compradores exigentes. Agende uma apresentação exclusiva e conheça as melhores unidades antes do mercado.</p>
+        </div>
+    </section>
+
+    <!-- Explicação e Alcance -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Por Que Escolher Nosso Atendimento VIP?</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Curadoria Exclusiva</h3>
+                    <p>Acesso a imóveis fora do mercado tradicional (Off-Market), garantindo privacidade e condições únicas de negociação.</p>
+                </div>
+                <div class="card">
+                    <h3>Consultoria Especializada</h3>
+                    <p>Atendimento focado em rentabilidade, liquidez e valorização patrimonial no segmento de altíssimo padrão.</p>
+                </div>
+                <div class="card">
+                    <h3>Agilidade & Privacidade</h3>
+                    <p>Processo de atendimento 100% discreto, rápido e personalizado via assessoria direta via WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Conversão -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Garanta Seu Atendimento Privado</h2>
+            <p>Preencha os dados abaixo para receber o catálogo completo e falar diretamente com um consultor especialista.</p>
+            
+            <div class="form-box">
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">WhatsApp com DDD</label>
+                        <input type="tel" id="phone" placeholder="(48) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interesse Principal</label>
+                        <select id="interest" required>
+                            <option value="Comprar Imóvel">Comprar Imóvel de Luxo</option>
+                            <option value="Investimento">Investimento em Lançamentos</option>
+                            <option value="Vender Imóvel">Vender meu Imóvel</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">RECEBER CATÁLOGO VIP</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script de Disparo WhatsApp (Alta Conversão) -->
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Configuração do WhatsApp do Atendimento
+            const whatsappNumber = '5548999999999'; // Substitua pelo seu número (DDD + Número)
+
+            // Coleta de dados
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const interest = document.getElementById('interest').value;
+
+            // Formatação da mensagem
+            const message = `Olá! Meu nome é *${name}*.\nTenho interesse em: *${interest}*.\nMeu contato: ${phone}.\nGostaria de receber o catálogo VIP e agendar um atendimento.`;
+
+            // Envio direto via URL do WhatsApp
+            const targetUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+            // Redirecionamento
+            window.open(targetUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
