@@ -1,1 +1,499 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agile Suite — Sua Presença Digital com Autoridade e Elegância</title>
+  <meta name="description" content="Landing Pages e Sites que encantam e convertem. Presença de líder, sem complicação. Pronta em poucos dias.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --preto: #0F1115;
+      --preto-suave: #1A1C23;
+      --dourado: #C8A951;
+      --dourado-claro: #E4C96A;
+      --branco: #FFFFFF;
+      --cinza: #B8B9BC;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--preto);
+      color: var(--branco);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* CABEÇALHO */
+    header {
+      padding: 1.5rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 17, 21, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(200, 169, 81, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--dourado);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .btn-header {
+      padding: 0.7rem 1.8rem;
+      border: 1px solid var(--dourado);
+      color: var(--dourado);
+      background: transparent;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-header:hover {
+      background: var(--dourado);
+      color: var(--preto);
+    }
+
+    /* SEÇÃO HERO */
+    .hero {
+      padding: 10rem 0 6rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200, 169, 81, 0.08) 0%, transparent 70%);
+      transform: translate(-50%, 0);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 span {
+      color: var(--dourado);
+      position: relative;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--cinza);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .btn-principal {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      background: linear-gradient(135deg, var(--dourado) 0%, var(--dourado-claro) 100%);
+      color: var(--preto);
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(200, 169, 81, 0.25);
+    }
+
+    .btn-principal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(200, 169, 81, 0.35);
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--cinza);
+    }
+
+    .hero-sub span {
+      color: var(--dourado);
+    }
+
+    /* SEÇÃO DOR / PROBLEMA */
+    .secao-dor {
+      padding: 5rem 0;
+      background: var(--preto-suave);
+    }
+
+    .secao-dor h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+    }
+
+    .secao-dor h2 span {
+      color: var(--dourado);
+    }
+
+    .grid-dor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card-dor {
+      background: rgba(15, 17, 21, 0.6);
+      padding: 2.2rem;
+      border-radius: 8px;
+      border-left: 2px solid var(--dourado);
+      transition: transform 0.3s ease;
+    }
+
+    .card-dor:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-dor h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--dourado);
+    }
+
+    .card-dor p {
+      color: var(--cinza);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* SEÇÃO SOLUÇÃO */
+    .secao-solucao {
+      padding: 5rem 0;
+    }
+
+    .titulo-secao {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .titulo-secao span {
+      color: var(--dourado);
+    }
+
+    .subtitulo-secao {
+      text-align: center;
+      color: var(--cinza);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .grid-recursos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .card-recurso {
+      padding: 2.2rem;
+      border: 1px solid rgba(200, 169, 81, 0.15);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background: rgba(26, 28, 35, 0.4);
+    }
+
+    .card-recurso:hover {
+      border-color: var(--dourado);
+      background: rgba(200, 169, 81, 0.05);
+    }
+
+    .card-recurso .icone {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-recurso h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: var(--branco);
+    }
+
+    .card-recurso p {
+      color: var(--cinza);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    /* SEÇÃO OBJEÇÕES / DÚVIDAS RESPONDIDAS */
+    .secao-duvidas {
+      padding: 5rem 0;
+      background: var(--preto-suave);
+    }
+
+    .lista-duvidas {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .item-duvida {
+      background: rgba(15, 17, 21, 0.6);
+      padding: 1.8rem 2rem;
+      border-radius: 8px;
+      border-right: 2px solid var(--dourado);
+    }
+
+    .item-duvida h4 {
+      font-size: 1.05rem;
+      color: var(--dourado);
+      margin-bottom: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .item-duvida p {
+      color: var(--cinza);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    /* SEÇÃO FECHAMENTO */
+    .secao-fechamento {
+      padding: 6rem 0;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(15, 17, 21, 1) 0%, rgba(26, 28, 35, 1) 100%);
+    }
+
+    .secao-fechamento h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .secao-fechamento h2 span {
+      color: var(--dourado);
+    }
+
+    .secao-fechamento p {
+      font-size: 1.2rem;
+      color: var(--cinza);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .destaque-urgencia {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: var(--dourado);
+      font-weight: 500;
+    }
+
+    /* RODAPÉ */
+    footer {
+      padding: 3rem 0;
+      text-align: center;
+      border-top: 1px solid rgba(200, 169, 81, 0.1);
+      color: var(--cinza);
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--dourado);
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .titulo-secao, .secao-dor h2, .secao-fechamento h2 {
+        font-size: 1.8rem;
+      }
+
+      .btn-principal {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">AGILE SUITE</div>
+      <a href="#contato" class="btn-header">Quero a Minha</a>
+    </div>
+  </header>
+
+  <!-- SEÇÃO PRINCIPAL / HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Deixe de ser invisível e passe a ser a <span>referência</span> na sua região</h1>
+      <p>Uma página que encanta à primeira vista, transmite autoridade e traz clientes até você — 24h por dia, mesmo enquanto você descansa.</p>
+      <a href="#contato" class="btn-principal">Quero Aparecer com Autoridade</a>
+      <p class="hero-sub">Pronto em poucos dias • Sem complicação • <span>Seu espaço, suas regras.</span></p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DOR — O QUE ELE ESTÁ PERDENDO -->
+  <section class="secao-dor">
+    <div class="container">
+      <h2>Você tem um trabalho excelente. Mas <span>quem não te encontra, não te contrata.</span></h2>
+      <div class="grid-dor">
+        <div class="card-dor">
+          <h3>❌ Você perde clientes sem saber</h3>
+          <p>Pessoas buscam o seu serviço na internet e não te encontram. O concorrente aparece primeiro e leva o cliente que poderia ser SEU.</p>
+        </div>
+        <div class="card-dor">
+          <h3>❌ Parece que você não é profissional</h3>
+          <p>Sem presença online, o cliente pensa "talvez seja iniciante". Mesmo sendo excelente, ele escolhe quem APARECE melhor.</p>
+        </div>
+        <div class="card-dor">
+          <h3>❌ Depende só de indicação</h3>
+          <p>Se ninguém indicar, não vem ninguém. A indicação tem teto. A internet traz clientes novos todos os dias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO SOLUÇÃO — O QUE ENTREGAMOS -->
+  <section class="secao-solucao">
+    <div class="container">
+      <h2 class="titulo-secao">A sua <span>máquina de presença</span> funcionando 24h</h2>
+      <p class="subtitulo-secao">Não é só um site. É a sua presença estruturada para atrair, convencer e trazer clientes.</p>
+      
+      <div class="grid-recursos">
+        <div class="card-recurso">
+          <div class="icone">🎨</div>
+          <h3>Design de Alto Padrão</h3>
+          <p>Elegante, moderno e com a sua identidade. De primeira impressão, você já é visto como autoridade no seu ramo.</p>
+        </div>
+        <div class="card-recurso">
+          <div class="icone">📱</div>
+          <h3>Feito para Celular</h3>
+          <p>85% das pessoas te procuram pelo celular. Sua página funciona perfeitamente em qualquer tela, rápida e leve.</p>
+        </div>
+        <div class="card-recurso">
+          <div class="icone">🔍</div>
+          <h3>Já Aparece no Google</h3>
+          <p>Estrutura otimizada para que o cliente te encontre SOZINHO quando buscar o que você faz. Sem pagar anúncio para começar.</p>
+        </div>
+        <div class="card-recurso">
+          <div class="icone">🤝</div>
+          <h3>Captura Clientes Automática</h3>
+          <p>Recebe nome, telefone e mensagem direto no seu WhatsApp. Você só recebe e atende. Simples assim.</p>
+        </div>
+        <div class="card-recurso">
+          <div class="icone">🏠</div>
+          <h3>Seu Espaço, Suas Regras</h3>
+          <p>100% sua. Não é rede social. Ninguém decide quem te vê. Ninguém bloqueia você. É propriedade sua para sempre.</p>
+        </div>
+        <div class="card-recurso">
+          <div class="icone">⚡</div>
+          <h3>Pronta em Poucos Dias</h3>
+          <p>Sem complicação, sem você precisar entender de tecnologia. Eu entrego tudo pronto e funcionando.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DÚVIDAS RESPONDIDAS — OBJEÇÕES NA PÁGINA -->
+  <section class="secao-duvidas">
+    <div class="container">
+      <h2 class="titulo-secao">Dúvidas comuns <span>respondidas de antemão</span></h2>
+      <p class="subtitulo-secao">Antes mesmo de perguntar, veja o que realmente importa:</p>
+
+      <div class="lista-duvidas">
+        <div class="item-duvida">
+          <h4>💛 "Está caro?"</h4>
+          <p>Um único cliente que você perdeu por não aparecer já pagaria a página inteira. Não é custo. É o dinheiro que você está deixando na mesa todos os meses.</p>
+        </div>
+        <div class="item-duvida">
+          <h4>💛 "Já tenho rede social, não preciso?"</h4>
+          <p>Rede social é aluguel. Página é propriedade. No Instagram o algoritmo decide quem te vê. Na sua página VOCÊ manda. Seja dono, não inquilino.</p>
+        </div>
+        <div class="item-duvida">
+          <h4>💛 "Não entendo de internet, vai ser complicado?"</h4>
+          <p>Você cuida do SEU trabalho com excelência. Eu cuido da parte técnica. Tudo pronto, funcionando, sem você precisar mexer em nada. Você só recebe e atende.</p>
+        </div>
+        <div class="item-duvida">
+          <h4>💛 "Espero mais um pouco?"</h4>
+          <p>Esperar não abaixa o preço. Só aumenta o preço de estar invisível. Cada mês que espera, é dinheiro perdido que não volta. O melhor momento é HOJE.</p>
+        </div>
+        <div class="item-duvida">
+          <h4>💛 "Não tenho clientes ainda?"</h4>
+          <p>É EXATAMENTE por isso que PRECISA. Você não tem clientes porque NINGUÉM TE ENCONTRA. A página é a porta de entrada que estava fechada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO FECHAMENTO / CHAMADA PARA AÇÃO -->
+  <section class="secao-fechamento" id="contato">
+    <div class="container">
+      <h2>Deixe de ser <span>invisível</span>. Passe a ser a <span>referência</span>.</h2>
+      <p>Você merece ser visto com a mesma excelência com que trabalha. Apareça com autoridade, elegância e comece a receber clientes que te encontram sozinhos.</p>
+      
+      <a href="https://wa.me/5548912381257" target="_blank" class="btn-principal">Quero minha página pronta essa semana</a>
+      
+      <p class="destaque-urgencia">✨ Seu espaço pronto em poucos dias • Sem complicação • Para sempre SEU.</p>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <p><span>AGILE SUITE</span> — Presença Digital com Autoridade e Elegância</p>
+      <p style="margin-top: 0.5rem;">Criado para empreendedores que merecem aparecer primeiro.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
