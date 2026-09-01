@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guilherme | Imóveis em Florianópolis, São José e Palhoça</title>
+  <title>Guilherme Mirras | Imóveis em Florianópolis, São José e Palhoça</title>
   <meta name="description" content="Encontre o imóvel ideal com Guilherme da Negócios Imobiliários. Atendimento personalizado, transparência e as melhores oportunidades da região.">
   <meta name="keywords" content="corretor de imóveis Florianópolis, imóveis São José SC, apartamento Palhoça, comprar casa Floripa, MN Negócios Imobiliários">
-  <meta property="og:title" content="Matheus Nicolau - Corretor de Imóveis">
+  <meta property="og:title" content="Guilherme Mirras - Corretor de Imóveis">
   <meta property="og:description" content="Ajudo você a encontrar o imóvel ideal em Florianópolis, São José e região. Atendimento exclusivo e transparente.">
-  <meta property="og:image" content="https://www.agilesuite.site/MatheusNicolau/img/matheus.png">
-  <meta property="og:url" content="https://www.agilesuite.site/MatheusNicolau/corretordeimoveis.html">
+  <meta property="og:image" content="https://www.agilesuite.site/GuilhermeMirras/img/guilherme.png">
+  <meta property="og:url" content="https://www.agilesuite.site/GuilhermeMirras/corretordeimoveis.html">
   <meta property="og:type" content="website">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -528,7 +528,7 @@
 
 <header>
   <div class="container header-content">
-    <div class="logo">Matheus Nicolau</div>
+    <div class="logo">Guilherme Mirras</div>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#destaques">Imóveis</a>
@@ -542,13 +542,13 @@
   <div class="container">
     <div class="hero-text">
       <h1>Encontre o <span>imóvel ideal</span> com segurança e transparência</h1>
-      <p>Sou Matheus Nicolau, da MN Negócios Imobiliários — especialista em compra, venda e negociação em <strong>Florianópolis, São José e Palhoça</strong>.</p>
+      <p>Sou Guilherme Mirras, da Negócios Imobiliários — especialista em compra, venda e negociação em <strong>Florianópolis, São José e Palhoça</strong>.</p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:15px;">
         <a href="#contato" class="btn">Solicitar Oportunidades</a>
         <a href="#destaques" class="btn btn-outline">Ver Imóveis</a>
       </div>
     </div>
-    <img src="img/matheus.png" alt="Matheus Nicolau" class="hero-img">
+    <img src="img/guilherme.png" alt="Guilherme Mirras" class="hero-img">
   </div>
 </section>
 
@@ -580,7 +580,7 @@
   <div class="container sobre-content">
     <div class="sobre-texto">
       <h2>Quem sou eu</h2>
-      <p>Sou <strong>Matheus Nicolau</strong>, cofundador da <strong>MN Negócios Imobiliários</strong> (CNPJ: 49.626.154/0001-82).</p>
+      <p>Sou <strong>Guilherme Mirras</strong>, cofundador da <strong>Negócios Imobiliários</strong> (CNPJ: 49.626.154/0001-82).</p>
       <p>Unindo conhecimento e atendimento próximo, ajudo você a encontrar o imóvel certo.</p>
       <ul>
         <li>✅ Atendimento personalizado</li>
@@ -601,7 +601,7 @@
         <div class="imovel-info">
           <h3>Apartamento 03 Dormitórios — Canto/Florianópolis</h3>
           <p>3 dormitórios • 1 suíte • 2 vagas • R$ 790.000</p>
-          <a href="https://matheusnicolauimoveis.com.br/imovel/apartamento-a-venda-no-bairro-canto-em-florianopolis-sc/100396" target="_blank" class="btn">Mais Detalhes</a>
+          <a href="https://guilhermemirrasimoveis.com.br/imovel/apartamento-a-venda-no-bairro-canto-em-florianopolis-sc/100396" target="_blank" class="btn">Mais Detalhes</a>
         </div>
       </div>
       <div class="imovel-card">
@@ -609,7 +609,7 @@
         <div class="imovel-info">
           <h3>Studio — Kobrasol/São José</h3>
           <p>1 dormitório • 48m² • 1 vaga • R$ 750.000</p>
-          <a href="https://matheusnicolauimoveis.com.br/imovel/apartamento-a-venda-no-bairro-kobrasol-em-sao-jose-sc/100391" target="_blank" class="btn">Mais Detalhes</a>
+          <a href="https://guilhermemirrasimoveis.com.br/imovel/apartamento-a-venda-no-bairro-kobrasol-em-sao-jose-sc/100391" target="_blank" class="btn">Mais Detalhes</a>
         </div>
       </div>
     </div>
@@ -621,7 +621,7 @@
     <h2 class="section-title">O que dizem meus clientes</h2>
     <div class="depo-grid">
       <div class="depo-card">
-        <p class="depo-texto">"O Matheus foi essencial para encontrarmos a casa ideal. Sempre atencioso e transparente. Recomendo!"</p>
+        <p class="depo-texto">"O Guilherme foi essencial para encontrarmos a casa ideal. Sempre atencioso e transparente. Recomendo!"</p>
         <p class="depo-nome">— Família Silva, Floripa</p>
       </div>
       <div class="depo-card">
@@ -675,9 +675,9 @@
         <button type="submit" class="btn" style="width:100%; margin-top:8px;">Falar com o Corretor</button>
       </form>
       <div class="social-links">
-        <a href="https://matheusnicolauimoveis.com.br/" target="_blank" class="btn btn-outline">Site</a>
-        <a href="https://instagram.com/corretormatheusnicolau/" target="_blank" class="btn">Instagram</a>
-        <a href="https://youtube.com/@matheusnicolaucorretordeim6451" target="_blank" class="btn btn-outline">YouTube</a>
+        <a href="https://guilhermemirrasimoveis.com.br/" target="_blank" class="btn btn-outline">Site</a>
+        <a href="https://instagram.com/corretor guilhermemirras/" target="_blank" class="btn">Instagram</a>
+        <a href="https://youtube.com/@guilhermemirras" target="_blank" class="btn btn-outline">YouTube</a>
       </div>
     </div>
   </div>
@@ -685,7 +685,7 @@
 
 <footer>
   <div class="container">
-    <h3>Matheus Nicolau • MN Negócios Imobiliários</h3>
+    <h3>Guilherme Mirras • MN Negócios Imobiliários</h3>
     <p>CNPJ: 49.626.154/0001-82 • (48) 99136-5133</p>
   </div>
 </footer>
@@ -734,9 +734,9 @@ document.getElementById('formLeads').addEventListener('submit', function(e){
 // =====================================================
 
 const CONFIG = {
-  whatsapp_matheus: "554891365133",
+  whatsapp_matheus: "554899999999999",
   telefone: "(48) 99136-5133",
-  site_base: "https://matheusnicolauimoveis.com.br",
+  site_base: "https://guilhermemirrasimoveis.com.br",
   empresa: "MN Negócios Imobiliários"
 };
 
@@ -837,7 +837,7 @@ const IMOVEIS_MATHEUS = [
     valor: 790000,
     tipo: "Pronto",
     detalhes: "84m² privativa • 1 suíte • 2 vagas • Sacada com vista mar • Semi-mobiliado",
-    link: "https://matheusnicolauimoveis.com.br/imovel/apartamento-a-venda-no-bairro-canto-em-florianopolis-sc/100396"
+    link: "https://guilhermemirrasimoveis.com.br/imovel/apartamento-a-venda-no-bairro-canto-em-florianopolis-sc/100396"
   },
   {
     titulo: "Studio — Kobrasol",
@@ -847,7 +847,7 @@ const IMOVEIS_MATHEUS = [
     valor: 750000,
     tipo: "Pronto",
     detalhes: "48m² privativa • 1 vaga • Semi-mobiliado • Piscina e academia no condomínio",
-    link: "https://matheusnicolauimoveis.com.br/imovel/apartamento-a-venda-no-bairro-kobrasol-em-sao-jose-sc/100391"
+    link: "https://guilhermemirrasimoveis.com.br/imovel/apartamento-a-venda-no-bairro-kobrasol-em-sao-jose-sc/100391"
   }
 ];
 
@@ -918,7 +918,7 @@ function processarResposta(textoUsuario) {
 }
 
 // =====================================================
-// 🔍 BUSCAR IMÓVEIS — APENAS DO MATHEUS
+// 🔍 BUSCAR IMÓVEIS — APENAS DO GUILHERME
 // =====================================================
 function buscarImoveis() {
   adicionarMensagem(`🔍 Estou buscando as melhores opções para você...`);
@@ -938,7 +938,7 @@ function buscarImoveis() {
   msg += `📍 Estreito, Florianópolis/SC • 📞 ${CONFIG.telefone}<br><br>`;
 
   if (filtrados.length === 0) {
-    msg += `Perfil registrado! Enviei seus dados para o Matheus, ele em breve entra em contato com as melhores opções.<br><br>`;
+    msg += `Perfil registrado! Enviei seus dados para o Guilherme, ele em breve entra em contato com as melhores opções.<br><br>`;
   } else {
     msg += `Encontrei ${filtrados.length} imóvel(is) para você:<br><br>`;
     filtrados.forEach((imv, i) => {
