@@ -25,5 +25,24 @@
 <section><div class="section-intro"><div class="section-label">Fotos do evento</div><h2>Momentos para guardar.</h2><p>Registros das vivências e celebrações do Transcenda Experience.</p></div><div class="gallery event-gallery"><figure><img src="img/transceda%20(13).JPG" alt="Momento do evento Transcenda" loading="lazy"><figcaption>Presença Transcenda</figcaption></figure><figure><img src="img/transceda%20(14).JPG" alt="Momento do evento Transcenda" loading="lazy"><figcaption>Vivência Transcenda</figcaption></figure><figure><img src="img/transceda%20(15).JPG" alt="Participantes em experiência Transcenda" loading="lazy"><figcaption>Conexão Transcenda</figcaption></figure><figure><img src="img/transceda%20(16).JPG" alt="Celebração do evento Transcenda" loading="lazy"><figcaption>Celebração Transcenda</figcaption></figure><figure><img src="img/transceda%20(17).jpg" alt="Registro do evento Transcenda" loading="lazy"><figcaption>Memória Transcenda</figcaption></figure></div></section>
 <section><div class="contact-card"><div class="section-label">Vagas limitadas</div><h2>Venha celebrar o primeiro ano.</h2><p>Para informações sobre ingresso, fale pelo WhatsApp ou acompanhe <a href="https://www.instagram.com/transcendacatipagel/" target="_blank" rel="noopener">@transcendacatipagel</a>.</p><a class="btn btn-primary" href="https://wa.me/555196044678?text=Ol%C3%A1!%20Quero%20garantir%20minha%20vaga%20no%201%20Ano%20Transcenda." target="_blank" rel="noopener">Falar no WhatsApp</a></div></section></main>
 <footer><div class="footer-brand">TRANSCENDA</div><p>20 de setembro de 2026 · Florianópolis</p></footer>
+<script>
+  const revealSections = document.querySelectorAll('.page > section');
+  const revealItems = document.querySelectorAll('.page > section:not(.event-hero) h2, .page > section:not(.event-hero) .section-label, .page > section:not(.event-hero) p, .page > section:not(.event-hero) li');
+  const revealImages = document.querySelectorAll('.page > section img, .page > section .card, .page > section .gallery figure, .page > section .quote, .page > section .contact-card');
+
+  revealSections.forEach((section) => section.classList.add('reveal'));
+  revealItems.forEach((item) => item.classList.add('reveal-item'));
+  revealImages.forEach((item) => item.classList.add(item.matches('img, figure') ? 'reveal-image' : 'reveal-item'));
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.14, rootMargin: '0px 0px -40px' });
+
+  document.querySelectorAll('.reveal, .reveal-item, .reveal-image').forEach((element) => revealObserver.observe(element));
+</script>
 </body>
 </html>
