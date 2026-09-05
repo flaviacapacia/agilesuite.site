@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página não encontrada | Transcenda</title>
+  <meta name="description" content="A página que você procura não foi encontrada no site Transcenda.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .not-found { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 72px 0; }
+    .not-found-inner { max-width: 640px; }
+    .not-found-code { color: var(--peach); font: 700 clamp(5rem, 18vw, 10rem)/.8 var(--title); margin-bottom: 24px; }
+    .not-found h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); margin: 0 0 18px; }
+    .not-found p { max-width: 500px; margin: 0 auto 28px; }
+    .not-found .actions { justify-content: center; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html"><img src="img/TRANSCENDA%20EXPERIENCE%20logo.jfif" alt="Transcenda Experience"></a>
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="landingpage.html">Experience</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="not-found" aria-labelledby="not-found-title">
+      <div class="not-found-inner">
+        <div class="not-found-code" aria-hidden="true">404</div>
+        <div class="eyebrow">A página saiu do caminho</div>
+        <h1 id="not-found-title">Mas você ainda está no lugar certo.</h1>
+        <p>O endereço acessado não existe ou foi movido. Volte para o início e continue sua jornada pelo Transcenda.</p>
+        <div class="actions"><a class="btn btn-primary" href="index.html">Voltar ao início</a><a class="btn btn-secondary" href="contato.html">Fale com a gente</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="footer-brand">TRANSCENDA</div><p>A sua próxima versão não precisa nascer sozinha.</p></footer>
+</body>
+</html>
