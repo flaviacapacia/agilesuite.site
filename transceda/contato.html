@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Movimento Transcenda · Cati Pagel</title>
+  <meta name="description" content="Entre em contato com o Movimento Transcenda e fale com a Cati Pagel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><nav class="nav"><a class="brand" href="index.html"><img src="img/TRANSCENDA%20EXPERIENCE%20logo.jfif" alt="Transcenda Experience"></a><div class="nav-links"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="landingpage.html">Experience</a><a class="active" href="contato.html">Contato</a></div></nav></header>
+<main class="page"><section class="event-hero"><div class="eyebrow">Vamos conversar</div><h1>Conexão começa com uma mensagem.</h1><p class="lead" style="margin: auto;">Para participar, apoiar, criar uma parceria ou saber mais sobre o Transcenda, fale diretamente com a Cati.</p></section>
+<section><div class="contact-grid"><div class="contact-card"><div class="section-label">Contato direto</div><h2>Fale com a gente.</h2><p>WhatsApp: <a href="https://wa.me/555196044678" target="_blank" rel="noopener">+55 51 9604-4678</a></p><p>Instagram: <a href="https://www.instagram.com/transcendacatipagel/" target="_blank" rel="noopener">@transcendacatipagel</a></p><p>Cati: <a href="https://www.instagram.com/catipagel/" target="_blank" rel="noopener">@catipagel</a></p><div class="actions"><a class="btn btn-primary" href="https://wa.me/555196044678?text=Ol%C3%A1%2C%20Cati!%20Vim%20pelo%20site%20do%20Transcenda%20e%20quero%20saber%20mais." target="_blank" rel="noopener">Abrir WhatsApp</a></div></div><div class="form-card"><div class="section-label">Parcerias</div><h2>Seja parceira(o).</h2><p>Quer fazer parte das próximas experiências? Preencha o formulário de parceria antes de falar conosco pelo WhatsApp.</p><a class="btn btn-secondary" href="https://docs.google.com/forms/d/1Z5dI6gI6FWnY2ce9MfyXwr8SazlG1ogAfCk-B7NYx3M/viewform?edit_requested=true" target="_blank" rel="noopener">Abrir formulário de parceria</a></div></div></section>
+<section><div class="section-intro"><div class="section-label">Mensagem rápida</div><h2>Conte o que você está buscando.</h2><p>O botão abaixo monta uma mensagem com os dados preenchidos e abre o WhatsApp. Nenhuma informação é enviada automaticamente antes da sua confirmação.</p></div><form class="form-card" id="contactForm"><label for="nome">Seu nome</label><input id="nome" name="nome" required><label for="assunto">Como podemos ajudar?</label><textarea id="assunto" name="assunto" required></textarea><div class="actions"><button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button></div></form></section></main>
+<footer><div class="footer-brand">TRANSCENDA</div><p>A sua próxima versão não precisa nascer sozinha.</p></footer>
+<script>document.getElementById('contactForm').addEventListener('submit', function (event) { event.preventDefault(); const nome = document.getElementById('nome').value.trim(); const assunto = document.getElementById('assunto').value.trim(); const mensagem = `Ol%C3%A1%2C%20Cati!%20Meu%20nome%20%C3%A9%20${encodeURIComponent(nome)}.%20${encodeURIComponent(assunto)}`; window.open(`https://wa.me/555196044678?text=${mensagem}`, '_blank', 'noopener'); });</script>
+</body>
+</html>
