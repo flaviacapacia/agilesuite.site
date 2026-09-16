@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agile Suite | Sites que Trazem Clientes</title>
+  <meta name="description" content="Não perca mais clientes por não estar na internet. Criamos sites e landing pages prontas, otimizadas para o Google e com contato direto no seu WhatsApp.">
+  <meta name="keywords" content="criar site, landing page, site profissional, SEO, barbearia, nutricionista, imóveis, São José SC">
+  
+  <link rel="icon" type="image/png" href="img/logo-agile.png">
+  <link rel="stylesheet" href="style.css?v=14">
+</head>
+
+<body>
+
+  <!-- Cabeçalho FIXO — IGUAL AO SEU -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Agile Suite</div>
+        <ul class="menu">
+          <li><a href="#inicio" class="ativo">Início</a></li>
+          <li><a href="#diferenca">Por que nós?</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#modelos">Modelos</a></li>
+          <li><a href="#contato">Solicitar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<style>
+
+  /* ==========================================
+   VISUAL EXATO — ROXO/ROSA NEON ESCURO
+   ESTRUTURA OTIMIZADA PARA CONVERSÃO
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #0f1120;
+    color: #dcd6ff;
+    min-height: 100vh;
+}
+
+:root {
+    --roxo-claro: #c77dff;
+    --rosa-neon: #f72585;
+    --fundo-escuro: #0f1120;
+    --fundo-card: rgba(255, 255, 255, 0.05);
+    --borda-suave: rgba(199, 125, 255, 0.3);
+    --sombra-leve: 0 0 12px rgba(199, 125, 255, 0.25);
+    --sombra-media: 0 0 20px rgba(247, 37, 133, 0.35);
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 10px var(--roxo-claro); }
+    to { text-shadow: 0 0 25px var(--rosa-neon); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px var(--rosa-neon); }
+    100% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 0.8em;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowText 3s ease-in-out infinite alternate;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+p { margin-bottom: 1em; color: #dcd6ff; }
+
+a {
+    text-decoration: none;
+    color: var(--roxo-claro);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--rosa-neon);
+    text-shadow: 0 0 10px var(--rosa-neon);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    display: block;
+    margin: 10px auto 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(199, 125, 255, 0.3);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    font-weight: 500;
+    color: var(--roxo-claro);
+}
+
+.menu a:hover, .menu a.ativo {
+    color: var(--rosa-neon);
+    text-shadow: 0 0 10px var(--rosa-neon);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--rosa-neon);
+}
+
+.btn-principal {
+    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+    color: white;
+}
+
+.btn-destaque {
+    background: linear-gradient(90deg, var(--rosa-neon), var(--roxo-claro));
+    color: white;
+}
+
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--fundo-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--borda-suave);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.card-img-container {
+    background: var(--fundo-escuro);
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.card-img:hover {
+    opacity: 1;
+}
+
+.card-conteudo {
+    padding: 20px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    border-top: 1px solid var(--borda-suave);
+    color: #dcd6ff;
+    padding: 50px 0 20px;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer p, footer a {
+    color: rgba(220, 214, 255, 0.85);
+}
+
+footer a:hover {
+    color: var(--rosa-neon);
+}
+
+.rodape-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.rodape-final {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda-suave);
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero { padding: 60px 0; }
+}
+
+/* ---------- ANIMAÇÕES PADRÃO ---------- */
+@keyframes glowText {
+  from { text-shadow: 0 0 10px var(--roxo-claro); }
+  to { text-shadow: 0 0 25px var(--rosa-neon); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
+  50% { transform: scale(1.05); box-shadow: 0 0 15px var(--rosa-neon); }
+  100% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ---------- TITULOS COM EFEITO ---------- */
+h1, h2, h3 {
+  background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite alternate;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+
+p {
+  color: var(--texto-suave);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* ---------- CABEÇALHO ---------- */
+header {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: var(--roxo-claro);
+  font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+  color: var(--rosa-neon);
+  text-shadow: 0 0 10px var(--rosa-neon);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+/* ---------- BOTÕES PADRÃO ---------- */
+.btn {
+  background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  display: inline-block;
+  animation: pulse 2s infinite;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--rosa-neon);
+}
+
+.btn-centro {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+}
+
+/* ---------- SEÇÃO HERO ---------- */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1em;
+}
+
+/* ---------- CARDS ---------- */
+.grid-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 0 240px;
+  background: var(--fundo-card);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
+}
+
+.card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.95em;
+}
+
+/* ---------- CARROSSEL ---------- */
+.slider-container {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  animation: slide 25s linear infinite;
+}
+
+.slider-container:hover {
+  animation-play-state: paused;
+}
+
+</style>
+  <main style="padding-top: 75px;">
+    <!-- HERO — AGORA COMEÇA PELA DOR E SOLUÇÃO -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h1>Perde clientes por não aparecer na internet?</h1>
+        <p>8 em cada 10 pessoas procuram serviços como o seu antes de contratar. Se você não tem um site profissional, está perdendo dinheiro para a concorrência — e nós resolvemos isso rápido.</p>
+        <div class="hero-botoes">
+          <a href="#modelos" class="btn btn-principal">Ver Modelos Prontos</a>
+          <a href="vendas-sites.html" class="btn btn-destaque">Quero Meu Site Agora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS — COM IMPACTO E GARANTIA -->
+    <section id="diferenca">
+      <div class="container">
+        <h2 class="section-title">Por que escolher a Agile Suite?</h2>
+        <div class="grid-cards">
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>✅ Entrega em até 3 dias</h3>
+              <p>Sem enrolação, sem esperas. Seu site pronto e funcionando rapidinho.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>✅ Apareça no Google</h3>
+              <p>Tudo já configurado para você aparecer quando alguém procurar o seu serviço.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>✅ Funciona em todos</h3>
+              <p>Celular, tablet e computador — sempre bonito e fácil de usar.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>✅ Garantia de satisfação</h3>
+              <p>Se não ficar como você quer, ajustamos tudo de graça. Sem riscos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA — PASSO A PASSO CLARO -->
+    <section id="como-funciona" style="background: rgba(0,0,0,0.2);">
+      <div class="container">
+        <h2 class="section-title">É muito simples</h2>
+        <div class="grid-cards">
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>01 — Escolha</h3>
+              <p>Escolha o modelo que combina com o seu ramo de atividade.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>02 — Envie</h3>
+              <p>Mande seus dados, fotos, endereço e o que mais quiser adicionar.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>03 — Aprove</h3>
+              <p>Você vê como ficou antes de publicar e aprova tudo.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-conteudo">
+              <h3>04 — Venda</h3>
+              <p>Já está no ar recebendo novos clientes e contatos diretos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Seção 1: Modelos Prontos (organizados, sem repetição) -->
+  <section id="modelos">
+    <div class="container">
+      <h2>Sites Prontos</h2>
+      <div class="grid-cards">
+
+        <div class="card">
+          <img src="img/corretora.png" alt="Site para Imóveis" class="card-img">
+          <h3>Imóveis - SEO / Blog</h3>
+          <a href="https://www.flaviacapaciacorretora.com/" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+
+        <div class="card">
+          <img src="img/beira-mar-predios.jpg" alt="Site para Imóveis" class="card-img">
+          <h3>Imóveis - SEO / ADS</h3>
+          <a href="https://www.imoveisfloripa.online/" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+
+  <div class="card">
+          <img src="img/flavia.jpeg" alt="Site para Imóveis" class="card-img">
+          <h3>Imóveis - SEO / ADS</h3>
+          <a href="https://www.imoveisfloripa.online/" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+        <div class="card">
+          <img src="MatheusNicolau/img/matheus.png" alt="Site para Nutricionista" class="card-img">
+          <h3>Landpage + Assistente Virtual</h3>
+          <a href="MatheusNicolau/contato-com-assistente.html" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+
+       
+
+       <div class="card">
+          <img src="Reformas/imagens/logo.jpeg" alt="Site para Serviços de Reforma" class="card-img">
+          <h3>Serviços de Reforma </h3>
+          <a href="Reformas/modelo-morderno.html" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+   
+         <div class="card">
+          <img src="transceda/img/TRANSCENDA EXPERIENCE logo.jfif" alt="Site para Serviços de Reforma" class="card-img">
+          <h3>Evento Transcenda</h3>
+          <a href="transceda/landingpage.html" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+
+       <div class="card">
+          <img src="img/vlad.png" alt="Landpage corretor" class="card-img">
+          <h3>Landpage Corretor</h3>
+          <a href="landpagevlad.html" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+        <div class="card">
+          <img src="img/naildesign.jpeg" alt="Site para Nail Design" class="card-img">
+          <h3>Nail Design</h3>
+          <a href="Fran.Santos-Naildesign/index.html" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+
+   
+
+        <div class="card">
+          <img src="img/marcos.jpeg" alt="Landing Page Corretor" class="card-img">
+          <h3>Imóveis - Landing Page</h3>
+          <a href="imoveis/modelo-corretor.html" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+
+        <div class="card">
+          <img src="img/estetica.webp" alt="Site para Estética" class="card-img">
+          <h3>Estética</h3>
+          <a href="estetica/modelo-esteticista.html" target="_blank" class="btn">Ver Modelo</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 2: Solicitar Modelos (carrossel animado que você gosta) -->
+  <section id="solicitar" style="background: rgba(0,0,0,0.2);">
+    <div class="container">
+      <h2>Solicite Novos Modelos</h2>
+      <div class="slider-container">
+
+        <div class="card">
+          <img src="img/festa.png" alt="Modelo para Festas" class="card-img">
+          <h3>Festas</h3>
+          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Festas" target="_blank" class="btn">Solicitar</a>
+        </div>
+
+        <div class="card">
+          <img src="img/restaurante.jpeg" alt="Modelo Restaurante" class="card-img">
+          <h3>Restaurante</h3>
+          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Restaurante" target="_blank" class="btn">Solicitar</a>
+        </div>
+
+        <div class="card">
+          <img src="img/estetica.webp" alt="Modelo Estética" class="card-img">
+          <h3>Estética</h3>
+          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Estética" target="_blank" class="btn">Solicitar</a>
+        </div>
+
+        <div class="card">
+          <img src="img/consertos.jpeg" alt="Serviços e Consertos" class="card-img">
+          <h3>Consertos</h3>
+          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Consertos" target="_blank" class="btn">Solicitar</a>
+        </div>
+
+        <div class="card">
+          <img src="img/naildesign.jpeg" alt="Modelo Nail Design" class="card-img">
+          <h3>Nail Design</h3>
+          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nail%20Design" target="_blank" class="btn">Solicitar</a>
+        </div>
+
+        <div class="card">
+          <img src="img/nutri.jpeg" alt="Modelo Nutricionista" class="card-img">
+          <h3>Nutricionista</h3>
+          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nutricionista" target="_blank" class="btn">Solicitar</a>
+        </div>
+
+        <!-- Repetição para loop perfeito -->
+        <div class="card"><img src="img/festa.png" class="card-img"><h3>Festas</h3><a href="#" class="btn">Solicitar</a></div>
+        <div class="card"><img src="img/restaurante.jpeg" class="card-img"><h3>Restaurante</h3><a href="#" class="btn">Solicitar</a></div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- MODELOS — COM BOTÃO DE AÇÃO EM CADA -->
+    <section id="modelos">
+      <div class="container">
+        <h2 class="section-title">Modelos prontos para o seu negócio</h2>
+        <div class="grid-cards">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="img/barbearia.jpeg" alt="Site para Barbearia" class="card-img">
+            </div>
+            <div class="card-conteudo">
+              <h3>Barbearia</h3>
+              <p>Layout moderno, serviços e agendamento fácil.</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20modelo%20Barbearia" target="_blank" class="btn">Solicitar este</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-container">
+              <img src="img/nutri.jpeg" alt="Site para Nutricionista" class="card-img">
+            </div>
+            <div class="card-conteudo">
+              <h3>Nutricionista</h3>
+              <p>Apresente atendimentos, dicas e horários.</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20modelo%20Nutricionista" target="_blank" class="btn">Solicitar este</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-container">
+              <img src="img/beira-mar-predios.jpg" alt="Site para Corretor de Imóveis" class="card-img">
+            </div>
+            <div class="card-conteudo">
+              <h3>Corretor de Imóveis</h3>
+              <p>Mostre seus imóveis e receba contatos diretos.</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20modelo%20Imóveis" target="_blank" class="btn">Solicitar este</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-container">
+              <img src="img/estetica.webp" alt="Site para Estética" class="card-img">
+            </div>
+            <div class="card-conteudo">
+              <h3>Estética e Beleza</h3>
+              <p>Destaque seus serviços e trabalhos realizados.</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20modelo%20Estética" target="_blank" class="btn">Solicitar este</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-container">
+              <img src="img/restaurante.jpeg" alt="Site para Restaurante" class="card-img">
+            </div>
+            <div class="card-conteudo">
+              <h3>Restaurante</h3>
+              <p>Cardápio, localização e reservas.</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20modelo%20Restaurante" target="_blank" class="btn">Solicitar este</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-container">
+              <img src="img/naildesign.jpeg" alt="Site para Nail Design" class="card-img">
+            </div>
+            <div class="card-conteudo">
+              <h3>Nail Design</h3>
+              <p>Galeria de trabalhos e agendamento.</p>
+              <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20modelo%20Nail%20Design" target="_blank" class="btn">Solicitar este</a>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="vendas-sites.html" class="btn btn-destaque">Ver Todos os Modelos e Preços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAMADA FINAL — FORTE E DIRETA -->
+    <section id="contato" style="background: rgba(0,0,0,0.2);">
+      <div class="container" style="text-align: center;">
+        <h2>Não deixe o seu negócio parado</h2>
+        <p style="max-width: 700px; margin: 0 auto 25px;">Seus clientes estão procurando por você na internet agora mesmo. Vamos colocar o seu negócio lá e começar a receber novos contatos ainda essa semana?</p>
+        <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20solicitar%20um%20orçamento%20grátis" target="_blank" class="btn btn-destaque">Solicitar Orçamento Gratuito</a>
+      </div>
+    </section>
+  </main>
+  <!-- Seção 3: Mini Curso -->
+  <section id="cursos">
+    <div class="container">
+      <h2>Mini Curso</h2>
+      <p>Crie sozinho seu site com passo a passo e páginas prontas.</p>
+      <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20o%20Mini%20Curso%20da%20Agile%20Suite" target="_blank" class="btn">Comprar pelo WhatsApp</a>
+    </div>
+  </section>
+  
+  <!-- RODAPÉ — IGUAL AO SEU -->
+  <footer>
+    <div class="container">
+      <div class="rodape-grid">
+        <div>
+          <h3>Agile Suite</h3>
+          <p>Criando presença digital para negócios que querem crescer.</p>
+        </div>
+        <div>
+          <h3>Links Rápidos</h3>
+          <p><a href="#inicio">Início</a></p>
+          <p><a href="#diferenca">Por que nós?</a></p>
+          <p><a href="#como-funciona">Como Funciona</a></p>
+          <p><a href="#modelos">Modelos</a></p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>São José / SC</p>
+          <p><a href="mailto:contato@agilesuite.site">contato@agilesuite.site</a></p>
+          <p><a href="https://wa.me/5511912381257" target="_blank">WhatsApp: (11) 91238-1257</a></p>
+          <p><a href="https://instagram.com/agilesuite.site" target="_blank">Instagram</a></p>
+        </div>
+      </div>
+      <div class="rodape-final">
+        <p>&copy; 2026 Agile Suite — Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
