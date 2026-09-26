@@ -6,320 +6,41 @@
   <title>Agile Suite | Sites que Trazem Clientes</title>
   <meta name="description" content="Não perca mais clientes por não estar na internet. Criamos sites e landing pages prontas, otimizadas para o Google e com contato direto no seu WhatsApp.">
   <meta name="keywords" content="criar site, landing page, site profissional, SEO, barbearia, nutricionista, imóveis, São José SC">
-  
   <link rel="icon" type="image/png" href="img/logo-agile.png">
-  <link rel="stylesheet" href="style.css?v=14">
-</head>
-
-<body>
-
-  <!-- Cabeçalho FIXO — IGUAL AO SEU -->
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Agile Suite</div>
-        <ul class="menu">
-          <li><a href="#inicio" class="ativo">Início</a></li>
-          <li><a href="#diferenca">Por que nós?</a></li>
-          <li><a href="#como-funciona">Como Funciona</a></li>
-          <li><a href="#modelos">Modelos</a></li>
-          <li><a href="#contato">Solicitar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-<style>
-
-  /* ==========================================
-   VISUAL EXATO — ROXO/ROSA NEON ESCURO
-   ESTRUTURA OTIMIZADA PARA CONVERSÃO
+  <style>
+/* ==========================================
+   AGILE SUITE — COMPLETO + RESPONSIVO
+   Roxo/Rosa Neon · Conversão · Mobile-first
    ========================================== */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-size: 16px;
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background: #0f1120;
-    color: #dcd6ff;
-    min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #0f1120;
+  color: #dcd6ff;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 :root {
-    --roxo-claro: #c77dff;
-    --rosa-neon: #f72585;
-    --fundo-escuro: #0f1120;
-    --fundo-card: rgba(255, 255, 255, 0.05);
-    --borda-suave: rgba(199, 125, 255, 0.3);
-    --sombra-leve: 0 0 12px rgba(199, 125, 255, 0.25);
-    --sombra-media: 0 0 20px rgba(247, 37, 133, 0.35);
+  --roxo-claro: #c77dff;
+  --rosa-neon: #f72585;
+  --fundo-escuro: #0f1120;
+  --fundo-card: rgba(255, 255, 255, 0.05);
+  --borda-suave: rgba(199, 125, 255, 0.3);
+  --sombra-media: 0 0 20px rgba(247, 37, 133, 0.35);
 }
 
-@keyframes glowText {
-    from { text-shadow: 0 0 10px var(--roxo-claro); }
-    to { text-shadow: 0 0 25px var(--rosa-neon); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
-    50% { transform: scale(1.05); box-shadow: 0 0 15px var(--rosa-neon); }
-    100% { transform: scale(1); box-shadow: 0 0 8px var(--roxo-claro); }
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    margin-bottom: 0.8em;
-    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glowText 3s ease-in-out infinite alternate;
-}
-
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.4rem; }
-
-p { margin-bottom: 1em; color: #dcd6ff; }
-
-a {
-    text-decoration: none;
-    color: var(--roxo-claro);
-    transition: all 0.2s ease;
-}
-
-a:hover {
-    color: var(--rosa-neon);
-    text-shadow: 0 0 10px var(--rosa-neon);
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-section {
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
-    display: block;
-    margin: 10px auto 0;
-}
-
-header {
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 20px rgba(199, 125, 255, 0.3);
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    padding: 15px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.menu {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-.menu a {
-    font-weight: 500;
-    color: var(--roxo-claro);
-}
-
-.menu a:hover, .menu a.ativo {
-    color: var(--rosa-neon);
-    text-shadow: 0 0 10px var(--rosa-neon);
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 500;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
-    color: white;
-    animation: pulse 2s infinite;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px var(--rosa-neon);
-}
-
-.btn-principal {
-    background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
-    color: white;
-}
-
-.btn-destaque {
-    background: linear-gradient(90deg, var(--rosa-neon), var(--roxo-claro));
-    color: white;
-}
-
-.hero {
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero h1 {
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
-
-.hero-botoes {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: var(--fundo-card);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--borda-suave);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--sombra-media);
-}
-
-.card-img-container {
-    background: var(--fundo-escuro);
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-}
-
-.card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-}
-
-.card-img:hover {
-    opacity: 1;
-}
-
-.card-conteudo {
-    padding: 20px;
-    text-align: center;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.85);
-    border-top: 1px solid var(--borda-suave);
-    color: #dcd6ff;
-    padding: 50px 0 20px;
-}
-
-footer h3 {
-    color: white;
-}
-
-footer p, footer a {
-    color: rgba(220, 214, 255, 0.85);
-}
-
-footer a:hover {
-    color: var(--rosa-neon);
-}
-
-.rodape-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.rodape-final {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid var(--borda-suave);
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .menu {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .hero { padding: 60px 0; }
-}
-
-/* ---------- ANIMAÇÕES PADRÃO ---------- */
 @keyframes glowText {
   from { text-shadow: 0 0 10px var(--roxo-claro); }
   to { text-shadow: 0 0 25px var(--rosa-neon); }
@@ -336,149 +57,189 @@ footer a:hover {
   100% { transform: translateX(-50%); }
 }
 
-/* ---------- TITULOS COM EFEITO ---------- */
-h1, h2, h3 {
+/* TIPOGRAFIA */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 0.75em;
   background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   animation: glowText 3s ease-in-out infinite alternate;
-  text-align: center;
-  margin-bottom: 25px;
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.4em; }
+h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); }
+h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); text-align: center; }
+h3 { font-size: clamp(1.05rem, 3vw, 1.25rem); }
 
 p {
-  color: var(--texto-suave);
-  line-height: 1.6;
-  margin-bottom: 15px;
-  text-align: center;
+  margin-bottom: 1em;
+  color: #dcd6ff;
 }
 
 a {
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* ---------- CONTAINER ---------- */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-section {
-  padding: 60px 0;
-}
-
-/* ---------- CABEÇALHO ---------- */
-header {
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 20px rgba(162, 155, 254, 0.4);
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li a {
   color: var(--roxo-claro);
-  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.ativo {
+a:hover {
   color: var(--rosa-neon);
   text-shadow: 0 0 10px var(--rosa-neon);
 }
 
-.logo {
-  font-size: 1.8em;
-  font-weight: 700;
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
-/* ---------- BOTÕES PADRÃO ---------- */
-.btn {
+section {
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 80px;
+  height: 3px;
   background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
-  color: #fff;
-  padding: 12px 28px;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 20px rgba(199, 125, 255, 0.3);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 14px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 1.45rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menu {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu a {
+  font-weight: 500;
+  color: var(--roxo-claro);
+  font-size: 0.95rem;
+  padding: 4px 2px;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: var(--rosa-neon);
+  text-shadow: 0 0 10px var(--rosa-neon);
+}
+
+/* ========== BOTÕES ========== */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
   border-radius: 30px;
   font-weight: 500;
-  display: inline-block;
-  animation: pulse 2s infinite;
+  text-align: center;
   border: none;
   cursor: pointer;
-  font-size: 1em;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
+  color: #fff !important;
+  animation: pulse 2s infinite;
+  font-size: 0.95rem;
+  text-shadow: none !important;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px var(--rosa-neon);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px var(--rosa-neon);
+  color: #fff !important;
 }
 
-.btn-centro {
-  display: block;
-  width: fit-content;
-  margin: 20px auto 0;
+.btn-principal {
+  background: linear-gradient(90deg, var(--roxo-claro), var(--rosa-neon));
 }
 
-/* ---------- SEÇÃO HERO ---------- */
+.btn-destaque {
+  background: linear-gradient(90deg, var(--rosa-neon), var(--roxo-claro));
+}
+
+/* ========== HERO ========== */
 .hero {
+  padding: 80px 0 60px;
   text-align: center;
-  padding: 80px 20px;
 }
 
-.hero h2 {
-  font-size: 2.5em;
+.hero h1 {
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .hero p {
-  max-width: 800px;
-  margin: 0 auto 30px;
-  font-size: 1.1em;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  max-width: 720px;
+  margin: 0 auto 28px;
+  text-align: center;
 }
 
-/* ---------- CARDS ---------- */
+.hero .btn {
+  margin: 8px 6px;
+}
+
+/* ========== GRID DE CARDS (Portfólio, Diferenciais, Como funciona) ========== */
 .grid-cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
 .card {
-  flex: 0 0 240px;
   background: var(--fundo-card);
   border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--borda-suave);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  text-align: center;
+  padding: 16px;
+  min-width: 0; /* evita overflow no grid */
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 15px rgba(253, 107, 241, 0.4);
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-media);
 }
 
 .card-img {
@@ -487,44 +248,287 @@ nav ul li a.ativo {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;
+  display: block;
+}
+
+.card-conteudo {
+  padding: 8px 4px 4px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card h3 {
-  font-size: 1.2em;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .card p {
-  font-size: 0.95em;
+  font-size: 0.92rem;
+  text-align: center;
+  margin-bottom: 12px;
 }
 
-/* ---------- CARROSSEL ---------- */
+.card .btn {
+  margin-top: auto;
+  align-self: center;
+  animation: none; /* botões dos cards sem pulse excessivo */
+  padding: 10px 20px;
+  font-size: 0.88rem;
+}
+
+/* ========== CARROSSEL — Solicite Novos Modelos ========== */
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 .slider-container {
   display: flex;
-  gap: 20px;
-  white-space: nowrap;
-  animation: slide 25s linear infinite;
+  gap: 18px;
+  width: max-content;
+  animation: slide 28s linear infinite;
 }
 
 .slider-container:hover {
   animation-play-state: paused;
 }
 
-</style>
-  <main style="padding-top: 75px;">
-    <!-- HERO — AGORA COMEÇA PELA DOR E SOLUÇÃO -->
+#solicitar .card {
+  flex: 0 0 230px;
+  width: 230px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: rgba(0, 0, 0, 0.85);
+  border-top: 1px solid var(--borda-suave);
+  color: #dcd6ff;
+  padding: 45px 0 20px;
+}
+
+footer h3 {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  background: none;
+  animation: none;
+  text-align: left;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+footer p,
+footer a {
+  color: rgba(220, 214, 255, 0.85);
+  font-size: 0.92rem;
+}
+
+footer a:hover {
+  color: var(--rosa-neon);
+}
+
+.rodape-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.rodape-final {
+  text-align: center;
+  padding-top: 18px;
+  border-top: 1px solid var(--borda-suave);
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESPONSIVO
+   ========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .rodape-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #solicitar .card {
+    flex: 0 0 210px;
+    width: 210px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+
+  header {
+    padding: 12px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .menu {
+    gap: 10px 14px;
+    justify-content: center;
+  }
+
+  .menu a {
+    font-size: 0.88rem;
+  }
+
+  .hero {
+    padding: 50px 0 40px;
+  }
+
+  .hero p {
+    margin-bottom: 22px;
+  }
+
+  .hero .btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  /* Portfólio e grids: 1 coluna */
+  .grid-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card-img {
+    height: 160px;
+  }
+
+  /* Carrossel no mobile: mantém rolagem, scroll com dedo */
+  .slider-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+    /* esconde barra feia mas permite scroll */
+    scrollbar-width: thin;
+    scrollbar-color: var(--roxo-claro) transparent;
+  }
+
+  .slider-wrapper::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .slider-wrapper::-webkit-scrollbar-thumb {
+    background: var(--roxo-claro);
+    border-radius: 4px;
+  }
+
+  .slider-container {
+    animation: slide 22s linear infinite; /* continua rolando */
+    padding-left: 4px;
+  }
+
+  #solicitar .card {
+    flex: 0 0 72vw;
+    width: 72vw;
+    max-width: 280px;
+    scroll-snap-align: center;
+  }
+
+  .rodape-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    text-align: center;
+  }
+
+  footer h3 {
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .card .btn {
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* Celular pequeno */
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+    padding: 0 8px;
+  }
+
+  section {
+    padding: 32px 0;
+  }
+
+  .hero {
+    padding: 40px 0 32px;
+  }
+
+  #solicitar .card {
+    flex: 0 0 78vw;
+    width: 78vw;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Agile Suite</div>
+        <ul class="menu">
+          <li><a href="#inicio" class="ativo">Início</a></li>
+          <li><a href="#diferenca">Por que nós?</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#modelos">Modelos</a></li>
+          <li><a href="#contato">Solicitar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
     <section class="hero" id="inicio">
       <div class="container">
-        <h1>Perde clientes por não aparecer na internet? </h1>
-            
-       <p>8 em cada 10 pessoas procuram serviços como o seu antes de contratar. Se você não tem um site que encanta e funciona, está entregando dinheiro à concorrência —  e eu resolvo isso pra você </p>
-          <a href="#modelos" class="btn btn-principal">Ver Modelos Prontos</a>
-          <a href="vendas-sites.html" class="btn btn-destaque">Quero Meu Site Agora</a>
-        </div>
+        <h1>Perde clientes por não aparecer na internet?</h1>
+        <p>8 em cada 10 pessoas procuram serviços como o seu antes de contratar. Se você não tem um site que encanta e funciona, está entregando dinheiro à concorrência — e eu resolvo isso pra você.</p>
+        <a href="#modelos" class="btn btn-principal">Ver Modelos Prontos</a>
+        <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20meu%20site%20agora" target="_blank" class="btn btn-destaque">Quero Meu Site Agora</a>
       </div>
     </section>
 
-    <!-- DIFERENCIAIS — COM IMPACTO E GARANTIA -->
+    <!-- DIFERENCIAIS -->
     <section id="diferenca">
       <div class="container">
         <h2 class="section-title">Por que escolher a Agile Suite?</h2>
@@ -557,7 +561,7 @@ nav ul li a.ativo {
       </div>
     </section>
 
-    <!-- COMO FUNCIONA — PASSO A PASSO CLARO -->
+    <!-- COMO FUNCIONA -->
     <section id="como-funciona" style="background: rgba(0,0,0,0.2);">
       <div class="container">
         <h2 class="section-title">É muito simples</h2>
@@ -590,170 +594,173 @@ nav ul li a.ativo {
       </div>
     </section>
 
-  <!-- Seção 1: Modelos Prontos (organizados, sem repetição) -->
-  <section id="modelos">
-    <div class="container">
-      <h2>Portifólio</h2>
-      <div class="grid-cards">
-
-        <div class="card">
-          <img src="img/corretora.png" alt="Site para Imóveis" class="card-img">
-          <h3>Imóveis - SEO / Blog</h3>
-               <p> Autoridade para seu negócio</p>
-          <a href="https://www.flaviacapaciacorretora.com/" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-
-        <div class="card">
-          <img src="img/beira-mar-predios.jpg" alt="Site para Imóveis" class="card-img">
-          <h3>Imóveis - SEO / ADS</h3>
-               <p>Tenha um site moderno para seus imóveis</p>
-          <a href="https://www.imoveisfloripa.online/" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-
-  <div class="card">
-          <img src="img/flavia.jpeg" alt="Site para Imóveis" class="card-img">
-          <h3>Imóveis - SEO / ADS</h3>
-               <p>Publique seus imóveis com elegancia</p>
-          <a href="https://www.imoveisfloripa.online/" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-        <div class="card">
-          <img src="MatheusNicolau/img/matheus.png" alt="Site para Nutricionista" class="card-img">
-          <h3>Landpage + Assistente Virtual</h3>
-            <p>Tenha uma página de atendimento e bot personalizados</p>
-          <a href="MatheusNicolau/contato-com-assistente.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-
-       
-
-       <div class="card">
-          <img src="Reformas/imagens/logo.jpeg" alt="Site para Serviços de Reforma" class="card-img">
-          <h3>Serviços de Reforma </h3>
-            <p>Destaque seus serviços e trabalhos realizados.</p>
-          <a href="Reformas/modelo-morderno.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-   
-         <div class="card">
-          <img src="transceda/img/TRANSCENDA EXPERIENCE logo.jfif" alt="Site para Serviços de Reforma" class="card-img">
-          <h3>Site Transcenda</h3>
-            <p>Tenha um site moderno para o seu evento</p>
-          <a href="transceda/landingpage.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-
-       <div class="card">
-          <img src="img/modelo-img-corretor.jpeg" alt="Landpage corretor" class="card-img">
-          <h3>Landpage Corretor</h3>
-             <p>Mostre seus imóveis e receba contatos diretos.</p>
-          <a href="landpagevlad.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-        <div class="card">
-          <img src="img/naildesign.jpeg" alt="Site para Nail Design" class="card-img">
-          <h3>Nail Design</h3>
-           <p>Galeria de trabalhos e agendamento.</p>
-             
-          <a href="Fran.Santos-Naildesign/landingpage.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-            <div class="card">
-          <img src="transceda/img/selo-transcenda-1ano.png" alt="Site para Serviços de Reforma" class="card-img">
-          <h3>Evento Transcenda</h3>
-            <p>Tenha uma pagina de captura de leads para os seus eventos</p>
-          <a href="transceda/transcenda-demo.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
+    <!-- PORTFÓLIO -->
+    <section id="modelos">
+      <div class="container">
+        <h2 class="section-title">Portfólio</h2>
+        <div class="grid-cards">
           <div class="card">
-          <img src="img/v46418.jpeg" alt="Site para Imóveis" class="card-img">
-          <h3>Blog - Artigos</h3>
-          <p>Publique artigos sobre seu negócio e ranqueie no Google</p>
-          <a href="artigo-kobrasol.html" target="_blank" class="btn">Ver Modelo</a>
+            <img src="img/corretora.png" alt="Site para Imóveis" class="card-img">
+            <h3>Imóveis - SEO / Blog</h3>
+            <p>Autoridade para seu negócio</p>
+            <a href="https://www.flaviacapaciacorretora.com/" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="img/beira-mar-predios.jpg" alt="Site para Imóveis" class="card-img">
+            <h3>Imóveis - SEO / ADS</h3>
+            <p>Tenha um site moderno para seus imóveis</p>
+            <a href="https://www.imoveisfloripa.online/" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="img/flavia.jpeg" alt="Site para Imóveis" class="card-img">
+            <h3>Imóveis - SEO / ADS</h3>
+            <p>Publique seus imóveis com elegância</p>
+            <a href="https://www.imoveisfloripa.online/" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="MatheusNicolau/img/matheus.png" alt="Landpage + Assistente" class="card-img">
+            <h3>Landpage + Assistente Virtual</h3>
+            <p>Página de atendimento e bot personalizados</p>
+            <a href="MatheusNicolau/contato-com-assistente.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="Reformas/imagens/logo.jpeg" alt="Serviços de Reforma" class="card-img">
+            <h3>Serviços de Reforma</h3>
+            <p>Destaque seus serviços e trabalhos realizados</p>
+            <a href="Reformas/modelo-morderno.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="transceda/img/TRANSCENDA EXPERIENCE logo.jfif" alt="Site Transcenda" class="card-img">
+            <h3>Site Transcenda</h3>
+            <p>Site moderno para o seu evento</p>
+            <a href="transceda/landingpage.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="img/modelo-img-corretor.jpeg" alt="Landpage Corretor" class="card-img">
+            <h3>Landpage Corretor</h3>
+            <p>Mostre seus imóveis e receba contatos diretos</p>
+            <a href="landpagevlad.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="img/naildesign.jpeg" alt="Nail Design" class="card-img">
+            <h3>Nail Design</h3>
+            <p>Galeria de trabalhos e agendamento</p>
+            <a href="Fran.Santos-Naildesign/landingpage.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="transceda/img/selo-transcenda-1ano.png" alt="Evento Transcenda" class="card-img">
+            <h3>Evento Transcenda</h3>
+            <p>Página de captura de leads para eventos</p>
+            <a href="transceda/transcenda-demo.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="img/v46418.jpeg" alt="Blog Artigos" class="card-img">
+            <h3>Blog - Artigos</h3>
+            <p>Publique artigos e ranqueie no Google</p>
+            <a href="artigo-kobrasol.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="img/marcos.jpeg" alt="Landing Page Corretor" class="card-img">
+            <h3>Imóveis - Landing Page</h3>
+            <p>Catálogo de imóveis sem parcelas mensais</p>
+            <a href="imoveis/modelo-corretor.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
+          <div class="card">
+            <img src="img/estetica.webp" alt="Estética" class="card-img">
+            <h3>Estética</h3>
+            <p>Layout moderno, serviços e agendamento fácil</p>
+            <a href="estetica/modelo-esteticista.html" target="_blank" class="btn">Ver Modelo</a>
+          </div>
         </div>
-   
-
-        <div class="card">
-          <img src="img/marcos.jpeg" alt="Landing Page Corretor" class="card-img">
-          <h3>Imóveis - Landing Page</h3>
-            <p>Tenha um Catalogo para seus imóveis sem parcelas mensais</p>
-        
-          <a href="imoveis/modelo-corretor.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-
-        <div class="card">
-          <img src="img/estetica.webp" alt="Site para Estética" class="card-img">
-          <h3>Estética</h3>
-           <p>Layout moderno, serviços e agendamento fácil.</p>          
-          <a href="estetica/modelo-esteticista.html" target="_blank" class="btn">Ver Modelo</a>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Seção 2: Solicitar Modelos (carrossel animado que você gosta) -->
-  <section id="solicitar" style="background: rgba(0,0,0,0.2);">
-    <div class="container">
-      <h2>Solicite Novos Modelos</h2>
-      <div class="slider-container">
-
-        <div class="card">
-          <img src="img/festa.png" alt="Modelo para Festas" class="card-img">
-          <h3>Festas</h3>
-          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Festas" target="_blank" class="btn">Solicitar</a>
+    <!-- SOLICITE NOVOS MODELOS (CARROSSEL COM ROLAGEM) -->
+    <section id="solicitar" style="background: rgba(0,0,0,0.2);">
+      <div class="container">
+        <h2 class="section-title">Solicite Novos Modelos</h2>
+        <div class="slider-wrapper">
+          <div class="slider-container">
+            <div class="card">
+              <img src="img/festa.png" alt="Modelo para Festas" class="card-img">
+              <h3>Festas</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Festas" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/restaurante.jpeg" alt="Modelo Restaurante" class="card-img">
+              <h3>Restaurante</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Restaurante" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/estetica.webp" alt="Modelo Estética" class="card-img">
+              <h3>Estética</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Estética" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/consertos.jpeg" alt="Serviços e Consertos" class="card-img">
+              <h3>Consertos</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Consertos" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/naildesign.jpeg" alt="Modelo Nail Design" class="card-img">
+              <h3>Nail Design</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nail%20Design" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/nutri.jpeg" alt="Modelo Nutricionista" class="card-img">
+              <h3>Nutricionista</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nutricionista" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <!-- Duplicados para loop contínuo da animação -->
+            <div class="card">
+              <img src="img/festa.png" alt="Modelo para Festas" class="card-img">
+              <h3>Festas</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Festas" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/restaurante.jpeg" alt="Modelo Restaurante" class="card-img">
+              <h3>Restaurante</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Restaurante" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/estetica.webp" alt="Modelo Estética" class="card-img">
+              <h3>Estética</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Estética" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/consertos.jpeg" alt="Serviços e Consertos" class="card-img">
+              <h3>Consertos</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Consertos" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/naildesign.jpeg" alt="Modelo Nail Design" class="card-img">
+              <h3>Nail Design</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nail%20Design" target="_blank" class="btn">Solicitar</a>
+            </div>
+            <div class="card">
+              <img src="img/nutri.jpeg" alt="Modelo Nutricionista" class="card-img">
+              <h3>Nutricionista</h3>
+              <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nutricionista" target="_blank" class="btn">Solicitar</a>
+            </div>
+          </div>
         </div>
-
-        <div class="card">
-          <img src="img/restaurante.jpeg" alt="Modelo Restaurante" class="card-img">
-          <h3>Restaurante</h3>
-          
-          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Restaurante" target="_blank" class="btn">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <img src="img/estetica.webp" alt="Modelo Estética" class="card-img">
-          <h3>Estética</h3>
-     
-          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Estética" target="_blank" class="btn">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <img src="img/consertos.jpeg" alt="Serviços e Consertos" class="card-img">
-          <h3>Consertos</h3>
-          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Consertos" target="_blank" class="btn">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <img src="img/naildesign.jpeg" alt="Modelo Nail Design" class="card-img">
-          <h3>Nail Design</h3>
-           
-            <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nail%20Design" target="_blank" class="btn">Solicitar</a>
-        </div>
-
-        <div class="card">
-          <img src="img/nutri.jpeg" alt="Modelo Nutricionista" class="card-img">
-          <h3>Nutricionista</h3>
-            
-          <a href="https://wa.me/5511912381257?text=Olá,%20quero%20solicitar%20o%20modelo%20Nutricionista" target="_blank" class="btn">Solicitar</a>
-        </div>
-
-        <!-- Repetição para loop perfeito -->
-        <div class="card"><img src="img/festa.png" class="card-img"><h3>Festas</h3><a href="#" class="btn">Solicitar</a></div>
-        <div class="card"><img src="img/restaurante.jpeg" class="card-img"><h3>Restaurante</h3><a href="#" class="btn">Solicitar</a></div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-   
-    <!-- CHAMADA FINAL — FORTE E DIRETA -->
+    <!-- CHAMADA FINAL -->
     <section id="contato" style="background: rgba(0,0,0,0.2);">
       <div class="container" style="text-align: center;">
-        <h2>Não deixe o seu negócio parado</h2>
-        <p style="max-width: 700px; margin: 0 auto 25px;">Seus clientes estão procurando por você na internet agora mesmo. Vamos colocar o seu negócio lá e começar a receber novos contatos ainda essa semana?</p>
+        <h2 class="section-title">Não deixe o seu negócio parado</h2>
+        <p style="max-width: 680px; margin: 0 auto 24px; text-align: center;">
+          Seus clientes estão procurando por você na internet agora mesmo. Vamos colocar o seu negócio lá e começar a receber novos contatos ainda essa semana?
+        </p>
         <a href="https://wa.me/5511912381257?text=Olá!%20Quero%20solicitar%20um%20orçamento%20grátis" target="_blank" class="btn btn-destaque">Solicitar Orçamento Gratuito</a>
       </div>
     </section>
+
   </main>
 
-  
-  <!-- RODAPÉ — IGUAL AO SEU -->
+  <!-- RODAPÉ -->
   <footer>
     <div class="container">
       <div class="rodape-grid">
