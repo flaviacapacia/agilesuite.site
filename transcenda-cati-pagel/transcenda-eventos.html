@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transcenda · Agenda de Eventos | Alto Mar, Marketing Digital & Experience</title>
+  <meta name="description" content="Agenda oficial Transcenda: Edição Alto Mar (17/10), encontro de Marketing Digital (06/10) e Transcenda Experience em Bom Retiro (10/10). Conexão, celebração e expansão para mulheres." />
+  <meta name="author" content="Transcenda · Cati Pagel" />
+  <meta property="og:title" content="Transcenda · Agenda de Eventos" />
+  <meta property="og:description" content="Abertura da temporada: Alto Mar, Marketing Digital e Experience na Serra. Vagas limitadas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="selo-transcenda.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="selo-transcenda.png" />
+  <link rel="icon" type="image/png" href="selo-transcenda.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --branco: #ffffff;
+      --off-white: #faf7f4;
+      --creme: #f5efe8;
+      --texto: #2a2420;
+      --texto-suave: #5c534c;
+      --dourado: #c9a84c;
+      --dourado-escuro: #a8862e;
+      --dourado-claro: #e8d48b;
+      --pessego: #e8b4a0;
+      --pessego-claro: #f3d4c4;
+      --pessego-suave: rgba(232, 180, 160, 0.18);
+      --dourado-suave: rgba(201, 168, 76, 0.14);
+      --borda: #e8dfd6;
+      --fonte-titulo: 'Cormorant Garamond', Georgia, serif;
+      --fonte-corpo: 'Outfit', system-ui, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--fonte-corpo);
+      background: var(--branco);
+      color: var(--texto);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 22px 80px;
+    }
+
+    /* NAV */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--borda);
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      z-index: 50;
+    }
+
+    .top-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--texto);
+    }
+
+    .top-brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 2px 12px rgba(201,168,76,0.25);
+    }
+
+    .top-brand span {
+      font-family: var(--fonte-titulo);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--dourado-escuro);
+      text-transform: uppercase;
+    }
+
+    .top-nav { display: flex; gap: 4px; flex-wrap: wrap; }
+    .top-nav a {
+      color: var(--texto-suave);
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .top-nav a:hover {
+      color: var(--dourado-escuro);
+      border-color: var(--dourado);
+      background: var(--dourado-suave);
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 48px 0 40px;
+    }
+
+    .selo {
+      width: min(180px, 48vw);
+      height: auto;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      box-shadow: 0 12px 40px rgba(201,168,76,0.28);
+      animation: floatSeal 5s ease-in-out infinite;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--dourado-escuro);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(1.9rem, 5vw, 2.9rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--texto);
+      margin-bottom: 14px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--dourado-escuro);
+    }
+
+    .hero-lead {
+      max-width: 560px;
+      margin: 0 auto 22px;
+      color: var(--texto-suave);
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    .btn-grupo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(201,168,76,0.35);
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 36px rgba(201,168,76,0.45);
+    }
+
+    .btn-peach {
+      background: transparent;
+      color: var(--texto);
+      border: 1px solid var(--pessego);
+    }
+    .btn-peach:hover {
+      background: var(--pessego-suave);
+      transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
+    section { margin: 48px 0; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--dourado-escuro);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(1.55rem, 3.5vw, 2.1rem);
+      font-weight: 600;
+      color: var(--texto);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    p { color: var(--texto-suave); margin-bottom: 12px; font-weight: 300; }
+
+    .quote {
+      border-left: 3px solid var(--dourado);
+      padding: 16px 20px;
+      background: linear-gradient(90deg, var(--dourado-suave), var(--pessego-suave));
+      border-radius: 0 16px 16px 0;
+      font-family: var(--fonte-titulo);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--texto);
+      line-height: 1.45;
+      margin: 18px 0;
+    }
+
+    /* EVENT CARDS */
+    .event-card {
+      background: var(--off-white);
+      border: 1px solid var(--borda);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 28px;
+      transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+    }
+    .event-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--pessego);
+      box-shadow: 0 16px 40px rgba(42,36,32,0.07);
+    }
+
+    .event-card.destaque {
+      background: linear-gradient(145deg, var(--creme), var(--pessego-claro));
+      border-color: var(--dourado);
+    }
+
+    .event-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--dourado-suave);
+      color: var(--dourado-escuro);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .event-card h3 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.55rem;
+      color: var(--texto);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+      margin: 14px 0 18px;
+      font-size: 0.92rem;
+      color: var(--texto-suave);
+    }
+
+    .event-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .event-meta strong {
+      color: var(--texto);
+      font-weight: 500;
+    }
+
+    /* LOTES */
+    .lotes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .lote {
+      text-align: center;
+      padding: 16px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--borda);
+      background: var(--branco);
+      transition: all 0.3s;
+    }
+    .lote:hover { border-color: var(--dourado); }
+    .lote .nome {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dourado-escuro);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .lote .preco {
+      font-family: var(--fonte-titulo);
+      font-size: 1.6rem;
+      color: var(--texto);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .lote .preco small {
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+    .lote .periodo {
+      font-size: 0.78rem;
+      color: var(--texto-suave);
+      margin-top: 6px;
+    }
+    .lote.ativo {
+      border-color: var(--dourado);
+      background: var(--dourado-suave);
+      box-shadow: 0 4px 16px rgba(201,168,76,0.2);
+    }
+
+    /* CRONOGRAMA */
+    .cronograma {
+      margin-top: 22px;
+      border-top: 1px solid var(--borda);
+      padding-top: 18px;
+    }
+
+    .cronograma h4 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.15rem;
+      color: var(--dourado-escuro);
+      margin-bottom: 14px;
+    }
+
+    .timeline {
+      list-style: none;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--borda);
+      font-size: 0.92rem;
+    }
+    .timeline li:last-child { border-bottom: none; }
+
+    .timeline .hora {
+      font-weight: 500;
+      color: var(--dourado-escuro);
+      font-size: 0.88rem;
+    }
+
+    .timeline .desc strong {
+      display: block;
+      color: var(--texto);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .timeline .desc span {
+      color: var(--texto-suave);
+      font-weight: 300;
+      font-size: 0.88rem;
+    }
+
+    /* GRID EVENTOS MENORES */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .mini-card {
+      background: var(--off-white);
+      border: 1px solid var(--borda);
+      border-radius: 18px;
+      padding: 24px 20px;
+      transition: all 0.35s;
+    }
+    .mini-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--pessego);
+      box-shadow: 0 12px 32px rgba(42,36,32,0.06);
+    }
+
+    .mini-card h3 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.25rem;
+      color: var(--texto);
+      margin-bottom: 8px;
+    }
+
+    /* CTA */
+    .cta-final {
+      text-align: center;
+      padding: 44px 28px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, var(--creme), var(--pessego-claro));
+      border: 1px solid var(--borda);
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid var(--borda);
+      text-align: center;
+    }
+    footer .logo-foot {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 16px rgba(201,168,76,0.2);
+    }
+    footer .brand {
+      font-family: var(--fonte-titulo);
+      font-size: 1.25rem;
+      color: var(--dourado-escuro);
+      letter-spacing: 0.14em;
+      margin-bottom: 6px;
+    }
+    footer .social {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 12px 0;
+      flex-wrap: wrap;
+    }
+    footer .social a {
+      color: var(--texto-suave);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+    footer .social a:hover { color: var(--dourado-escuro); }
+    footer .copy {
+      font-size: 0.78rem;
+      color: #a09890;
+      margin-top: 10px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes floatSeal {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 700px) {
+      .top { flex-direction: column; gap: 12px; }
+      .top-brand span { font-size: 1.05rem; }
+      .btn { width: 100%; }
+      .btn-grupo { flex-direction: column; }
+      .timeline li { grid-template-columns: 60px 1fr; }
+      .lotes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="#topo" class="top-brand">
+        <img src="selo-transcenda.png" alt="Logo Transcenda" width="48" height="48" />
+        <span>Transcenda</span>
+      </a>
+      <nav class="top-nav">
+        <a href="#alto-mar">Alto Mar</a>
+        <a href="#marketing">Marketing</a>
+        <a href="#experience">Experience</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#ingressos">Ingressos</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <img class="selo" src="selo-transcenda.png" alt="Selo Transcenda" width="180" height="180" />
+      <p class="eyebrow">Abertura da Temporada · 2025</p>
+      <h1>A edição mais aguardada:<br /><em>Alto Mar</em></h1>
+      <p class="hero-lead">
+        Onde tudo começou. De um encontro em alto mar nasceu o Transcenda — e agora abrimos oficialmente a temporada com conexão, celebração e expansão.
+      </p>
+      <div class="btn-grupo">
+        <a class="btn btn-gold" href="#alto-mar">Quero garantir minha vaga</a>
+        <a class="btn btn-peach" href="#agenda">Ver toda a agenda</a>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="reveal">
+      <p class="section-label">A origem</p>
+      <h2>Aqui foi onde tudo começou</h2>
+      <p>
+        De um “encontro” em barco no alto mar surgiu o Transcenda. Depois viemos aprimorando: vivências, facilitadoras, movimentos, acessos &amp; conexões — e migramos também para o online.
+      </p>
+      <div class="quote">
+        “Tudo de tudo, aqui! Tudo para Você, Mulher.”
+      </div>
+      <p>
+        Depois de celebrarmos o nosso <strong style="color:var(--texto);font-weight:500;">1 Ano Transcenda</strong>, chegou a hora de abrir oficialmente a temporada. E quem faz parte dessa história tem acesso antes da divulgação oficial.
+      </p>
+    </section>
+
+    <!-- EVENTO PRINCIPAL: ALTO MAR -->
+    <section id="alto-mar" class="reveal">
+      <article class="event-card destaque">
+        <span class="event-badge">Evento principal · Abertura da temporada</span>
+        <h3>TRANSCENDA · Edição Alto Mar</h3>
+        <p>Uma experiência para viver o Transcenda em sua essência: conexão &amp; celebração a bordo.</p>
+
+        <div class="event-meta">
+          <span>📅 <strong>17/10</strong> · 10h às 17h</span>
+          <span>📍 <strong>Marina Norte da Ilha</strong></span>
+          <span>🌊 <strong>A bordo</strong></span>
+        </div>
+
+        <p style="margin-bottom:6px;font-size:0.9rem;color:var(--texto);font-weight:500;">O que você vive:</p>
+        <p style="font-size:0.92rem;">
+          Acessos &amp; Conexões · Networking de altíssimo valor · Conteúdos &amp; Fotos · Brunch a bordo · Celebração · Mimos especiais · Alto Mar
+        </p>
+
+        <div class="lotes" id="ingressos">
+          <div class="lote ativo">
+            <div class="nome">1º lote</div>
+            <div class="preco"><small>R$</small> 347</div>
+            <div class="periodo">21/09 a 28/09</div>
+          </div>
+          <div class="lote">
+            <div class="nome">2º lote</div>
+            <div class="preco"><small>R$</small> 407</div>
+            <div class="periodo">29/09 a 05/10</div>
+          </div>
+          <div class="lote">
+            <div class="nome">3º lote</div>
+            <div class="preco"><small>R$</small> 447</div>
+            <div class="periodo">06/10 a 10/10</div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--texto-suave);margin-top:4px;">
+          ⚠️ Lotes limitados. O valor muda automaticamente conforme a data/quantidade.
+        </p>
+
+        <div class="cronograma">
+          <h4>Cronograma do dia · 17/10</h4>
+          <ul class="timeline">
+            <li>
+              <div class="hora">10h00</div>
+              <div class="desc">
+                <strong>Embarque &amp; Welcome</strong>
+                <span>Recepção das participantes + acolhimento + primeiros registros.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">10h15</div>
+              <div class="desc">
+                <strong>Abertura Transcenda</strong>
+                <span>Boas-vindas, proposta da edição e momento de presença.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">10h30</div>
+              <div class="desc">
+                <strong>Acessos &amp; Conexões</strong>
+                <span>Dinâmica de apresentação e conexão entre as participantes.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">11h00</div>
+              <div class="desc">
+                <strong>Networking a bordo</strong>
+                <span>Conversas, trocas e construção de novas conexões enquanto navegamos.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">11h45</div>
+              <div class="desc">
+                <strong>Vivência Transcenda</strong>
+                <span>Momento de Corpo, Mente &amp; Espírito — leveza, presença e movimento.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">12h15</div>
+              <div class="desc">
+                <strong>Brindes, Mimos &amp; Surpresas</strong>
+                <span>Momento dedicado aos parceiros e experiências especiais.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">13h00</div>
+              <div class="desc">
+                <strong>Brinde Transcenda</strong>
+                <span>Um brinde à nossa história e a tudo que ainda está por vir.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">13h30</div>
+              <div class="desc">
+                <strong>Celebração a bordo</strong>
+                <span>Música, registros, conversas e aproveitamento livre do barco.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">16h00</div>
+              <div class="desc">
+                <strong>Encerramento</strong>
+                <span>Agradecimento + registros finais + despedida.</span>
+              </div>
+            </li>
+            <li>
+              <div class="hora">17h00</div>
+              <div class="desc">
+                <strong>Retorno na Marina</strong>
+                <span>Fim da navegação.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="quote" style="margin-top:22px;">
+          “Não é apenas um passeio de barco. É uma experiência para pausar, conectar, celebrar &amp; seguir em frente.”
+        </div>
+
+        <div class="btn-grupo" style="margin-top:20px;justify-content:flex-start;">
+          <a class="btn btn-gold" href="https://wa.me/5548999999999?text=Olá!%20Quero%20garantir%20minha%20vaga%20no%20Alto%20Mar%20Transcenda%20(17/10)." target="_blank" rel="noopener">Quero minha vaga no Alto Mar</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- OUTROS EVENTOS -->
+    <section id="agenda" class="reveal">
+      <p class="section-label">Agenda completa</p>
+      <h2>Próximos encontros Transcenda</h2>
+
+      <div class="grid-2">
+        <!-- Marketing Digital -->
+        <article class="mini-card" id="marketing">
+          <span class="event-badge">Online · Gratuito / prático</span>
+          <h3>Marketing Digital na Prática</h3>
+          <div class="event-meta">
+            <span>📅 <strong>06/10</strong></span>
+            <span>🕖 <strong>19h</strong></span>
+            <span>💻 <strong>Online</strong></span>
+          </div>
+          <p style="font-size:0.92rem;">
+            Marketing vai muito além de “somente postar”. É atrair, conectar &amp; converter. Encontro prático e aplicável para o seu negócio.
+          </p>
+          <div class="cronograma" style="border-top:none;padding-top:8px;margin-top:8px;">
+            <ul class="timeline">
+              <li>
+                <div class="hora">19h00</div>
+                <div class="desc"><strong>Abertura</strong></div>
+              </li>
+              <li>
+                <div class="hora">19h10</div>
+                <div class="desc"><strong>Aula Marketing Digital na Prática</strong></div>
+              </li>
+              <li>
+                <div class="hora">20h00</div>
+                <div class="desc"><strong>Perguntas e troca</strong></div>
+              </li>
+              <li>
+                <div class="hora">20h15</div>
+                <div class="desc"><strong>Encerramento</strong></div>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-grupo" style="margin-top:16px;justify-content:flex-start;">
+            <a class="btn btn-peach" href="https://wa.me/5548999999999?text=Olá!%20Quero%20participar%20do%20encontro%20de%20Marketing%20Digital%20(06/10)." target="_blank" rel="noopener">Quero participar</a>
+          </div>
+        </article>
+
+        <!-- Experience Bom Retiro -->
+        <article class="mini-card" id="experience">
+          <span class="event-badge">Presencial · Exclusivo</span>
+          <h3>Transcenda Experience</h3>
+          <div class="event-meta">
+            <span>📅 <strong>10/10</strong></span>
+            <span>📍 <strong>Bom Retiro – Serra Catarinense/SC</strong></span>
+          </div>
+          <p style="font-size:0.92rem;">
+            DJ, pôr do sol, energia boa e um ambiente exclusivo &amp; intimista. Vagas sendo preenchidas.
+          </p>
+          <p style="font-size:0.92rem;margin-top:8px;">
+            🛖🌿🎶 Um encontro para celebrar com presença e conexão na serra.
+          </p>
+          <div class="btn-grupo" style="margin-top:16px;justify-content:flex-start;">
+            <a class="btn btn-gold" href="https://www.sympla.com.br/evento/wine-experience-brazil-spring-edition/3544760" target="_blank" rel="noopener">Garantir vaga no Sympla</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final reveal">
+      <img src="selo-transcenda.png" alt="" width="72" height="72" style="border-radius:50%;margin-bottom:14px;box-shadow:0 6px 20px rgba(201,168,76,0.3);" />
+      <p class="section-label">Bem-vinda à temporada</p>
+      <h2 style="margin-bottom:10px;">O mar também é o nosso lugar</h2>
+      <p style="max-width:460px;margin:0 auto 20px;">
+        Conexão, celebração e expansão — para Você, Mulher. Escolha o próximo passo da sua jornada Transcenda.
+      </p>
+      <div class="btn-grupo">
+        <a class="btn btn-gold" href="#alto-mar">Alto Mar · 17/10</a>
+        <a class="btn btn-peach" href="https://www.instagram.com/transcendacatipagel/" target="_blank" rel="noopener">Seguir no Instagram</a>
+      </div>
+    </section>
+
+    <footer>
+      <img class="logo-foot" src="selo-transcenda.png" alt="Transcenda" />
+      <div class="brand">TRANSCENDA</div>
+      <p style="color:var(--texto-suave);font-size:0.9rem;">Pertencimento · Conexão · Expansão</p>
+      <p style="color:var(--texto-suave);font-size:0.85rem;">Método <strong style="color:var(--dourado-escuro);">Cati Pagel</strong></p>
+      <div class="social">
+        <a href="https://www.instagram.com/transcendacatipagel/" target="_blank" rel="noopener">@transcendacatipagel</a>
+        <a href="https://www.instagram.com/catipagel/" target="_blank" rel="noopener">@catipagel</a>
+      </div>
+      <p class="copy">© 2026 Transcenda · Todos os direitos reservados</p>
+    </footer>
+  </div>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+
+    // Destacar lote ativo conforme data (opcional - ajuste se necessário)
+    (function highlightLote() {
+      const hoje = new Date();
+      const lotes = document.querySelectorAll('.lote');
+      lotes.forEach(l => l.classList.remove('ativo'));
+      // 1º lote: 21/09 a 28/09 | 2º: 29/09 a 05/10 | 3º: 06/10 a 10/10
+      const d = hoje.getDate();
+      const m = hoje.getMonth() + 1; // 9 = setembro, 10 = outubro
+      if (m === 9 && d >= 21 && d <= 28) lotes[0]?.classList.add('ativo');
+      else if ((m === 9 && d >= 29) || (m === 10 && d <= 5)) lotes[1]?.classList.add('ativo');
+      else if (m === 10 && d >= 6 && d <= 10) lotes[2]?.classList.add('ativo');
+      else lotes[0]?.classList.add('ativo'); // fallback
+    })();
+  </script>
+</body>
+</html>
