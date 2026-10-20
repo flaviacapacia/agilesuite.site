@@ -40,7 +40,6 @@
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
-    /* Cabeçalho */
     header {
       position: fixed;
       top: 0;
@@ -70,7 +69,7 @@
       transition: var(--transicao);
     }
     .logo:hover { transform: scale(1.05); }
-    nav { display: flex; gap: 8px; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
     nav a {
       color: var(--escuro);
       padding: 10px 18px;
@@ -94,7 +93,6 @@
     nav a:hover { color: var(--dourado); }
     nav a:hover::after { width: 70%; }
 
-    /* Hero */
     .hero {
       margin-top: 70px;
       position: relative;
@@ -191,7 +189,6 @@
       transform: translateY(-3px);
     }
 
-    /* Seções */
     .secao {
       padding: 80px 24px;
       max-width: 1200px;
@@ -236,7 +233,6 @@
       margin: 20px auto 0;
     }
 
-    /* Filtros e Serviços */
     .categorias {
       display: flex;
       flex-wrap: wrap;
@@ -347,7 +343,6 @@
       color: var(--branco);
     }
 
-    /* AGENTE VIRTUAL — JANELA DE CHAT */
     .chat-botao-flutuante {
       position: fixed;
       bottom: 24px;
@@ -433,8 +428,9 @@
       padding: 12px 16px;
       border-radius: 18px;
       max-width: 80%;
-      line-height: 1.4;
+      line-height: 1.5;
       font-size: 0.95rem;
+      white-space: pre-line;
     }
     .mensagem.bot .mensagem-balao {
       background: var(--chat-mensagem-bot);
@@ -492,14 +488,7 @@
       transition: var(--transicao);
     }
     .chat-entrada button:hover { background: var(--dourado-claro); }
-    .digitando {
-      font-style: italic;
-      color: #999;
-      font-size: 0.85rem;
-      margin-bottom: 12px;
-    }
 
-    /* Seção Dados e Rodapé */
     .grade-dados {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -568,7 +557,6 @@
   <a href="#" class="logo">Forasteiros</a>
   <nav>
     <a href="#servicos">Serviços</a>
-    <a href="#agenda">Agendar</a>
     <a href="#equipe">Equipe</a>
     <a href="#localizacao">Localização</a>
   </nav>
@@ -664,7 +652,6 @@
   </p>
 </footer>
 
-<!-- AGENTE VIRTUAL / CHAT -->
 <button class="chat-botao-flutuante" id="botaoChat" onclick="alternarChat()">💬</button>
 
 <div class="chat-janelas" id="janelaChat">
@@ -680,14 +667,12 @@
 </div>
 
 <script>
-// Efeito cabeçalho
 window.addEventListener('scroll', () => {
   const cab = document.getElementById('cabecalho');
   if (window.scrollY > 50) cab.classList.add('scrolled');
   else cab.classList.remove('scrolled');
 });
 
-// Dados dos serviços
 const servicos = [
   { id: 'infantil', nome: 'Infantil', descricao: 'Corte infantil com atenção especial', tempo: '40min', valor: 35, categoria: 'cortes' },
   { id: 'corte-militar', nome: 'Corte Militar', descricao: 'Estilo clássico e marcante', tempo: '40min', valor: 35, categoria: 'cortes' },
@@ -709,7 +694,6 @@ const servicos = [
   { id: 'limpeza-pele', nome: 'Limpeza de Pele', descricao: 'Esfoliante, toalha quente e hidratação', tempo: '30min', valor: 25, categoria: 'pele' }
 ];
 
-// Horários
 const agenda = {
   "domingo": [],
   "segunda-feira": ["09:00","09:30","10:00","10:30","11:00","14:00","14:30","15:00","15:30","16:00","17:00","18:00","19:00"],
@@ -720,7 +704,6 @@ const agenda = {
   "sábado": ["08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","13:00","14:00","15:00","16:00","17:00","18:00"]
 };
 
-// Renderizar serviços
 document.addEventListener('DOMContentLoaded', () => {
   renderizarServicos('todos');
   document.querySelectorAll('.categoria').forEach(b => {
@@ -754,7 +737,6 @@ function renderizarServicos(filtro) {
   });
 }
 
-// ========== AGENTE VIRTUAL / CHAT ==========
 let chatAberto = false;
 let etapa = 'inicio';
 let dados = { servico: null, nome: '', telefone: '', data: '', horario: '' };
@@ -804,7 +786,7 @@ function escolherAcao(acao) {
   } else {
     adicionarMensagem('usuario', 'Tenho uma dúvida');
     setTimeout(() => {
-      adicionarMensagem('bot', 'Claro! Você pode falar diretamente conosco pelo WhatsApp: <strong>(48) 99999-0000</strong> ou voltar aqui e escolher "Agendar horário".', gerarOpcoesIniciais());
+      adicionarMensagem('bot', 'Claro! Você pode falar diretamente conosco pelo WhatsApp: (48) 99999-0000 ou voltar aqui e escolher "Agendar horário".', gerarOpcoesIniciais());
     }, 500);
   }
 }
@@ -815,7 +797,7 @@ function listarServicosChat() {
   principais.forEach((s, i) => {
     texto += `${i+1}. ${s.nome} — R$ ${s.valor},00\n`;
   });
-  texto += '\nDigite o nome ou número do serviço desejado:';
+  texto += '\nDigite o número do serviço desejado:';
   adicionarMensagem('bot', texto, gerarBotoesServicos());
   mostrarEntrada();
 }
@@ -875,7 +857,7 @@ function processarResposta(texto) {
     dados.telefone = texto;
     etapa = 'data';
     setTimeout(() => {
-      adicionarMensagem('bot', `Perfeito! Agora escolha a data.\n\nDigite no formato: DD/MM ou clique em uma data aqui ↓`);
+      adicionarMensagem('bot', `Perfeito! Agora escolha a data:`);
       adicionarSeletorData();
     }, 500);
   } else if (etapa === 'data') {
@@ -895,20 +877,22 @@ function adicionarSeletorData() {
   const hoje = new Date();
   hoje.setDate(hoje.getDate() + 1);
   const min = hoje.toISOString().split('T')[0];
-  div.innerHTML = `<input type="date" min="${min}" onchange="escolherDataChat(this.value)" style="padding:8px; border-radius:8px; border:1px solid #ddd; width:100%;">`;
+  div.innerHTML = `<input type="date" min="${min}" onchange="escolherDataChat(this.value)" style="padding:10px; border-radius:8px; border:1px solid #ddd; width:100%; cursor:pointer;">`;
   adicionarOpcao(div);
 }
 
 function escolherDataChat(valor) {
   if (!valor) return;
-  dados.data = new Date(valor + 'T00:00:00').toLocaleDateString('pt-BR');
+  const d = new Date(valor + 'T00:00:00');
+  dados.data = d.toLocaleDateString('pt-BR');
   etapa = 'horario';
   adicionarMensagem('usuario', dados.data);
   listarHorariosChat();
 }
 
 function listarHorariosChat() {
-  const dataObj = new Date(dados.data.split('/').reverse().join('-') + 'T00:00:00');
+  const partes = dados.data.split('/');
+  const dataObj = new Date(`${partes[2]}-${partes[1]}-${partes[0]}T00:00:00`);
   const diaSemana = dataObj.toLocaleDateString('pt-BR', { weekday: 'long' });
   const horarios = agenda[diaSemana] || [];
   
@@ -994,9 +978,31 @@ function reiniciarChat() {
   dados = { servico: null, nome: '', telefone: '', data: '', horario: '' };
   etapa = 'inicio';
   document.getElementById('caixaMensagens').innerHTML = '';
+  document.getElementById('areaEntrada').style.display = 'none';
   mensagemBoasVindas();
 }
 
-// Funções auxiliares do chat
 function adicionarMensagem(tipo, texto, opcoes = null) {
-  const caixa
+  const caixa = document.getElementById('caixaMensagens');
+  const div = document.createElement('div');
+  div.className = `mensagem ${tipo}`;
+  const conteudo = document.createElement('div');
+  conteudo.className = 'mensagem-balao';
+  conteudo.textContent = texto;
+  div.appendChild(conteudo);
+  caixa.appendChild(div);
+  
+  if (opcoes) {
+    const opDiv = document.createElement('div');
+    opDiv.style.display = 'flex';
+    opDiv.style.justifyContent = tipo === 'usuario' ? 'flex-end' : 'flex-start';
+    opDiv.appendChild(opcoes);
+    caixa.appendChild(opDiv);
+  }
+  
+  caixa.scrollTop = caixa.scrollHeight;
+}
+
+function adicionarOpcao(elemento) {
+  const caixa = document.getElementById('caixaMensagens');
+  const
