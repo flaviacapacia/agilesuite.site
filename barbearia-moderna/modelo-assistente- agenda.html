@@ -170,16 +170,6 @@
       transform: translateY(-3px);
       box-shadow: 0 8px 30px rgba(184,134,11,0.4);
     }
-    .btn-secundario {
-      background: transparent;
-      color: var(--branco);
-      border: 2px solid rgba(255,255,255,0.5);
-    }
-    .btn-secundario:hover {
-      border-color: var(--dourado-claro);
-      background: rgba(212,175,55,0.15);
-      transform: translateY(-3px);
-    }
     .btn-chat {
       background: #25D366;
       color: white;
@@ -306,7 +296,6 @@
       font-size: 0.95rem;
       color: #777;
       margin-bottom: 20px;
-      min-height: 40px;
       line-height: 1.5;
     }
     .servico-rodape {
@@ -356,7 +345,7 @@
       cursor: pointer;
       font-size: 26px;
       box-shadow: 0 4px 20px rgba(184,134,11,0.4);
-      z-index: 999;
+      z-index: 9999;
       transition: var(--transicao);
       display: flex;
       align-items: center;
@@ -380,7 +369,7 @@
       display: none;
       flex-direction: column;
       overflow: hidden;
-      z-index: 1000;
+      z-index: 10000;
       border: 1px solid var(--chat-borda);
     }
     .chat-janelas.aberta { display: flex; animation: aparece 0.3s ease-out; }
@@ -401,7 +390,7 @@
       background: none;
       border: none;
       color: white;
-      font-size: 20px;
+      font-size: 22px;
       cursor: pointer;
       opacity: 0.8;
       transition: opacity 0.2s;
@@ -872,13 +861,19 @@ function processarResposta(texto) {
 }
 
 function adicionarSeletorData() {
+  const caixa = document.getElementById('caixaMensagens');
   const div = document.createElement('div');
   div.style.margin = '10px 0';
   const hoje = new Date();
   hoje.setDate(hoje.getDate() + 1);
   const min = hoje.toISOString().split('T')[0];
   div.innerHTML = `<input type="date" min="${min}" onchange="escolherDataChat(this.value)" style="padding:10px; border-radius:8px; border:1px solid #ddd; width:100%; cursor:pointer;">`;
-  adicionarOpcao(div);
+  const wrap = document.createElement('div');
+  wrap.style.display = 'flex';
+  wrap.style.justifyContent = 'flex-start';
+  wrap.appendChild(div);
+  caixa.appendChild(wrap);
+  caixa.scrollTop = caixa.scrollHeight;
 }
 
 function escolherDataChat(valor) {
@@ -996,13 +991,13 @@ function adicionarMensagem(tipo, texto, opcoes = null) {
     const opDiv = document.createElement('div');
     opDiv.style.display = 'flex';
     opDiv.style.justifyContent = tipo === 'usuario' ? 'flex-end' : 'flex-start';
+    opDiv.style.marginBottom = '12px';
     opDiv.appendChild(opcoes);
     caixa.appendChild(opDiv);
   }
   
   caixa.scrollTop = caixa.scrollHeight;
 }
-
-function adicionarOpcao(elemento) {
-  const caixa = document.getElementById('caixaMensagens');
-  const
+</script>
+</body>
+</html>
