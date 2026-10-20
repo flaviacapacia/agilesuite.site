@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbearia Forasteiros — Agendamento Online</title>
+  <meta name="description" content="Agende seu horário na Barbearia Forasteiros — Cortes, Barba, Pigmentação e mais. Atendimento de qualidade com profissionais experientes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dourado: #b8860b;
+      --dourado-claro: #d4af37;
+      --marinho: #1c2530;
+      --fundo: #f8f9fa;
+      --branco: #ffffff;
+      --cinza: #e9ecef;
+      --texto: #2d3436;
+      --texto-claro: #6c757d;
+      --fonte: 'Poppins', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--fonte);
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    header {
+      background: var(--branco);
+      padding: 15px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--cinza);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dourado);
+      letter-spacing: 0.05em;
+    }
+    nav a {
+      color: var(--marinho);
+      margin: 0 12px;
+      font-weight: 500;
+      transition: color 0.25s;
+    }
+    nav a:hover { color: var(--dourado); }
+
+    .hero {
+      background: linear-gradient(rgba(28, 37, 48, 0.75), rgba(28, 37, 48, 0.75)), url('img/bg-forasteiros.jpg') center/cover no-repeat;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .hero-conteudo { max-width: 700px; }
+    .hero h1 {
+      font-size: 2.4rem;
+      color: var(--dourado-claro);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 32px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--branco);
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: var(--dourado-claro);
+      transform: translateY(-2px);
+    }
+    .btn-linha {
+      background: transparent;
+      color: var(--branco);
+      border: 2px solid var(--dourado-claro);
+      margin-left: 12px;
+    }
+    .btn-linha:hover {
+      background: var(--dourado-claro);
+      color: var(--branco);
+    }
+
+    .secao {
+      padding: 60px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .titulo-secao {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      color: var(--marinho);
+      position: relative;
+    }
+    .titulo-secao::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--dourado);
+      margin: 12px auto 0;
+    }
+    .subtitulo {
+      text-align: center;
+      color: var(--texto-claro);
+      margin-bottom: 32px;
+    }
+
+    .categorias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .categoria {
+      padding: 10px 20px;
+      background: transparent;
+      border: 1px solid var(--cinza);
+      color: var(--texto);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .categoria.ativa {
+      border-color: var(--dourado);
+      color: var(--branco);
+      background: var(--dourado);
+    }
+    .grade-servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .servico {
+      background: var(--branco);
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .servico:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(184, 134, 11, 0.15);
+    }
+    .servico-nome {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: var(--marinho);
+    }
+    .servico-detalhe {
+      font-size: 0.9rem;
+      color: var(--texto-claro);
+      margin-bottom: 12px;
+      min-height: 40px;
+    }
+    .servico-rodape {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .servico-valor {
+      font-weight: 700;
+      color: var(--dourado);
+      font-size: 1.1rem;
+    }
+    .servico-tempo {
+      font-size: 0.85rem;
+      color: var(--texto-claro);
+    }
+    .servico .btn {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+
+    .caixa-agenda {
+      background: var(--branco);
+      border-radius: 12px;
+      padding: 32px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    form label {
+      display: block;
+      margin: 16px 0 6px;
+      font-weight: 500;
+      color: var(--marinho);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--dourado);
+      box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+    }
+    .horarios {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .hora {
+      padding: 12px 20px;
+      border: 2px solid var(--dourado);
+      border-radius: 8px;
+      color: var(--dourado);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-align: center;
+      min-width: 90px;
+    }
+    .hora:hover { background: rgba(184, 134, 11, 0.1); }
+    .hora.selecionado {
+      background: var(--dourado);
+      color: var(--branco);
+    }
+    .sem-horario {
+      text-align: center;
+      color: var(--texto-claro);
+      padding: 20px;
+    }
+    .servico-selecionado {
+      background: rgba(184, 134, 11, 0.1);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 3px solid var(--dourado);
+    }
+    .servico-selecionado button {
+      background: none;
+      border: none;
+      color: #c0392b;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .grade-dados {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+    .dado {
+      padding: 24px;
+      background: var(--branco);
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .dado h3 {
+      color: var(--dourado);
+      margin-bottom: 10px;
+    }
+    .dado p { color: var(--texto-claro); }
+    .dado a { color: var(--dourado); font-weight: 500; }
+
+    footer {
+      background: var(--marinho);
+      color: var(--branco);
+      text-align: center;
+      padding: 40px 24px;
+      margin-top: 40px;
+    }
+    .redes { margin: 20px 0; }
+    .redes a {
+      color: var(--dourado-claro);
+      margin: 0 10px;
+    }
+    .redes a:hover { color: var(--branco); }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      nav { margin-top: 10px; }
+      .hero h1 { font-size: 1.8rem; }
+      .caixa-agenda { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">BARBEARIA FORASTEIROS</a>
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#agenda">Agendar</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#localizacao">Localização</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-conteudo">
+    <h1>Seu Estilo, Nossa Missão</h1>
+    <p>Profissionais experientes prontos para oferecer o melhor visual para você</p>
+    <a href="#servicos" class="btn">Ver Serviços</a>
+    <a href="#agenda" class="btn btn-linha">Agendar Agora</a>
+  </div>
+</section>
+
+<section id="servicos" class="secao">
+  <h2 class="titulo-secao">Nossos Serviços</h2>
+  <p class="subtitulo">Selecione um serviço e agende seu horário</p>
+
+  <div class="categorias">
+    <button class="categoria ativa" data-categoria="todos">Todos</button>
+    <button class="categoria" data-categoria="cortes">Cortes</button>
+    <button class="categoria" data-categoria="barba">Barba</button>
+    <button class="categoria" data-categoria="pigmentacao">Pigmentação</button>
+    <button class="categoria" data-categoria="quimica">Química</button>
+    <button class="categoria" data-categoria="pe">Pele</button>
+  </div>
+
+  <div class="grade-servicos" id="gradeServicos"></div>
+</section>
+
+<section id="agenda" class="secao">
+  <h2 class="titulo-secao">Agendamento Online</h2>
+  <p class="subtitulo">Escolha o serviço, a data e o horário</p>
+
+  <div class="caixa-agenda">
+    <div id="resumoServico" style="display:none;" class="servico-selecionado">
+      <div>
+        <strong id="nomeServicoSel"></strong><br>
+        <span style="color:#b8860b; font-weight:600;">R$ <span id="valorServicoSel"></span></span>
+      </div>
+      <button onclick="removerServico()">&times;</button>
+    </div>
+
+    <form id="formAgendamento">
+      <label for="nome">Seu Nome *</label>
+      <input type="text" id="nome" required placeholder="Digite seu nome">
+
+      <label for="telefone">WhatsApp *</label>
+      <input type="tel" id="telefone" required placeholder="(48) 9XXXX-XXXX">
+
+      <label for="data">Data *</label>
+      <input type="date" id="data" required onchange="atualizarHorarios()">
+
+      <label>Horários Disponíveis:</label>
+      <div class="horarios" id="listaHorarios">
+        <p class="sem-horario">Escolha uma data para ver os horários disponíveis.</p>
+      </div>
+
+      <button type="button" class="btn" style="margin-top:24px; width:100%;" onclick="confirmarAgendamento()">
+        Confirmar Agendamento
+      </button>
+    </form>
+  </div>
+</section>
+
+<section id="equipe" class="secao">
+  <h2 class="titulo-secao">Nossa Equipe</h2>
+  <div class="grade-dados">
+    <div class="dado">
+      <h3>Equipe Forasteiros</h3>
+      <p>Profissionais qualificados, sempre atualizados e prontos para entregar o melhor visual para você</p>
+    </div>
+  </div>
+</section>
+
+<section id="localizacao" class="secao">
+  <h2 class="titulo-secao">Venha Nos Visitar</h2>
+  <div class="grade-dados">
+    <div class="dado">
+      <h3>Endereço</h3>
+      <p>Rua Exemplo, 123 — Bairro<br>Biguaçu / SC</p>
+    </div>
+    <div class="dado">
+      <h3>Telefone / WhatsApp</h3>
+      <p><a href="https://wa.me/5548999990000" target="_blank">(48) 99999-0000</a></p>
+    </div>
+    <div class="dado">
+      <h3>Horário de Funcionamento</h3>
+      <p>Segunda a Sexta: 9h às 12h — 13h30 às 20h<br>Sábado: 8h30 às 18h30<br>Domingo: Fechado</p>
+    </div>
+    <div class="dado">
+      <h3>Contato</h3>
+      <p>contato@forasteiros.com.br</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3 class="logo">BARBEARIA FORASTEIROS</h3>
+  <p>Seu Estilo, Nossa Missão</p>
+  <div class="redes">
+    <a href="https://wa.me/5548999990000" target="_blank">WhatsApp</a> |
+    <a href="https://www.instagram.com/agilesuite.oficial" target="_blank">Instagram</a> |
+    <a href="#localizacao">Como Chegar</a>
+  </div>
+  <p style="margin-top:20px; font-size:0.9rem; color:#999;">
+    &copy; 2026 Barbearia Forasteiros — Todos os direitos reservados
+  </p>
+</footer>
+
+<script>
+// === DADOS DOS SERVIÇOS ===
+const servicos = [
+  { id: 'infantil', nome: 'Infantil', descricao: 'Corte infantil', tempo: '40min', valor: 35, categoria: 'cortes' },
+  { id: 'corte-militar', nome: 'Corte Militar', descricao: 'Estilo militar', tempo: '40min', valor: 35, categoria: 'cortes' },
+  { id: 'mullet', nome: 'Mullet', descricao: 'Corte Mullet', tempo: '30min', valor: 35, categoria: 'cortes' },
+  { id: 'degrade', nome: 'Degradê', descricao: 'Corte degradê personalizado', tempo: '40min', valor: 35, categoria: 'cortes' },
+  { id: 'corte-completo', nome: 'Corte de Cabelo', descricao: 'Corte completo e acabamento', tempo: '40min', valor: 35, categoria: 'cortes' },
+  { id: 'pezinho', nome: 'Pezinho', descricao: 'Delineação e acabamento', tempo: '10min', valor: 15, categoria: 'cortes' },
+  { id: 'sobrancelha', nome: 'Sobrancelha', descricao: 'Limpeza e delineação', tempo: '10min', valor: 10, categoria: 'cortes' },
+  { id: 'combo', nome: 'Combo Cabelo + Barba + Sobrancelha', descricao: 'Pacote completo de renovação', tempo: '1h', valor: 65, categoria: 'cortes' },
+  
+  { id: 'barba-maquina', nome: 'Barba Completa na Máquina', descricao: 'Barbear com máquina de acabamento', tempo: '30min', valor: 35, categoria: 'barba' },
+  { id: 'barba-marcacao', nome: 'Barba — Marcação', descricao: 'Limpeza e marcação', tempo: '20min', valor: 25, categoria: 'barba' },
+  { id: 'barboterapia', nome: 'Barboterapia', descricao: 'Com toalha quente e relaxamento', tempo: '30min', valor: 35, categoria: 'barba' },
+  { id: 'bigode', nome: 'Bigode', descricao: 'Aparo com navalha e máquina', tempo: '15min', valor: 15, categoria: 'barba' },
+  { id: 'bigode-maquina', nome: 'Bigode — Só na Máquina', descricao: 'Limpeza rápida', tempo: '5min', valor: 10, categoria: 'barba' },
+
+  { id: 'pig-barba-10', nome: 'Pigmentação de Barba', descricao: 'Pintura da barba', tempo: '10min', valor: 15, categoria: 'pigmentacao' },
+  { id: 'pig-barba-15', nome: 'Pigmentação de Barba Completa', descricao: 'Pintura detalhada', tempo: '15min', valor: 15, categoria: 'pigmentacao' },
+  { id: 'pig-cabelo', nome: 'Pigmentação', descricao: 'Cabelo e barba', tempo: '45min', valor: 30, aPartir: true, categoria: 'pigmentacao' },
+
+  { id: 'luzes', nome: 'Luzes', descricao: 'Mechas e descoloração', tempo: '3h', valor: 95, aPartir: true, categoria: 'quimica' },
+  { id: 'platinado', nome: 'Platinado', descricao: 'Descoloração completa', tempo: '3h', valor: 100, aPartir: true, categoria: 'quimica' },
+
+  { id: 'limpeza-pele', nome: 'Limpeza de Pele', descricao: 'Esfoliante e toalha quente', tempo: '30min', valor: 25, categoria: 'pele' }
+];
+
+// === HORÁRIOS POR DIA ===
+const agenda = {
+  "domingo": [],
+  "segunda-feira": ["09:00","09:30","10:00","10:30","11:00","14:00","14:30","15:00","15:30","16:00","17:00","18:00","19:00"],
+  "terça-feira": ["09:00","09:30","10:00","10:30","11:00","14:00","14:30","15:00","15:30","16:00","17:00","18:00","19:00"],
+  "quarta-feira": ["09:00","09:30","10:00","10:30","11:00","14:00","14:30","15:00","15:30","16:00","17:00","18:00","19:00"],
+  "quinta-feira": ["09:00","09:30","10:00","10:30","11:00","14:00","14:30","15:00","15:30","16:00","17:00","18:00","19:00"],
+  "sexta-feira": ["09:00","09:30","10:00","10:30","11:00","14:00","14:30","15:00","15:30","16:00","17:00","18:00","19:00"],
+  "sábado": ["08:30","09:00","09:30","10:00","10:30","11:00","11:30","12:00","13:00","14:00","15:00","16:00","17:00","18:00"]
+};
+
+let servicoEscolhido = null;
+let horarioEscolhido = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderizarServicos('todos');
+  
+  document.querySelectorAll('.categoria').forEach(botao => {
+    botao.onclick = () => {
+      document.querySelectorAll('.categoria').forEach(c => c.classList.remove('ativa'));
+      botao.classList.add('ativa');
+      renderizarServicos(botao.dataset.categoria);
+    };
+  });
+});
+
+function renderizarServicos(categoriaFiltro) {
+  const grade = document.getElementById('gradeServicos');
+  grade.innerHTML = '';
+  
+  const filtrados = categoriaFiltro === 'todos'
+    ? servicos
+    : servicos.filter(s => s.categoria === categoriaFiltro);
+
+  filtrados.forEach(servico => {
+    const card = document.createElement('div');
+    card.className = 'servico';
+    card.innerHTML = `
+      <h3 class="servico-nome">${servico.nome}</h3>
+      <p class="servico-detalhe">${servico.descricao}</p>
+      <div class="servico-rodape">
+        <div>
+          <span class="servico-valor">${servico.aPartir ? 'A partir de ' : ''}R$ ${servico.valor},00</span>
+          <span class="servico-tempo"> — ${servico.tempo}</span>
+        </div>
+        <button class="btn" onclick="escolherServico('${servico.id}')">Agendar</button>
+      </div>
+    `;
+    grade.appendChild(card);
+  });
+}
+
+function escolherServico(id) {
+  servicoEscolhido = servicos.find(s => s.id === id);
+  horarioEscolhido = null;
+  
+  document.getElementById('resumoServico').style.display = 'flex';
+  document.getElementById('nomeServicoSel').textContent = servicoEscolhido.nome;
+  document.getElementById('valorServicoSel').textContent = `${servicoEscolhido.valor},00`;
+  
+  document.getElementById('agenda').scrollIntoView({ behavior: 'smooth' });
+  atualizarHorarios();
+}
+
+function removerServico() {
+  servicoEscolhido = null;
+  horarioEscolhido = null;
+  document.getElementById('resumoServico').style.display = 'none';
+  document.getElementById('listaHorarios').innerHTML = '<p class="sem-horario">Escolha uma data para ver os horários disponíveis.</p>';
+}
+
+function atualizarHorarios() {
+  const dataInput = document.getElementById('data').value;
+  const lista = document.getElementById('listaHorarios');
+  lista.innerHTML = '';
+  horarioEscolhido = null;
+
+  if (!dataInput || !servicoEscolhido) {
+    lista.innerHTML = '<p class="sem-horario">Escolha primeiro um serviço e uma data.</p>';
+    return;
+  }
+
+  const dataObj = new Date(dataInput + 'T00:00:00');
+  const diaSemana = dataObj.toLocaleDateString('pt-BR', { weekday: 'long' });
+  const horarios = agenda[diaSemana] || [];
+
+  if (horarios.length === 0) {
+    lista.innerHTML = `<p class="sem-horario">No(a) ${diaSemana} não há atendimento.</p>`;
+    return;
+  }
+
+  horarios.forEach(hora => {
+    const div = document.createElement('div');
+    div.className = 'hora';
+    div.textContent = hora;
+    div.onclick = () => {
+      document.querySelectorAll('.hora').forEach(el => el.classList.remove('selecionado'));
+      div.classList.add('selecionado');
+      horarioEscolhido = hora;
+    };
+    lista.appendChild(div);
+  });
+}
+
+function confirmarAgendamento() {
+  const nome = document.getElementById('nome').value.trim();
+  const telefone = document.getElementById('telefone').value.trim();
+  const data = document.getElementById('data').value;
+
+  if (!servicoEscolhido) {
+    alert('Escolha primeiro um serviço na lista acima.');
+    return;
+  }
+  if (!nome || !telefone || !data || !horarioEscolhido) {
+    alert('Preencha nome, WhatsApp, escolha a data e o horário.');
+    return;
+  }
+
+  const mensagem = `Olá! Gostaria de agendar na Barbearia Forasteiros:
+
+Serviço: ${servicoEscolhido.nome}
+Valor: R$ ${servicoEscolhido.valor},00
+Data: ${new Date(data + 'T00:00:00').toLocaleDateString('pt-BR')}
+Horário: ${horarioEscolhido}
+Nome: ${nome}
+WhatsApp: ${telefone}
+
+Atenciosamente, ${nome}`;
+
+  const url = `https://wa.me/5548999990000?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, '_blank');
+}
+</script>
+</body>
+</html>
