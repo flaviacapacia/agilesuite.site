@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbearia Forasteiros — Agendamento Online | Biguaçu SC</title>
+  <meta name="description" content="Agende online na Barbearia Forasteiros. Cortes, barba, pigmentação e mais. Assistente virtual e WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --ink: #1c1917;
+      --muted: #78716c;
+      --line: #e7e5e4;
+      --gold: #a16207;
+      --gold-soft: #fef3c7;
+      --gold-mid: #ca8a04;
+      --success: #16a34a;
+      --radius: 16px;
+      --radius-full: 999px;
+      --shadow: 0 1px 2px rgba(28,25,23,.04), 0 8px 24px rgba(28,25,23,.06);
+      --shadow-lg: 0 4px 6px rgba(28,25,23,.03), 0 20px 40px rgba(28,25,23,.08);
+      --font: 'DM Sans', system-ui, sans-serif;
+      --display: 'Instrument Serif', Georgia, serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 88px;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(247,245,242,.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .header.is-scrolled {
+      border-color: var(--line);
+      box-shadow: 0 1px 0 rgba(28,25,23,.04);
+    }
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .logo span { color: var(--gold); }
+    .nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      padding: 8px 14px;
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--muted);
+      border-radius: var(--radius-full);
+      transition: color .2s, background .2s;
+    }
+    .nav a:hover {
+      color: var(--ink);
+      background: rgba(28,25,23,.04);
+    }
+    .nav-cta {
+      display: none;
+      padding: 10px 18px !important;
+      background: var(--ink) !important;
+      color: #fff !important;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: #000 !important; opacity: .9; }
+
+    /* Hero */
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 120px 24px 64px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: .8rem;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      margin-bottom: 20px;
+      letter-spacing: .02em;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold-mid);
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: var(--ink);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 420px;
+      margin-bottom: 32px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: .95rem;
+      transition: transform .2s var(--ease), box-shadow .2s, background .2s, color .2s;
+    }
+    .btn:active { transform: scale(.98); }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(28,25,23,.15);
+    }
+    .btn-primary:hover {
+      background: #000;
+      box-shadow: 0 6px 20px rgba(28,25,23,.2);
+    }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .btn-secondary:hover {
+      border-color: #d6d3d1;
+      background: #fafaf9;
+    }
+    .btn-wa {
+      background: #25D366;
+      color: #fff;
+    }
+    .btn-wa:hover { background: #1ebe57; }
+
+    .hero-card {
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--line);
+    }
+    .hero-card-title {
+      font-size: .85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .stat {
+      padding: 16px;
+      background: var(--bg);
+      border-radius: 12px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .stat span {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+    .section-head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .filter {
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      transition: all .2s var(--ease);
+    }
+    .filter:hover {
+      color: var(--ink);
+      border-color: #d6d3d1;
+    }
+    .filter.is-active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    /* Services grid */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .service {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s;
+    }
+    .service:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .service-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .service-desc {
+      font-size: .9rem;
+      color: var(--muted);
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .service-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+    .service-price {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+    .service-time {
+      font-size: .8rem;
+      color: var(--muted);
+      background: var(--bg);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+    .service-book {
+      width: 100%;
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: .9rem;
+      background: var(--bg);
+      color: var(--ink);
+      border: 1px solid transparent;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .service-book:hover {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: box-shadow .25s var(--ease);
+    }
+    .feature:hover { box-shadow: var(--shadow); }
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+    .feature h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .feature p {
+      font-size: .95rem;
+      color: var(--muted);
+    }
+
+    /* Location */
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .location-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .location-card h3 {
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .location-card p {
+      font-size: .95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .location-card a {
+      color: var(--ink);
+      font-weight: 600;
+      border-bottom: 1px solid var(--line);
+    }
+    .location-card a:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Footer */
+    .footer {
+      background: var(--ink);
+      color: #a8a29e;
+      padding: 56px 24px 32px;
+      margin-top: 40px;
+    }
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer .logo { color: #fff; margin-bottom: 8px; }
+    .footer-tag {
+      font-size: .95rem;
+      margin-bottom: 24px;
+    }
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: background .2s, transform .2s;
+    }
+    .footer-social a:hover {
+      background: var(--gold);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .footer-copy {
+      font-size: .85rem;
+      color: #78716c;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 24px;
+    }
+
+    /* Chat FAB */
+    .chat-fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-size: 1.4rem;
+      box-shadow: 0 8px 24px rgba(28,25,23,.25);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s var(--ease), background .2s;
+    }
+    .chat-fab:hover {
+      transform: scale(1.06);
+      background: #000;
+    }
+
+    /* Chat window */
+    .chat-panel {
+      position: fixed;
+      bottom: 92px;
+      right: 24px;
+      width: 380px;
+      max-width: calc(100vw - 32px);
+      height: 520px;
+      max-height: calc(100vh - 120px);
+      background: var(--surface);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--line);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 201;
+    }
+    .chat-panel.is-open {
+      display: flex;
+      animation: slideIn .3s var(--ease);
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(12px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .chat-head {
+      padding: 16px 18px;
+      background: var(--ink);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chat-head h3 {
+      font-size: .95rem;
+      font-weight: 600;
+    }
+    .chat-head-sub {
+      font-size: .75rem;
+      opacity: .7;
+      font-weight: 400;
+    }
+    .chat-close {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.25rem;
+      opacity: .8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chat-close:hover { opacity: 1; background: rgba(255,255,255,.1); }
+    .chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 18px;
+      background: #fafaf9;
+    }
+    .msg {
+      display: flex;
+      margin-bottom: 12px;
+      animation: msgIn .25s var(--ease);
+    }
+    @keyframes msgIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .msg.user { justify-content: flex-end; }
+    .bubble {
+      max-width: 85%;
+      padding: 12px 14px;
+      border-radius: 16px;
+      font-size: .9rem;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+    .msg.bot .bubble {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-bottom-left-radius: 4px;
+      color: var(--ink);
+    }
+    .msg.user .bubble {
+      background: var(--ink);
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+    .chat-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 4px 0 12px;
+    }
+    .chip {
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      font-size: .85rem;
+      font-weight: 500;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      transition: border-color .2s, background .2s;
+    }
+    .chip:hover {
+      border-color: var(--gold);
+      background: var(--gold-soft);
+      color: var(--gold);
+    }
+    .chip-confirm {
+      background: var(--success) !important;
+      border-color: var(--success) !important;
+      color: #fff !important;
+    }
+    .chat-input-row {
+      display: none;
+      padding: 12px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+      gap: 8px;
+    }
+    .chat-input-row.is-visible { display: flex; }
+    .chat-input-row input {
+      flex: 1;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font-size: .9rem;
+      outline: none;
+      font-family: inherit;
+    }
+    .chat-input-row input:focus {
+      border-color: var(--gold-mid);
+      box-shadow: 0 0 0 3px rgba(202,138,4,.15);
+    }
+    .chat-send {
+      padding: 12px 16px;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .chat-send:hover { background: #000; }
+    .date-pick {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: .9rem;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 100px;
+        gap: 32px;
+      }
+      .hero-card { order: -1; }
+      .features { grid-template-columns: 1fr; }
+      .nav-cta { display: inline-flex !important; }
+    }
+    @media (max-width: 560px) {
+      .header-inner { padding: 12px 16px; }
+      .nav a:not(.nav-cta) { display: none; }
+      .section { padding: 48px 16px; }
+      .hero { padding: 96px 16px 48px; }
+      .chat-panel {
+        right: 16px;
+        left: 16px;
+        width: auto;
+        bottom: 88px;
+      }
+      .chat-fab { right: 16px; bottom: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">Forasteiros<span>.</span></a>
+      <nav class="nav">
+        <a href="#servicos">Serviços</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#localizacao">Local</a>
+        <a href="#servicos" class="nav-cta" onclick="abrirChat(); return false;">Agendar</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="hero-badge">Biguaçu · SC</div>
+      <h1>Seu estilo,<br><em>nossa missão</em></h1>
+      <p class="hero-lead">Cortes, barba e estética masculina com atendimento personalizado. Agende em segundos pelo assistente ou WhatsApp.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary" onclick="abrirChat()">Agendar agora</button>
+        <a href="#servicos" class="btn btn-secondary">Ver serviços</a>
+        <a href="https://wa.me/5548999990000" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <p class="hero-card-title">Por que agendar conosco</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>18+</strong>
+          <span>serviços</span>
+        </div>
+        <div class="stat">
+          <strong>R$ 10</strong>
+          <span>a partir de</span>
+        </div>
+        <div class="stat">
+          <strong>Seg–Sáb</strong>
+          <span>horários flexíveis</span>
+        </div>
+        <div class="stat">
+          <strong>Chat</strong>
+          <span>agendamento online</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicos">
+    <div class="section-head">
+      <p class="eyebrow">Serviços</p>
+      <h2 class="section-title">O que oferecemos</h2>
+      <p class="section-sub">Escolha o serviço e reserve — ou use o assistente para agendar em poucos cliques.</p>
+    </div>
+    <div class="filters" id="filtros">
+      <button type="button" class="filter is-active" data-categoria="todos">Todos</button>
+      <button type="button" class="filter" data-categoria="cortes">Cortes</button>
+      <button type="button" class="filter" data-categoria="barba">Barba</button>
+      <button type="button" class="filter" data-categoria="pigmentacao">Pigmentação</button>
+      <button type="button" class="filter" data-categoria="quimica">Química</button>
+      <button type="button" class="filter" data-categoria="pele">Pele</button>
+    </div>
+    <div class="services" id="gradeServicos"></div>
+  </section>
+
+  <section class="section" id="equipe">
+    <div class="section-head">
+      <p class="eyebrow">Experiência</p>
+      <h2 class="section-title">Feito para você</h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">✂</div>
+        <h3>Profissionais atualizados</h3>
+        <p>Equipe alinhada às tendências de cortes e estética masculina.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">◎</div>
+        <h3>Atendimento personalizado</h3>
+        <p>Avaliamos seu estilo e sugerimos o visual que combina com você.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">◇</div>
+        <h3>Ambiente confortável</h3>
+        <p>Espaço pensado para relaxar enquanto você cuida da aparência.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="localizacao">
+    <div class="section-head">
+      <p class="eyebrow">Visite</p>
+      <h2 class="section-title">Localização e contato</h2>
+    </div>
+    <div class="location-grid">
+      <div class="location-card">
+        <h3>Endereço</h3>
+        <p>Rua Exemplo, 123 — Centro<br>Biguaçu / SC</p>
+      </div>
+      <div class="location-card">
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/5548999990000" target="_blank" rel="noopener">(48) 99999-0000</a></p>
+      </div>
+      <div class="location-card">
+        <h3>Horário</h3>
+        <p>Seg–Sex: 9h–12h · 13h30–20h<br>Sáb: 8h30–18h30<br>Domingo: fechado</p>
+      </div>
+      <div class="location-card">
+        <h3>E-mail</h3>
+        <p>contato@forasteiros.com.br</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#" class="logo">Forasteiros<span>.</span></a>
+      <p class="footer-tag">Seu estilo, nossa missão</p>
+      <div class="footer-social">
+        <a href="https://wa.me/5548999990000" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a href="https://www.instagram.com/agilesuite.oficial" target="_blank" rel="noopener" title="Instagram">◎</a>
+        <a href="#localizacao" title="Local">📍</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Barbearia Forasteiros — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <button type="button" class="chat-fab" id="botaoChat" onclick="alternarChat()" aria-label="Abrir chat">💬</button>
+
+  <div class="chat-panel" id="janelaChat" role="dialog" aria-label="Assistente de agendamento">
+    <div class="chat-head">
+      <div>
+        <h3>Assistente Forasteiros</h3>
+        <p class="chat-head-sub">Agendamento online</p>
+      </div>
+      <button type="button" class="chat-close" onclick="alternarChat()" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="chat-body" id="caixaMensagens"></div>
+    <div class="chat-input-row" id="areaEntrada">
+      <input type="text" id="entradaTexto" placeholder="Digite sua mensagem…" autocomplete="off" />
+      <button type="button" class="chat-send" onclick="enviarTexto()">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+  const WHATSAPP = '5548999990000';
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('is-scrolled', window.scrollY > 24);
+  });
+
+  const servicos = [
+    { id: 'infantil', nome: 'Infantil', descricao: 'Corte infantil com atenção especial', tempo: '40min', valor: 35, categoria: 'cortes' },
+    { id: 'corte-militar', nome: 'Corte Militar', descricao: 'Estilo clássico e marcante', tempo: '40min', valor: 35, categoria: 'cortes' },
+    { id: 'mullet', nome: 'Mullet', descricao: 'Estilo moderno e diferenciado', tempo: '30min', valor: 35, categoria: 'cortes' },
+    { id: 'degrade', nome: 'Degradê', descricao: 'Corte personalizado com acabamento', tempo: '40min', valor: 35, categoria: 'cortes' },
+    { id: 'corte-completo', nome: 'Corte de Cabelo', descricao: 'Corte completo e acabamento refinado', tempo: '40min', valor: 35, categoria: 'cortes' },
+    { id: 'pezinho', nome: 'Pezinho', descricao: 'Acabamento e delineação', tempo: '10min', valor: 15, categoria: 'cortes' },
+    { id: 'sobrancelha', nome: 'Sobrancelha', descricao: 'Limpeza e desenho', tempo: '10min', valor: 10, categoria: 'cortes' },
+    { id: 'combo', nome: 'Combo Cabelo + Barba + Sobrancelha', descricao: 'Pacote completo de transformação', tempo: '1h', valor: 65, categoria: 'cortes' },
+    { id: 'barba-maquina', nome: 'Barba Completa', descricao: 'Barbear com máquina e acabamento', tempo: '30min', valor: 35, categoria: 'barba' },
+    { id: 'barba-marcacao', nome: 'Marcação de Barba', descricao: 'Limpeza e contorno definido', tempo: '20min', valor: 25, categoria: 'barba' },
+    { id: 'barboterapia', nome: 'Barboterapia', descricao: 'Toalha quente, hidratação e relaxamento', tempo: '30min', valor: 35, categoria: 'barba' },
+    { id: 'bigode', nome: 'Bigode', descricao: 'Aparo com navalha e máquina', tempo: '15min', valor: 15, categoria: 'barba' },
+    { id: 'bigode-maquina', nome: 'Bigode — Rápido', descricao: 'Limpeza e ajuste na máquina', tempo: '5min', valor: 10, categoria: 'barba' },
+    { id: 'pig-barba-10', nome: 'Pigmentação de Barba', descricao: 'Uniformização da cor', tempo: '10min', valor: 15, categoria: 'pigmentacao' },
+    { id: 'pig-cabelo', nome: 'Pigmentação', descricao: 'Cabelo e barba', tempo: '45min', valor: 30, aPartir: true, categoria: 'pigmentacao' },
+    { id: 'luzes', nome: 'Luzes', descricao: 'Mechas e descoloração', tempo: '3h', valor: 95, aPartir: true, categoria: 'quimica' },
+    { id: 'platinado', nome: 'Platinado', descricao: 'Descoloração completa', tempo: '3h', valor: 100, aPartir: true, categoria: 'quimica' },
+    { id: 'limpeza-pele', nome: 'Limpeza de Pele', descricao: 'Esfoliante, toalha quente e hidratação', tempo: '30min', valor: 25, categoria: 'pele' }
+  ];
+
+  const agenda = {
+    'domingo': [],
+    'segunda-feira': ['09:00','09:30','10:00','10:30','11:00','14:00','14:30','15:00','15:30','16:00','17:00','18:00','19:00'],
+    'terça-feira': ['09:00','09:30','10:00','10:30','11:00','14:00','14:30','15:00','15:30','16:00','17:00','18:00','19:00'],
+    'quarta-feira': ['09:00','09:30','10:00','10:30','11:00','14:00','14:30','15:00','15:30','16:00','17:00','18:00','19:00'],
+    'quinta-feira': ['09:00','09:30','10:00','10:30','11:00','14:00','14:30','15:00','15:30','16:00','17:00','18:00','19:00'],
+    'sexta-feira': ['09:00','09:30','10:00','10:30','11:00','14:00','14:30','15:00','15:30','16:00','17:00','18:00','19:00'],
+    'sábado': ['08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','13:00','14:00','15:00','16:00','17:00','18:00']
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderizarServicos('todos');
+    document.querySelectorAll('.filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        renderizarServicos(btn.dataset.categoria);
+      });
+    });
+    document.getElementById('entradaTexto').addEventListener('keydown', e => {
+      if (e.key === 'Enter') { e.preventDefault(); enviarTexto(); }
+    });
+  });
+
+  function renderizarServicos(filtro) {
+    const grade = document.getElementById('gradeServicos');
+    const lista = filtro === 'todos' ? servicos : servicos.filter(s => s.categoria === filtro);
+    grade.innerHTML = lista.map(s => `
+      <article class="service">
+        <h3 class="service-name">${s.nome}</h3>
+        <p class="service-desc">${s.descricao}</p>
+        <div class="service-meta">
+          <span class="service-price">${s.aPartir ? 'A partir de ' : ''}R$ ${s.valor}</span>
+          <span class="service-time">${s.tempo}</span>
+        </div>
+        <button type="button" class="service-book" onclick="escolherServicoChat('${s.id}')">Agendar</button>
+      </article>
+    `).join('');
+  }
+
+  let chatAberto = false;
+  let etapa = 'inicio';
+  let dados = { servico: null, nome: '', telefone: '', data: '', horario: '' };
+
+  function abrirChat() {
+    if (!chatAberto) alternarChat();
+  }
+
+  function alternarChat() {
+    const painel = document.getElementById('janelaChat');
+    chatAberto = !chatAberto;
+    painel.classList.toggle('is-open', chatAberto);
+    if (chatAberto && etapa === 'inicio') mensagemBoasVindas();
+  }
+
+  function adicionarMensagem(tipo, texto, chipsEl) {
+    const caixa = document.getElementById('caixaMensagens');
+    const div = document.createElement('div');
+    div.className = 'msg ' + tipo;
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.textContent = texto;
+    div.appendChild(bubble);
+    caixa.appendChild(div);
+    if (chipsEl) {
+      const wrap = document.createElement('div');
+      wrap.appendChild(chipsEl);
+      caixa.appendChild(wrap);
+    }
+    caixa.scrollTop = caixa.scrollHeight;
+  }
+
+  function chipsIniciais() {
+    const d = document.createElement('div');
+    d.className = 'chat-chips';
+    d.innerHTML = `
+      <button type="button" class="chip" onclick="escolherAcao('agendar')">Agendar horário</button>
+      <button type="button" class="chip" onclick="escolherAcao('servicos')">Ver serviços</button>
+      <button type="button" class="chip" onclick="escolherAcao('duvida')">Dúvida</button>
+    `;
+    return d;
+  }
+
+  function mensagemBoasVindas() {
+    adicionarMensagem('bot', 'Olá! Bem-vindo à Barbearia Forasteiros.');
+    setTimeout(() => {
+      adicionarMensagem('bot', 'Como posso ajudar?', chipsIniciais());
+    }, 400);
+  }
+
+  function escolherAcao(acao) {
+    if (acao === 'agendar' || acao === 'servicos') {
+      adicionarMensagem('usuario', acao === 'agendar' ? 'Quero agendar' : 'Ver serviços');
+      etapa = 'servico';
+      setTimeout(listarServicosChat, 400);
+    } else {
+      adicionarMensagem('usuario', 'Tenho uma dúvida');
+      setTimeout(() => {
+        adicionarMensagem('bot', 'Fale conosco no WhatsApp (48) 99999-0000 ou escolha Agendar horário aqui.', chipsIniciais());
+      }, 400);
+    }
+  }
+
+  function listarServicosChat() {
+    const principais = servicos.slice(0, 8);
+    let texto = 'Serviços disponíveis:\n\n';
+    principais.forEach((s, i) => { texto += (i + 1) + '. ' + s.nome + ' — R$ ' + s.valor + '\n'; });
+    texto += '\nToque no número ou digite:';
+    const chips = document.createElement('div');
+    chips.className = 'chat-chips';
+    principais.forEach((s, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = String(i + 1);
+      b.onclick = () => selecionarServicoPorIndice(i);
+      chips.appendChild(b);
+    });
+    adicionarMensagem('bot', texto, chips);
+    mostrarEntrada(true);
+  }
+
+  function selecionarServicoPorIndice(i) {
+    const serv = servicos[i];
+    dados.servico = serv;
+    adicionarMensagem('usuario', serv.nome);
+    etapa = 'nome';
+    setTimeout(() => {
+      adicionarMensagem('bot', serv.nome + ' — R$ ' + serv.valor + ' (' + serv.tempo + ')\n\nQual é o seu nome?');
+    }, 350);
+  }
+
+  function escolherServicoChat(id) {
+    abrirChat();
+    dados.servico = servicos.find(s => s.id === id);
+    etapa = 'nome';
+    setTimeout(() => {
+      adicionarMensagem('bot', 'Você escolheu: ' + dados.servico.nome + ' — R$ ' + dados.servico.valor + '\n\nQual é o seu nome?');
+      mostrarEntrada(true);
+    }, 300);
+  }
+
+  function mostrarEntrada(show) {
+    document.getElementById('areaEntrada').classList.toggle('is-visible', !!show);
+  }
+
+  function enviarTexto() {
+    const input = document.getElementById('entradaTexto');
+    const texto = (input.value || '').trim();
+    if (!texto) return;
+    adicionarMensagem('usuario', texto);
+    input.value = '';
+    processarResposta(texto);
+  }
+
+  function processarResposta(texto) {
+    if (etapa === 'servico') {
+      const n = parseInt(texto, 10);
+      if (n >= 1 && n <= 8) {
+        selecionarServicoPorIndice(n - 1);
+        return;
+      }
+      adicionarMensagem('bot', 'Digite um número de 1 a 8 ou toque em uma opção.');
+      return;
+    }
+    if (etapa === 'nome') {
+      dados.nome = texto;
+      etapa = 'telefone';
+      setTimeout(() => {
+        adicionarMensagem('bot', 'Prazer, ' + dados.nome + '!\n\nSeu WhatsApp com DDD:');
+      }, 350);
+      return;
+    }
+    if (etapa === 'telefone') {
+      dados.telefone = texto;
+      etapa = 'data';
+      setTimeout(() => {
+        adicionarMensagem('bot', 'Escolha a data:');
+        adicionarSeletorData();
+      }, 350);
+      return;
+    }
+  }
+
+  function adicionarSeletorData() {
+    const caixa = document.getElementById('caixaMensagens');
+    const wrap = document.createElement('div');
+    const input = document.createElement('input');
+    input.type = 'date';
+    input.className = 'date-pick';
+    const min = new Date();
+    min.setDate(min.getDate() + 1);
+    input.min = min.toISOString().split('T')[0];
+    input.onchange = function () {
+      if (!this.value) return;
+      const d = new Date(this.value + 'T12:00:00');
+      dados.data = d.toLocaleDateString('pt-BR');
+      adicionarMensagem('usuario', dados.data);
+      etapa = 'horario';
+      listarHorariosChat();
+    };
+    wrap.appendChild(input);
+    caixa.appendChild(wrap);
+    caixa.scrollTop = caixa.scrollHeight;
+  }
+
+  function listarHorariosChat() {
+    const partes = dados.data.split('/');
+    const dataObj = new Date(partes[2] + '-' + partes[1] + '-' + partes[0] + 'T12:00:00');
+    const diaSemana = dataObj.toLocaleDateString('pt-BR', { weekday: 'long' });
+    const horarios = agenda[diaSemana] || [];
+    if (!horarios.length) {
+      adicionarMensagem('bot', 'Não atendemos nesse dia. Escolha outra data:');
+      etapa = 'data';
+      adicionarSeletorData();
+      return;
+    }
+    let texto = 'Horários em ' + dados.data + ' (' + diaSemana + '):\n';
+    const chips = document.createElement('div');
+    chips.className = 'chat-chips';
+    horarios.forEach(h => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = h;
+      b.onclick = () => {
+        dados.horario = h;
+        adicionarMensagem('usuario', h);
+        etapa = 'confirmar';
+        setTimeout(confirmarAgendamentoChat, 350);
+      };
+      chips.appendChild(b);
+    });
+    adicionarMensagem('bot', texto, chips);
+  }
+
+  function confirmarAgendamentoChat() {
+    const resumo =
+      'Resumo do agendamento:\n' +
+      '• ' + dados.servico.nome + '\n' +
+      '• R$ ' + dados.servico.valor + '\n' +
+      '• ' + dados.data + ' às ' + dados.horario + '\n' +
+      '• ' + dados.nome + ' · ' + dados.telefone + '\n\n' +
+      'Confirma?';
+    const chips = document.createElement('div');
+    chips.className = 'chat-chips';
+    chips.innerHTML = `
+      <button type="button" class="chip chip-confirm" onclick="enviarWhatsApp()">Sim, confirmo</button>
+      <button type="button" class="chip" onclick="reiniciarChat()">Começar de novo</button>
+    `;
+    adicionarMensagem('bot', resumo, chips);
+  }
+
+  function enviarWhatsApp() {
+    adicionarMensagem('usuario', 'Confirmo!');
+    const mensagem =
+      'Olá! Agendamento Barbearia Forasteiros:\n\n' +
+      'Serviço: ' + dados.servico.nome + '\n' +
+      'Valor: R$ ' + dados.servico.valor + '\n' +
+      'Data: ' + dados.data + '\n' +
+      'Horário: ' + dados.horario + '\n' +
+      'Nome: ' + dados.nome + '\n' +
+      'WhatsApp: ' + dados.telefone;
+    setTimeout(() => {
+      adicionarMensagem('bot', 'Perfeito! Abrimos o WhatsApp para finalizar. Até breve, ' + dados.nome + '!');
+      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(mensagem), '_blank', 'noopener');
+      etapa = 'inicio';
+      dados = { servico: null, nome: '', telefone: '', data: '', horario: '' };
+      mostrarEntrada(false);
+    }, 400);
+  }
+
+  function reiniciarChat() {
+    dados = { servico: null, nome: '', telefone: '', data: '', horario: '' };
+    etapa = 'inicio';
+    document.getElementById('caixaMensagens').innerHTML = '';
+    mostrarEntrada(false);
+    mensagemBoasVindas();
+  }
+  </script>
+</body>
+</html>
