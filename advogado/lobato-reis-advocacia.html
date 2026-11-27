@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobato Reis Advocacia | Direito Trabalhista</title>
+    <meta name="description" content="Advocacia Trabalhista em São José e Grande Florianópolis. Defesa dos seus direitos com dedicação e estratégia.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    /* ==========================================
+   LOBATO REIS ADVOCACIA — Paleta Preto, Marrom e Dourado
+========================================== */
+
+:root {
+    /* Cores Principais */
+    --preto: #0f0f0f;
+    --preto-suave: #1a1a1a;
+    --marrom-escuro: #3d2e1f;
+    --marrom: #6b4c2a;
+    --marrom-claro: #8c6b45;
+    --dourado: #b8860b;
+    --dourado-claro: #d4a017;
+    --dourado-suave: #e8c547;
+    --bege: #f5f0e6;
+    --bege-escuro: #e8dfd0;
+    --branco: #ffffff;
+    --cinza-suave: #b8b0a0;
+    
+    /* Fontes */
+    --fonte-titulo: 'Playfair Display', Georgia, serif;
+    --fonte-texto: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Efeitos */
+    --transicao: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --sombra-dourada: 0 4px 20px rgba(184, 134, 11, 0.15);
+    --sombra-profunda: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--bege);
+    background-color: var(--preto);
+    line-height: 1.7;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--branco);
+}
+
+h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); margin-bottom: 1.5rem; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+p { margin-bottom: 1.2rem; font-size: 1.025rem; color: var(--cinza-suave); line-height: 1.8; }
+
+em {
+    color: var(--dourado);
+    font-style: italic;
+}
+
+strong {
+    color: var(--dourado-claro);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transicao);
+}
+
+ul { list-style: none; }
+
+img { max-width: 100%; height: auto; }
+
+section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.secao-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--dourado);
+    margin-bottom: 1rem;
+   
+
+</style>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="container">
+            <a href="#inicio" class="logo">
+                <span class="logo-texto">LOBATO REIS</span>
+                <span class="logo-sub">ADVOCACIA</span>
+            </a>
+            <nav class="nav">
+                <button class="menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Atuação</a></li>
+                    <li><a href="#diferenca">Diferencial</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL / HERO -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-conteudo fade-in">
+                    <p class="pre-titulo">Defesa dos seus direitos</p>
+                    <h1>Seu trabalho,<br>sua <em>história</em>,<br>nossa <em>luta</em>.</h1>
+                    <p class="subtitulo">Especializada em <strong>Direito Trabalhista</strong> na Grande Florianópolis. Estratégia, dedicação e resultados para você.</p>
+                    <div class="botoes-hero">
+                        <a href="https://wa.me/5548991877861" target="_blank" class="btn btn-primario">
+                            <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                        </a>
+                        <a href="#servicos" class="btn btn-secundario">Conhecer Áreas</a>
+                    </div>
+                    <div class="dados-hero">
+                        <div class="dado-item">
+                            <span class="dado-numero">+10</span>
+                            <span class="dado-label">Anos de experiência</span>
+                        </div>
+                        <div class="dado-item">
+                            <span class="dado-numero">SC</span>
+                            <span class="dado-label">Atuação</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-imagem-wrapper fade-in">
+                    <div class="imagem-fundo"></div>
+                    <img src="img/nubia.jpeg" alt="Núbia Lobato Reis — Advogada Trabalhista" class="hero-foto">
+                    <div class="selo">
+                        <span>OAB/SC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="decoracao circulo-1"></div>
+        <div class="decoracao circulo-2"></div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-grid">
+                <div class="sobre-imagem fade-in">
+                    <div class="bloco-dourado"></div>
+                    <img src="img/nubia.jpeg" alt="Núbia Lobato Reis" class="foto-sobre">
+                </div>
+                <div class="sobre-conteudo fade-in">
+                    <span class="secao-tag">Sobre mim</span>
+                    <h2>Núbia Lobato Reis</h2>
+                    <h3>Advogada — Direito Trabalhista</h3>
+                    <p>Com atuação focada no Direito Trabalhista, defendo os direitos de trabalhadores em todas as etapas da relação de emprego. Acredito que cada caso é único e merece atenção dedicada, estratégia clara e acompanhamento próximo.</p>
+                    <p>Atendimento presencial em São José/SC e online em todo o Brasil. Estou pronta para ouvir a sua história e lutar pelos seus direitos.</p>
+                    <div class="destaque-frase">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Seu trabalho é seu maior patrimônio. Defender seus direitos é minha missão.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="servicos" id="servicos">
+        <div class="container">
+            <div class="secao-cabecalho fade-in">
+                <span class="secao-tag">O que faço</span>
+                <h2>Áreas de <em>Atuação</em></h2>
+                <p>Principais situações em que posso ajudá-lo</p>
+            </div>
+            <div class="servicos-grid">
+                <div class="servico-card fade-in">
+                    <div class="servico-icone">
+                        <i class="fas fa-user-times"></i>
+                    </div>
+                    <h3>Rescisão e Demissão</h3>
+                    <p>Verbas rescisórias, demissão sem justa causa, dispensa durante estabilidade e acordos judiciais.</p>
+                </div>
+                <div class="servico-card fade-in">
+                    <div class="servico-icone">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horas Extras</h3>
+                    <p>Cobrança de horas extras, adicional noturno, intervalo intrajornada e sobrejornada.</p>
+                </div>
+                <div class="servico-card fade-in">
+                    <div class="servico-icone">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Sem Carteira Assinada</h3>
+                    <p>Reconhecimento de vínculo empregatício, direitos e FGTS para trabalho informal.</p>
+                </div>
+                <div class="servico-card fade-in">
+                    <div class="servico-icone">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Acidente de Trabalho</h3>
+                    <p>Estabilidade, benefícios, indenização por danos morais e materiais decorrentes de acidentes.</p>
+                </div>
+                <div class="servico-card fade-in">
+                    <div class="servico-icone">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Assédio no Trabalho</h3>
+                    <p>Defesa em casos de assédio moral e sexual, com busca de indenização e medidas protetivas.</p>
+                </div>
+                <div class="servico-card fade-in">
+                    <div class="servico-icone">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Reclamações Trabalhistas</h3>
+                    <p>Elaboração e acompanhamento de reclamações na Justiça do Trabalho — do início ao fim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO TRABALHAMOS -->
+    <section class="diferenca" id="diferenca">
+        <div class="container">
+            <div class="secao-cabecalho fade-in">
+                <span class="secao-tag">Diferencial</span>
+                <h2>Como posso te <em>ajudar</em></h2>
+            </div>
+            <div class="passos">
+                <div class="passo-item fade-in">
+                    <div class="passo-numero">01</div>
+                    <div class="passo-conteudo">
+                        <h3>Escuta ativa</h3>
+                        <p>Você conta sua história com calma. Eu ouço tudo, sem julgamento, entendendo o que realmente está em jogo para você.</p>
+                    </div>
+                </div>
+                <div class="passo-item fade-in">
+                    <div class="passo-numero">02</div>
+                    <div class="passo-conteudo">
+                        <h3>Análise clara</h3>
+                        <p>Explico seus direitos, os caminhos possíveis, os prazos e os riscos — sempre em linguagem simples e honesta.</p>
+                    </div>
+                </div>
+                <div class="passo-item fade-in">
+                    <div class="passo-numero">03</div>
+                    <div class="passo-conteudo">
+                        <h3>Ação estratégica</h3>
+                        <p>Se decidirmos seguir, cada passo é planejado. Você é informado de tudo sem precisar ficar cobrando.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-wrapper fade-in">
+                <div class="contato-texto">
+                    <span class="secao-tag">Fale comigo</span>
+                    <h2>Conte a sua <em>história</em></h2>
+                    <p>Na primeira conversa você já entende seus direitos, as opções e os próximos passos. Sem compromisso.</p>
+                    
+                    <div class="contato-dados">
+                        <a href="https://wa.me/5548991877861" target="_blank" class="contato-link">
+                            <div class="icone-contato">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>(48) 99187-7861</span>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/advnabilalobatoreis/" target="_blank" class="contato-link">
+                            <div class="icone-contato">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>@advnabilalobatoreis</span>
+                            </div>
+                        </a>
+                        <div class="contato-link">
+                            <div class="icone-contato">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Endereço</strong>
+                                <span>R. das Camélias, 345 — Sl 301<br>Kobrasol, São José — SC<br>CEP 88102-480</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-imagem fade-in">
+                    <div class="imagem-fundo-dourado"></div>
+                    <img src="img/nubia.jpeg" alt="Atendimento jurídico" class="foto-contato">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div class="rodape-logo">
+                    <h3>LOBATO REIS</h3>
+                    <p>ADVOCACIA</p>
+                </div>
+                <p class="rodape-texto">Defendendo os direitos de trabalhadores na Grande Florianópolis e em todo o Brasil.</p>
+                <div class="rodape-redes">
+                    <a href="https://wa.me/5548991877861" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/advnabilalobatoreis/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="rodape-copyright">&copy; 2026 Lobato Reis Advocacia — Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
