@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leo de Andrade Advocacia | Escritório de Advocacia</title>
+  <meta name="description" content="Escritório Leo de Andrade Advocacia. Atuação em Direito Trabalhista, Civil, Família, Previdenciário e Empresarial. Atendimento presencial e online." />
+  <meta property="og:title" content="Leo de Andrade Advocacia" />
+  <meta property="og:description" content="Escritório de advocacia com atuação em diversas áreas. Atendimento claro, estratégico e próximo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root {
+      --azul: #0b1f3a;
+      --azul-medio: #14365f;
+      --azul-claro: #1e4d86;
+      --azul-suave: #e8eef6;
+      --dourado: #b8974a;
+      --dourado-claro: #d4b56a;
+      --branco: #ffffff;
+      --off: #f7f9fc;
+      --texto: #243044;
+      --texto-suave: #5a6a7e;
+      --borda: #d9e2ef;
+      --fonte-titulo: 'Playfair Display', Georgia, serif;
+      --fonte-texto: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transicao: all 0.3s ease;
+      --sombra: 0 10px 30px rgba(11, 31, 58, 0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--fonte-texto);
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    .container { width: min(92%, 1140px); margin: 0 auto; }
+    h1, h2, h3 {
+      font-family: var(--fonte-titulo);
+      color: var(--azul);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3.3rem); margin-bottom: 1.1rem; }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 0.8rem; }
+    h3 { font-size: 1.08rem; margin-bottom: 0.55rem; }
+    p { color: var(--texto-suave); margin-bottom: 1rem; }
+    em { color: var(--azul-claro); font-style: italic; }
+    strong { color: var(--azul); }
+    a { text-decoration: none; color: inherit; transition: var(--transicao); }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    section { padding: 4.5rem 0; }
+
+    .secao-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--azul-claro);
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .secao-cabecalho { text-align: center; max-width: 680px; margin: 0 auto 2.6rem; }
+
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visivel { opacity: 1; transform: translateY(0); }
+
+    /* HEADER */
+    .header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid transparent;
+      transition: var(--transicao);
+      padding: 0.9rem 0;
+    }
+    .header.com-fundo { border-bottom-color: var(--borda); box-shadow: 0 4px 20px rgba(11,31,58,0.06); }
+    .header .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .logo { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-texto { font-family: var(--fonte-titulo); font-size: 1.3rem; color: var(--azul); font-weight: 700; }
+    .logo-sub { font-size: 0.7rem; letter-spacing: 2.4px; text-transform: uppercase; color: var(--texto-suave); }
+    .menu-toggle {
+      display: none; width: 46px; height: 46px; border-radius: 10px;
+      border: 1px solid var(--borda); background: var(--off); color: var(--azul);
+      font-size: 1.15rem; cursor: pointer; align-items: center; justify-content: center;
+    }
+    .menu { display: flex; gap: 1.5rem; align-items: center; }
+    .menu a { font-size: 0.92rem; color: var(--texto); font-weight: 500; }
+    .menu a:hover { color: var(--azul-claro); }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.9rem 1.55rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
+      border: none; cursor: pointer; transition: var(--transicao); font-family: inherit;
+    }
+    .btn-primario { background: var(--azul); color: #fff; }
+    .btn-primario:hover { background: var(--azul-medio); transform: translateY(-2px); }
+    .btn-secundario { background: transparent; color: var(--azul); border: 2px solid var(--azul); }
+    .btn-secundario:hover { background: var(--azul); color: #fff; }
+    .btn-whatsapp { background: #25D366; color: #fff; width: 100%; }
+    .btn-whatsapp:hover { background: #1ebe57; }
+
+    /* HERO */
+    .hero {
+      padding: 7.5rem 0 4rem;
+      background: linear-gradient(180deg, var(--off) 0%, var(--branco) 100%);
+      min-height: 92vh; display: flex; align-items: center;
+    }
+    .hero-wrapper {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center;
+    }
+    .hero-conteudo { order: 1; }
+    .hero-imagem-wrapper { order: 2; position: relative; display: flex; justify-content: center; }
+    .pre-titulo {
+      font-size: 0.82rem; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--azul-claro); font-weight: 700; margin-bottom: 0.85rem;
+    }
+    .subtitulo { font-size: 1.05rem; margin-bottom: 1.6rem; }
+    .botoes-hero { display: flex; gap: 0.85rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .dados-hero { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .dado-numero { display: block; font-family: var(--fonte-titulo); font-size: 1.7rem; color: var(--azul); font-weight: 700; }
+    .dado-label { font-size: 0.85rem; color: var(--texto-suave); }
+    .imagem-fundo {
+      position: absolute; top: 6%; left: 8%; width: 84%; height: 88%;
+      background: linear-gradient(145deg, var(--azul) 0%, var(--azul-claro) 100%);
+      border-radius: 14px; z-index: 0;
+    }
+    .hero-foto {
+      position: relative; z-index: 1; width: 100%; max-width: 400px;
+      border-radius: 14px; box-shadow: var(--sombra); object-fit: cover; aspect-ratio: 4/5;
+      background: var(--azul-suave);
+    }
+    .selo {
+      position: absolute; bottom: 7%; right: 7%; z-index: 2;
+      background: var(--azul); color: #fff; padding: 0.65rem 1rem;
+      border-radius: 8px; font-weight: 700; font-size: 0.85rem;
+    }
+
+    /* SOBRE */
+    .sobre { background: var(--branco); }
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; }
+    .sobre-imagem { position: relative; display: flex; justify-content: center; }
+    .bloco-azul {
+      position: absolute; top: 5%; left: 6%; width: 88%; height: 90%;
+      background: linear-gradient(145deg, var(--azul-claro), var(--azul)); border-radius: 14px; z-index: 0;
+    }
+    .foto-sobre {
+      position: relative; z-index: 1; width: 100%; max-width: 340px;
+      border-radius: 14px; box-shadow: var(--sombra); object-fit: cover; aspect-ratio: 4/5;
+      background: var(--azul-suave);
+    }
+    .sobre-conteudo h3 {
+      font-family: var(--fonte-texto); font-size: 0.9rem; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--azul-claro); margin-bottom: 1rem;
+    }
+    .destaque-frase {
+      margin-top: 1.5rem; padding: 1.2rem 1.3rem;
+      border-left: 3px solid var(--azul); background: var(--azul-suave); border-radius: 0 10px 10px 0;
+    }
+    .destaque-frase p { color: var(--azul); font-style: italic; margin: 0; }
+
+    /* ÁREAS */
+    .areas { background: var(--off); }
+    .areas-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+    }
+    .area-card {
+      background: var(--branco); border: 1px solid var(--borda); border-radius: 14px;
+      padding: 1.5rem; transition: var(--transicao); height: 100%;
+    }
+    .area-card:hover { transform: translateY(-4px); box-shadow: var(--sombra); border-color: #b9c9df; }
+    .area-icone {
+      width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      background: var(--azul-suave); color: var(--azul); margin-bottom: 0.95rem; font-size: 1.1rem;
+    }
+
+    /* COMO */
+    .como { background: var(--branco); }
+    .passos { max-width: 720px; margin: 0 auto; }
+    .passo-item {
+      display: flex; gap: 1.2rem; padding: 1.35rem 0;
+      border-bottom: 1px solid var(--borda);
+    }
+    .passo-numero {
+      font-family: var(--fonte-titulo); font-size: 1.6rem; font-weight: 700;
+      color: var(--azul); min-width: 48px; line-height: 1;
+    }
+
+    /* REELS — dourado discreto só aqui */
+    .reels { background: var(--off); }
+    .reels-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 240px));
+      gap: 1.3rem; justify-content: center; max-width: 800px; margin: 0 auto;
+    }
+    .reel-card {
+      background: var(--branco); border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--borda); transition: var(--transicao);
+    }
+    .reel-card:hover { transform: translateY(-5px); box-shadow: var(--sombra); border-color: var(--dourado); }
+    .reel-thumbnail {
+      position: relative; aspect-ratio: 9/16;
+      background: linear-gradient(160deg, var(--azul) 0%, var(--azul-medio) 55%, var(--azul-claro) 100%);
+      overflow: hidden;
+    }
+    .reel-capa { position: absolute; inset: 0; }
+    .reel-capa img { width: 100%; height: 100%; object-fit: cover; }
+    .reel-placeholder {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 0.6rem; color: rgba(255,255,255,0.9);
+      padding: 1rem; text-align: center;
+    }
+    .reel-placeholder i { font-size: 1.6rem; color: var(--dourado-claro); }
+    .reel-placeholder span { font-size: 0.82rem; line-height: 1.35; }
+    .reel-play {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 54px; height: 54px; border-radius: 50%; background: rgba(255,255,255,0.95);
+      display: flex; align-items: center; justify-content: center; color: var(--azul); z-index: 2;
+      border: 2px solid var(--dourado);
+    }
+    .reel-info { padding: 1rem; }
+    .reel-info h3 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .reel-info p { font-size: 0.85rem; margin-bottom: 0.35rem; }
+    .reel-data { font-size: 0.78rem; color: var(--dourado); font-weight: 600; }
+    .reels-cta { text-align: center; margin-top: 2.2rem; }
+
+    /* CONTATO */
+    .contato { background: var(--branco); }
+    .contato-banner {
+      display: flex; align-items: flex-start; gap: 0.9rem;
+      padding: 1rem 1.15rem; margin-bottom: 1.5rem; border-radius: 12px;
+      background: var(--azul-suave); border: 1px solid var(--borda);
+    }
+    .contato-banner i { color: var(--azul); font-size: 1.25rem; margin-top: 0.15rem; }
+    .contato-banner strong { display: block; color: var(--azul); font-size: 0.95rem; margin-bottom: 0.15rem; }
+    .contato-banner span { font-size: 0.88rem; color: var(--texto-suave); }
+    .contato-wrapper { display: grid; grid-template-columns: 1fr 1.05fr; gap: 2.2rem; align-items: start; }
+    .form-card {
+      background: var(--off); border: 1px solid var(--borda); border-radius: 16px;
+      padding: 1.6rem 1.4rem; box-shadow: var(--sombra);
+    }
+    .form-card h3 { margin-bottom: 0.3rem; }
+    .form-card > p { font-size: 0.92rem; margin-bottom: 1.2rem; }
+    .form-grupo { margin-bottom: 0.95rem; }
+    .form-grupo label {
+      display: block; font-size: 0.8rem; font-weight: 600; color: var(--azul);
+      margin-bottom: 0.35rem;
+    }
+    .form-grupo input, .form-grupo select, .form-grupo textarea {
+      width: 100%; padding: 0.82rem 0.95rem; border-radius: 8px;
+      border: 1px solid var(--borda); background: var(--branco); color: var(--texto);
+      font-family: inherit; font-size: 0.95rem; outline: none; transition: var(--transicao);
+    }
+    .form-grupo input:focus, .form-grupo select:focus, .form-grupo textarea:focus {
+      border-color: var(--azul-claro); box-shadow: 0 0 0 3px rgba(30,77,134,0.12);
+    }
+    .form-grupo select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%230b1f3a' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.4rem; cursor: pointer;
+    }
+    .form-grupo textarea { min-height: 110px; resize: vertical; }
+    .form-linha { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    .form-hint { font-size: 0.78rem; color: #8896a8; text-align: center; margin-top: 0.8rem; margin-bottom: 0; }
+    .contato-dados { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1.3rem; }
+    .contato-link {
+      display: flex; gap: 0.9rem; align-items: flex-start; padding: 0.95rem 1rem;
+      border: 1px solid var(--borda); border-radius: 12px; background: var(--off);
+    }
+    .contato-link:hover { border-color: var(--azul-claro); }
+    .icone-contato {
+      width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: var(--azul); color: #fff; flex-shrink: 0;
+    }
+    .contato-link strong { display: block; color: var(--azul); font-size: 0.9rem; margin-bottom: 0.1rem; }
+    .contato-link span { font-size: 0.88rem; color: var(--texto-suave); line-height: 1.4; }
+
+    /* FOOTER */
+    .rodape {
+      background: var(--azul); color: rgba(255,255,255,0.85); padding: 2.8rem 0 1.8rem; text-align: center;
+    }
+    .rodape-logo h3 { color: #fff; font-size: 1.3rem; margin-bottom: 0.2rem; }
+    .rodape-logo p { color: rgba(255,255,255,0.65); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+    .rodape-texto { max-width: 480px; margin: 0 auto 1.3rem; color: rgba(255,255,255,0.75); font-size: 0.9rem; }
+    .rodape-redes { display: flex; justify-content: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+    .rodape-redes a {
+      width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35);
+      display: flex; align-items: center; justify-content: center; color: #fff;
+    }
+    .rodape-redes a:hover { background: #fff; color: var(--azul); }
+    .rodape-copyright { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin: 0; }
+
+    @media (max-width: 900px) {
+      .areas-grid { grid-template-columns: repeat(2, 1fr); }
+      .contato-wrapper { grid-template-columns: 1fr; }
+      .reels-grid { grid-template-columns: repeat(2, minmax(0, 220px)); }
+    }
+    @media (max-width: 768px) {
+      section { padding: 3.2rem 0; }
+      .menu-toggle { display: inline-flex; }
+      .menu {
+        display: none; position: absolute; top: calc(100% + 2px); left: 0; right: 0;
+        background: #fff; flex-direction: column; gap: 0; border-bottom: 1px solid var(--borda);
+        box-shadow: 0 12px 28px rgba(11,31,58,0.1);
+      }
+      .menu.aberto { display: flex; }
+      .menu a { display: block; padding: 1rem 1.3rem; border-bottom: 1px solid var(--borda); }
+      .hero { padding: 5.8rem 0 2.4rem; min-height: auto; }
+      .hero-wrapper { grid-template-columns: 1fr; gap: 1.7rem; text-align: center; }
+      .hero-imagem-wrapper { order: 1; }
+      .hero-conteudo { order: 2; }
+      .botoes-hero { flex-direction: column; align-items: stretch; }
+      .botoes-hero .btn { width: 100%; }
+      .dados-hero { justify-content: center; }
+      .hero-foto { max-width: 270px; width: 85%; margin: 0 auto; }
+      .imagem-fundo { left: 50%; transform: translateX(-46%); width: 78%; }
+      .sobre-grid { grid-template-columns: 1fr; text-align: center; }
+      .sobre-imagem { display: none; }
+      .areas-grid { grid-template-columns: 1fr; }
+      .reels-grid { grid-template-columns: 1fr; max-width: 280px; }
+      .form-linha { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="#inicio" class="logo">
+        <span class="logo-texto">LEO DE ANDRADE</span>
+        <span class="logo-sub">ADVOCACIA</span>
+      </a>
+      <nav>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#areas">Áreas</a></li>
+          <li><a href="#como">Como atuamos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-wrapper">
+        <div class="hero-imagem-wrapper fade-in">
+          <div class="imagem-fundo"></div>
+          <img src="img/leo.png" alt="Leo de Andrade — Advogado" class="hero-foto" width="400" height="500" onerror="this.style.display='none'" />
+          <div class="selo">OAB</div>
+        </div>
+        <div class="hero-conteudo fade-in">
+          <p class="pre-titulo">Escritório de advocacia</p>
+          <h1>Direito com<br>clareza, estratégia<br>e <em>resultado</em>.</h1>
+          <p class="subtitulo">O escritório <strong>Leo de Andrade Advocacia</strong> atua em diversas áreas do Direito, com atendimento próximo, linguagem simples e foco na solução do seu caso.</p>
+          <div class="botoes-hero">
+            <a href="#contato" class="btn btn-primario"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+            <a href="#areas" class="btn btn-secundario">Ver áreas de atuação</a>
+          </div>
+          <div class="dados-hero">
+            <div><span class="dado-numero">Multidisciplinar</span><span class="dado-label">Várias áreas do Direito</span></div>
+            <div><span class="dado-numero">Online</span><span class="dado-label">Atendimento remoto</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-imagem fade-in">
+          <div class="bloco-azul"></div>
+          <img src="img/leo.png" alt="Leo de Andrade" class="foto-sobre" width="340" height="425" onerror="this.style.display='none'" />
+        </div>
+        <div class="sobre-conteudo fade-in">
+          <span class="secao-tag">Sobre o escritório</span>
+          <h2>Leo de Andrade</h2>
+          <h3>Advocacia com visão completa do seu caso</h3>
+          <p>O escritório nasceu para oferecer atendimento jurídico organizado e acessível, unindo análise técnica e comunicação clara. Cada demanda é tratada com método: entender o problema, explicar as opções e conduzir a estratégia com transparência.</p>
+          <p>Atuamos de forma presencial e online, com acompanhamento próximo em todas as etapas.</p>
+          <div class="destaque-frase">
+            <p>Orientação jurídica séria, linguagem simples e compromisso com o melhor caminho para o cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="areas" id="areas">
+    <div class="container">
+      <div class="secao-cabecalho fade-in">
+        <span class="secao-tag">Escritório completo</span>
+        <h2>Áreas de <em>atuação</em></h2>
+        <p>Um único escritório para diferentes necessidades jurídicas</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card fade-in">
+          <div class="area-icone"><i class="fas fa-briefcase"></i></div>
+          <h3>Direito Trabalhista</h3>
+          <p>Rescisões, verbas, horas extras, vínculo empregatício, assédio e reclamações trabalhistas.</p>
+        </div>
+        <div class="area-card fade-in">
+          <div class="area-icone"><i class="fas fa-home"></i></div>
+          <h3>Direito de Família</h3>
+          <p>Divórcio, pensão, guarda, inventário, união estável e mediação familiar.</p>
+        </div>
+        <div class="area-card fade-in">
+          <div class="area-icone"><i class="fas fa-file-contract"></i></div>
+          <h3>Direito Civil</h3>
+          <p>Contratos, cobranças, indenizações, responsabilidade civil e obrigações.</p>
+        </div>
+        <div class="area-card fade-in">
+          <div class="area-icone"><i class="fas fa-building"></i></div>
+          <h3>Direito Empresarial</h3>
+          <p>Contratos empresariais, sociedades, consultoria preventiva e contencioso comercial.</p>
+        </div>
+        <div class="area-card fade-in">
+          <div class="area-icone"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Direito Previdenciário</h3>
+          <p>Aposentadorias, benefícios do INSS, revisões e recursos administrativos e judiciais.</p>
+        </div>
+        <div class="area-card fade-in">
+          <div class="area-icone"><i class="fas fa-gavel"></i></div>
+          <h3>Consumidor</h3>
+          <p>Problemas com bancos, planos de saúde, compras, cobranças indevidas e danos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="como" id="como">
+    <div class="container">
+      <div class="secao-cabecalho fade-in">
+        <span class="secao-tag">Método</span>
+        <h2>Como o escritório <em>trabalha</em></h2>
+      </div>
+      <div class="passos">
+        <div class="passo-item fade-in">
+          <div class="passo-numero">01</div>
+          <div>
+            <h3>Escuta e diagnóstico</h3>
+            <p>Entendemos sua situação com calma, documentos e objetivos claros.</p>
+          </div>
+        </div>
+        <div class="passo-item fade-in">
+          <div class="passo-numero">02</div>
+          <div>
+            <h3>Estratégia e orientação</h3>
+            <p>Explicamos caminhos, prazos, riscos e a melhor condução do caso.</p>
+          </div>
+        </div>
+        <div class="passo-item fade-in">
+          <div class="passo-numero">03</div>
+          <div>
+            <h3>Acompanhamento</h3>
+            <p>Você é informado em cada etapa, sem precisar ficar cobrando retorno.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reels" id="reels">
+    <div class="container">
+      <div class="secao-cabecalho fade-in">
+        <span class="secao-tag">Conteúdo</span>
+        <h2>No <em>Instagram</em></h2>
+        <p>Orientações jurídicas em linguagem simples</p>
+      </div>
+      <div class="reels-grid">
+        <div class="reel-card fade-in">
+          <a href="#" class="reel-link" target="_blank" rel="noopener">
+            <div class="reel-thumbnail">
+              <div class="reel-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <span>Capa do Reel<br>em breve</span>
+              </div>
+              <div class="reel-play"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="reel-info">
+              <h3>Direitos do trabalhador</h3>
+              <p>O que observar na rescisão</p>
+              <span class="reel-data">Conteúdo jurídico</span>
+            </div>
+          </a>
+        </div>
+        <div class="reel-card fade-in">
+          <a href="#" class="reel-link" target="_blank" rel="noopener">
+            <div class="reel-thumbnail">
+              <div class="reel-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <span>Capa do Reel<br>em breve</span>
+              </div>
+              <div class="reel-play"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="reel-info">
+              <h3>Família e inventário</h3>
+              <p>Passos iniciais com segurança</p>
+              <span class="reel-data">Conteúdo jurídico</span>
+            </div>
+          </a>
+        </div>
+        <div class="reel-card fade-in">
+          <a href="#" class="reel-link" target="_blank" rel="noopener">
+            <div class="reel-thumbnail">
+              <div class="reel-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <span>Capa do Reel<br>em breve</span>
+              </div>
+              <div class="reel-play"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="reel-info">
+              <h3>Empresas e contratos</h3>
+              <p>Prevenção de conflitos</p>
+              <span class="reel-data">Conteúdo jurídico</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="reels-cta fade-in">
+        <a href="#" class="btn btn-primario" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Seguir no Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="container">
+      <div class="secao-cabecalho fade-in">
+        <span class="secao-tag">Atendimento</span>
+        <h2>Conte a sua <em>história</em></h2>
+        <p>Preencha o formulário e abra a conversa no WhatsApp com os dados prontos.</p>
+      </div>
+      <div class="contato-wrapper fade-in">
+        <div>
+          <div class="contato-banner">
+            <i class="fas fa-balance-scale"></i>
+            <div>
+              <strong>Escritório multidisciplinar</strong>
+              <span>Trabalhista, Família, Civil, Empresarial, Previdenciário e Consumidor.</span>
+            </div>
+          </div>
+          <p>Na primeira conversa você já entende as opções e os próximos passos. Sem compromisso.</p>
+          <div class="contato-dados">
+            <a href="https://wa.me/55SEUNUMERO" class="contato-link" target="_blank" rel="noopener">
+              <div class="icone-contato"><i class="fab fa-whatsapp"></i></div>
+              <div><strong>WhatsApp</strong><span>Clique para conversar</span></div>
+            </a>
+            <a href="#" class="contato-link" target="_blank" rel="noopener">
+              <div class="icone-contato"><i class="fab fa-instagram"></i></div>
+              <div><strong>Instagram</strong><span>@leo.deandrade</span></div>
+            </a>
+            <div class="contato-link">
+              <div class="icone-contato"><i class="fas fa-map-marker-alt"></i></div>
+              <div><strong>Atendimento</strong><span>Presencial e online<br>Grande Florianópolis e região</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Envie sua mensagem</h3>
+          <p>Escolha a área e conte o que precisa. A mensagem abre no WhatsApp.</p>
+          <form id="formWhatsApp" novalidate>
+            <div class="form-linha">
+              <div class="form-grupo">
+                <label for="nome">Seu nome *</label>
+                <input id="nome" name="nome" type="text" placeholder="Nome completo" required />
+              </div>
+              <div class="form-grupo">
+                <label for="telefone">WhatsApp *</label>
+                <input id="telefone" name="telefone" type="tel" placeholder="(48) 99999-9999" required />
+              </div>
+            </div>
+            <div class="form-grupo">
+              <label for="area">Área do seu caso *</label>
+              <select id="area" name="area" required>
+                <option value="">Selecione</option>
+                <option value="Direito Trabalhista">Direito Trabalhista</option>
+                <option value="Direito de Família">Direito de Família</option>
+                <option value="Direito Civil">Direito Civil</option>
+                <option value="Direito Empresarial">Direito Empresarial</option>
+                <option value="Direito Previdenciário">Direito Previdenciário</option>
+                <option value="Direito do Consumidor">Direito do Consumidor</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-grupo">
+              <label for="cidade">Cidade</label>
+              <input id="cidade" name="cidade" type="text" placeholder="Ex.: Florianópolis / São José" />
+            </div>
+            <div class="form-grupo">
+              <label for="mensagem">Conte sua história *</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Explique em poucas linhas o que aconteceu..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Enviar no WhatsApp</button>
+            <p class="form-hint">Você será redirecionado ao WhatsApp com a mensagem preenchida.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-logo">
+        <h3>LEO DE ANDRADE</h3>
+        <p>ADVOCACIA</p>
+      </div>
+      <p class="rodape-texto">Escritório de advocacia com atendimento multidisciplinar, presencial e online.</p>
+      <div class="rodape-redes">
+        <a href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="rodape-copyright">&copy; 2026 Leo de Andrade Advocacia — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Troque pelo número real com DDI 55 + DDD + número
+    const WA_NUMERO = '55SEUNUMERO';
+
+    document.getElementById('formWhatsApp')?.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const area = document.getElementById('area').value;
+      const cidade = document.getElementById('cidade').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      if (!nome || !telefone || !area || !mensagem) {
+        alert('Preencha nome, WhatsApp, área e sua história.');
+        return;
+      }
+      const linhas = [
+        'Olá, Dr. Leo! Vim pelo site do escritório.',
+        '',
+        '*Nome:* ' + nome,
+        '*WhatsApp:* ' + telefone,
+        '*Área:* ' + area,
+        cidade ? ('*Cidade:* ' + cidade) : null,
+        '',
+        '*Minha história:*',
+        mensagem,
+        '',
+        'Gostaria de orientação sobre este caso.'
+      ].filter(Boolean);
+      window.open('https://wa.me/' + WA_NUMERO + '?text=' + encodeURIComponent(linhas.join('\n')), '_blank');
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visivel'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach((el) => obs.observe(el));
+
+    const botaoMenu = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    botaoMenu?.addEventListener('click', () => {
+      const aberto = menu?.classList.toggle('aberto');
+      botaoMenu.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      const icon = botaoMenu.querySelector('i');
+      if (icon) icon.className = aberto ? 'fas fa-times' : 'fas fa-bars';
+    });
+    document.querySelectorAll('.menu a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu?.classList.remove('aberto');
+        botaoMenu?.setAttribute('aria-expanded', 'false');
+        const icon = botaoMenu?.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+      });
+    });
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 40) header?.classList.add('com-fundo');
+      else header?.classList.remove('com-fundo');
+    });
+  </script>
+</body>
+</html>
