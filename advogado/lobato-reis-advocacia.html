@@ -15,9 +15,12 @@
     /* ==========================================
    LOBATO REIS ADVOCACIA — Paleta Preto, Marrom e Dourado
 ========================================== */
+/* ==========================================
+   LOBATO REIS ADVOCACIA — Paleta Preto, Marrom e Dourado
+   ✅ Imagens ajustadas + responsividade completa
+========================================== */
 
 :root {
-    /* Cores Principais */
     --preto: #0f0f0f;
     --preto-suave: #1a1a1a;
     --marrom-escuro: #3d2e1f;
@@ -31,11 +34,9 @@
     --branco: #ffffff;
     --cinza-suave: #b8b0a0;
     
-    /* Fontes */
     --fonte-titulo: 'Playfair Display', Georgia, serif;
     --fonte-texto: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     
-    /* Efeitos */
     --transicao: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --sombra-dourada: 0 4px 20px rgba(184, 134, 11, 0.15);
     --sombra-profunda: 0 10px 40px rgba(0, 0, 0, 0.4);
@@ -75,11 +76,11 @@ h1, h2, h3, h4 {
     color: var(--branco);
 }
 
-h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); margin-bottom: 1.5rem; }
-h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1rem; }
-h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.5rem; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 1rem; }
+h3 { font-size: 1.15rem; margin-bottom: 0.75rem; }
 
-p { margin-bottom: 1.2rem; font-size: 1.025rem; color: var(--cinza-suave); line-height: 1.8; }
+p { margin-bottom: 1.2rem; font-size: 1rem; color: var(--cinza-suave); line-height: 1.8; }
 
 em {
     color: var(--dourado);
@@ -102,19 +103,612 @@ ul { list-style: none; }
 img { max-width: 100%; height: auto; }
 
 section {
-    padding: 6rem 0;
+    padding: 4.5rem 0;
     position: relative;
     overflow: hidden;
 }
 
 .secao-tag {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    margin-bottom: 0.8rem;
+}
+
+.secao-cabecalho {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: var(--transicao);
+    padding: 1rem 0;
+}
+
+.header.com-fundo {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-texto {
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dourado);
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-size: 0.7rem;
+    color: var(--cinza-suave);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dourado);
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.menu a {
+    font-size: 0.9rem;
+    color: var(--bege);
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--dourado);
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicao);
+    border: none;
+    font-size: 0.95rem;
+}
+
+.btn-primario {
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--dourado-claro) 100%);
+    color: var(--preto);
+    box-shadow: var(--sombra-dourada);
+}
+
+.btn-primario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+}
+
+.btn-secundario {
+    background: transparent;
+    color: var(--dourado);
+    border: 2px solid var(--dourado);
+}
+
+.btn-secundario:hover {
+    background: var(--dourado);
+    color: var(--preto);
+}
+
+.botoes-hero {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================
+   SEÇÃO HERO — IMAGENS AJUSTADAS
+========================================== */
+.hero {
+    padding: 8rem 0 5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.pre-titulo {
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: var(--dourado);
     margin-bottom: 1rem;
-   
+}
+
+.subtitulo {
+    font-size: 1rem;
+    color: var(--cinza-suave);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.dados-hero {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.dado-numero {
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dourado);
+}
+
+.dado-label {
+    font-size: 0.85rem;
+    color: var(--cinza-suave);
+}
+
+/* ===== IMAGEM HERO — TAMANHO CORRETO ===== */
+.hero-imagem-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-fundo {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    width: 85%;
+    height: 85%;
+    background: linear-gradient(135deg, var(--marrom) 0%, var(--dourado) 100%);
+    border-radius: 6px;
+    z-index: 0;
+}
+
+.hero-foto {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--sombra-profunda);
+    object-fit: cover;
+}
+
+.selo {
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+    background: var(--dourado);
+    color: var(--preto);
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.decoracao {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,134,11,0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.circulo-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    right: -100px;
+}
+
+.circulo-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    left: -50px;
+}
+
+/* ==========================================
+   SOBRE
+========================================== */
+.sobre {
+    background: var(--preto-suave);
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sobre-imagem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.bloco-dourado {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    width: 88%;
+    height: 88%;
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--marrom) 100%);
+    border-radius: 6px;
+    z-index: 0;
+}
+
+.foto-sobre {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--sombra-profunda);
+    object-fit: cover;
+}
+
+.sobre-conteudo h3 {
+    color: var(--dourado);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+}
+
+.destaque-frase {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-left: 3px solid var(--dourado);
+    background: rgba(184, 134, 11, 0.05);
+    border-radius: 4px;
+}
+
+.destaque-frase i {
+    color: var(--dourado);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.destaque-frase p {
+    color: var(--bege);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   SERVIÇOS / ÁREAS DE ATUAÇÃO
+========================================== */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.servico-card {
+    background: var(--preto-suave);
+    padding: 1.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(184, 134, 11, 0.15);
+    transition: var(--transicao);
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado);
+    background: rgba(184, 134, 11, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.servico-icone {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(184,134,11,0.15) 0%, rgba(184,134,11,0.05) 100%);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.servico-icone i {
+    font-size: 1.2rem;
+    color: var(--dourado);
+}
+
+/* ==========================================
+   DIFERENCIAL / COMO TRABALHAMOS
+========================================== */
+.diferenca {
+    background: var(--preto-suave);
+}
+
+.passos {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.passo-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(184, 134, 11, 0.15);
+}
+
+.passo-numero {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--dourado-claro) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 1;
+    min-width: 60px;
+}
+
+/* ==========================================
+   CONTATO
+========================================== */
+.contato-wrapper {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.contato-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contato-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--preto-suave);
+    border-radius: 6px;
+    border: 1px solid rgba(184, 134, 11, 0.1);
+    transition: var(--transicao);
+}
+
+.contato-link:hover {
+    border-color: var(--dourado);
+    transform: translateX(5px);
+}
+
+.icone-contato {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--dourado-claro) 100%);
+    border-radius: 50%;
+    color: var(--preto);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contato-link strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--bege);
+    margin-bottom: 0.2rem;
+}
+
+.contato-link span {
+    font-size: 0.9rem;
+    color: var(--cinza-suave);
+}
+
+.contato-imagem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-fundo-dourado {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    width: 85%;
+    height: 85%;
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--marrom) 100%);
+    border-radius: 6px;
+    z-index: 0;
+}
+
+.foto-contato {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--sombra-profunda);
+    object-fit: cover;
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+.rodape {
+    background: var(--preto-suave);
+    padding: 3rem 0 2rem;
+    border-top: 1px solid rgba(184, 134, 11, 0.1);
+    text-align: center;
+}
+
+.rodape-logo h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    color: var(--dourado);
+    margin-bottom: 0.3rem;
+}
+
+.rodape-logo p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--cinza-suave);
+    margin-bottom: 1rem;
+}
+
+.rodape-texto {
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    font-size: 0.9rem;
+}
+
+.rodape-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.rodape-redes a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dourado);
+    color: var(--dourado);
+    border-radius: 50%;
+    transition: var(--transicao);
+}
+
+.rodape-redes a:hover {
+    background: var(--dourado);
+    color: var(--preto);
+}
+
+.rodape-copyright {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* ==========================================
+   📱 RESPONSIVIDADE — CELULAR
+========================================== */
+@media (max-width: 900px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3.5rem 0;
+    }
+
+    /* Menu mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--preto-suave);
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        border-bottom: 1px solid rgba(184, 134, 11, 0.15);
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(184, 134, 11, 0.08);
+    }
+
+    /* Hero — empilha no celular */
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.
 
 </style>
 <body>
@@ -168,7 +762,7 @@ section {
                 </div>
                 <div class="hero-imagem-wrapper fade-in">
                     <div class="imagem-fundo"></div>
-                    <img src="img/nubia.jpeg" alt="Núbia Lobato Reis — Advogada Trabalhista" class="hero-foto">
+                    <img src="img/nubia.png" alt="Núbia Lobato Reis — Advogada Trabalhista" class="hero-foto">
                     <div class="selo">
                         <span>OAB/SC</span>
                     </div>
@@ -185,7 +779,7 @@ section {
             <div class="sobre-grid">
                 <div class="sobre-imagem fade-in">
                     <div class="bloco-dourado"></div>
-                    <img src="img/nubia.jpeg" alt="Núbia Lobato Reis" class="foto-sobre">
+                    <img src="img/nubia.png" alt="Núbia Lobato Reis" class="foto-sobre">
                 </div>
                 <div class="sobre-conteudo fade-in">
                     <span class="secao-tag">Sobre mim</span>
@@ -331,7 +925,7 @@ section {
                 </div>
                 <div class="contato-imagem fade-in">
                     <div class="imagem-fundo-dourado"></div>
-                    <img src="img/nubia.jpeg" alt="Atendimento jurídico" class="foto-contato">
+                    <img src="img/nubia.png" alt="Atendimento jurídico" class="foto-contato">
                 </div>
             </div>
         </div>
@@ -355,7 +949,47 @@ section {
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script >// ===== ANIMAÇÃO DE ENTRADA AO ROLAR =====
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visivel');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+document.querySelectorAll('.fade-in').forEach(el => {
+    observador.observe(el);
+});
+
+// ===== MENU MOBILE =====
+const botaoMenu = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+botaoMenu?.addEventListener('click', () => {
+    menu?.classList.toggle('aberto');
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu?.classList.remove('aberto');
+    });
+});
+
+// ===== ANIMAÇÃO SCROLL NO CABEÇALHO =====
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header?.classList.add('com-fundo');
+    } else {
+        header?.classList.remove('com-fundo');
+    }
+});
+</script>
 </body>
 </html>
 
