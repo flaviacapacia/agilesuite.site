@@ -541,6 +541,20 @@ section {
     max-width: 700px;
     margin: 0 auto;
 }
+     /* ==========================================
+   REELS DO INSTAGRAM — Completo e Corrigido
+========================================== */
+.reels {
+    background: var(--preto-suave);
+}
+
+.reels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
 
 .reel-card {
     background: var(--preto);
@@ -564,41 +578,21 @@ section {
     position: relative;
     aspect-ratio: 9/16;
     background: linear-gradient(135deg, var(--marrom-escuro) 0%, var(--marrom) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
 .reel-capa {
     position: absolute;
     inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    background: rgba(0, 0, 0, 0.3);
-    transition: var(--transicao);
+    overflow: hidden;
 }
 
-.reel-capa.destaque {
-    background: rgba(184, 134, 11, 0.15);
+.reel-capa img {
+    transition: transform 0.4s ease;
 }
 
-.reel-card:hover .reel-capa {
-    background: rgba(184, 134, 11, 0.25);
-}
-
-.reel-icone-insta {
-    font-size: 2rem;
-    color: var(--dourado);
-}
-
-.reel-texto {
-    color: var(--bege);
-    font-size: 0.95rem;
-    font-weight: 500;
+.reel-card:hover .reel-capa img {
+    transform: scale(1.05);
 }
 
 .reel-play {
@@ -614,10 +608,10 @@ section {
     align-items: center;
     justify-content: center;
     color: var(--preto);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     opacity: 0.9;
     transition: var(--transicao);
-    z-index: 1;
+    z-index: 2;
 }
 
 .reel-card:hover .reel-play {
@@ -651,18 +645,13 @@ section {
     margin-top: 3rem;
 }
 
-/* ===== Responsividade da seção Reels ===== */
+/* 📱 Responsividade */
 @media (max-width: 600px) {
     .reels-grid {
         grid-template-columns: 1fr;
-        max-width: 320px;
-    }
-    
-    .reel-thumbnail {
-        aspect-ratio: 4/5;
+        max-width: 300px;
     }
 }
-
 /* ==========================================
    CONTATO
 ========================================== */
@@ -855,6 +844,8 @@ section {
         grid-template-columns: 1fr;
         gap: 2.
 
+   
+
 </style>
 <body>
 
@@ -1027,8 +1018,7 @@ section {
                 </div>
             </div>
         </div>
-    </section>
-    <!-- REELS DO INSTAGRAM -->
+       <!-- REELS DO INSTAGRAM -->
     <section class="reels" id="reels">
         <div class="container">
             <div class="secao-cabecalho fade-in">
@@ -1046,8 +1036,7 @@ section {
                                 <i class="fas fa-play"></i>
                             </div>
                             <div class="reel-capa">
-                              <div class="reel-capa destaque">
-                                <img src="img/capa-reels-1.jpg" alt="Descrição" style="width:100%;height:100%;object-fit:cover;">
+                                <img src="img/capa-reels-1.jpg" alt="Modelo de Pedido de Demissão" style="width:100%;height:100%;object-fit:cover;">
                             </div>
                         </div>
                         <div class="reel-info">
@@ -1058,19 +1047,19 @@ section {
                     </a>
                 </div>
 
-                <!-- Reel 2 — Adicione mais sempre que quiser -->
+                <!-- Reel 2 -->
                 <div class="reel-card fade-in">
                     <a href="https://www.instagram.com/p/CuC5x0LAcJb/" target="_blank" class="reel-link">
                         <div class="reel-thumbnail">
                             <div class="reel-play">
                                 <i class="fas fa-play"></i>
                             </div>
-                            <div class="reel-capa destaque">
-                                <img src="img/capa-reels-2.jpg" alt="Descrição" style="width:100%;height:100%;object-fit:cover;">
+                            <div class="reel-capa">
+                                <img src="img/capa-reels-2.png" alt="Siga nosso perfil" style="width:100%;height:100%;object-fit:cover;">
                             </div>
                         </div>
                         <div class="reel-info">
-                            <h3>Siga nosso perfil</h3>
+                            <h3>Dicas Trabalhistas</h3>
                             <p>@advnabilalobatoreis</p>
                             <span class="reel-data">Novos vídeos toda semana</span>
                         </div>
@@ -1085,6 +1074,7 @@ section {
             </div>
         </div>
     </section>
+
 
     <!-- CONTATO -->
     <section class="contato" id="contato">
