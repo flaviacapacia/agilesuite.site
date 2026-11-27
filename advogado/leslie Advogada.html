@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesley Advogada | Direito Previdenciário, Trabalhista, Empresarial e Tributário</title>
+    <meta name="description" content="Advocacia preparada para defender os seus direitos. Atuação estratégica e humanizada. Presencial na Grande Florianópolis e online em todo o Brasil.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    /* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+:root {
+    --cor-primaria: #1a1a1a;
+    --cor-secundaria: #b8860b;
+    --cor-secundaria-clara: #d4a017;
+    --cor-texto: #333333;
+    --cor-clara: #f8f7f4;
+    --cor-fundo: #ffffff;
+    --cor-cinza-suave: #f0efeb;
+    --fonte-titulo: 'Playfair Display', Georgia, serif;
+    --fonte-texto: 'Inter', -apple-system, sans-serif;
+    --transicao: all 0.3s ease;
+    --sombra-suave: 0 2px 8px rgba(0,0,0,0.04);
+    --sombra-media: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--cor-primaria);
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 1.5rem; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1.2rem; }
+h3 { font-size: 1.35rem; margin-bottom: 0.8rem; }
+h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+p { margin-bottom: 1.2rem; font-size: 1.025rem; }
+
+em {
+    color: var(--cor-secundaria);
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transicao);
+}
+
+ul { list-style: none; }
+
+section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.section-header p {
+    font-size: 1.05rem;
+    color: #666;
+}
+
+/* ==========================================
+   ANIMAÇÕES — Surgimento ao rolar
+========================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    letter-spacing: -0.5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--cor-primaria);
+}
+
+.menu {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+.menu a {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    position: relative;
+    font-weight: 400;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-secundaria);
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+.btn {
+    display: inline-block;
+    padding: 0.95rem 2.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicao);
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--cor-secundaria);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--cor-secundaria-clara);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(184, 134, 11, 0.25);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+}
+
+.btn-secondary:hover {
+    background: var(--cor-primaria);
+    color: white;
+}
+
+.btn-whatsapp {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 340px;
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   SEÇÃO HERO
+========================================== */
+.hero {
+    padding: 10rem 0 7rem;
+    background: linear-gradient(180deg, var(--cor-clara) 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    margin-bottom: 1.5rem;
+    color: var(--cor-primaria);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.3rem;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.hero-slogan {
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   ÁREAS DE ATUAÇÃO
+========================================== */
+.areas {
+    background-color: var(--cor-fundo);
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 3rem;
+}
+
+.area-coluna h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-primaria);
+}
+
+.area-subtitulo {
+    color: #666;
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
+}
+
+.area-card {
+    background: var(--cor-clara);
+    padding: 1.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    transition: var(--transicao);
+}
+
+.area-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-media);
+}
+
+.area-card h4 {
+    color: var(--cor-secundaria);
+    font-size: 1.1rem;
+}
+
+.profissional-card {
+    margin-top: 1.8rem;
+    padding: 1.5rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    text-align: center;
+    background: white;
+}
+
+.foto-prof {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.nome-prof {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+
+.cargo-prof {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ==========================================
+   SITUAÇÕES COMUNS
+========================================== */
+.duvidas {
+    background-color: var(--cor-clara);
+}
+
+.situacoes-lista {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.situacoes-lista li {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 2.5rem;
+    transition: var(--transicao);
+}
+
+.situacoes-lista li:first-child {
+    border-top: 1px solid #ddd;
+}
+
+.situacoes-lista li::before {
+    content: '→';
+    position: absolute;
+    left: 0.8rem;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.situacoes-lista li:hover {
+    background: rgba(184, 134, 11, 0.04);
+    padding-left: 3rem;
+}
+
+/* ==========================================
+   ESCRITÓRIO
+========================================== */
+.escritorio {
+    background-color: var(--cor-fundo);
+}
+
+.escritorio-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.escritorio-content p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 1.3rem;
+    line-height: 1.8;
+}
+
+.destaque {
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem !important;
+    color: var(--cor-secundaria) !important;
+    margin-top: 1rem;
+    margin-bottom: 2rem !important;
+}
+
+/* ==========================================
+   EQUIPE
+========================================== */
+.equipe {
+    background-color: var(--cor-clara);
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.equipe-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
+}
+
+.equipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.equipe-foto {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.equipe-card h3 {
+    margin-bottom: 0.3rem;
+}
+
+.equipe-cargo {
+    font-size: 0.9rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 0.5rem;
+}
+
+.equipe-area {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.equipe-especialidades {
+    list-style: none;
+}
+
+.equipe-especialidades li {
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    color: #555;
+}
+
+/* ==========================================
+   METODOLOGIA / COMO TRABALHAMOS
+========================================== */
+.metodologia {
+    background-color: var(--cor-fundo);
+}
+
+.metodologia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.metodologia-item {
+    padding: 2rem;
+    border-left: 3px solid var(--cor-secundaria);
+    background: var(--cor-clara);
+    border-radius: 4px;
+    transition: var(--transicao);
+}
+
+.metodologia-item:hover {
+    transform: translateX(5px);
+    background: #fff;
+    box-shadow: var(--sombra-suave);
+}
+
+.metodologia-item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+}
+
+.metodologia-item p {
+    font-size: 0.98rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   BLOG / CONTEÚDO
+========================================== */
+.blog {
+    background-color: var(--cor-clara);
+}
+
+.blog-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.blog-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 8px;
+    transition: var(--transicao);
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.blog-categoria {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cor-secundaria);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.blog-data {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0.8rem;
+}
+
+.blog-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.blog-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.blog-link {
+    font-size: 0.95rem;
+    color: var(--cor-secundaria);
+    font-weight: 500;
+}
+
+.blog-link:hover {
+    color: var(--cor-secundaria-clara);
+}
+
+.blog-fade {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.blog-fade p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   CONTATO
+========================================== */
+.contato {
+    background: linear-gradient(180deg, var(--cor-fundo) 0%, var(--cor-clara) 100%);
+}
+
+.contato-content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contato-content h2 {
+    margin-bottom: 1rem;
+}
+
+.contato-content > p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.contato-item {
+    background: white;
+    padding: 1.25rem 2rem;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
+}
+
+.contato-item:hover {
+    box-shadow: var(--sombra-media);
+    transform: translateY(-2px);
+}
+
+.contato-item strong {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.contato-item span {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--cor-primaria);
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+.footer {
+    background: var(--cor-primaria);
+    color: #aaa;
+    padding: 2.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — Telas menores
+========================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        box-shadow: 0 8px 10px rgba(0,0,0,0.05);
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+
+    .areas-grid,
+    .metodologia-grid,
+    .equipe-grid,
+    .blog-lista {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header" id="inicio">
+        <div class="container">
+            <a href="#inicio" class="logo">Lesley Advogada</a>
+            <nav class="nav">
+                <button class="menu-toggle" aria-label="Menu">☰</button>
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#areas">Áreas de Atuação</a></li>
+                    <li><a href="#duvidas">Como podemos ajudar</a></li>
+                    <li><a href="#escritorio">O Escritório</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#metodologia">Como Trabalhamos</a></li>
+                    <li><a href="#blog">Conteúdo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL / HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Você não precisa entender de leis para ter seus <em>direitos respeitados</em>.</h1>
+                <p class="hero-subtitle">Precisa de uma advocacia preparada para defendê-los. Atuamos de forma estratégica e humanizada, com dedicação exclusiva a cada área.</p>
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn btn-primary">Agendar atendimento</a>
+                    <a href="#areas" class="btn btn-secondary">Ver áreas de atuação</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Advocacia desde</span>
+                        <span class="stat-number">2013</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Anos de atuação</span>
+                        <span class="stat-number">13</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Atendimento</span>
+                        <span class="stat-number">Todo o Brasil</span>
+                    </div>
+                </div>
+                <p class="hero-slogan">Mais que processos, <em>pessoas</em>.<br>Mais que leis, <em>direitos</em>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="areas" id="areas">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Cada área com quem <em>vive</em> aquele assunto todos os dias</h2>
+                <p>Previdenciário e Trabalhista com a Lesley. Empresarial e Tributário com seu parceiro.</p>
+            </div>
+
+            <div class="areas-grid">
+                <!-- Coluna: Para Você -->
+                <div class="area-coluna fade-in">
+                    <h3>Para você</h3>
+                    <p class="area-subtitulo">Trabalhadores, segurados do INSS e suas famílias.</p>
+                    
+                    <div class="area-card">
+                        <h4>Direito Previdenciário</h4>
+                        <p>Aposentadorias, auxílio-doença, BPC/LOAS, pensão por morte, revisões e benefícios negados pelo INSS.</p>
+                    </div>
+                    
+                    <div class="area-card">
+                        <h4>Direito Trabalhista</h4>
+                        <p>Demissão, verbas rescisórias, horas extras, trabalho sem carteira, acidente de trabalho e assédio.</p>
+                    </div>
+                    
+                    <div class="profissional-card">
+                        <div class="foto-prof">👩‍⚖️</div>
+                        <p class="nome-prof">Lesley — Advogada</p>
+                        <span class="cargo-prof">Direito Previdenciário e Trabalhista</span>
+                    </div>
+                </div>
+
+                <!-- Coluna: Para Sua Empresa -->
+                <div class="area-coluna fade-in">
+                    <h3>Para a sua empresa</h3>
+                    <p class="area-subtitulo">Empresários, sócios e empresas de todos os portes.</p>
+                    
+                    <div class="area-card">
+                        <h4>Direito Empresarial</h4>
+                        <p>Constituição de empresas, contratos, organização societária, planejamento patrimonial, conflitos entre sócios e assessoria preventiva.</p>
+                    </div>
+                    
+                    <div class="area-card">
+                        <h4>Direito Tributário</h4>
+                        <p>Planejamento tributário, revisão e recuperação de tributos, execuções fiscais e regularização com o fisco.</p>
+                    </div>
+                    
+                    <div class="profissional-card">
+                        <div class="foto-prof">👨‍⚖️</div>
+                        <p class="nome-prof">Seu parceiro — Advogado</p>
+                        <span class="cargo-prof">Direito Empresarial e Tributário</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SITUAÇÕES COMUNS -->
+    <section class="duvidas" id="duvidas">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Reconhece alguma destas <em>situações</em>?</h2>
+            </div>
+            <ul class="situacoes-lista">
+                <li class="fade-in">Quer se aposentar e não sabe qual é o melhor momento?</li>
+                <li class="fade-in">Teve um benefício negado pelo INSS?</li>
+                <li class="fade-in">Foi demitido e não recebeu corretamente?</li>
+                <li class="fade-in">Trabalhou sem carteira assinada?</li>
+                <li class="fade-in">Vai abrir uma empresa e não sabe qual estrutura escolher?</li>
+                <li class="fade-in">Seus contratos com clientes e fornecedores foram feitos sob medida?</li>
+                <li class="fade-in">Não sabe se o regime tributário da empresa é o mais adequado?</li>
+                <li class="fade-in">Suspeita que pagou tributos a mais nos últimos anos?</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SOBRE O ESCRITÓRIO -->
+    <section class="escritorio" id="escritorio">
+        <div class="container">
+            <div class="escritorio-content fade-in">
+                <h2>Não acreditamos em soluções genéricas para <em>histórias únicas</em></h2>
+                <p>Por trás de um benefício negado existe alguém que precisa de segurança financeira. Por trás de uma empresa existem investimentos, empregos e anos de trabalho. É por entender o que cada questão representa na vida de uma pessoa que a nossa advocacia vai além de apresentar documentos e acompanhar processos.</p>
+                <p>Unimos conhecimento técnico, estratégia e atendimento humanizado. Cada caso é analisado com cuidado, e cada pessoa é tratada com respeito e individualidade.</p>
+                <p class="destaque"><strong>13 anos</strong> de advocacia desde 2013, na Grande Florianópolis e online em todo o Brasil</p>
+                <a href="#contato" class="btn btn-secondary">Conheça o escritório</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section class="equipe" id="equipe">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Quem vai cuidar do seu <em>caso</em></h2>
+                <p>Conheça a nossa equipe</p>
+            </div>
+            <div class="equipe-grid">
+                <div class="equipe-card fade-in">
+                    <div class="equipe-foto">👩‍⚖️</div>
+                    <h3>Lesley Advogada</h3>
+                    <p class="equipe-cargo">OAB/SC ----</p>
+                    <p class="equipe-area">Direito Previdenciário e Trabalhista</p>
+                    <ul class="equipe-especialidades">
+                        <li>Direito Previdenciário</li>
+                        <li>Direito Trabalhista</li>
+                    </ul>
+                </div>
+                <div class="equipe-card fade-in">
+                    <div class="equipe-foto">👨‍⚖️</div>
+                    <h3>Seu Parceiro</h3>
+                    <p class="equipe-cargo">OAB/SC ----</p>
+                    <p class="equipe-area">Direito Empresarial e Tributário</p>
+                    <ul class="equipe-especialidades">
+                        <li>Direito Empresarial</li>
+                        <li>Direito Tributário</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO TRABALHAMOS -->
+    <section class="metodologia" id="metodologia">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Cada caso tem particularidades. Cada pessoa merece <em>atenção</em>.</h2>
+            </div>
+            <div class="metodologia-grid">
+                <div class="metodologia-item fade-in">
+                    <h3>Escuta ativa</h3>
+                    <p>Antes de falar em lei, entendemos a sua história, o seu trabalho e o que está em jogo para você.</p>
+                </div>
+                <div class="metodologia-item fade-in">
+                    <h3>Análise cuidadosa</h3>
+                    <p>Cada documento é conferido. Você recebe um diagnóstico claro, com os caminhos possíveis e os riscos de cada um.</p>
+                </div>
+                <div class="metodologia-item fade-in">
+                    <h3>Transparência</h3>
+                    <p>Honorários combinados por escrito, prazos realistas e notícias do andamento sem você precisar perguntar.</p>
+                </div>
+                <div class="metodologia-item fade-in">
+                    <h3>Online e presencial</h3>
+                    <p>Presencial na Grande Florianópolis e por videochamada em todo o Brasil, com documentos enviados pelo WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG / CONTEÚDO -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Informação clara sobre os seus <em>direitos</em></h2>
+            </div>
+            <div class="blog-lista">
+                <article class="blog-card fade-in">
+                    <span class="blog-categoria">Direito Previdenciário</span>
+                    <span class="blog-data">20 de novembro de 2026</span>
+                    <h3>Por que cada vez mais aposentados conseguem aumentar o valor da aposentadoria?</h3>
+                    <p>Está cada vez mais comum que aposentados tenham direito a revisão de sua aposentadoria...</p>
+                    <a href="#" class="blog-link">Leia mais →</a>
+                </article>
+                <article class="blog-card fade-in">
+                    <span class="blog-categoria">Direito Previdenciário</span>
+                    <span class="blog-data">15 de outubro de 2026</span>
+                    <h3>Revisão da aposentadoria por atividades concomitantes</h3>
+                    <p>O segurado que trabalha em dois empregos ao mesmo tempo tem a chamada atividade concomitante...</p>
+                    <a href="#" class="blog-link">Leia mais →</a>
+                </article>
+                <article class="blog-card fade-in">
+                    <span class="blog-categoria">Direito Administrativo</span>
+                    <span class="blog-data">09 de setembro de 2026</span>
+                    <h3>Por que o resultado da perícia do INSS não saiu?</h3>
+                    <p>Quando após realizada a perícia no INSS o resultado não for divulgado, o benefício entra em exigência...</p>
+                    <a href="#" class="blog-link">Leia mais →</a>
+                </article>
+            </div>
+            <div class="blog-fade fade-in">
+                <p>Dicas sobre INSS, aposentadoria e direitos do trabalhador.</p>
+                <a href="#" class="btn btn-secondary">Ver todos os artigos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-content fade-in">
+                <h2>Conte a sua história. Nós explicamos o <em>caminho</em>.</h2>
+                <p>Responda pelo formulário ou chame no WhatsApp. Na primeira conversa você entende os seus direitos, as opções e os próximos passos.</p>
+                
+                <div class="contato-info">
+                    <a href="https://wa.me/5548999600601" target="_blank" class="contato-item">
+                        <strong>WhatsApp e telefone</strong>
+                        <span>(48) 99960-0601</span>
+                    </a>
+                    <div class="contato-item">
+                        <strong>Atendimento</strong>
+                        <span>Presencial na Grande Florianópolis e online em todo o Brasil</span>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/5548999600601" target="_blank" class="btn btn-primary btn-whatsapp">💬 Chamar no WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Lesley Advogada — Todos os direitos reservados</p>
+        </div>
+    </footer>
+<script>
+  // ===== ANIMAÇÃO DE SURGIMENTO AO ROLAR =====
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visivel');
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll('.fade-in').forEach(el => {
+    observador.observe(el);
+});
+
+// ===== MENU MOBILE =====
+const botaoMenu = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+botaoMenu?.addEventListener('click', () => {
+    menu?.classList.toggle('aberto');
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu?.classList.remove('aberto');
+    });
+});
+</script>
+</body>
+</html>
