@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assessoria jurídica personalizada em Direito Imobiliário, do Trabalho e Civil.">
+  <title>Fernanda | Advocacia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+   :root {
+  --dourado: #ad842f;
+  --preto: #211e1a;
+  --texto: #514c45;
+  --linha: #e9e3d8;
+}
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      color: var(--texto);
+      background: var(--branco);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 88%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--verde);
+      color: #fff;
+      font-size: 13px;
+      padding: 9px 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--linha);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .marca {
+      color: var(--verde);
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      line-height: 1.15;
+      letter-spacing: .04em;
+    }
+
+    .marca small {
+      display: block;
+      color: var(--dourado);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      letter-spacing: .2em;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    .links a:hover { color: var(--dourado); }
+
+    .botao {
+      display: inline-block;
+      background: var(--dourado);
+      color: #fff;
+      padding: 13px 22px;
+      border: 1px solid var(--dourado);
+      transition: .2s ease;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .botao:hover {
+      background: transparent;
+      color: var(--dourado);
+    }
+
+    .botao-contorno {
+      display: inline-block;
+      border: 1px solid var(--dourado);
+      color: var(--verde);
+      padding: 12px 21px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: var(--creme);
+      padding: 100px 0 94px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(173,137,84,.25);
+      border-radius: 50%;
+      right: -100px;
+      top: -130px;
+    }
+
+    .hero-conteudo {
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--dourado);
+      font-size: 12px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    h1 {
+      color: var(--verde);
+      font-size: clamp(40px, 6vw, 66px);
+      max-width: 740px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      color: #5d615a;
+      font-size: 17px;
+      max-width: 660px;
+      margin-bottom: 30px;
+    }
+
+    .acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 38px;
+    }
+
+    .detalhes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 26px;
+      color: var(--suave);
+      font-size: 13px;
+    }
+
+    .detalhes span::before {
+      content: "—";
+      color: var(--dourado);
+      margin-right: 8px;
+    }
+
+    section { padding: 82px 0; }
+
+    .titulo-secao {
+      max-width: 690px;
+      margin-bottom: 42px;
+    }
+
+    .titulo-secao h2 {
+      color: var(--verde);
+      font-size: clamp(32px, 4vw, 44px);
+      margin-bottom: 15px;
+    }
+
+    .titulo-secao p { color: var(--suave); }
+
+    .areas {
+      background: #fff;
+    }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid var(--linha);
+      padding: 30px 26px;
+      background: #fff;
+    }
+
+    .numero {
+      color: var(--dourado);
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      color: var(--verde);
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--suave);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .card ul {
+      list-style: none;
+      color: #555a53;
+      font-size: 14px;
+    }
+
+    .card li {
+      border-top: 1px solid var(--linha);
+      padding: 9px 0;
+    }
+
+    .atendimento {
+      background: var(--creme);
+    }
+
+    .passos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .passo {
+      border-top: 2px solid var(--dourado);
+      padding-top: 20px;
+    }
+
+    .passo h3 {
+      color: var(--verde);
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .passo p { color: var(--suave); font-size: 14px; }
+/* Seção sobre a advogada */
+.sobre {
+  background: #fff;
+  padding: 90px 0;
+}
+
+.sobre-conteudo {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* Foto à esquerda */
+.sobre-foto {
+  position: relative;
+  max-width: 460px;
+}
+
+.sobre-foto img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.foto-moldura {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--dourado);
+}
+
+/* Texto à direita */
+.sobre-texto {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--dourado);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.sobre-texto h2 {
+  color: var(--preto);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.sobre-oab {
+  color: var(--dourado) !important;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 25px !important;
+}
+
+.sobre-texto p {
+  color: var(--texto);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 17px;
+}
+
+.credenciais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0 28px;
+}
+
+.credenciais span {
+  border: 1px solid var(--linha);
+  color: var(--preto);
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--preto);
+  border: 1px solid var(--preto);
+  color: #fff;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.botao:hover {
+  background: var(--dourado);
+  border-color: var(--dourado);
+}
+
+/* Ajustes para celular */
+@media (max-width: 800px) {
+  .sobre {
+    padding: 65px 0;
+  }
+
+  .sobre-conteudo {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .sobre-foto {
+    width: min(100%, 460px);
+    margin: 0 auto;
+  }
+
+  .sobre-texto h2 {
+    font-size: 38px;
+  }
+}
+    .credenciais {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .credenciais span {
+      border: 1px solid var(--linha);
+      padding: 8px 12px;
+      color: var(--verde);
+      font-size: 12px;
+    }
+
+    .online {
+      background: var(--verde);
+      color: white;
+      text-align: center;
+      padding: 65px 0;
+    }
+
+    .online h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .online p {
+      color: #dce4df;
+      max-width: 650px;
+      margin: 0 auto 22px;
+    }
+
+    .online .botao {
+      background: var(--dourado);
+      color: white;
+    }
+
+    .contato { background: var(--creme); }
+
+    .contato-grade {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contato h2 {
+      color: var(--verde);
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .contato p { color: var(--suave); }
+
+    .info-contato {
+      display: grid;
+      gap: 20px;
+    }
+
+    .info-contato strong {
+      display: block;
+      color: var(--verde);
+      margin-bottom: 4px;
+    }
+
+    .info-contato span { color: var(--suave); }
+
+    footer {
+      background: #211e1a;
+      color: #e9e3d8;
+      padding: 28px 0;
+      font-size: 12px;
+    }
+
+    .rodape {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+      .links { gap: 14px; }
+      .links a:not(.botao) { display: none; }
+      .grade, .passos { grid-template-columns: 1fr; }
+      .sobre-grade, .contato-grade { grid-template-columns: 1fr; gap: 32px; }
+      section { padding: 62px 0; }
+      .hero { padding: 72px 0; }
+    }
+
+    @media (max-width: 480px) {
+      .container { width: 90%; }
+      nav { min-height: 72px; }
+      .marca { font-size: 18px; }
+      .links .botao { padding: 10px 13px; font-size: 12px; }
+      .topbar .container { font-size: 11px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Atendimento presencial em [Cidade/UF]</span>
+      <span>Consultas on-line em todo o Brasil</span>
+    </div>
+  </div>
+
+  <header>
+    <nav class="container">
+      <a class="marca" href="#inicio">
+        FERNANDA
+        <small>Advocacia</small>
+      </a>
+      <div class="links">
+        <a href="#atuacao">Atuação</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#sobre">A advogada</a>
+        <a class="botao" href="#contato">Agendar atendimento</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-conteudo">
+          <div class="eyebrow">Assessoria jurídica personalizada</div>
+          <h1>Orientação jurídica clara para decisões mais seguras.</h1>
+          <p>
+            Atuação consultiva e contenciosa em Direito Imobiliário,
+            do Trabalho e Civil, para pessoas físicas e jurídicas.
+          </p>
+          <div class="acoes">
+            <a class="botao" href="#contato">Agendar atendimento</a>
+            <a class="botao-contorno" href="#atuacao">Conheça as áreas</a>
+          </div>
+          <div class="detalhes">
+            <span>Atendimento em [Cidade/UF]</span>
+            <span>Consultas on-line</span>
+            <span>[Português / Espanhol]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas" id="atuacao">
+      <div class="container">
+        <div class="titulo-secao">
+          <div class="eyebrow">Como posso ajudar</div>
+          <h2>Áreas de atuação</h2>
+          <p>
+            Atuação consultiva, voltada à prevenção de conflitos, e
+            contenciosa, na defesa dos interesses do cliente.
+          </p>
+        </div>
+
+        <div class="grade">
+          <article class="card">
+            <div class="numero">01</div>
+            <h3>Direito Imobiliário</h3>
+            <p>Assessoria em negócios imobiliários, contratos e regularização de imóveis.</p>
+            <ul>
+              <li>Compra e venda de imóveis</li>
+              <li>Locação residencial e comercial</li>
+              <li>Elaboração e revisão de contratos</li>
+              <li>Regularização e registros</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="numero">02</div>
+            <h3>Direito do Trabalho</h3>
+            <p>Orientação a empregadores e empregados nas relações de trabalho.</p>
+            <ul>
+              <li>Consultoria preventiva</li>
+              <li>Orientação trabalhista</li>
+              <li>Análise de relações de trabalho</li>
+              <li>Atuação em processos trabalhistas</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="numero">03</div>
+            <h3>Direito Civil</h3>
+            <p>Atuação em contratos, obrigações e questões civis do dia a dia.</p>
+            <ul>
+              <li>Contratos e cobranças</li>
+              <li>Responsabilidade civil</li>
+              <li>Divórcio e união estável</li>
+              <li>Guarda, alimentos e inventário</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="atendimento" id="atendimento">
+      <div class="container">
+        <div class="titulo-secao">
+          <div class="eyebrow">Simples e transparente</div>
+          <h2>Como funciona o atendimento</h2>
+          <p>Um processo pensado para compreender sua situação e explicar os caminhos possíveis.</p>
+        </div>
+
+        <div class="passos">
+          <article class="passo">
+            <h3>01. Primeiro contato</h3>
+            <p>Entre em contato pelo WhatsApp e conte brevemente o que aconteceu para agendarmos uma conversa.</p>
+          </article>
+          <article class="passo">
+            <h3>02. Reunião</h3>
+            <p>O atendimento pode ser presencial em [Cidade/UF] ou on-line, de onde você estiver.</p>
+          </article>
+          <article class="passo">
+            <h3>03. Análise e orientação</h3>
+            <p>O caso é analisado e são explicados os caminhos jurídicos possíveis e seus riscos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+  <div class="container sobre-conteudo">
+
+    <div class="sobre-foto">
+      <img src="img/leslei-1.avif" alt="Fernanda, advogada">
+      <span class="foto-moldura"></span>
+    </div>
+
+    <div class="sobre-texto">
+      <div class="eyebrow">Atuação profissional</div>
+      <h2>Fernanda [Sobrenome]</h2>
+
+      <p class="sobre-oab">ADVOGADA · OAB/[UF] [NÚMERO]</p>
+
+      <p>
+        Advogada com atuação em Direito Imobiliário, do Trabalho e Civil,
+        oferecendo assessoria jurídica a pessoas físicas e jurídicas.
+      </p>
+
+      <p>
+        O atendimento começa pela compreensão de cada situação. A partir
+        dessa análise, Fernanda apresenta os caminhos jurídicos possíveis
+        e os riscos envolvidos, para ajudar o cliente a tomar decisões
+        bem informadas.
+      </p>
+
+      <p>
+        [Acrescente aqui informações reais sobre sua formação, experiência
+        profissional e trajetória.]
+      </p>
+
+      <div class="credenciais">
+        <span>[Formação acadêmica]</span>
+        <span>Atendimento presencial e on-line</span>
+        <span>[Português / Espanhol]</span>
+      </div>
+
+      <a class="botao" href="#contato">Agendar atendimento</a>
+    </div>
+
+  </div>
+</section>
+
+        <div class="sobre-texto">
+          <div class="eyebrow">A advogada</div>
+          <h2>Uma atuação próxima e transparente</h2>
+          <p>
+            Fernanda [Sobrenome] é advogada e atua nas áreas de Direito
+            Imobiliário, do Trabalho e Civil, assessorando pessoas físicas
+            e jurídicas.
+          </p>
+          <p>
+            Seu trabalho começa pela compreensão da situação de cada cliente.
+            A partir daí, apresenta as alternativas jurídicas, os possíveis
+            riscos e os próximos passos, para que as decisões sejam tomadas
+            com clareza.
+          </p>
+          <p>
+            [Acrescente aqui informações reais sobre sua formação, experiência
+            profissional e trajetória.]
+          </p>
+
+          <div class="credenciais">
+            <span>OAB/[UF] [número]</span>
+            <span>[Universidade / formação]</span>
+            <span>Atendimento presencial e on-line</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="online">
+      <div class="container">
+        <div class="eyebrow">Onde você estiver</div>
+        <h2>Atendimento on-line em todo o Brasil</h2>
+        <p>
+          Reuniões e acompanhamento jurídico on-line para clientes de
+          diferentes cidades, com comunicação clara em cada etapa.
+        </p>
+        <a class="botao" href="#contato">Agendar atendimento</a>
+      </div>
+    </section>
+
+    <section class="contato" id="contato">
+      <div class="container contato-grade">
+        <div>
+          <div class="eyebrow">Vamos conversar</div>
+          <h2>Agende um atendimento</h2>
+          <p>
+            Entre em contato para agendar uma reunião presencial ou on-line.
+            O primeiro contato pode ser feito pelo WhatsApp.
+          </p>
+          <br>
+          <!-- Troque o número abaixo pelo WhatsApp com código do país e DDD.
+               Exemplo: https://wa.me/5547999999999 -->
+          <a class="botao" href="https://wa.me/55SEUNUMERO">
+            Falar pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="info-contato">
+          <div>
+            <strong>WhatsApp / Telefone</strong>
+            <span>[Inserir número de contato]</span>
+          </div>
+          <div>
+            <strong>Escritório</strong>
+            <span>[Rua, número, bairro]<br>[Cidade/UF]</span>
+          </div>
+          <div>
+            <strong>Horário de atendimento</strong>
+            <span>[Dias e horários]</span>
+          </div>
+          <div>
+            <strong>E-mail</strong>
+            <span>[Inserir e-mail profissional]</span>
+          </div>
+          <div>
+            <strong>Instagram</strong>
+            <span>[@perfil profissional]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container rodape">
+      <span>Fernanda [Sobrenome] Advocacia · OAB/[UF] [número]</span>
+      <span>Conteúdo informativo. Não constitui consulta jurídica.</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
+          
+          
